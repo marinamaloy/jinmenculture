@@ -9,6 +9,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@300;400;500&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
+
+  <script>
+const wxImages = [
+  {src:'images/weixunxiu-1.jpg',caption:'微醺秀酒吧氛围'},{src:'images/weixunxiu-2.jpg',caption:'观众惊叹反应'},
+  {src:'images/weixunxiu-3.jpg',caption:'近景魔术表演'},{src:'images/weixunxiu-4.jpg',caption:'演出后合影'},
+  {src:'images/weixunxiu-5.jpg',caption:'魔术瞬间'},{src:'images/weixunxiu-6.jpg',caption:'场地氛围'}
+];
+
+function handleSubmit(e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = '发送中... / Sending...';
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(function(response) {
+    if (response.ok) {
+      form.innerHTML = '<p style="text-align:center;color:var(--gold);padding:40px 0;font-size:16px;">✓ 预约已提交！我们会尽快联系您。<br>Booking submitted! We will contact you soon.</p>';
+    } else {
+      btn.disabled = false;
+      btn.textContent = '提交预约 / Submit Booking';
+      alert('发送失败，请重试 / Failed to send, please try again.');
+    }
+  }).catch(function() {
+    btn.disabled = false;
+    btn.textContent = '提交预约 / Submit Booking';
+    alert('发送失败，请重试 / Failed to send, please try again.');
+  });
+}
+</script>
+<script src="js/main.js"></script>
+</body>
 <body>
 <div id="nav-placeholder"></div>
 
@@ -173,7 +208,7 @@
   <div class="container">
     <div class="section-heading"><h2 class="lang-cn">预约演出</h2><h2 class="lang-en" style="display:none;">Book a Show</h2></div>
     <div style="max-width:500px;margin:0 auto;" class="fade-up">
-      <form action="https://formspree.io/f/xwvzvgla" method="POST">
+     <form action="https://formspree.io/f/xwvzvgla" method="POST" onsubmit="handleSubmit(event)">
   <div class="form-group"><input type="text" name="venue" placeholder="场馆名称 / Venue Name *" required></div>
   <div class="form-group"><input type="text" name="name" placeholder="联系人 / Contact Name *" required></div>
   <div class="form-group"><input type="text" name="contact" placeholder="手机/微信 / Phone or WeChat *" required></div>
