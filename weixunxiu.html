@@ -173,18 +173,18 @@
   <div class="container">
     <div class="section-heading"><h2 class="lang-cn">预约演出</h2><h2 class="lang-en" style="display:none;">Book a Show</h2></div>
     <div style="max-width:500px;margin:0 auto;" class="fade-up">
-      <form onsubmit="event.preventDefault();showToast();">
-        <div class="form-group"><input type="text" placeholder="场馆名称 / Venue Name *" required></div>
-        <div class="form-group"><input type="text" placeholder="联系人 / Contact Name *" required></div>
-        <div class="form-group"><input type="text" placeholder="手机/微信 / Phone or WeChat *" required></div>
-        <div class="form-group"><input type="date" placeholder="预计演出日期 / Preferred Date"></div>
-        <div class="form-group"><input type="number" placeholder="预计观众人数 / Expected Guests"></div>
-        <div class="form-group">
-          <select><option>套餐选择 / Package</option><option>体验场 / Trial ¥3,500</option><option>标准场 / Standard ¥5,500</option><option>驻场合作 / Residency</option></select>
-        </div>
-        <div class="form-group"><textarea placeholder="备注 / Notes"></textarea></div>
-        <button type="submit" class="btn btn-filled" style="width:100%;justify-content:center;">提交预约 / Submit Booking</button>
-      </form>
+      <form action="https://formspree.io/f/xwvzvgla" method="POST">
+  <div class="form-group"><input type="text" name="venue" placeholder="场馆名称 / Venue Name *" required></div>
+  <div class="form-group"><input type="text" name="name" placeholder="联系人 / Contact Name *" required></div>
+  <div class="form-group"><input type="text" name="contact" placeholder="手机/微信 / Phone or WeChat *" required></div>
+  <div class="form-group"><input type="date" name="date" placeholder="预计演出日期 / Preferred Date"></div>
+  <div class="form-group"><input type="number" name="guests" placeholder="预计观众人数 / Expected Guests"></div>
+  <div class="form-group">
+    <select name="package"><option>套餐选择 / Package</option><option>体验场 / Trial ¥3,500</option><option>标准场 / Standard ¥5,500</option><option>驻场合作 / Residency</option></select>
+  </div>
+  <div class="form-group"><textarea name="notes" placeholder="备注 / Notes"></textarea></div>
+  <button type="submit" class="btn btn-filled" style="width:100%;justify-content:center;">提交预约 / Submit Booking</button>
+</form>
     </div>
   </div>
 </section>
