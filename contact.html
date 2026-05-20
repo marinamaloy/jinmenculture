@@ -35,28 +35,27 @@
       <div class="fade-up">
         <h3 style="font-family:var(--font-cn-serif);font-size:20px;color:var(--gold-text);margin-bottom:24px;" class="lang-cn">发送咨询</h3>
         <h3 style="font-family:var(--font-en-display);font-size:18px;color:var(--text-primary);display:none;" class="lang-en">Send Inquiry</h3>
-        <form onsubmit="event.preventDefault();showToast();">
-          <div class="form-group"><input type="text" placeholder="姓名 / Name *" required></div>
-          <div class="form-group"><input type="text" placeholder="公司 / Company (optional)"></div>
-          <div class="form-group"><input type="text" placeholder="联系方式 / Phone or WeChat *" required></div>
-          <div class="form-group">
-            <select>
-              <option>咨询类型 / Inquiry Type</option>
-              <option>原创IP合作 / Original IP Partnership</option>
-              <option>马戏团的幽魂投资 / Ghost of Circus Investment</option>
-              <option>幻觉工程订制 / Custom Illusion Engineering</option>
-              <option>品牌演出预约 / Brand Show Booking</option>
-              <option>微醺秀预约 / Weixunxiu Booking</option>
-              <option>演艺创意合作 / Creative Direction</option>
-              <option>其他 / Other</option>
-            </select>
-          </div>
-          <div class="form-group"><textarea placeholder="留言 / Message"></textarea></div>
-          <button type="submit" class="btn btn-filled" style="width:100%;justify-content:center;">发送 / Send</button>
-        </form>
-        <p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;" class="lang-cn">已收到！我们将在1个工作日内与您联系。</p>
-        <p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;display:none;" class="lang-en">Received! We'll be in touch within 1 business day.</p>
-      </div>
+        <form action="https://formspree.io/f/mzdwdnde" method="POST">
+  <div class="form-group"><input type="text" name="name" placeholder="姓名 / Name *" required></div>
+  <div class="form-group"><input type="text" name="company" placeholder="公司 / Company (optional)"></div>
+  <div class="form-group"><input type="text" name="contact" placeholder="联系方式 / Phone or WeChat *" required></div>
+  <div class="form-group">
+    <select name="inquiry_type">
+      <option>咨询类型 / Inquiry Type</option>
+      <option>原创IP合作 / Original IP Partnership</option>
+      <option>马戏团的幽魂投资 / Ghost of Circus Investment</option>
+      <option>幻觉工程订制 / Custom Illusion Engineering</option>
+      <option>品牌演出预约 / Brand Show Booking</option>
+      <option>微醺秀预约 / Weixunxiu Booking</option>
+      <option>演艺创意合作 / Creative Direction</option>
+      <option>其他 / Other</option>
+    </select>
+  </div>
+  <div class="form-group"><textarea name="message" placeholder="留言 / Message"></textarea></div>
+  <button type="submit" class="btn btn-filled" style="width:100%;justify-content:center;">发送 / Send</button>
+</form>
+<p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;" class="lang-cn">提交后 Formspree 将自动跳转确认页。</p>
+<p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;display:none;" class="lang-en">You will be redirected to a confirmation page after submission.</p>
 
       <!-- Right: Contact Info -->
       <div class="fade-up">
