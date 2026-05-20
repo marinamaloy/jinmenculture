@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>联系我们 · Contact — 浸门文化 JINMEN CULTURE</title>
+<meta name="description" content="联系浸门文化——原创IP合作、幻觉工程定制、品牌演出预约、投资合作洽谈。WeChat: Alex-lives">
+<link rel="icon" type="image/png" href="images/jinmen-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@300;400;500&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<!-- Compact Hero -->
+<section style="position:relative;min-height:45vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;">
+  <div style="position:absolute;inset:0;z-index:0;"><img src="images/联系我们背景.png" alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.65) saturate(0.55);"></div>
+  <div style="position:absolute;inset:0;background:rgba(9,9,9,0.6);z-index:1;"></div>
+  <div style="position:relative;z-index:2;padding:100px 40px 60px;">
+    <h1 style="font-family:var(--font-cn-serif);font-size:42px;color:var(--gold-text);font-weight:400;margin-bottom:8px;">准备好合作了吗？</h1>
+    <h1 style="font-family:var(--font-en-display);font-size:30px;color:var(--text-primary);display:none;" class="lang-en">Ready to Work Together?</h1>
+    <div class="cta-row" style="margin-top:32px;">
+      <button class="btn btn-outlined" onclick="copyToClipboard('1379197706@qq.com')">&#9993; 发送邮件 / Email Us</button>
+      <button class="btn btn-filled" onclick="copyToClipboard('Alex-lives')">&#128172; 微信咨询 / WeChat</button>
+      <button class="btn btn-outlined" onclick="copyToClipboard('13641709150')">&#128222; 预约通话 / Call Us</button>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section section-alt" style="position:relative;z-index:2;">
+  <div class="container">
+    <div class="grid-2" style="gap:48px;align-items:start;">
+      <!-- Left: Form -->
+      <div class="fade-up">
+        <h3 style="font-family:var(--font-cn-serif);font-size:20px;color:var(--gold-text);margin-bottom:24px;" class="lang-cn">发送咨询</h3>
+        <h3 style="font-family:var(--font-en-display);font-size:18px;color:var(--text-primary);display:none;" class="lang-en">Send Inquiry</h3>
+        <form onsubmit="event.preventDefault();showToast();">
+          <div class="form-group"><input type="text" placeholder="姓名 / Name *" required></div>
+          <div class="form-group"><input type="text" placeholder="公司 / Company (optional)"></div>
+          <div class="form-group"><input type="text" placeholder="联系方式 / Phone or WeChat *" required></div>
+          <div class="form-group">
+            <select>
+              <option>咨询类型 / Inquiry Type</option>
+              <option>原创IP合作 / Original IP Partnership</option>
+              <option>马戏团的幽魂投资 / Ghost of Circus Investment</option>
+              <option>幻觉工程订制 / Custom Illusion Engineering</option>
+              <option>品牌演出预约 / Brand Show Booking</option>
+              <option>微醺秀预约 / Weixunxiu Booking</option>
+              <option>演艺创意合作 / Creative Direction</option>
+              <option>其他 / Other</option>
+            </select>
+          </div>
+          <div class="form-group"><textarea placeholder="留言 / Message"></textarea></div>
+          <button type="submit" class="btn btn-filled" style="width:100%;justify-content:center;">发送 / Send</button>
+        </form>
+        <p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;" class="lang-cn">已收到！我们将在1个工作日内与您联系。</p>
+        <p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;display:none;" class="lang-en">Received! We'll be in touch within 1 business day.</p>
+      </div>
+
+      <!-- Right: Contact Info -->
+      <div class="fade-up">
+        <h3 style="font-family:var(--font-cn-serif);font-size:20px;color:var(--gold-text);margin-bottom:24px;" class="lang-cn">联系方式</h3>
+        <h3 style="font-family:var(--font-en-display);font-size:18px;color:var(--text-primary);display:none;" class="lang-en">Contact Info</h3>
+
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <!-- WeChat Card -->
+          <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.15);padding:20px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,160,96,0.4)'" onmouseout="this.style.borderColor='rgba(201,160,96,0.15)'" onclick="copyToClipboard('Alex-lives')">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,160,96,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">WECHAT</div>
+              <div style="font-size:15px;color:var(--text-primary);margin-top:2px;">Alex-lives</div>
+            </div>
+            <div style="margin-left:auto;font-size:11px;color:var(--gold);border:1px solid rgba(201,160,96,0.3);padding:4px 10px;border-radius:12px;">点击复制</div>
+          </div>
+
+          <!-- Email Card -->
+          <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.15);padding:20px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,160,96,0.4)'" onmouseout="this.style.borderColor='rgba(201,160,96,0.15)'" onclick="copyToClipboard('1379197706@qq.com')">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,160,96,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">EMAIL</div>
+              <div style="font-size:15px;color:var(--text-primary);margin-top:2px;">1379197706@qq.com</div>
+            </div>
+            <div style="margin-left:auto;font-size:11px;color:var(--gold);border:1px solid rgba(201,160,96,0.3);padding:4px 10px;border-radius:12px;">点击复制</div>
+          </div>
+
+          <!-- Phone Card -->
+          <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.15);padding:20px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,160,96,0.4)'" onmouseout="this.style.borderColor='rgba(201,160,96,0.15)'" onclick="copyToClipboard('13641709150')">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,160,96,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">PHONE</div>
+              <div style="font-size:15px;color:var(--text-primary);margin-top:2px;">13641709150</div>
+            </div>
+            <div style="margin-left:auto;font-size:11px;color:var(--gold);border:1px solid rgba(201,160,96,0.3);padding:4px 10px;border-radius:12px;">点击复制</div>
+          </div>
+
+          <!-- Location Card -->
+          <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.15);padding:20px 24px;display:flex;align-items:center;gap:16px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,160,96,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">LOCATION</div>
+              <div style="font-size:15px;color:var(--text-primary);margin-top:2px;">Shanghai, China</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:32px;text-align:center;">
+          <img src="images/wechat-qr.jpg" alt="WeChat QR" style="width:160px;height:160px;border-radius:4px;border:1px solid rgba(201,160,96,0.2);">
+          <p style="font-size:11px;color:var(--text-tertiary);margin-top:8px;">扫码添加微信 / Scan to add WeChat</p>
+        </div>
+
+        <p style="font-size:12px;color:var(--text-tertiary);margin-top:24px;text-align:center;" class="lang-cn">我们承诺在1个工作日内回复所有咨询</p>
+        <p style="font-size:12px;color:var(--text-tertiary);margin-top:24px;text-align:center;display:none;" class="lang-en">We respond to all inquiries within 1 business day</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" style="position:relative;z-index:2;"><div class="container"><div class="footer-grid"><div class="footer-col"><div style="display:flex;align-items:center;gap:10px;"><img src="images/jinmen-logo.png" alt="" style="width:32px;height:32px;"><div><div style="font-family:var(--font-cn-serif);font-size:15px;color:var(--gold-text);">浸门文化</div><div style="font-family:var(--font-en);font-size:7.5px;color:#6A6050;letter-spacing:3px;">JINMEN CULTURE</div></div></div><p class="tagline" style="display:none;">我们实现不可能</p></div><div class="footer-col"><h4 class="lang-cn">快速链接</h4><h4 class="lang-en" style="display:none;">Quick Links</h4><a href="index.html">首页</a><a href="ip.html">原创IP</a><a href="engineering.html">幻觉工程</a><a href="shows.html">品牌演出</a><a href="direction.html">演艺创意</a><a href="about.html">关于我们</a><a href="contact.html">联系我们</a></div><div class="footer-col"><h4 class="lang-cn">联系方式</h4><h4 class="lang-en" style="display:none;">Contact</h4><button class="contact-item" onclick="copyToClipboard('Alex-lives')"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WeChat: Alex-lives</button><button class="contact-item" onclick="copyToClipboard('1379197706@qq.com')"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>1379197706@qq.com</button><button class="contact-item" onclick="copyToClipboard('13641709150')"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>13641709150</button><img src="images/wechat-qr.jpg" alt="WeChat QR" class="qr"></div></div><div class="footer-bottom">&copy; 2026 上海浸门文化传媒有限公司 · Shanghai Jinmen Culture Media Co., Ltd.</div></div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
