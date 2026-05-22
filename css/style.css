@@ -40,6 +40,30 @@
   --font-cn-serif: 'Noto Serif SC', serif;
 }
 
+.device-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* ensure text sits on top of the image */
+  overflow: hidden;
+  border-radius: 12px; /* keep your existing rounding */
+}
+
+/* semi‑transparent overlay – keeps text readable */
+.card-overlay {
+  background: rgba(0, 0, 0, 0.6); /* dark overlay, adjust opacity as needed */
+  padding: 16px;
+  border-radius: inherit;
+  height: 100%;
+  transition: background 0.3s;
+}
+
+/* optional: lighten overlay on hover */
+.device-card:hover .card-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
 /* ---- Reset & Base ---- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
