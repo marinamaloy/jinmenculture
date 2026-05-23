@@ -189,6 +189,7 @@ body.show-en .lang-cn-inline { display: none !important; }
   color: var(--gold);
   cursor: pointer;
 }
+.mobile-menu { display: none; }
 @media (max-width: 900px) {
   .site-nav { padding: 0 16px; }
   .site-nav .nav-links { display: none; }
