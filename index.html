@@ -14,7 +14,19 @@
   }
 })();
 </script>
-  
+  <style>
+  /* Critical styles – prevents white flash */
+  body {
+    background: #090909;
+    margin: 0;
+    padding: 0;
+  }
+  /* Optional: hide content until nav is ready? Not needed, but prevents layout shift */
+  #nav-placeholder {
+    display: block;
+    min-height: 64px;
+  }
+</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>浸门文化 · JINMEN CULTURE — 幻觉工程 · 沉浸式演出 · 魔术体验</title>
