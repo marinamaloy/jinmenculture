@@ -40,6 +40,24 @@
   --font-cn-serif: 'Noto Serif SC', serif;
 }
 
+/* Force all inputs to respect container width */
+input, select, textarea, button {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Specifically target date inputs */
+input[type="date"] {
+  min-width: 0;          /* removes the forced minimum width */
+  width: 100%;
+}
+
+/* Also improve long placeholder text wrapping (not fully supported, but safe) */
+.form-group input::placeholder {
+  white-space: normal;
+  word-break: break-word;
+}
+
 .device-card {
   position: relative;
   background-size: cover;
