@@ -75,8 +75,35 @@ function injectNav() {
     </div>
   `;
 
-  const placeholder = document.getElementById('nav-placeholder');
+  function injectMobileTabs() {
+  const tabsHTML = `
+    <div class="mobile-page-tabs" id="mobilePageTabs">
+      <a href="index.html" data-tab="index">首页</a>
+      <a href="ip.html" data-tab="ip">原创IP</a>
+      <a href="engineering.html" data-tab="engineering">幻觉工程</a>
+      <a href="shows.html" data-tab="shows">品牌演出</a>
+      <a href="direction.html" data-tab="direction">演艺创意</a>
+      <a href="about.html" data-tab="about">关于我们</a>
+      <a href="contact.html" data-tab="contact">联系我们</a>
+    </div>
+  `;
+  
+  // Insert after site-nav
+  const nav = document.querySelector('.site-nav');
+  if (nav) nav.insertAdjacentHTML('afterend', tabsHTML);
+  
+  // Highlight active tab
+  const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+  document.querySelectorAll('#mobilePageTabs a').forEach(tab => {
+    if (tab.dataset.tab === currentPage) tab.classList.add('active');
+  });
+}
+
+    const placeholder = document.getElementById('nav-placeholder');
   if (placeholder) placeholder.innerHTML = navHTML;
+  
+  // Inject mobile page tabs (only shows on mobile via CSS)
+  injectMobileTabs();
 }
 
 function toggleMobileMenu() {
