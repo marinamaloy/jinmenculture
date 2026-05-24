@@ -75,7 +75,15 @@ function injectNav() {
     </div>
   `;
 
-  function injectMobileTabs() {
+  const placeholder = document.getElementById('nav-placeholder');
+  if (placeholder) placeholder.innerHTML = navHTML;
+  
+  // Inject mobile scrollable tabs
+  injectMobileTabs();
+}
+
+// Separate function - NOT inside injectNav()
+function injectMobileTabs() {
   const tabsHTML = `
     <div class="mobile-page-tabs" id="mobilePageTabs">
       <a href="index.html" data-tab="index">首页</a>
@@ -97,13 +105,6 @@ function injectNav() {
   document.querySelectorAll('#mobilePageTabs a').forEach(tab => {
     if (tab.dataset.tab === currentPage) tab.classList.add('active');
   });
-}
-
-    const placeholder = document.getElementById('nav-placeholder');
-  if (placeholder) placeholder.innerHTML = navHTML;
-  
-  // Inject mobile page tabs (only shows on mobile via CSS)
-  injectMobileTabs();
 }
 
 function toggleMobileMenu() {
