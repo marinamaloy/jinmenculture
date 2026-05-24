@@ -4,9 +4,15 @@
   <script>
   // Prevent language flash on first paint
   (function() {
-    var saved = localStorage.getItem('jm-lang');
-    if (saved === 'en') document.documentElement.classList.add('show-en');
-  })();
+  var saved = localStorage.getItem('jm-lang');
+  if (saved === 'en') {
+    document.documentElement.classList.add('show-en');
+    // Also ensure body gets the class when it exists
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('show-en');
+    });
+  }
+})();
 </script>
   
 <meta charset="UTF-8">
