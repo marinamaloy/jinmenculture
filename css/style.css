@@ -81,8 +81,10 @@ body {
 
 /* Language toggle — default Chinese */
 .lang-en { display: none !important; }
-body.show-en .lang-cn { display: none !important; }
-body.show-en .lang-en { display: block !important; }
+body.show-en .lang-cn,
+html.show-en .lang-cn { display: none !important; }
+body.show-en .lang-cn,
+html.show-en .lang-cn { display: block !important; }
 body.show-en .lang-en-inline { display: inline !important; }
 body.show-en .lang-cn-inline { display: none !important; }
 
