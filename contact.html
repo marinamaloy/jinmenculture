@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>联系我们 · Contact — 浸门文化 JINMEN CULTURE</title>
-<meta name="description" content="联系浸门文化——原创IP合作、幻觉工程定制、品牌演出预约、投资合作洽谈。WeChat: Alex-lives">
-<link rel="icon" type="image/png" href="images/jinmen-logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@300;400;500&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-
   <script>
+  // Prevent language flash on first paint
+  (function() {
+    var saved = localStorage.getItem('jm-lang');
+    if (saved === 'en') document.documentElement.classList.add('show-en');
+  })();
+</script>
+
+   <script>
 function handleSubmit(e) {
   e.preventDefault();
   var form = e.target;
@@ -28,6 +27,16 @@ function handleSubmit(e) {
 }
 </script>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>联系我们 · Contact — 浸门文化 JINMEN CULTURE</title>
+<meta name="description" content="联系浸门文化——原创IP合作、幻觉工程定制、品牌演出预约、投资合作洽谈。WeChat: Alex-lives">
+<link rel="icon" type="image/png" href="images/jinmen-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@300;400;500&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+ 
   
 <body>
 <div id="nav-placeholder"></div>
