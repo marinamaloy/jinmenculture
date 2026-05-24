@@ -201,13 +201,20 @@ body.show-en .lang-en { display: block !important; }
   .nav-mobile-btn { display: block; }
   
   /* Horizontal scrollable page tabs */
-  .mobile-page-tabs {
+    .mobile-page-tabs {
     display: flex;
+    position: fixed;        /* ← ВСЕГДА ВИДЕН при скролле */
+    top: 56px;              /* ← Прямо под шапкой */
+    left: 0; right: 0;
+    z-index: 999;           /* ← Поверх контента */
+    background: var(--bg-nav);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid rgba(30,28,22,0.2);
+    padding: 4px 12px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     gap: 0;
-    width: 100%;
-    padding-bottom: 4px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
