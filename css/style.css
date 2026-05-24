@@ -86,8 +86,6 @@ body {
 /* When English mode is active */
 body.show-en .lang-cn { display: none !important; }
 body.show-en .lang-en { display: block !important; }
-body.show-en .lang-en-inline { display: inline !important; }
-body.show-en .lang-cn-inline { display: none !important; }
 
 /* ---- Typography Classes ---- */
 .font-display { font-family: var(--font-en-display); }
