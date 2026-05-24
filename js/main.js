@@ -75,15 +75,21 @@ function injectNav() {
     </div>
   `;
 
-  const placeholder = document.getElementById('nav-placeholder');
-  if (placeholder) placeholder.innerHTML = navHTML;
-  
-  // Inject mobile scrollable tabs
-  injectMobileTabs();
+    const placeholder = document.getElementById('nav-placeholder');
+  if (placeholder) {
+    placeholder.innerHTML = navHTML;
+    injectMobileTabs();   // Only call after successful injection
+    initLangToggle();     // Re-attach listeners after new buttons are injected
+  }
 }
 
-// Separate function - NOT inside injectNav()
 function injectMobileTabs() {
+  const nav = document.querySelector('.site-nav');
+  if (!nav) return;   // ✅ Early exit if nav not found
+
+  // Avoid duplicate tabs
+  if (document.getElementById('mobilePageTabs')) return;
+
   const tabsHTML = `
     <div class="mobile-page-tabs" id="mobilePageTabs">
       <a href="index.html" data-tab="index">首页</a>
@@ -96,11 +102,8 @@ function injectMobileTabs() {
     </div>
   `;
   
-  // Insert after site-nav
-  const nav = document.querySelector('.site-nav');
-  if (nav) nav.insertAdjacentHTML('afterend', tabsHTML);
-  
-  // Highlight active tab
+ nav.insertAdjacentHTML('afterend', tabsHTML);
+
   const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
   document.querySelectorAll('#mobilePageTabs a').forEach(tab => {
     if (tab.dataset.tab === currentPage) tab.classList.add('active');
@@ -108,7 +111,8 @@ function injectMobileTabs() {
 }
 
 function toggleMobileMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
+  const menu = document.getElementById('mobileMenu');
+  if (menu) menu.classList.toggle('open');
 }
 
 // ---- Active Nav Link ----
@@ -188,8 +192,9 @@ let currentLightboxImages = [];
 let currentLightboxIndex = 0;
 
 function openLightbox(images, index) {
+  if (!images || images.length === 0) return;
   currentLightboxImages = images;
-  currentLightboxIndex = index;
+  currentLightboxIndex = Math.min(index, images.length - 1);
   renderLightbox();
 }
 
@@ -236,9 +241,7 @@ function lightboxNext() {
 // ---- Initialize everything ----
 document.addEventListener('DOMContentLoaded', () => {
   injectNav();
-  initLangToggle();
   setActiveNav();
-  scrollToTop();
   initHeroParallax();
   initScrollAnimations();
 });
