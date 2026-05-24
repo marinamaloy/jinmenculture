@@ -190,28 +190,20 @@ body.show-en .lang-cn-inline { display: none !important; }
   cursor: pointer;
 }
 .mobile-menu { display: none; }
+
 @media (max-width: 900px) {
-  .site-nav { padding: 0 12px; height: 56px; }
+  .site-nav { padding: 0 12px; height: auto; min-height: 56px; flex-wrap: wrap; }
   .site-nav .nav-links { display: none; }
-  .nav-mobile-btn { display: none; }
+  .nav-mobile-btn { display: block; }
   
-  /* Fixed mobile tab navigation */
-  .site-nav {
-    flex-wrap: wrap;
-    height: auto;
-    min-height: 56px;
-    padding-bottom: 0;
-  }
-  
-  /* Horizontal scrollable page tabs under the logo */
+  /* Horizontal scrollable page tabs */
   .mobile-page-tabs {
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     gap: 0;
     width: 100%;
-    margin-top: 4px;
-    padding-bottom: 6px;
+    padding-bottom: 4px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -235,16 +227,14 @@ body.show-en .lang-cn-inline { display: none !important; }
     color: var(--gold-text);
     border-bottom-color: var(--gold);
   }
-  .mobile-page-tabs a:active {
-    color: var(--text-primary);
-  }
   
-  /* Push page content down to avoid being hidden behind fixed nav */
+  /* Push content down */
   .hero-section,
   .page-hero {
     margin-top: 96px;
   }
-}
+  
+  /* Mobile full-screen menu (hamburger) */
   .mobile-menu {
     position: fixed; inset: 0;
     background: rgba(9,9,9,0.97);
