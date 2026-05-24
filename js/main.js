@@ -75,11 +75,11 @@ function injectNav() {
     </div>
   `;
 
-    const placeholder = document.getElementById('nav-placeholder');
+      const placeholder = document.getElementById('nav-placeholder');
   if (placeholder) {
     placeholder.innerHTML = navHTML;
-    injectMobileTabs();   // Only call after successful injection
-    initLangToggle();     // Re-attach listeners after new buttons are injected
+    injectMobileTabs(); // ← добавляем вызов после вставки навигации
+    initLangToggle();
   }
 }
 
@@ -110,11 +110,36 @@ function injectMobileTabs() {
   });
 }
 
+function injectMobileTabs() {
+  const nav = document.querySelector('.site-nav');
+  if (!nav) return;
+  if (document.getElementById('mobilePageTabs')) return; // не создавать дубликат
+
+  const tabsHTML = `
+    <div class="mobile-page-tabs" id="mobilePageTabs">
+      <a href="index.html" data-tab="index">首页</a>
+      <a href="ip.html" data-tab="ip">原创IP</a>
+      <a href="engineering.html" data-tab="engineering">幻觉工程</a>
+      <a href="shows.html" data-tab="shows">品牌演出</a>
+      <a href="direction.html" data-tab="direction">演艺创意</a>
+      <a href="about.html" data-tab="about">关于我们</a>
+      <a href="contact.html" data-tab="contact">联系我们</a>
+    </div>
+  `;
+
+  nav.insertAdjacentHTML('afterend', tabsHTML);
+
+  // Подсветить активную страницу
+  const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+  document.querySelectorAll('#mobilePageTabs a').forEach(tab => {
+    if (tab.dataset.tab === currentPage) tab.classList.add('active');
+  });
+}
+
 function toggleMobileMenu() {
   const menu = document.getElementById('mobileMenu');
   if (menu) menu.classList.toggle('open');
 }
-
 // ---- Active Nav Link ----
 function setActiveNav() {
   const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
