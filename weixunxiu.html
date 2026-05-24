@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+
+  <script>
+  // Prevent language flash on first paint
+  (function() {
+    var saved = localStorage.getItem('jm-lang');
+    if (saved === 'en') document.documentElement.classList.add('show-en');
+  })();
+</script>
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>微醺秀 · Weixunxiu — 浸门文化 JINMEN CULTURE</title>
