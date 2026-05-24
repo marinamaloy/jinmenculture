@@ -190,7 +190,9 @@ body.show-en .lang-en { display: block !important; }
   color: var(--gold);
   cursor: pointer;
 }
-.mobile-menu { display: none; }
+.mobile-menu { 
+  display: none !important; 
+}
 .mobile-page-tabs { display: none; }
 
 @media (max-width: 900px) {
@@ -241,7 +243,7 @@ body.show-en .lang-en { display: block !important; }
     position: fixed; inset: 0;
     background: rgba(9,9,9,0.97);
     z-index: 2000;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
