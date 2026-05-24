@@ -80,11 +80,12 @@ body {
 }
 
 /* Language toggle — default Chinese */
+/* Default: Chinese visible, English hidden */
 .lang-en { display: none !important; }
-body.show-en .lang-cn,
-html.show-en .lang-cn { display: none !important; }
-body.show-en .lang-cn,
-html.show-en .lang-cn { display: block !important; }
+
+/* When English mode is active */
+body.show-en .lang-cn { display: none !important; }
+body.show-en .lang-en { display: block !important; }
 body.show-en .lang-en-inline { display: inline !important; }
 body.show-en .lang-cn-inline { display: none !important; }
 
@@ -192,6 +193,7 @@ body.show-en .lang-cn-inline { display: none !important; }
   cursor: pointer;
 }
 .mobile-menu { display: none; }
+.mobile-page-tabs { display: none; }
 
 @media (max-width: 900px) {
   .site-nav { padding: 0 12px; height: auto; min-height: 56px; flex-wrap: wrap; }
@@ -1362,6 +1364,3 @@ body.scrolled-past-hero .hero-bg {
   .feedback-grid { grid-template-columns: repeat(2, 1fr); }
   .site-nav { padding: 0 16px; }
 }
-
-/* Scroll to top */
-html { scroll-behavior: smooth; }
