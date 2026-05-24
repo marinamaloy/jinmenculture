@@ -55,7 +55,7 @@ function handleSubmit(e) {
   <div style="position:absolute;inset:0;background:rgba(9,9,9,0.6);z-index:1;"></div>
   <div style="position:relative;z-index:2;padding:100px 40px 60px;">
     <h1 style="font-family:var(--font-cn-serif);font-size:42px;color:var(--gold-text);font-weight:400;margin-bottom:8px;" class="lang-cn">准备好合作了吗？</h1>
-    <h1 style="font-family:var(--font-en-display);font-size:30px;color:var(--text-primary);display:none;" class="lang-en">Ready to Work Together?</h1>
+    <h1 style="font-family:var(--font-en-display);font-size:30px;color:var(--text-primary)" class="lang-en">Ready to Work Together?</h1>
     <div class="cta-row" style="margin-top:32px;">
       <button class="btn btn-outlined" onclick="copyToClipboard('1379197706@qq.com')">&#9993; 发送邮件 / Email Us</button>
       <button class="btn btn-filled" onclick="copyToClipboard('Alex-lives')">&#128172; 微信咨询 / WeChat</button>
@@ -74,6 +74,7 @@ function handleSubmit(e) {
         <h3 style="font-family:var(--font-cn-serif);font-size:20px;color:var(--gold-text);margin-bottom:24px;" class="lang-cn">发送咨询</h3>
         <h3 style="font-family:var(--font-en-display);font-size:18px;color:var(--text-primary);display:none;" class="lang-en">Send Inquiry</h3>
         <form action="https://formspree.io/f/mzdwdnde" method="POST" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="_next" value="https://jinmenculture.com/contact.html">
           <div class="form-group"><input type="text" name="name" placeholder="姓名 / Name *" required></div>
           <div class="form-group"><input type="text" name="company" placeholder="公司 / Company (optional)"></div>
           <div class="form-group"><input type="text" name="contact" placeholder="联系方式 / Phone or WeChat *" required></div>
