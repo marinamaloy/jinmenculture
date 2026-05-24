@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+
+   <script>
+function handleSubmit(e) {
+  e.preventDefault();
+  var form = e.target;
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(function(response) {
+    if (response.ok) {
+      form.innerHTML = '<p style="text-align:center;color:var(--gold);padding:40px 0;">✓ 消息已发送！我们会尽快联系您。<br>Message sent! We will contact you soon.</p>';
+    } else {
+      alert('发送失败，请重试 / Failed to send, please try again.');
+    }
+  });
+}
+</script>
+
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>演艺创意 · Creative Direction — 浸门文化 JINMEN CULTURE</title>
