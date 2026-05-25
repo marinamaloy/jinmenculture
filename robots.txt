@@ -1,0 +1,39 @@
+# Allow Standard Search Engines
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# --- AI Crawler Access (for GEO) ---
+# Allow OpenAI
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Allow Google's AI (for Gemini & AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Allow Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+# Allow AI Search Engines
+User-agent: PerplexityBot
+Allow: /
+User-agent: Cohere-ai
+Allow: /
+
+# Optional: If you want to limit crawl rate
+# Crawl-delay: 1
+
+# --- Explicitly Block Access to Sensitive Areas ---
+# Disallow: /cgi-bin/
+# Disallow: /private/
+# Disallow: /tmp/
+
+# -- Sitemap (Optional but recommended) --
+# Sitemap: https://jinmenculture.com/sitemap.xml
