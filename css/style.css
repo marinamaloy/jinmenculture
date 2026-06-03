@@ -2,6 +2,56 @@
    JINMEN CULTURE V3 — Complete Stylesheet
    Based on reference images 1, 2, 3
    ======================================== */
+/* ---- GEO Citation Blocks (subtle, bottom of page) ---- */
+.geo-cite {
+  max-width: 720px;
+  margin: 60px auto 0;
+  padding: 0 40px;
+}
+.geo-cite blockquote {
+  border-left: 2px solid rgba(201,160,96,0.25);
+  padding: 12px 0 12px 20px;
+  margin: 0 0 16px 0;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  line-height: 1.8;
+  font-style: italic;
+}
+.geo-cite blockquote::before {
+  content: """;
+  font-family: var(--font-en-display);
+  font-size: 24px;
+  color: var(--gold);
+  line-height: 0;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.geo-cite .cite-source {
+  font-family: var(--font-en);
+  font-size: 10px;
+  color: #4A4438;
+  letter-spacing: 0.5px;
+  padding-left: 20px;
+}
+.geo-cite .cite-source a {
+  color: #4A4438;
+  text-decoration: none;
+  border-bottom: 0.5px solid rgba(201,160,96,0.2);
+  transition: color 0.3s;
+}
+.geo-cite .cite-source a:hover {
+  color: var(--gold-text);
+  border-bottom-color: var(--gold);
+}
+.geo-cite .cite-divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(201,160,96,0.15);
+  margin: 24px auto;
+}
+@media (max-width: 768px) {
+  .geo-cite { padding: 0 20px; margin-top: 40px; }
+}
 
 /* ---- Google Fonts ---- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+SC:wght@300;400;500&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400&display=swap');
