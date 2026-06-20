@@ -37,15 +37,17 @@ function injectNav() {
         </div>
       </a>
 
-      <ul class="nav-links">
-        <li><a href="index.html" data-nav="index">首页</a></li>
-        <li><a href="ip.html" data-nav="ip">原创IP</a></li>
-        <li><a href="engineering.html" data-nav="engineering">幻觉工程</a></li>
-        <li><a href="shows.html" data-nav="shows">品牌演出</a></li>
-        <li><a href="direction.html" data-nav="direction">演艺创意</a></li>
-        <li><a href="about.html" data-nav="about">关于我们</a></li>
-        <li><a href="contact.html" data-nav="contact">联系我们</a></li>
-      </ul>
+      <nav aria-label="Main navigation">
+  <ul class="nav-links">
+    <li><a href="index.html" data-nav="index">首页</a></li>
+    <li><a href="ip.html" data-nav="ip">原创IP</a></li>
+    <li><a href="engineering.html" data-nav="engineering">幻觉工程</a></li>
+    <li><a href="shows.html" data-nav="shows">品牌演出</a></li>
+    <li><a href="direction.html" data-nav="direction">演艺创意</a></li>
+    <li><a href="about.html" data-nav="about">关于我们</a></li>
+    <li><a href="contact.html" data-nav="contact">联系我们</a></li>
+  </ul>
+</nav>
 
       <div style="display:flex;align-items:center;gap:16px;">
         <div class="lang-toggle">
