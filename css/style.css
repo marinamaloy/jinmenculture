@@ -542,7 +542,7 @@ body.scrolled-past-hero .hero-bg {
   padding: 40px 16px 16px;
   background: linear-gradient(to top, rgba(9,9,9,0.95) 0%, transparent 100%);
 }
-.case-card .overlay h4 {
+.case-card .overlay h3 {
   font-family: var(--font-cn-serif);
   font-size: 14px;
   color: var(--gold-text);
