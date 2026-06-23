@@ -849,6 +849,7 @@ body.scrolled-past-hero .hero-bg {
 }
 .page-hero-bg img {
   width: 100%; height: 100%;
+   image-rendering: auto;
   object-fit: cover;
   filter: brightness(0.65) saturate(0.55);
 }
