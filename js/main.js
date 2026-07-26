@@ -37,15 +37,15 @@ function injectNav() {
         </div>
       </a>
 
-      <nav aria-label="Main navigation">
+     <nav aria-label="Main navigation">
   <ul class="nav-links">
-    <li><a href="index.html" data-nav="index">首页</a></li>
-    <li><a href="ip.html" data-nav="ip">原创IP</a></li>
-    <li><a href="engineering.html" data-nav="engineering">幻觉工程</a></li>
-    <li><a href="shows.html" data-nav="shows">品牌演出</a></li>
-    <li><a href="direction.html" data-nav="direction">演艺创意</a></li>
-    <li><a href="about.html" data-nav="about">关于我们</a></li>
-    <li><a href="contact.html" data-nav="contact">联系我们</a></li>
+    <li><a href="index.html" data-nav="index"><span class="lang-cn">首页</span><span class="lang-en" style="display:none;">Home</span></a></li>
+    <li><a href="ip.html" data-nav="ip"><span class="lang-cn">原创IP</span><span class="lang-en" style="display:none;">Original IP</span></a></li>
+    <li><a href="engineering.html" data-nav="engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en" style="display:none;">Engineering</span></a></li>
+    <li><a href="shows.html" data-nav="shows"><span class="lang-cn">品牌演出</span><span class="lang-en" style="display:none;">Brand Shows</span></a></li>
+    <li><a href="direction.html" data-nav="direction"><span class="lang-cn">演艺创意</span><span class="lang-en" style="display:none;">Creative Direction</span></a></li>
+    <li><a href="about.html" data-nav="about"><span class="lang-cn">关于我们</span><span class="lang-en" style="display:none;">About</span></a></li>
+    <li><a href="contact.html" data-nav="contact"><span class="lang-cn">联系我们</span><span class="lang-en" style="display:none;">Contact</span></a></li>
   </ul>
 </nav>
 
