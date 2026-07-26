@@ -387,7 +387,7 @@ body.scrolled-past-hero .hero-bg {
 .hero-nav-item {
   text-align: right;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: opacity 0.3s ease;
   text-decoration: none;
 }
