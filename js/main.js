@@ -92,13 +92,13 @@ function injectMobileTabs() {
 
   const tabsHTML = `
     <div class="mobile-page-tabs" id="mobilePageTabs">
-      <a href="index.html" data-tab="index">首页</a>
-      <a href="ip.html" data-tab="ip">原创IP</a>
-      <a href="engineering.html" data-tab="engineering">幻觉工程</a>
-      <a href="shows.html" data-tab="shows">品牌演出</a>
-      <a href="direction.html" data-tab="direction">演艺创意</a>
-      <a href="about.html" data-tab="about">关于我们</a>
-      <a href="contact.html" data-tab="contact">联系我们</a>
+      <a href="index.html" data-tab="index"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a>
+      <a href="ip.html" data-tab="ip"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a>
+      <a href="engineering.html" data-tab="engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a>
+      <a href="shows.html" data-tab="shows"><span class="lang-cn">品牌演出</span><span class="lang-en">Brand Shows</span></a>
+      <a href="direction.html" data-tab="direction"><span class="lang-cn">演艺创意</span><span class="lang-en">Creative Direction</span></a>
+      <a href="about.html" data-tab="about"><span class="lang-cn">关于我们</span><span class="lang-en">About</span></a>
+      <a href="contact.html" data-tab="contact"><span class="lang-cn">联系我们</span><span class="lang-en">Contact</span></a>
     </div>
   `;
   nav.insertAdjacentHTML('afterend', tabsHTML);
