@@ -37,17 +37,17 @@ function injectNav() {
         </div>
       </a>
 
-     <nav aria-label="Main navigation">
-  <ul class="nav-links">
-    <li><a href="index.html" data-nav="index"><span class="lang-cn">首页</span><span class="lang-en" style="display:none;">Home</span></a></li>
-    <li><a href="ip.html" data-nav="ip"><span class="lang-cn">原创IP</span><span class="lang-en" style="display:none;">Original IP</span></a></li>
-    <li><a href="engineering.html" data-nav="engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en" style="display:none;">Engineering</span></a></li>
-    <li><a href="shows.html" data-nav="shows"><span class="lang-cn">品牌演出</span><span class="lang-en" style="display:none;">Brand Shows</span></a></li>
-    <li><a href="direction.html" data-nav="direction"><span class="lang-cn">演艺创意</span><span class="lang-en" style="display:none;">Creative Direction</span></a></li>
-    <li><a href="about.html" data-nav="about"><span class="lang-cn">关于我们</span><span class="lang-en" style="display:none;">About</span></a></li>
-    <li><a href="contact.html" data-nav="contact"><span class="lang-cn">联系我们</span><span class="lang-en" style="display:none;">Contact</span></a></li>
-  </ul>
-</nav>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" data-nav="index"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a></li>
+          <li><a href="ip.html" data-nav="ip"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a></li>
+          <li><a href="engineering.html" data-nav="engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a></li>
+          <li><a href="shows.html" data-nav="shows"><span class="lang-cn">品牌演出</span><span class="lang-en">Brand Shows</span></a></li>
+          <li><a href="direction.html" data-nav="direction"><span class="lang-cn">演艺创意</span><span class="lang-en">Creative Direction</span></a></li>
+          <li><a href="about.html" data-nav="about"><span class="lang-cn">关于我们</span><span class="lang-en">About</span></a></li>
+          <li><a href="contact.html" data-nav="contact"><span class="lang-cn">联系我们</span><span class="lang-en">Contact</span></a></li>
+        </ul>
+      </nav>
 
       <div style="display:flex;align-items:center;gap:16px;">
         <div class="lang-toggle">
@@ -67,29 +67,27 @@ function injectNav() {
 
     <div class="mobile-menu" id="mobileMenu">
       <button class="close" onclick="toggleMobileMenu()">&times;</button>
-      <a href="index.html">首页 / Home</a>
-      <a href="ip.html">原创IP / Original IP</a>
-      <a href="engineering.html">幻觉工程 / Engineering</a>
-      <a href="shows.html">品牌演出 / Brand Shows</a>
-      <a href="direction.html">演艺创意 / Direction</a>
-      <a href="about.html">关于我们 / About</a>
-      <a href="contact.html">联系我们 / Contact</a>
+      <a href="index.html"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a>
+      <a href="ip.html"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a>
+      <a href="engineering.html"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a>
+      <a href="shows.html"><span class="lang-cn">品牌演出</span><span class="lang-en">Brand Shows</span></a>
+      <a href="direction.html"><span class="lang-cn">演艺创意</span><span class="lang-en">Creative Direction</span></a>
+      <a href="about.html"><span class="lang-cn">关于我们</span><span class="lang-en">About</span></a>
+      <a href="contact.html"><span class="lang-cn">联系我们</span><span class="lang-en">Contact</span></a>
     </div>
   `;
 
-      const placeholder = document.getElementById('nav-placeholder');
+  const placeholder = document.getElementById('nav-placeholder');
   if (placeholder) {
     placeholder.innerHTML = navHTML;
-    injectMobileTabs(); // ← добавляем вызов после вставки навигации
+    injectMobileTabs();
     initLangToggle();
   }
 }
 
 function injectMobileTabs() {
   const nav = document.querySelector('.site-nav');
-  if (!nav) return;   // ✅ Early exit if nav not found
-
-  // Avoid duplicate tabs
+  if (!nav) return;
   if (document.getElementById('mobilePageTabs')) return;
 
   const tabsHTML = `
@@ -103,8 +101,7 @@ function injectMobileTabs() {
       <a href="contact.html" data-tab="contact">联系我们</a>
     </div>
   `;
-  
- nav.insertAdjacentHTML('afterend', tabsHTML);
+  nav.insertAdjacentHTML('afterend', tabsHTML);
 
   const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
   document.querySelectorAll('#mobilePageTabs a').forEach(tab => {
@@ -112,12 +109,11 @@ function injectMobileTabs() {
   });
 }
 
-
-
 function toggleMobileMenu() {
   const menu = document.getElementById('mobileMenu');
   if (menu) menu.classList.toggle('open');
 }
+
 // ---- Active Nav Link ----
 function setActiveNav() {
   const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
