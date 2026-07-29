@@ -2,7 +2,236 @@
    JINMEN CULTURE V3 — Complete Stylesheet
    Based on reference images 1, 2, 3
    ======================================== */
+/* ==================================================
+   FAQ — JINMEN DARK EDITORIAL ACCORDION
+   ================================================== */
 
+.faq-section {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(201, 160, 96, 0.07),
+      transparent 38%
+    ),
+    var(--bg-secondary, #0d0c0b);
+}
+
+.faq-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(1100px, calc(100% - 48px));
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 160, 96, 0.35),
+    transparent
+  );
+}
+
+.faq-heading {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.faq-eyebrow {
+  margin-bottom: 15px;
+  color: var(--gold-text, #d4aa6a);
+  font-family: var(--font-en, "Inter", sans-serif);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.faq-list {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(201, 160, 96, 0.22);
+}
+
+.faq-item {
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid rgba(201, 160, 96, 0.18);
+  background: rgba(255, 255, 255, 0.008);
+  transition:
+    background-color 280ms ease,
+    border-color 280ms ease;
+}
+
+.faq-item:hover,
+.faq-item[open] {
+  background: rgba(201, 160, 96, 0.035);
+  border-bottom-color: rgba(201, 160, 96, 0.38);
+}
+
+.faq-item summary {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 32px;
+  align-items: center;
+  min-height: 88px;
+  padding: 0 22px;
+  color: var(--text-primary, #ede8df);
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::marker {
+  display: none;
+  content: "";
+}
+
+.faq-number {
+  color: rgba(212, 170, 106, 0.65);
+  font-family: var(--font-en, "Inter", sans-serif);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.faq-question {
+  padding-right: 28px;
+  color: var(--text-primary, #ede8df);
+  font-family: var(--font-cn-serif, "Noto Serif SC", serif);
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 400;
+  line-height: 1.5;
+  transition: color 220ms ease;
+}
+
+.faq-question.lang-en {
+  font-family: var(--font-en-display, "Playfair Display", serif);
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+.faq-item:hover .faq-question,
+.faq-item[open] .faq-question {
+  color: var(--gold-text, #d4aa6a);
+}
+
+.faq-toggle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  justify-self: end;
+}
+
+.faq-toggle::before,
+.faq-toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--gold-text, #d4aa6a);
+  transform: translate(-50%, -50%);
+  transition:
+    transform 280ms ease,
+    opacity 280ms ease;
+}
+
+.faq-toggle::before {
+  width: 14px;
+  height: 1px;
+}
+
+.faq-toggle::after {
+  width: 1px;
+  height: 14px;
+}
+
+.faq-item[open] .faq-toggle::after {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-answer {
+  max-width: 760px;
+  padding: 0 68px 30px 74px;
+  animation: faqReveal 320ms ease both;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: var(--text-secondary, #a89f92);
+  font-family: var(--font-cn-serif, "Noto Serif SC", serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.faq-answer p.lang-en {
+  font-family: var(--font-en, "Inter", sans-serif);
+  line-height: 1.9;
+}
+
+@keyframes faqReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .faq-heading {
+    margin-bottom: 34px;
+  }
+
+  .faq-item summary {
+    grid-template-columns: 38px minmax(0, 1fr) 26px;
+    min-height: 78px;
+    padding: 0 10px;
+  }
+
+  .faq-number {
+    font-size: 9px;
+  }
+
+  .faq-question {
+    padding-right: 12px;
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    padding: 0 38px 25px 48px;
+  }
+
+  .faq-answer p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-item,
+  .faq-question,
+  .faq-toggle::before,
+  .faq-toggle::after {
+    transition: none;
+  }
+
+  .faq-answer {
+    animation: none;
+  }
+}
 
 /* ---- Google Fonts ---- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+SC:wght@300;400;500&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400&display=swap');
