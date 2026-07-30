@@ -2,6 +2,19 @@
    JINMEN CULTURE V3 — Complete Stylesheet
    Based on reference images 1, 2, 3
    ======================================== */
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .ip-collaboration-grid {
   display: grid;
   grid-template-columns: minmax(260px, 0.85fr) minmax(420px, 1.4fr);
