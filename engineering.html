@@ -163,7 +163,91 @@ var _hmt = _hmt || [];
   async
   defer
 ></script>
-  
+  <script>
+function handleEngineeringSubmit(event) {
+  event.preventDefault();
+
+  var form = event.target;
+  var button = form.querySelector('button[type="submit"]');
+
+  if (button.disabled) return;
+
+  var originalButtonText = button.innerHTML;
+
+  button.disabled = true;
+  button.innerHTML = '发送中... / Sending...';
+  button.style.opacity = '0.65';
+  button.style.cursor = 'wait';
+
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(function(response) {
+    if (!response.ok) {
+      throw new Error('Formspree submission failed');
+    }
+
+    form.innerHTML = `
+      <div
+        role="status"
+        aria-live="polite"
+        style="text-align:center;padding:54px 20px;border-top:0.5px solid rgba(201,160,96,0.18);border-bottom:0.5px solid rgba(201,160,96,0.18);"
+      >
+        <div
+          style="font-family:var(--font-en-display);font-size:28px;color:var(--gold-text);margin-bottom:18px;"
+        >
+          ✓
+        </div>
+
+        <p
+          class="lang-cn"
+          style="font-family:var(--font-cn-serif);font-size:20px;color:var(--text-primary);line-height:1.6;margin:0 0 12px;"
+        >
+          询价已成功发送
+        </p>
+
+        <p
+          class="lang-en"
+          style="display:none;font-family:var(--font-en-display);font-size:20px;color:var(--text-primary);line-height:1.6;margin:0 0 12px;"
+        >
+          Your Enquiry Has Been Sent
+        </p>
+
+        <p
+          class="lang-cn"
+          style="font-size:13px;color:var(--text-secondary);line-height:1.8;margin:0;"
+        >
+          感谢您的咨询。浸门文化将在一个工作日内与您联系。
+        </p>
+
+        <p
+          class="lang-en"
+          style="display:none;font-size:13px;color:var(--text-secondary);line-height:1.8;margin:0;"
+        >
+          Thank you for your enquiry. Jinmen Culture will contact you within one business day.
+        </p>
+      </div>
+    `;
+  })
+  .catch(function(error) {
+    console.error(error);
+
+    alert(
+      '发送失败，请稍后重试，或通过微信 Alex-lives 联系我们。\n' +
+      'Submission failed. Please try again or contact us through WeChat: Alex-lives.'
+    );
+
+    button.disabled = false;
+    button.innerHTML = originalButtonText;
+    button.style.opacity = '1';
+    button.style.cursor = 'pointer';
+  });
+}
+</script>
 </head>
 <body>
 <div id="nav-placeholder"></div>
@@ -413,6 +497,7 @@ var _hmt = _hmt || [];
   action="https://formspree.io/f/mrendvaj"
   method="POST"
   accept-charset="UTF-8"
+  onsubmit="handleEngineeringSubmit(event)"
 >
   <!-- Information about the source page -->
   <input type="hidden" name="page" value="Jinmen Culture — Illusion Engineering">
@@ -583,11 +668,11 @@ var _hmt = _hmt || [];
     提交询价 / Submit Enquiry
   </button>
 
-  <p
-    style="margin:14px 0 0;text-align:center;color:var(--text-secondary);font-size:11px;line-height:1.6;"
-  >
-    提交后您将看到发送确认页面。You will see a confirmation after submission.
-  </p>
+ <p
+  style="margin:14px 0 0;text-align:center;color:var(--text-secondary);font-size:11px;line-height:1.6;"
+>
+  表单将在本页面安全提交。The form will be submitted securely without leaving this page.
+</p>
 </form>
        </div>
   </div>
