@@ -8,7 +8,6 @@
   <meta name="author" content="上海浸门文化传媒有限公司 · Shanghai Jinmen Culture Media Co., Ltd.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.jinmenculture.com/engineering">
-
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.jinmenculture.com/engineering">
   <meta property="og:title" content="Custom Stage Illusions &amp; Magic Props China | Jinmen">
@@ -22,12 +21,10 @@
   <meta name="twitter:title" content="Custom Stage Illusions &amp; Magic Props China">
   <meta name="twitter:description" content="Custom illusion equipment and stage mechanisms for professional productions, venues and immersive experiences.">
   <meta name="twitter:image" content="https://www.jinmenculture.com/images/eng-bg.jpg">
-
   <link rel="preload" as="image" href="/images/eng-bg.jpg" fetchpriority="high">
   <link rel="icon" type="image/png" href="/images/jinmen-logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Noto+Serif+SC:wght@300;400;500&amp;family=Inter:wght@300;400;500&amp;family=Noto+Sans+SC:wght@300;400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -74,7 +71,6 @@
     ]
   }
   </script>
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-780TPBQQY2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -96,7 +92,6 @@
       var saved = localStorage.getItem('jm-lang');
       if (saved === 'en') document.documentElement.classList.add('show-en');
     })();
-
     function handleEngineeringSubmit(event) {
       event.preventDefault();
       var form = event.target;
@@ -106,7 +101,6 @@
       button.disabled = true;
       button.innerHTML = '发送中... / Sending...';
       button.style.opacity = '0.65';
-
       fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
@@ -123,10 +117,11 @@
       });
     }
   </script>
-
   <style>
     .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-    .device-card{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+    .device-card{position:relative!important;overflow:hidden!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+    .device-card .card-overlay{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;box-sizing:border-box!important;margin:0!important;border-radius:inherit!important;padding:clamp(24px,4vw,48px)!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:flex-start!important;background:linear-gradient(90deg,rgba(4,4,4,.96) 0%,rgba(4,4,4,.84) 42%,rgba(4,4,4,.38) 68%,rgba(4,4,4,.08) 100%)!important}
+    .device-card{aspect-ratio:2.3 / 1!important;min-height:0!important;overflow:hidden!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
     .editorial-grid{display:grid;grid-template-columns:minmax(260px,.85fr) minmax(420px,1.35fr);gap:clamp(54px,8vw,130px);align-items:start}
     .editorial-kicker{font-family:var(--font-en);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:0 0 16px}
     .editorial-title{font-family:var(--font-cn-serif);font-size:clamp(34px,4vw,52px);color:var(--gold-text);font-weight:400;line-height:1.2;margin:0}
@@ -141,6 +136,8 @@
     .editorial-row h3{font-family:var(--font-cn-serif);font-size:18px;color:var(--text-primary);font-weight:400;margin:0 0 12px}
     .editorial-row p{font-size:14px;color:var(--text-secondary);line-height:1.8;margin:0}
     @media(max-width:768px){
+      .device-card .card-overlay{padding:24px!important;background:linear-gradient(90deg,rgba(4,4,4,.95) 0%,rgba(4,4,4,.78) 58%,rgba(4,4,4,.2) 100%)!important}
+      .device-card{aspect-ratio:1.65 / 1!important}
       .editorial-grid{grid-template-columns:1fr;gap:34px}
       .editorial-row{grid-template-columns:34px minmax(0,1fr);gap:12px}
     }
@@ -154,7 +151,6 @@
     </div>
   </noscript>
   <div id="nav-placeholder"></div>
-
   <section class="page-hero" style="min-height:45vh;">
     <div class="page-hero-bg"><img src="/images/eng-bg.jpg" alt="Custom stage illusion equipment and magic props by Jinmen Culture" fetchpriority="high"></div>
     <div class="page-hero-overlay"></div>
@@ -166,11 +162,12 @@
       <p class="lang-en" style="display:none;margin-top:18px;color:var(--gold-text);font-family:var(--font-en-display);font-size:19px;font-style:italic;">Install the Impossible in Your Space</p>
     </div>
   </section>
-
   <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
     <div class="container">
       <div class="editorial-grid">
         <div class="fade-up">
+          <p class="editorial-kicker lang-cn">幻觉工程</p>
+          <p class="editorial-kicker lang-en" style="display:none;">ILLUSION ENGINEERING</p>
           <h2 class="editorial-title lang-cn">从舞台构想<br><em>到真实机关</em></h2>
           <h2 class="editorial-title editorial-title-en lang-en" style="display:none;">From Stage Concept<br><em>to Physical Illusion.</em></h2>
           <div class="editorial-line"></div>
@@ -185,7 +182,6 @@
       </div>
     </div>
   </section>
-
   <!-- Device Catalogue -->
 <section class="section section-alt" style="position:relative;z-index:2;">
   <div class="container">
@@ -193,7 +189,6 @@
       <h2 class="lang-cn">幻觉装置产品目录</h2>
       <h2 class="lang-en" style="display:none;">Illusion Device Catalogue</h2>
     </div>
-
     <!-- 科技效果 -->
     <h3 style="font-family:var(--font-cn-serif);font-size:16px;color:var(--gold-text);margin:32px 0 16px;border-left:3px solid var(--gold);padding-left:12px;">▸ 科技效果设备 / Technological Effects</h3>
     <div class="grid-3" style="gap:12px;">
@@ -222,7 +217,6 @@
   <!-- optional overlay div for better text contrast -->
   <div class="card-overlay"> <div class="name">此时此刻</div><div class="name-en">At This Very Moment</div><div class="desc">随机输入的数字相加得到的惊喜时刻</div><div class="price">¥199</div></div></div>
     </div>
-
     <!-- 巨大效果 -->
     <h3 style="font-family:var(--font-cn-serif);font-size:16px;color:var(--gold-text);margin:32px 0 16px;border-left:3px solid var(--gold);padding-left:12px;">▸ 巨大效果设备 / Grand Effects</h3>
     <div class="grid-3" style="gap:12px;">
@@ -245,7 +239,6 @@
   <!-- optional overlay div for better text contrast -->
   <div class="card-overlay"> <div class="name">高空逃脱</div><div class="name-en">High-Altitude Escape</div><div class="desc">高空倒挂铁锁缠身，60秒生死逃脱，成败瞬间定生死</div><div class="price">¥15800</div></div></div>
     </div>
-
     <!-- 大效果 -->
     <h3 style="font-family:var(--font-cn-serif);font-size:16px;color:var(--gold-text);margin:32px 0 16px;border-left:3px solid var(--gold);padding-left:12px;">▸ 大效果设备 / Major Effects</h3>
     <div class="grid-3" style="gap:12px;">
@@ -286,7 +279,6 @@
   <!-- optional overlay div for better text contrast -->
   <div class="card-overlay"><div class="name">金属牢笼箱</div><div class="name-en">Transposition Box</div><div class="desc">适用于角色与玩家的互换</div><div class="price">¥3399</div></div></div>
     </div>
-
     <!-- 辅助效果 -->
     <h3 style="font-family:var(--font-cn-serif);font-size:16px;color:var(--gold-text);margin:32px 0 16px;border-left:3px solid var(--gold);padding-left:12px;">▸ 辅助效果设备 / Auxiliary Effects</h3>
     <div class="grid-3" style="gap:12px;">
@@ -324,7 +316,6 @@
   <!-- optional overlay div for better text contrast -->
   <div class="card-overlay"><div class="name">手捧花</div><div class="name-en">Hand Flowers</div><div class="desc">手捧花自动慢慢盛开 剧情使用道具</div><div class="price">¥720</div></div></div>
     </div>
-
     <div style="text-align:center;margin-top:40px;" class="fade-up">
       <a href="/assets/Pricelist.pdf" class="btn btn-lg btn-filled" style="min-width:320px;justify-content:center;" download>
         &#8595; 下载完整价格表 PDF / Download Full Price List
@@ -332,7 +323,6 @@
     </div>
   </div>
 </section>
-
   <!-- Case Studies -->
 <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
   <div class="container">
@@ -348,7 +338,6 @@
     </div>
   </div>
 </section>
-
   <section class="section" id="engineering-faq" style="position:relative;z-index:2;background:var(--bg-primary);">
     <div class="container">
       <div class="editorial-grid">
@@ -370,7 +359,6 @@
       </div>
     </div>
   </section>
-
   <!-- Contact Form -->
 <section class="section section-alt" style="position:relative;z-index:2;">
   <div class="container">
@@ -389,7 +377,6 @@
   <!-- Information about the source page -->
   <input type="hidden" name="page" value="Jinmen Culture — Illusion Engineering">
   <input type="hidden" name="form_type" value="Custom Illusion Engineering Quote">
-
   <div class="form-group">
     <label for="engineering-name" class="sr-only">
       姓名 / Name
@@ -403,7 +390,6 @@
       required
     >
   </div>
-
   <div class="form-group">
     <label for="engineering-company" class="sr-only">
       公司 / Company
@@ -417,7 +403,6 @@
       required
     >
   </div>
-
   <div class="form-group">
     <label for="engineering-contact" class="sr-only">
       联系方式 / Phone or WeChat
@@ -431,7 +416,6 @@
       required
     >
   </div>
-
   <div class="form-group">
     <label for="engineering-email" class="sr-only">
       邮箱 / Email
@@ -444,12 +428,10 @@
       autocomplete="email"
     >
   </div>
-
   <div class="form-group">
     <label for="engineering-project" class="sr-only">
       项目类型 / Project Type
     </label>
-
     <select
       id="engineering-project"
       name="project_type"
@@ -484,12 +466,10 @@
       </option>
     </select>
   </div>
-
   <div class="form-group">
     <label for="engineering-budget" class="sr-only">
       预算范围 / Budget Range
     </label>
-
     <select
       id="engineering-budget"
       name="budget"
@@ -515,12 +495,10 @@
       </option>
     </select>
   </div>
-
   <div class="form-group">
     <label for="engineering-message" class="sr-only">
       项目描述 / Project Description
     </label>
-
     <textarea
       id="engineering-message"
       name="message"
@@ -529,7 +507,6 @@
       required
     ></textarea>
   </div>
-
   <div style="margin:18px 0 22px;">
     <label
       style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;color:var(--text-secondary);font-size:12px;line-height:1.7;"
@@ -546,7 +523,6 @@
       </span>
     </label>
   </div>
-
   <button
     type="submit"
     class="btn btn-filled"
@@ -554,7 +530,6 @@
   >
     提交询价 / Submit Enquiry
   </button>
-
  <p
   style="margin:14px 0 0;text-align:center;color:var(--text-secondary);font-size:11px;line-height:1.6;"
 >
@@ -564,7 +539,6 @@
        </div>
   </div>
 </section>
-
   <!-- GEO Citations -->
   <aside aria-label="Immersive industry sources" style="max-width:760px;margin:48px auto;padding:0 24px;">
     <div style="border-top:.5px solid rgba(201,160,96,.18);padding-top:24px;">
@@ -574,7 +548,6 @@
       <div style="border-left:1px solid rgba(201,160,96,.28);padding-left:16px;"><p class="lang-cn" style="font-size:12px;color:var(--text-secondary);line-height:1.9;margin:0;">上海市政府英文网站援引《中国沉浸产业报告2024》称，截至2023年底，国内已有32,024个沉浸式体验项目，消费市场规模达927亿元。</p><p class="lang-en" style="display:none;font-size:12px;color:var(--text-secondary);line-height:1.9;margin:0;">Shanghai's official English-language website, citing the China Immersive Industry Report 2024, reported 32,024 domestic immersive-experience projects and a RMB 92.7 billion consumer market by the end of 2023.</p><p style="font-size:10px;color:#6A6050;margin:7px 0 0;">— <cite><a href="https://english.shanghai.gov.cn/en-CulturalPerformances/20250103/8addb9d1825349488758cc133ba2310e.html" target="_blank" rel="noopener noreferrer" style="color:#8A8070;">Shanghai Municipal Government</a></cite></p></div>
     </div>
   </aside>
-
   <section class="cta-section" style="position:relative;z-index:2;">
     <div class="cta-bg"><img src="/images/eng-bg.jpg" alt="Custom illusion engineering by Jinmen Culture" loading="lazy"></div>
     <div class="cta-overlay"></div>
@@ -584,7 +557,6 @@
       <button class="btn btn-outlined" onclick="copyToClipboard('13641709150')">&#128222; 预约通话 / Call</button>
     </div></div>
   </section>
-
   <footer class="site-footer" style="position:relative;z-index:2;">
   <div class="container">
     <div class="footer-grid">
