@@ -409,7 +409,7 @@ var _hmt = _hmt || [];
       <p class="subtitle" style="color:var(--text-secondary);">承诺1个工作日内回复 / Response guaranteed within 1 business day</p>
     </div>
     <div style="max-width:600px;margin:0 auto;" class="fade-up">
-      <form
+     <form
   action="https://formspree.io/f/mrendvaj"
   method="POST"
   accept-charset="UTF-8"
@@ -528,9 +528,67 @@ var _hmt = _hmt || [];
       </option>
       <option value="Under CNY 50,000">
         ¥5万以下 / Under ¥50k
-    </div>
+      </option>
+      <option value="CNY 50,000–200,000">
+        ¥5–20万 / ¥50k–200k
+      </option>
+      <option value="CNY 200,000–500,000">
+        ¥20–50万 / ¥200k–500k
+      </option>
+      <option value="Over CNY 500,000">
+        ¥50万以上 / Over ¥500k
+      </option>
+      <option value="To be discussed">
+        待定 / To Be Discussed
+      </option>
+    </select>
   </div>
-</section>
+
+  <div class="form-group">
+    <label for="engineering-message" class="sr-only">
+      项目描述 / Project Description
+    </label>
+
+    <textarea
+      id="engineering-message"
+      name="message"
+      placeholder="请介绍场地、所需效果、时间及其他项目要求 / Tell us about the venue, required effects, schedule and other project requirements *"
+      rows="7"
+      required
+    ></textarea>
+  </div>
+
+  <div style="margin:18px 0 22px;">
+    <label
+      style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;color:var(--text-secondary);font-size:12px;line-height:1.7;"
+    >
+      <input
+        type="checkbox"
+        name="consent"
+        value="Agreed"
+        required
+        style="width:16px;height:16px;margin-top:2px;flex:0 0 auto;"
+      >
+      <span>
+        我同意浸门文化使用以上信息回复本次询价。I agree that Jinmen Culture may use this information to respond to my enquiry.
+      </span>
+    </label>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-filled"
+    style="width:100%;justify-content:center;"
+  >
+    提交询价 / Submit Enquiry
+  </button>
+
+  <p
+    style="margin:14px 0 0;text-align:center;color:var(--text-secondary);font-size:11px;line-height:1.6;"
+  >
+    提交后您将看到发送确认页面。You will see a confirmation after submission.
+  </p>
+</form>
 
 <!-- GEO Citations -->
 <div style="max-width:640px;margin:40px auto 0;padding:0 24px;opacity:0.5;">
