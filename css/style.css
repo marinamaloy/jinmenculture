@@ -2,7 +2,106 @@
    JINMEN CULTURE V3 — Complete Stylesheet
    Based on reference images 1, 2, 3
    ======================================== */
+.ip-collaboration-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(420px, 1.4fr);
+  gap: clamp(60px, 9vw, 150px);
+  align-items: start;
+}
 
+.ip-collaboration-heading {
+  position: sticky;
+  top: 120px;
+}
+
+.ip-collaboration-heading h2 {
+  margin: 24px 0 0;
+  color: var(--text-primary);
+  font-family: var(--font-cn-serif);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.ip-collaboration-heading h2.lang-en {
+  font-family: var(--font-en-display);
+}
+
+.ip-collaboration-heading h2 em {
+  color: var(--gold-text);
+  font-weight: 400;
+}
+
+.ip-collaboration-heading p {
+  max-width: 360px;
+  margin: 34px 0 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.ip-gold-line {
+  width: 88px;
+  height: 1px;
+  margin-top: 36px;
+  background: var(--gold);
+}
+
+.ip-collaboration-row {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 20px;
+  padding: 0 0 34px;
+  margin-bottom: 34px;
+  border-bottom: 0.5px solid rgba(201, 160, 96, 0.16);
+}
+
+.ip-collaboration-row:last-child {
+  margin-bottom: 0;
+}
+
+.ip-number {
+  color: var(--gold-text);
+  font-family: var(--font-en-display);
+  font-size: 18px;
+  font-style: italic;
+}
+
+.ip-collaboration-row h3 {
+  margin: 0 0 18px;
+  color: var(--text-primary);
+  font-family: var(--font-cn-serif);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.ip-collaboration-row h3.lang-en {
+  font-family: var(--font-en-display);
+}
+
+.ip-collaboration-row p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+@media (max-width: 800px) {
+  .ip-collaboration-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .ip-collaboration-heading {
+    position: static;
+  }
+
+  .ip-collaboration-row {
+    grid-template-columns: 34px 1fr;
+    gap: 12px;
+  }
+}
 #faq summary::-webkit-details-marker {
   display: none;
 }
