@@ -18,6 +18,7 @@ function initLangToggle() {
 }
 
 function applyLang(lang) {
+  document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
   document.body.classList.toggle('show-en', lang === 'en');
   document.querySelectorAll('[data-lang-btn]').forEach(btn => {
     const isActive = btn.dataset.langBtn === lang;
