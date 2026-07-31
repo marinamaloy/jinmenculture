@@ -10,12 +10,15 @@ Shanghai-based company specializing in immersive magic shows, illusion engineeri
 - Brand Shows – Custom immersive performances for corporate events
 
 ## Key Pages
-- Homepage: https://jinmenculture.com
-- Weixunxiu Show: https://jinmenculture.com/weixunxiu.html
-- Illusion Engineering: https://jinmenculture.com/engineering.html
-- Ghost of the Circus: https://jinmenculture.com/ghost.html
-- Brand Shows: https://jinmenculture.com/shows.html
-- Contact: https://jinmenculture.com/contact.html
+- Homepage: https://www.jinmenculture.com/
+- IP: https://www.jinmenculture.com/ip
+- Weixunxiu Show: https://www.jinmenculture.com/weixunxiu
+- Illusion Engineering: https://www.jinmenculture.com/engineering
+- Ghost of the Circus: https://www.jinmenculture.com/ghost
+- Brand Shows: https://www.jinmenculture.com/shows
+- Directing: https://www.jinmenculture.com/direction
+- About: https://www.jinmenculture.com/about
+- Contact: https://www.jinmenculture.com/contact
 
 ## FAQ
 Q: What immersive magic shows do you offer?
@@ -31,4 +34,4 @@ A: Contact us via WeChat (Alex-lives) or email (1379197706@qq.com).
 - WeChat: Alex-lives
 - Email: 1379197706@qq.com
 - Phone: +86 13641709150
-- Address: 放鹤路1088号, 闵行区, 上海
+- Address: 闵行区, 上海
