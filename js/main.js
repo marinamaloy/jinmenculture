@@ -29,7 +29,7 @@ function applyLang(lang) {
 function injectNav() {
   const navHTML = `
     <header class="site-nav" id="siteNav">
-      <a href="index.html" class="logo">
+      <a href="/" class="logo">
         <img src="images/jinmen-logo.png" alt="浸门文化">
         <div class="logo-text">
           <span class="cn">浸门文化</span>
@@ -39,13 +39,13 @@ function injectNav() {
 
       <nav aria-label="Main navigation">
         <ul class="nav-links">
-          <li><a href="index.html" data-nav="index"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a></li>
-          <li><a href="ip.html" data-nav="ip"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a></li>
-          <li><a href="engineering.html" data-nav="engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a></li>
-          <li><a href="shows.html" data-nav="shows"><span class="lang-cn">品牌演出</span><span class="lang-en">Brand Shows</span></a></li>
-          <li><a href="direction.html" data-nav="direction"><span class="lang-cn">演艺创意</span><span class="lang-en">Creative Direction</span></a></li>
-          <li><a href="about.html" data-nav="about"><span class="lang-cn">关于我们</span><span class="lang-en">About</span></a></li>
-          <li><a href="contact.html" data-nav="contact"><span class="lang-cn">联系我们</span><span class="lang-en">Contact</span></a></li>
+          <li><a href="/" data-nav="index"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a></li>
+          <li><a href="/ip" data-nav="ip"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a></li>
+          <li><a href="/engineering" data-nav="engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a></li>
+          <li><a href="/shows" data-nav="shows"><span class="lang-cn">品牌演出</span><span class="lang-en">Brand Shows</span></a></li>
+          <li><a href="/direction" data-nav="direction"><span class="lang-cn">演艺创意</span><span class="lang-en">Creative Direction</span></a></li>
+          <li><a href="/about" data-nav="about"><span class="lang-cn">关于我们</span><span class="lang-en">About</span></a></li>
+          <li><a href="/contact" data-nav="contact"><span class="lang-cn">联系我们</span><span class="lang-en">Contact</span></a></li>
         </ul>
       </nav>
 
@@ -67,13 +67,13 @@ function injectNav() {
 
     <div class="mobile-menu" id="mobileMenu">
       <button class="close" onclick="toggleMobileMenu()">&times;</button>
-      <a href="index.html"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a>
-      <a href="ip.html"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a>
-      <a href="engineering.html"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a>
-      <a href="shows.html"><span class="lang-cn">品牌演出</span><span class="lang-en">Brand Shows</span></a>
-      <a href="direction.html"><span class="lang-cn">演艺创意</span><span class="lang-en">Creative Direction</span></a>
-      <a href="about.html"><span class="lang-cn">关于我们</span><span class="lang-en">About</span></a>
-      <a href="contact.html"><span class="lang-cn">联系我们</span><span class="lang-en">Contact</span></a>
+      <a href="/"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a>
+      <a href="/ip"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a>
+      <a href="/engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a>
+      <a href="/shows"><span class="lang-cn">品牌演出</span><span class="lang-en">Brand Shows</span></a>
+      <a href="/direction"><span class="lang-cn">演艺创意</span><span class="lang-en">Creative Direction</span></a>
+      <a href="/about"><span class="lang-cn">关于我们</span><span class="lang-en">About</span></a>
+      <a href="/contact"><span class="lang-cn">联系我们</span><span class="lang-en">Contact</span></a>
     </div>
   `;
 
@@ -92,13 +92,13 @@ function injectMobileTabs() {
 
   const tabsHTML = `
     <div class="mobile-page-tabs" id="mobilePageTabs">
-      <a href="index.html" data-tab="index"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a>
-      <a href="ip.html" data-tab="ip"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a>
-      <a href="engineering.html" data-tab="engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a>
-      <a href="shows.html" data-tab="shows"><span class="lang-cn">品牌演出</span><span class="lang-en">Brand Shows</span></a>
-      <a href="direction.html" data-tab="direction"><span class="lang-cn">演艺创意</span><span class="lang-en">Creative Direction</span></a>
-      <a href="about.html" data-tab="about"><span class="lang-cn">关于我们</span><span class="lang-en">About</span></a>
-      <a href="contact.html" data-tab="contact"><span class="lang-cn">联系我们</span><span class="lang-en">Contact</span></a>
+      <a href="/" data-tab="index"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a>
+      <a href="/ip" data-tab="ip"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a>
+      <a href="/engineering" data-tab="engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a>
+      <a href="/shows" data-tab="shows"><span class="lang-cn">品牌演出</span><span class="lang-en">Brand Shows</span></a>
+      <a href="/direction" data-tab="direction"><span class="lang-cn">演艺创意</span><span class="lang-en">Creative Direction</span></a>
+      <a href="/about" data-tab="about"><span class="lang-cn">关于我们</span><span class="lang-en">About</span></a>
+      <a href="/contact" data-tab="contact"><span class="lang-cn">联系我们</span><span class="lang-en">Contact</span></a>
     </div>
   `;
   nav.insertAdjacentHTML('afterend', tabsHTML);
