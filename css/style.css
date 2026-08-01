@@ -1517,9 +1517,6 @@ body.scrolled-past-hero .hero-bg {
   .site-nav { padding: 0 16px; }
 }
 
-(0.78) brightness(0.82);
-    transition: transform 0.8s ease, filter 0.8s ease;
-  }
 
   .jm-cases-grid {
     display: grid !important;
