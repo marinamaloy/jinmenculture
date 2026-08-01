@@ -1517,8 +1517,7 @@ body.scrolled-past-hero .hero-bg {
   .site-nav { padding: 0 16px; }
 }
 
-<!-- ====== 1. ADD THIS CSS INSIDE <head> ====== -->
-<style>
+
   .jm-cases-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1702,6 +1701,6 @@ body.scrolled-past-hero .hero-bg {
       transition: none;
     }
   }
-</style>
+
 
 
