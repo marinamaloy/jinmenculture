@@ -51,6 +51,48 @@
   <script>(function(){var saved=localStorage.getItem('jm-lang');if(saved==='en')document.documentElement.classList.add('show-en');})();</script>
 
   <style>
+    /* Ghost — audience review previews */
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.feedback-item {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  cursor: pointer;
+  background: #17171c;
+  border: 1px solid rgba(201, 160, 96, 0.16);
+}
+
+.feedback-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+}
+
+@media (max-width: 900px) {
+  .feedback-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .feedback-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .feedback-item {
+    aspect-ratio: 3 / 4;
+  }
+}
     .hero-project-title{font-family:var(--font-cn-serif);font-size:clamp(28px,4vw,46px);line-height:1.25;color:var(--text-primary);font-weight:400;margin:0 0 22px}
     .show-feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}.show-feature{text-align:center}.show-feature .emoji{font-size:36px;margin-bottom:16px;display:block}.show-feature h4{font-family:var(--font-cn-serif);font-size:18px;color:var(--gold-text);margin-bottom:12px;font-weight:400}.show-feature p{font-size:13px;color:var(--text-secondary);line-height:1.8}
     .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;text-align:center}.stat-item .num{font-family:var(--font-en-display);font-size:40px;color:var(--gold-text);line-height:1}.stat-item .unit{font-size:14px;color:var(--text-primary);margin-top:4px}.stat-item .label{font-size:12px;color:var(--text-tertiary);margin-top:4px}
