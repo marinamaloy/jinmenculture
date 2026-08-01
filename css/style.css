@@ -1526,7 +1526,7 @@ body.scrolled-past-hero .hero-bg {
 
   .jm-case-card {
     position: relative;
-    min-height: 560px;
+    min-height: 470px;
     overflow: hidden;
     isolation: isolate;
     border: 1px solid rgba(201, 160, 96, 0.28);
@@ -1543,7 +1543,7 @@ body.scrolled-past-hero .hero-bg {
   }
 
   .jm-case-bg {
-    z-index: -3;
+    z-index: 0;
   }
 
   .jm-case-bg img {
@@ -1554,37 +1554,43 @@ body.scrolled-past-hero .hero-bg {
   }
 
   .jm-case-shade {
-    z-index: -2;
-    background:
-      linear-gradient(180deg, rgba(4, 4, 4, 0.24) 0%, rgba(4, 4, 4, 0.45) 32%, rgba(4, 4, 4, 0.94) 100%),
-      linear-gradient(90deg, rgba(4, 4, 4, 0.55) 0%, rgba(4, 4, 4, 0.08) 72%);
+    z-index: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(4, 4, 4, 0.04) 0%,
+      rgba(4, 4, 4, 0.08) 35%,
+      rgba(4, 4, 4, 0.56) 64%,
+      rgba(4, 4, 4, 0.94) 100%
+    );
   }
 
   .jm-case-card::after {
     content: "";
     position: absolute;
     inset: 14px;
-    z-index: -1;
+    z-index: 3;
     border: 1px solid rgba(201, 160, 96, 0.18);
     pointer-events: none;
   }
 
   .jm-case-content {
-    min-height: 560px;
+    position: relative;
+    z-index: 2;
+    min-height: 470px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 38px;
+    padding: 28px;
   }
 
   .jm-case-type {
     align-self: flex-start;
-    margin: 0 0 16px;
-    padding: 5px 11px;
+    margin: 0 0 10px;
+    padding: 4px 9px;
     border: 1px solid rgba(201, 160, 96, 0.72);
     color: var(--gold-text, #d4aa6a);
     background: rgba(7, 7, 7, 0.42);
-    font: 500 10px/1.4 var(--font-en, "Inter", sans-serif);
+    font: 500 9px/1.35 var(--font-en, "Inter", sans-serif);
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }
@@ -1593,7 +1599,7 @@ body.scrolled-past-hero .hero-bg {
     margin: 0;
     color: #f2eee6;
     font-family: var(--font-cn-serif, "Noto Serif SC", serif);
-    font-size: clamp(25px, 2.25vw, 34px);
+    font-size: clamp(23px, 2vw, 30px);
     font-weight: 400;
     line-height: 1.3;
     text-shadow: 0 2px 18px rgba(0, 0, 0, 0.72);
@@ -1601,31 +1607,33 @@ body.scrolled-past-hero .hero-bg {
 
   .jm-case-title.lang-en {
     font-family: var(--font-en-display, "Playfair Display", serif);
-    font-size: clamp(23px, 2vw, 31px);
+    font-size: clamp(21px, 1.8vw, 27px);
     font-style: italic;
     line-height: 1.2;
   }
 
   .jm-case-facts {
     margin-top: auto;
-    padding: 22px 24px 20px;
-    background: rgba(5, 5, 5, 0.7);
+    width: min(92%, 560px);
+    box-sizing: border-box;
+    padding: 14px 18px 13px;
+    background: rgba(5, 5, 5, 0.52);
     border-left: 2px solid rgba(201, 160, 96, 0.78);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
   }
 
   .jm-case-fact + .jm-case-fact {
-    margin-top: 14px;
-    padding-top: 14px;
+    margin-top: 8px;
+    padding-top: 8px;
     border-top: 1px solid rgba(201, 160, 96, 0.14);
   }
 
   .jm-case-label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     color: var(--gold-text, #d4aa6a);
-    font: 500 10px/1.35 var(--font-en, "Inter", sans-serif);
+    font: 500 9px/1.3 var(--font-en, "Inter", sans-serif);
     letter-spacing: 0.14em;
     text-transform: uppercase;
   }
@@ -1633,13 +1641,13 @@ body.scrolled-past-hero .hero-bg {
   .jm-case-copy {
     margin: 0;
     color: rgba(237, 232, 223, 0.88);
-    font-size: 13px;
-    line-height: 1.75;
+    font-size: 11.5px;
+    line-height: 1.55;
   }
 
   .jm-case-copy.lang-en {
-    font-size: 12.5px;
-    line-height: 1.65;
+    font-size: 11px;
+    line-height: 1.48;
   }
 
   .jm-case-card:hover .jm-case-bg img {
@@ -1659,14 +1667,14 @@ body.scrolled-past-hero .hero-bg {
 
     .jm-case-card,
     .jm-case-content {
-      min-height: 610px;
+      min-height: 560px;
     }
   }
 
   @media (max-width: 600px) {
     .jm-case-card,
     .jm-case-content {
-      min-height: 640px;
+      min-height: 580px;
     }
 
     .jm-case-content {
@@ -1678,21 +1686,22 @@ body.scrolled-past-hero .hero-bg {
     }
 
     .jm-case-facts {
-      padding: 18px 18px 17px;
+      width: 100%;
+      padding: 15px 16px 14px;
     }
 
     .jm-case-title {
-      font-size: 27px;
+      font-size: 25px;
     }
 
     .jm-case-title.lang-en {
-      font-size: 25px;
+      font-size: 23px;
     }
 
     .jm-case-copy,
     .jm-case-copy.lang-en {
-      font-size: 12px;
-      line-height: 1.65;
+      font-size: 11px;
+      line-height: 1.52;
     }
   }
 
@@ -1701,8 +1710,5 @@ body.scrolled-past-hero .hero-bg {
       transition: none;
     }
   }
-
-
-
 
 
