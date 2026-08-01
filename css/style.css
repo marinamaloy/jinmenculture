@@ -1518,7 +1518,7 @@ body.scrolled-past-hero .hero-bg {
 }
 
 
-  .jm-cases-grid {
+   .jm-cases-grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 28px;
@@ -1526,20 +1526,22 @@ body.scrolled-past-hero .hero-bg {
 
   .jm-case-card {
     position: relative;
-    min-height: 470px;
+    min-height: 0;
     overflow: hidden;
     isolation: isolate;
     border: 1px solid rgba(201, 160, 96, 0.28);
-    background: #0b0a09;
+    background: #0a0908;
   }
 
   .jm-case-bg,
   .jm-case-bg img,
   .jm-case-shade {
     position: absolute;
-    inset: 0;
+    top: 0;
+    right: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 300px;
   }
 
   .jm-case-bg {
@@ -1549,19 +1551,13 @@ body.scrolled-past-hero .hero-bg {
   .jm-case-bg img {
     object-fit: cover;
     object-position: center;
-    filter: saturate(0.78) brightness(0.82);
+    filter: saturate(0.9) brightness(0.95);
     transition: transform 0.8s ease, filter 0.8s ease;
   }
 
   .jm-case-shade {
     z-index: 1;
-    background: linear-gradient(
-      180deg,
-      rgba(4, 4, 4, 0.04) 0%,
-      rgba(4, 4, 4, 0.08) 35%,
-      rgba(4, 4, 4, 0.56) 64%,
-      rgba(4, 4, 4, 0.94) 100%
-    );
+    background: linear-gradient(180deg, rgba(4, 4, 4, 0.03) 0%, rgba(4, 4, 4, 0.08) 52%, rgba(4, 4, 4, 0.76) 100%);
   }
 
   .jm-case-card::after {
@@ -1576,26 +1572,31 @@ body.scrolled-past-hero .hero-bg {
   .jm-case-content {
     position: relative;
     z-index: 2;
-    min-height: 470px;
+    min-height: 0;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    padding: 28px;
+    display: block;
+    padding: 322px 24px 24px;
   }
 
   .jm-case-type {
-    align-self: flex-start;
-    margin: 0 0 10px;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    margin: 0;
     padding: 4px 9px;
     border: 1px solid rgba(201, 160, 96, 0.72);
     color: var(--gold-text, #d4aa6a);
-    background: rgba(7, 7, 7, 0.42);
+    background: rgba(7, 7, 7, 0.64);
     font: 500 9px/1.35 var(--font-en, "Inter", sans-serif);
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }
 
   .jm-case-title {
+    position: absolute;
+    left: 24px;
+    bottom: calc(100% - 280px);
+    max-width: calc(100% - 48px);
     margin: 0;
     color: #f2eee6;
     font-family: var(--font-cn-serif, "Noto Serif SC", serif);
@@ -1613,14 +1614,12 @@ body.scrolled-past-hero .hero-bg {
   }
 
   .jm-case-facts {
-    margin-top: auto;
-    width: min(92%, 560px);
+    margin: 0;
+    width: 100%;
     box-sizing: border-box;
-    padding: 14px 18px 13px;
-    background: rgba(5, 5, 5, 0.52);
+    padding: 18px 20px 17px;
+    background: #0d0c0a;
     border-left: 2px solid rgba(201, 160, 96, 0.78);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
   }
 
   .jm-case-fact + .jm-case-fact {
@@ -1652,7 +1651,7 @@ body.scrolled-past-hero .hero-bg {
 
   .jm-case-card:hover .jm-case-bg img {
     transform: scale(1.035);
-    filter: saturate(0.9) brightness(0.9);
+    filter: saturate(1) brightness(1);
   }
 
   .jm-case-card:hover {
@@ -1667,18 +1666,35 @@ body.scrolled-past-hero .hero-bg {
 
     .jm-case-card,
     .jm-case-content {
-      min-height: 560px;
+      min-height: 0;
     }
   }
 
   @media (max-width: 600px) {
     .jm-case-card,
     .jm-case-content {
-      min-height: 580px;
+      min-height: 0;
     }
 
     .jm-case-content {
-      padding: 26px 24px;
+      padding: 282px 18px 18px;
+    }
+
+    .jm-case-bg,
+    .jm-case-bg img,
+    .jm-case-shade {
+      height: 260px;
+    }
+
+    .jm-case-type {
+      top: 18px;
+      left: 18px;
+    }
+
+    .jm-case-title {
+      left: 18px;
+      bottom: calc(100% - 244px);
+      max-width: calc(100% - 36px);
     }
 
     .jm-case-card::after {
@@ -1687,7 +1703,7 @@ body.scrolled-past-hero .hero-bg {
 
     .jm-case-facts {
       width: 100%;
-      padding: 15px 16px 14px;
+      padding: 16px 16px 15px;
     }
 
     .jm-case-title {
