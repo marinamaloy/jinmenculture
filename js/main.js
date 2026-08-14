@@ -56,18 +56,41 @@ function injectNav() {
           <span style="color:#4A4438;">|</span>
           <button data-lang-btn="en">EN</button>
         </div>
-        <button class="nav-mobile-btn" onclick="toggleMobileMenu()">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
-        </button>
+        <button
+  class="nav-mobile-btn"
+  type="button"
+  onclick="toggleMobileMenu()"
+  aria-label="打开导航菜单 / Open navigation menu"
+  aria-controls="mobileMenu"
+  aria-expanded="false"
+>
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.5"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <line x1="3" y1="12" x2="21" y2="12"/>
+    <line x1="3" y1="18" x2="21" y2="18"/>
+  </svg>
+</button>
       </div>
     </header>
 
     <div class="mobile-menu" id="mobileMenu">
-      <button class="close" onclick="toggleMobileMenu()">&times;</button>
+      <button
+  class="close"
+  type="button"
+  onclick="toggleMobileMenu()"
+  aria-label="关闭导航菜单 / Close navigation menu"
+>
+  &times;
+</button>
       <a href="/"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a>
       <a href="/ip"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a>
       <a href="/engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a>
@@ -112,7 +135,15 @@ function injectMobileTabs() {
 
 function toggleMobileMenu() {
   const menu = document.getElementById('mobileMenu');
-  if (menu) menu.classList.toggle('open');
+  const menuButton = document.querySelector('.nav-mobile-btn');
+
+  if (!menu) return;
+
+  const isOpen = menu.classList.toggle('open');
+
+  if (menuButton) {
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+  }
 }
 
 // ---- Active Nav Link ----
