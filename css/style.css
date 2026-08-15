@@ -256,7 +256,10 @@ body.show-en .lang-en { display: block !important; }
   text-decoration: none;
 }
 .site-nav .logo img {
-  width: 32px; height: 32px;
+  width: auto;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 .site-nav .logo-text {
   display: flex;
