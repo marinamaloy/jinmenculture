@@ -911,14 +911,15 @@ body.scrolled-past-hero .hero-bg {
 }
 .footer-col a {
   display: block;
-  color: var(--text-tertiary);
+  color: #8a8070;
   text-decoration: none;
   font-size: 12px;
   margin-bottom: 10px;
   transition: color 0.3s;
 }
+
 .footer-col a:hover {
-  color: var(--gold-text);
+  color: var(--gold);
 }
 .footer-col .contact-item {
   display: flex;
