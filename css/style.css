@@ -1731,4 +1731,8 @@ body.scrolled-past-hero .hero-bg {
     }
   }
 
+.section-heading .subtitle,
+.footer-col .contact-item {
+  color: #8a8070;
+}
 
