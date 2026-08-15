@@ -31,7 +31,12 @@ function injectNav() {
   const navHTML = `
     <header class="site-nav" id="siteNav">
       <a href="/" class="logo">
-        <img src="images/jinmen-logo.png" alt="浸门文化">
+        <img
+  src="images/jinmen-logo.png"
+  alt="浸门文化"
+  width="182"
+  height="256"
+>
         <div class="logo-text">
           <span class="cn">浸门文化</span>
           <span class="en">JINMEN CULTURE</span>
