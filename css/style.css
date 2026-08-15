@@ -896,7 +896,7 @@ body.scrolled-past-hero .hero-bg {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 }
-.footer-col h4 {
+.footer-col h3 {
   font-family: var(--font-cn-serif);
   font-size: 14px;
   color: var(--gold-text);
