@@ -896,12 +896,14 @@ body.scrolled-past-hero .hero-bg {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 }
-.footer-col h3 {
+.site-footer .footer-col > h3 {
+  margin: 0 0 20px;
+  color: var(--gold-text);
   font-family: var(--font-cn-serif);
   font-size: 14px;
-  color: var(--gold-text);
-  margin-bottom: 20px;
   font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
 }
 .footer-col .tagline {
   font-family: var(--font-cn-serif);
