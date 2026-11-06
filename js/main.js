@@ -54,6 +54,7 @@ function applyLang(lang) {
     btn.classList.toggle('active', isActive);
   });
   jmApplyLanguageContent(lang);
+  requestAnimationFrame(revealActiveMobileTab);
   const lightbox = document.getElementById('lightbox');
   if (lightbox && lightbox.style.display === 'flex') renderLightbox();
 }
@@ -119,7 +120,7 @@ function injectNav() {
       </div>
     </header>
 
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="网站导航" data-aria-label-en="Site navigation" aria-hidden="true" inert>
       <button
   class="close"
   type="button"
@@ -143,6 +144,7 @@ function injectNav() {
     placeholder.innerHTML = navHTML;
     injectMobileTabs();
     initLangToggle();
+    initMobileMenu();
   }
 }
 
@@ -152,42 +154,127 @@ function injectMobileTabs() {
   if (document.getElementById('mobilePageTabs')) return;
 
   const tabsHTML = `
-    <div class="mobile-page-tabs" id="mobilePageTabs">
+    <nav class="mobile-page-tabs" id="mobilePageTabs" aria-label="网站栏目" data-aria-label-en="Site sections">
+      <div class="mobile-tabs-scroll">
       <a href="/" data-tab="index"><span class="lang-cn">首页</span><span class="lang-en">Home</span></a>
       <a href="/ip" data-tab="ip"><span class="lang-cn">原创IP</span><span class="lang-en">Original IP</span></a>
       <a href="/engineering" data-tab="engineering"><span class="lang-cn">幻觉工程</span><span class="lang-en">Engineering</span></a>
       <a href="/shows" data-tab="shows"><span class="lang-cn">品牌演出</span><span class="lang-en">Brand Shows</span></a>
       <a href="/direction" data-tab="direction"><span class="lang-cn">演艺创意</span><span class="lang-en">Creative Direction</span></a>
       <a href="/about" data-tab="about"><span class="lang-cn">关于我们</span><span class="lang-en">About</span></a>
-      <a href="/contact" data-tab="contact"><span class="lang-cn">联系我们</span><span class="lang-en">Contact</span></a>
-    </div>
+      </div>
+      <a href="/contact" data-tab="contact" class="mobile-contact-link"><span class="lang-cn">联系</span><span class="lang-en">Contact</span></a>
+    </nav>
   `;
   nav.insertAdjacentHTML('afterend', tabsHTML);
 
-  const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+  const currentPage = getCurrentNavPage();
   document.querySelectorAll('#mobilePageTabs a').forEach(tab => {
-    if (tab.dataset.tab === currentPage) tab.classList.add('active');
+    if (tab.dataset.tab === currentPage) {
+      tab.classList.add('active');
+      tab.setAttribute('aria-current', 'page');
+    }
   });
+}
+
+function getCurrentNavPage() {
+  const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+  return ({ ghost: 'ip', weixunxiu: 'shows' })[page] || page;
+}
+
+function revealActiveMobileTab() {
+  const scroller = document.querySelector('.mobile-tabs-scroll');
+  const active = scroller && scroller.querySelector('.active');
+  if (!active || !scroller.clientWidth) return;
+  const item = active.getBoundingClientRect();
+  const rail = scroller.getBoundingClientRect();
+  scroller.scrollLeft += item.left - rail.left - (rail.width - item.width) / 2;
+}
+
+let mobileMenuRestore = [];
+let mobileMenuOverflow = '';
+let mobileMenuReturnFocus = null;
+
+function setMobileMenu(open, restoreFocus = true) {
+  const menu = document.getElementById('mobileMenu');
+  const button = document.querySelector('.nav-mobile-btn');
+  if (!menu || menu.classList.contains('open') === open) return;
+
+  if (open) {
+    mobileMenuReturnFocus = document.activeElement;
+    mobileMenuOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    menu.inert = false;
+    menu.setAttribute('aria-hidden', 'false');
+    menu.classList.add('open');
+    button.setAttribute('aria-expanded', 'true');
+    menu.querySelector('.close').focus();
+    // Disable every background branch, even when the menu is nested in a placeholder.
+    for (let node = menu; node.parentElement && node !== document.body; node = node.parentElement) {
+      [...node.parentElement.children].filter(sibling => sibling !== node).forEach(sibling => {
+        mobileMenuRestore.push([sibling, sibling.inert]);
+        sibling.inert = true;
+      });
+    }
+  } else {
+    mobileMenuRestore.forEach(([element, inert]) => { element.inert = inert; });
+    mobileMenuRestore = [];
+    menu.classList.remove('open');
+    button.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = mobileMenuOverflow;
+    if (restoreFocus && mobileMenuReturnFocus?.isConnected) mobileMenuReturnFocus.focus();
+    else if (menu.contains(document.activeElement)) document.activeElement.blur();
+    menu.inert = true;
+    menu.setAttribute('aria-hidden', 'true');
+  }
 }
 
 function toggleMobileMenu() {
   const menu = document.getElementById('mobileMenu');
-  const menuButton = document.querySelector('.nav-mobile-btn');
+  if (menu) setMobileMenu(!menu.classList.contains('open'));
+}
 
-  if (!menu) return;
-
-  const isOpen = menu.classList.toggle('open');
-
-  if (menuButton) {
-    menuButton.setAttribute('aria-expanded', String(isOpen));
-  }
+function initMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMobileMenu(false)));
+  document.addEventListener('keydown', event => {
+    if (!menu.classList.contains('open')) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      setMobileMenu(false);
+    } else if (event.key === 'Tab') {
+      const controls = [...menu.querySelectorAll('button, a[href]')];
+      const first = controls[0], last = controls[controls.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault(); last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault(); first.focus();
+      }
+    }
+  });
+  const currentPage = getCurrentNavPage();
+  menu.querySelectorAll('a').forEach(link => {
+    if (link.getAttribute('href') === (currentPage === 'index' ? '/' : '/' + currentPage)) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+  const desktop = window.matchMedia('(min-width: 901px)');
+  desktop.addEventListener('change', event => {
+    if (event.matches) setMobileMenu(false, false);
+    else revealActiveMobileTab();
+  });
+  window.addEventListener('resize', revealActiveMobileTab);
 }
 
 // ---- Active Nav Link ----
+
 function setActiveNav() {
-  const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+  const currentPage = getCurrentNavPage();
   document.querySelectorAll('[data-nav]').forEach(link => {
-    if (link.dataset.nav === currentPage) link.classList.add('active');
+    if (link.dataset.nav === currentPage) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    }
   });
 }
 
