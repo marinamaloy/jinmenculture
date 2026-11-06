@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Stage Illusions &amp; Magic Props China | Jinmen</title>
-  <meta name="description" content="Shanghai-based Jinmen Culture designs and builds custom stage illusions, magic props and physical effects for theatres, escape rooms, brands and cultural venues across China.">
+  <title>Stage Illusions &amp; Escape Room Effects China | Jinmen</title>
+  <meta name="description" content="Jinmen Culture designs and builds custom stage illusions, magic props and escape room effects in Shanghai for theatres, brands and cultural venues across China.">
   <meta name="author" content="上海浸门文化传媒有限公司 · Shanghai Jinmen Culture Media Co., Ltd.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.jinmenculture.com/engineering">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.jinmenculture.com/engineering">
-  <meta property="og:title" content="Custom Stage Illusions &amp; Magic Props China | Jinmen">
+  <meta property="og:title" content="Stage Illusions &amp; Escape Room Effects China | Jinmen">
   <meta property="og:description" content="Custom illusion equipment, stage mechanisms and physical effects designed in Shanghai for professional venues and productions across China.">
   <meta property="og:image" content="https://www.jinmenculture.com/images/eng-bg.jpg">
   <meta property="og:image:alt" content="Custom stage illusion equipment and magic props by Jinmen Culture">
@@ -71,50 +71,15 @@
     ]
   }
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-780TPBQQY2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-780TPBQQY2');
-  </script>
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?05115fa95834850c3d2f5c7b97722d35";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+  
+  
+  
   <script>
     (function() {
       var saved = localStorage.getItem('jm-lang');
       if (saved === 'en') document.documentElement.classList.add('show-en');
     })();
-    function handleEngineeringSubmit(event) {
-      event.preventDefault();
-      var form = event.target;
-      var button = form.querySelector('button[type="submit"]');
-      if (button.disabled) return;
-      button.disabled = true;
-      jmSetMessage(button, '发送中...', 'Sending...');
-      button.style.opacity = '0.65';
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {'Accept':'application/json'}
-      }).then(function(response) {
-        if (!response.ok) throw new Error('Formspree submission failed');
-        form.innerHTML = '<div role="status" aria-live="polite" style="text-align:center;padding:54px 20px;border-top:0.5px solid rgba(201,160,96,.18);border-bottom:0.5px solid rgba(201,160,96,.18);"><div style="font-family:var(--font-en-display);font-size:28px;color:var(--gold-text);margin-bottom:18px;">✓</div><p style="font-family:var(--font-cn-serif);font-size:20px;color:var(--text-primary);line-height:1.6;margin:0 0 12px;"><span class="lang-cn">询价已成功发送</span><span class="lang-en">Your enquiry has been sent</span></p><p style="font-size:13px;color:var(--text-secondary);line-height:1.8;margin:0;"><span class="lang-cn">我们将在一个工作日内与您联系。</span><span class="lang-en">We will contact you within one business day.</span></p></div>';
-      }).catch(function(error) {
-        console.error(error);
-        alert(jmText('发送失败，请稍后重试。', 'Submission failed. Please try again.'));
-        button.disabled = false;
-        jmSetMessage(button, '提交询价', 'Submit Enquiry');
-        button.style.opacity = '1';
-      });
-    }
+    function handleEngineeringSubmit(event) { return jmSubmitInquiry(event, 'engineering'); }
   </script>
   <style>
     .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
@@ -141,6 +106,7 @@
       .editorial-row{grid-template-columns:34px minmax(0,1fr);gap:12px}
     }
   </style>
+  <script src="/js/analytics.js"></script>
 </head>
 <body>
   <noscript>
@@ -155,8 +121,8 @@
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content" style="padding-top:80px;">
       <div class="label"><span data-en="02 · ILLUSION ENGINEERING">02 · 幻觉设计工程 / ILLUSION ENGINEERING</span></div>
-      <h1 class="lang-cn">定制舞台幻觉装置与魔术道具</h1>
-      <h1 class="lang-en" style="display:none;">Custom Stage Illusions &amp; Magic Props</h1>
+      <h1 class="lang-cn">舞台幻觉装置与密室特效定制</h1>
+      <h1 class="lang-en" style="display:none;">Custom Stage Illusions &amp; Escape Room Effects</h1>
       <p class="lang-cn" style="margin-top:18px;color:var(--gold-text);font-family:var(--font-cn-serif);font-size:18px;">让不可能成为你空间的一部分</p>
       <p class="lang-en" style="display:none;margin-top:18px;color:var(--gold-text);font-family:var(--font-en-display);font-size:19px;font-style:italic;">Install the Impossible in Your Space</p>
     </div>
@@ -365,7 +331,7 @@
       <p class="subtitle" style="color:var(--text-secondary);"><span data-en="We respond within one business day">承诺1个工作日内回复 / Response guaranteed within 1 business day</span></p>
     </div>
     <div style="max-width:600px;margin:0 auto;" class="fade-up">
-     <form
+     <form data-inquiry-form="engineering"
   action="https://formspree.io/f/mrendvaj"
   method="POST"
   accept-charset="UTF-8"

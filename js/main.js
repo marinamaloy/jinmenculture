@@ -315,7 +315,10 @@ function initScrollAnimations() {
 // ---- Copy to Clipboard ----
 function copyToClipboard(text) {
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(showToast);
+    navigator.clipboard.writeText(text).then(function () {
+      jmTrackCopiedContact(text);
+      showToast();
+    });
   } else {
     const ta = document.createElement('textarea');
     ta.value = text;
@@ -323,9 +326,9 @@ function copyToClipboard(text) {
     ta.style.opacity = '0';
     document.body.appendChild(ta);
     ta.select();
-    document.execCommand('copy');
+    const copied = document.execCommand('copy');
     document.body.removeChild(ta);
-    showToast();
+    if (copied) { jmTrackCopiedContact(text); showToast(); }
   }
 }
 
@@ -393,10 +396,108 @@ function lightboxNext() {
   renderLightbox();
 }
 
+
+
+// ---- Enquiry measurement and submission ----
+function jmTrackEvent(name, parameters) {
+  // A blocked analytics script must never stop a customer from contacting us.
+  try { if (typeof window.jmTrack === 'function') window.jmTrack(name, parameters); } catch (_) {}
+}
+
+function jmTrackCopiedContact(value) {
+  const method = value === '1379197706@qq.com' ? 'email_copy' : value === 'Alex-lives' ? 'wechat_copy' : null;
+  if (!method) return; // Do not treat copied social links as enquiries.
+  const active = document.activeElement;
+  const location = active?.closest('.site-footer') ? 'footer' : active?.closest('.cta-section, .cta-row') ? 'cta' : 'page';
+  jmTrackEvent('jm_contact_click', { contact_method: method, contact_location: location });
+}
+
+async function jmSubmitInquiry(event, formName) {
+  event.preventDefault();
+  const form = event.target;
+  const labels = {
+    contact: ['发送', 'Send'],
+    engineering: ['提交询价', 'Submit Enquiry'],
+    weixunxiu: ['提交预约', 'Submit Booking']
+  };
+  if (!labels[formName] || ['sending', 'success'].includes(form.dataset.submitState)) return;
+  if (!form.reportValidity()) return;
+  const button = form.querySelector('button[type="submit"]');
+  form.querySelector('.inquiry-feedback')?.remove();
+  form.dataset.submitState = 'sending';
+  button.disabled = true;
+  jmSetMessage(button, '发送中...', 'Sending...');
+
+  const reference = form.dataset.submissionId || ('JM-' + Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).slice(2, 8).toUpperCase());
+  form.dataset.submissionId = reference;
+  const payload = new FormData(form);
+  payload.set('submission_id', reference);
+  payload.set('source_page', window.location.origin + window.location.pathname);
+  payload.set('site_language', document.documentElement.lang === 'en' ? 'en' : 'zh-CN');
+  const live = ['www.jinmenculture.com', 'jinmenculture.com'].includes(window.location.hostname);
+  payload.set('site_environment', live ? 'production' : 'preview');
+  payload.set('_subject', (live ? '' : '[PREVIEW] ') + 'Jinmen ' + formName + ' enquiry — ' + reference);
+  jmTrackEvent('jm_form_attempt', { form_name: formName });
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 30000);
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST', body: payload, headers: { Accept: 'application/json' }, signal: controller.signal
+    });
+    if (!response.ok) {
+      const error = new Error('Submission not accepted');
+      error.isServerError = true;
+      throw error;
+    }
+    form.dataset.submitState = 'success';
+    jmTrackEvent('generate_lead', { form_name: formName });
+    const status = document.createElement('div');
+    status.className = 'inquiry-feedback';
+    status.setAttribute('role', 'status');
+    status.setAttribute('tabindex', '-1');
+    status.style.cssText = 'text-align:center;color:var(--text-primary);padding:36px 0;line-height:1.8;';
+    status.innerHTML = '<p style="color:var(--gold-text);font-size:20px;">✓ <span class="lang-cn">您的咨询已提交</span><span class="lang-en">Your enquiry has been submitted</span></p><p><span class="lang-cn">我们会尽快与您联系。请保留咨询编号：</span><span class="lang-en">We will contact you soon. Please keep your enquiry reference:</span></p>';
+    const code = document.createElement('p');
+    code.textContent = reference;
+    status.appendChild(code);
+    form.replaceChildren(status);
+    status.focus({ preventScroll: true });
+  } catch (error) {
+    form.dataset.submitState = 'error';
+    jmTrackEvent('jm_form_error', { form_name: formName, error_type: error.isServerError ? 'server' : 'network' });
+    button.disabled = false;
+    jmSetMessage(button, labels[formName][0], labels[formName][1]);
+    const status = document.createElement('p');
+    status.className = 'inquiry-feedback';
+    status.setAttribute('role', 'alert');
+    status.setAttribute('tabindex', '-1');
+    status.style.cssText = 'margin-top:16px;color:var(--text-primary);line-height:1.7;';
+    status.innerHTML = '<span class="lang-cn">暂时无法确认提交结果。您的填写内容已保留，请重试，或复制邮箱／微信联系我们，并提供咨询编号：</span><span class="lang-en">We could not confirm submission. Your entries are preserved. Please retry, or contact us by email or WeChat and share this reference:</span> ';
+    status.appendChild(document.createTextNode(reference));
+    form.appendChild(status);
+    status.focus({ preventScroll: true });
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+function jmInitContactMeasurement() {
+  document.addEventListener('click', event => {
+    const phone = event.target.closest('a[href^="tel:"]');
+    if (!phone) return;
+    jmTrackEvent('jm_contact_click', {
+      contact_method: 'phone',
+      contact_location: phone.closest('.site-footer') ? 'footer' : phone.closest('.cta-section, .cta-row') ? 'cta' : 'page'
+    });
+  });
+}
+
 // ---- Initialize everything ----
 document.addEventListener('DOMContentLoaded', () => {
   injectNav();
   setActiveNav();
   initHeroParallax();
   initScrollAnimations();
+  jmInitContactMeasurement();
 });

@@ -46,9 +46,9 @@
   }
   </script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-780TPBQQY2"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-780TPBQQY2');</script>
-  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?05115fa95834850c3d2f5c7b97722d35";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+  
+  
+  
   <script>(function(){var saved=localStorage.getItem('jm-lang');if(saved==='en')document.documentElement.classList.add('show-en');})();</script>
 
   <style>
@@ -80,8 +80,9 @@
   {src:'images/weixunxiu-5.webp',caption:'微醺秀上海舞台魔术表演', captionEn: "Weixunxiu stage magic in Shanghai"},
   {src:'images/weixunxiu-6.webp',caption:'微醺秀小型场地互动魔术演出', captionEn: "Weixunxiu interactive magic in an intimate venue"}
 ];
-    function handleSubmit(e){e.preventDefault();var form=e.target;var btn=form.querySelector('button[type="submit"]');btn.disabled=true;jmSetMessage(btn,'发送中...','Sending...');fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}}).then(function(response){if(response.ok){form.innerHTML='<p style="text-align:center;color:var(--gold);padding:40px 0;font-size:16px;">✓ <span class="lang-cn">预约已提交！我们会尽快联系您。</span><span class="lang-en">Booking submitted! We will contact you soon.</span></p>';}else{btn.disabled=false;jmSetMessage(btn,'提交预约','Submit Booking');alert(jmText('发送失败，请重试。', 'Failed to send. Please try again.'));}}).catch(function(){btn.disabled=false;jmSetMessage(btn,'提交预约','Submit Booking');alert(jmText('发送失败，请重试。', 'Failed to send. Please try again.'));});}
+    function handleSubmit(event) { return jmSubmitInquiry(event, 'weixunxiu'); }
   </script>
+  <script src="/js/analytics.js"></script>
 </head>
 
 <body>
@@ -94,7 +95,7 @@
   <div class="page-hero-content" style="padding-top:80px;">
     <div class="label"><span data-en="IMMERSIVE SOCIAL MAGIC SHOW">沉浸式社交魔术演出 · IMMERSIVE SOCIAL MAGIC SHOW</span></div>
     <h1 class="lang-cn" style="font-family:var(--font-cn-serif);font-size:48px;">微醺秀 – 上海沉浸式社交魔术演出</h1>
-    <h1 class="lang-en" style="display:none;font-family:var(--font-en-display);font-style:italic;font-size:36px;">Weixunxiu · The Tipsy Magic Experience  - Shanghai Immersive Social Magic Show</h1>
+    <h1 class="lang-en" style="display:none;font-family:var(--font-en-display);font-style:italic;font-size:36px;">Weixunxiu · Immersive Social Magic Show</h1>
     <p style="font-size:15px;color:var(--text-secondary);margin:16px 0 32px;" class="lang-cn">一场让整个场馆都停不下来讲述的夜晚</p>
     <p style="font-size:15px;color:var(--text-secondary);margin:16px 0 32px;display:none;" class="lang-en">A night your entire venue will be talking about tomorrow</p>
     <a href="#booking" class="btn btn-filled btn-lg"><span data-en="Book Now">立即预约 / Book Now</span></a>
@@ -313,7 +314,7 @@
   <div class="container">
     <div class="section-heading"><h2 class="lang-cn">预约演出</h2><h2 class="lang-en" style="display:none;">Book a Show</h2></div>
     <div style="max-width:500px;margin:0 auto;" class="fade-up">
-     <form action="https://formspree.io/f/xwvzvgla" method="POST" onsubmit="handleSubmit(event)">
+     <form data-inquiry-form="weixunxiu" action="https://formspree.io/f/xwvzvgla" method="POST" onsubmit="handleSubmit(event)">
   <div class="form-group"><input type="text" name="venue" placeholder="场馆名称 / Venue Name *" data-placeholder-en="Venue Name *" required></div>
   <div class="form-group"><input type="text" name="name" placeholder="联系人 / Contact Name *" data-placeholder-en="Contact Name *" required></div>
   <div class="form-group"><input type="text" name="contact" placeholder="手机/微信 / Phone or WeChat *" data-placeholder-en="Phone or WeChat *" required></div>
