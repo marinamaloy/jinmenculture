@@ -1869,6 +1869,8 @@ body.scrolled-past-hero .hero-bg {
 
 /* English catalogue titles and descriptions need room without changing the Chinese layout. */
 body.show-en .device-card {
+  aspect-ratio: auto !important;
+  min-width: 0;
   min-height: 220px !important;
 }
 body.show-en .device-card .card-overlay {
@@ -1878,4 +1880,11 @@ body.show-en .device-card .name-en {
   font-size: 15px;
   color: var(--text-primary);
   line-height: 1.4;
+}
+
+/* These bilingual blocks already have a translated primary label in English mode. */
+body.show-en .fin-row .label > .en,
+body.show-en .fin-row .label > br,
+body.show-en .occasion-item h4.en {
+  display: none;
 }
