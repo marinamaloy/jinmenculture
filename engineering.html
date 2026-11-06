@@ -105,6 +105,21 @@
       .editorial-grid{grid-template-columns:1fr;gap:34px}
       .editorial-row{grid-template-columns:34px minmax(0,1fr);gap:12px}
     }
+    .engineering-hero .page-hero-content{width:100%;max-width:1000px;padding:100px 40px 48px;box-sizing:border-box}
+    .engineering-hero-summary{max-width:680px;margin:20px auto 24px;color:var(--text-primary);font-size:16px;line-height:1.75}
+    .engineering-project-link{min-height:44px;white-space:normal}
+    .engineering-applications-title{font-family:var(--font-cn-serif);font-size:24px;line-height:1.4;font-weight:400;color:var(--gold-text);margin:0 0 24px}
+    .engineering-applications-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+    .engineering-applications-grid>div{border-top:1px solid rgba(201,160,96,.24);padding-top:20px;min-width:0}
+    .engineering-applications-grid h3{font-size:18px;font-weight:400;line-height:1.5;color:var(--text-primary);margin:0 0 12px}
+    .engineering-applications-grid p,.engineering-enquiry-guide p{font-size:16px;line-height:1.8;color:var(--text-secondary);margin:0}
+    .engineering-enquiry-guide{margin:0 0 28px;padding-left:18px;border-left:1px solid rgba(201,160,96,.4)}
+    #project-enquiry{scroll-margin-top:110px}
+    @media(max-width:768px){
+      .engineering-hero .page-hero-content{padding:96px 20px 36px}
+      .engineering-applications-grid{grid-template-columns:1fr;gap:24px}
+      .engineering-applications-title{font-size:22px}
+    }
   </style>
   <script src="/js/analytics.js"></script>
 </head>
@@ -116,15 +131,18 @@
     </div>
   </noscript>
   <div id="nav-placeholder"></div>
-  <section class="page-hero" style="min-height:45vh;">
+  <section class="page-hero engineering-hero" style="min-height:45vh;">
     <div class="page-hero-bg"><img src="/images/eng-bg.jpg" alt="Custom stage illusion equipment and magic props by Jinmen Culture" fetchpriority="high"></div>
     <div class="page-hero-overlay"></div>
-    <div class="page-hero-content" style="padding-top:80px;">
+    <div class="page-hero-content">
       <div class="label"><span data-en="02 · ILLUSION ENGINEERING">02 · 幻觉设计工程 / ILLUSION ENGINEERING</span></div>
       <h1 class="lang-cn">舞台幻觉装置与密室特效定制</h1>
       <h1 class="lang-en" style="display:none;">Custom Stage Illusions &amp; Escape Room Effects</h1>
       <p class="lang-cn" style="margin-top:18px;color:var(--gold-text);font-family:var(--font-cn-serif);font-size:18px;">让不可能成为你空间的一部分</p>
       <p class="lang-en" style="display:none;margin-top:18px;color:var(--gold-text);font-family:var(--font-en-display);font-size:19px;font-style:italic;">Install the Impossible in Your Space</p>
+      <p class="engineering-hero-summary lang-cn">为剧场、密室与品牌空间设计制作舞台幻觉装置、魔术道具与实体特效。</p>
+      <p class="engineering-hero-summary lang-en" style="display:none;">We design and build stage illusions, magic props and physical effects for theatres, escape rooms and brand spaces.</p>
+      <a class="btn btn-outlined engineering-project-link" href="#project-enquiry"><span data-en="Discuss Your Project">讨论项目</span></a>
     </div>
   </section>
   <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
@@ -141,6 +159,30 @@
           <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-cn">按故事与空间定制</h3><h3 class="lang-en" style="display:none;">Designed for Story and Space</h3><p class="lang-cn">根据剧情、观众动线、视角、场地尺寸与演出节奏开发装置，而不是简单套用现成效果。</p><p class="lang-en" style="display:none;">Equipment is developed around the story, audience flow, sightlines, venue dimensions and performance rhythm.</p></div></div>
           <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-cn">设计、制作与测试</h3><h3 class="lang-en" style="display:none;">Design, Fabrication and Testing</h3><p class="lang-cn">从结构方案和控制逻辑，到样机制作、效果测试与现场调试，由同一创作工程流程推进。</p><p class="lang-en" style="display:none;">Structural planning, control logic, prototyping, effect testing and on-site calibration are developed through one process.</p></div></div>
           <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-cn">安装、培训与支持</h3><h3 class="lang-en" style="display:none;">Installation, Training and Support</h3><p class="lang-cn">可根据项目提供安装调试、操作培训与后续技术支持，具体服务范围在方案中确认。</p><p class="lang-en" style="display:none;">Installation, operational training and follow-up technical support can be included according to the project scope.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications: brief buyer guidance, not additional product descriptions -->
+  <section class="section engineering-applications" aria-labelledby="engineering-applications-heading" style="position:relative;z-index:2;background:var(--bg-primary);">
+    <div class="container">
+      <h2 id="engineering-applications-heading" class="engineering-applications-title"><span data-en="Designed for Your Setting">按应用场景定制</span></h2>
+      <div class="engineering-applications-grid">
+        <div>
+          <h3><span data-en="Theatres &amp; Stage Productions">剧场与舞台演出</span></h3>
+          <p class="lang-cn">人物出现、消失与悬浮，让幻觉效果融入剧情与舞台调度。</p>
+          <p class="lang-en" style="display:none;">Appearance, disappearance and levitation effects shaped around the story and stage action.</p>
+        </div>
+        <div>
+          <h3><span data-en="Escape Rooms &amp; Immersive Spaces">密室与沉浸式空间</span></h3>
+          <p class="lang-cn">角色置换、线索浮现与互动机关，配合玩家动线与剧情节奏。</p>
+          <p class="lang-en" style="display:none;">Character switches, clue reveals and interactive props matched to player movement and story timing.</p>
+        </div>
+        <div>
+          <h3><span data-en="Brands &amp; Commercial Venues">品牌与商业空间</span></h3>
+          <p class="lang-cn">物品显现、展柜取物与视觉变化，让装置成为展示与体验的一部分。</p>
+          <p class="lang-en" style="display:none;">Object appearances, display-case illusions and visual transformations for presentations and experiences.</p>
         </div>
       </div>
     </div>
@@ -323,7 +365,7 @@
     </div>
   </section>
   <!-- Contact Form -->
-<section class="section section-alt" style="position:relative;z-index:2;">
+<section id="project-enquiry" class="section section-alt" style="position:relative;z-index:2;">
   <div class="container">
     <div class="section-heading">
       <h2 class="lang-cn">获取定制报价</h2>
@@ -331,6 +373,10 @@
       <p class="subtitle" style="color:var(--text-secondary);"><span data-en="We respond within one business day">承诺1个工作日内回复 / Response guaranteed within 1 business day</span></p>
     </div>
     <div style="max-width:600px;margin:0 auto;" class="fade-up">
+     <div class="engineering-enquiry-guide">
+       <p class="lang-cn">请在项目描述中说明城市、场地尺寸、希望实现的效果、计划时间与预算范围。暂未确定的内容可以留待沟通。</p>
+       <p class="lang-en" style="display:none;">In your project description, include the city, venue dimensions, desired effect, target date and budget range. Anything undecided can be discussed together.</p>
+     </div>
      <form data-inquiry-form="engineering"
   action="https://formspree.io/f/mrendvaj"
   method="POST"
