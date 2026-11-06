@@ -19,7 +19,7 @@ function jmApplyLanguageContent(lang) {
     if (!element.hasAttribute('data-cn')) element.dataset.cn = element.textContent;
     element.textContent = lang === 'en' ? element.dataset.en : element.dataset.cn;
   });
-  ['placeholder', 'aria-label', 'alt'].forEach(attribute => {
+  ['placeholder', 'aria-label', 'alt', 'content'].forEach(attribute => {
     document.querySelectorAll('[data-' + attribute + '-en]').forEach(element => {
       const originalKey = 'data-' + attribute + '-cn';
       if (!element.hasAttribute(originalKey)) {
