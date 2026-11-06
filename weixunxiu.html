@@ -73,14 +73,14 @@
 
   <script>
     const wxImages = [
-  {src:'images/weixunxiu-1.webp',caption:'微醺秀上海驻场魔术演出舞台'},
-  {src:'images/weixunxiu-2.webp',caption:'微醺秀沉浸式魔术演出观众互动'},
-  {src:'images/weixunxiu-3.webp',caption:'微醺秀近景魔术表演现场'},
-  {src:'images/weixunxiu-4.webp',caption:'微醺秀魔术师与观众演出后合影'},
-  {src:'images/weixunxiu-5.webp',caption:'微醺秀上海舞台魔术表演'},
-  {src:'images/weixunxiu-6.webp',caption:'微醺秀小型场地互动魔术演出'}
+  {src:'images/weixunxiu-1.webp',caption:'微醺秀上海驻场魔术演出舞台', captionEn: "Weixunxiu residency show stage in Shanghai"},
+  {src:'images/weixunxiu-2.webp',caption:'微醺秀沉浸式魔术演出观众互动', captionEn: "Audience interaction at Weixunxiu"},
+  {src:'images/weixunxiu-3.webp',caption:'微醺秀近景魔术表演现场', captionEn: "Close-up magic at Weixunxiu"},
+  {src:'images/weixunxiu-4.webp',caption:'微醺秀魔术师与观众演出后合影', captionEn: "Weixunxiu magicians and guests after the show"},
+  {src:'images/weixunxiu-5.webp',caption:'微醺秀上海舞台魔术表演', captionEn: "Weixunxiu stage magic in Shanghai"},
+  {src:'images/weixunxiu-6.webp',caption:'微醺秀小型场地互动魔术演出', captionEn: "Weixunxiu interactive magic in an intimate venue"}
 ];
-    function handleSubmit(e){e.preventDefault();var form=e.target;var btn=form.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='发送中... / Sending...';fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}}).then(function(response){if(response.ok){form.innerHTML='<p style="text-align:center;color:var(--gold);padding:40px 0;font-size:16px;">✓ 预约已提交！我们会尽快联系您。<br>Booking submitted! We will contact you soon.</p>';}else{btn.disabled=false;btn.textContent='提交预约 / Submit Booking';alert('发送失败，请重试 / Failed to send, please try again.');}}).catch(function(){btn.disabled=false;btn.textContent='提交预约 / Submit Booking';alert('发送失败，请重试 / Failed to send, please try again.');});}
+    function handleSubmit(e){e.preventDefault();var form=e.target;var btn=form.querySelector('button[type="submit"]');btn.disabled=true;jmSetMessage(btn,'发送中...','Sending...');fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}}).then(function(response){if(response.ok){form.innerHTML='<p style="text-align:center;color:var(--gold);padding:40px 0;font-size:16px;">✓ <span class="lang-cn">预约已提交！我们会尽快联系您。</span><span class="lang-en">Booking submitted! We will contact you soon.</span></p>';}else{btn.disabled=false;jmSetMessage(btn,'提交预约','Submit Booking');alert(jmText('发送失败，请重试。', 'Failed to send. Please try again.'));}}).catch(function(){btn.disabled=false;jmSetMessage(btn,'提交预约','Submit Booking');alert(jmText('发送失败，请重试。', 'Failed to send. Please try again.'));});}
   </script>
 </head>
 
@@ -89,15 +89,15 @@
 <div id="nav-placeholder"></div>
 <main id="main-content" style="display:block;">
 <section class="page-hero" style="min-height:60vh;">
-  <div class="page-hero-bg"><img src="images/weixunxiu-bg.webp" alt="微醺秀沉浸式魔术酒吧演出 by 浸门文化 Shanghai"></div>
+  <div class="page-hero-bg"><img src="images/weixunxiu-bg.webp" alt="微醺秀沉浸式魔术酒吧演出 by 浸门文化 Shanghai" data-alt-en="Weixunxiu immersive social magic show by Jinmen Culture in Shanghai"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content" style="padding-top:80px;">
-    <div class="label">沉浸式社交魔术演出 · IMMERSIVE SOCIAL MAGIC SHOW</div>
+    <div class="label"><span data-en="IMMERSIVE SOCIAL MAGIC SHOW">沉浸式社交魔术演出 · IMMERSIVE SOCIAL MAGIC SHOW</span></div>
     <h1 class="lang-cn" style="font-family:var(--font-cn-serif);font-size:48px;">微醺秀 – 上海沉浸式社交魔术演出</h1>
-    <h1 class="lang-en" style="display:none;font-family:var(--font-en-display);font-style:italic;font-size:36px;">微醺 · The Tipsy Magic Experience  - Shanghai Immersive Social Magic Show</h1>
+    <h1 class="lang-en" style="display:none;font-family:var(--font-en-display);font-style:italic;font-size:36px;">Weixunxiu · The Tipsy Magic Experience  - Shanghai Immersive Social Magic Show</h1>
     <p style="font-size:15px;color:var(--text-secondary);margin:16px 0 32px;" class="lang-cn">一场让整个场馆都停不下来讲述的夜晚</p>
     <p style="font-size:15px;color:var(--text-secondary);margin:16px 0 32px;display:none;" class="lang-en">A night your entire venue will be talking about tomorrow</p>
-    <a href="#booking" class="btn btn-filled btn-lg">立即预约 / Book Now</a>
+    <a href="#booking" class="btn btn-filled btn-lg"><span data-en="Book Now">立即预约 / Book Now</span></a>
   </div>
 </section>
 
@@ -123,7 +123,7 @@
       <div class="gallery-item" onclick="openLightbox(wxImages,0)">
         <img
           src="images/weixunxiu-1.webp"
-          alt="微醺秀上海驻场魔术演出舞台"
+          alt="微醺秀上海驻场魔术演出舞台" data-alt-en="Weixunxiu residency show stage in Shanghai"
           width="1600"
           height="1200"
           loading="lazy"
@@ -133,7 +133,7 @@
       <div class="gallery-item" onclick="openLightbox(wxImages,1)">
         <img
           src="images/weixunxiu-2.webp"
-          alt="微醺秀沉浸式魔术演出观众互动"
+          alt="微醺秀沉浸式魔术演出观众互动" data-alt-en="Audience interaction at Weixunxiu"
           width="1600"
           height="1201"
           loading="lazy"
@@ -143,7 +143,7 @@
       <div class="gallery-item" onclick="openLightbox(wxImages,2)">
         <img
           src="images/weixunxiu-3.webp"
-          alt="微醺秀近景魔术表演现场"
+          alt="微醺秀近景魔术表演现场" data-alt-en="Close-up magic at Weixunxiu"
           width="1600"
           height="1013"
           loading="lazy"
@@ -153,7 +153,7 @@
       <div class="gallery-item" onclick="openLightbox(wxImages,3)">
         <img
           src="images/weixunxiu-4.webp"
-          alt="微醺秀魔术师与观众演出后合影"
+          alt="微醺秀魔术师与观众演出后合影" data-alt-en="Weixunxiu magicians and guests after the show"
           width="1600"
           height="1201"
           loading="lazy"
@@ -163,7 +163,7 @@
       <div class="gallery-item" onclick="openLightbox(wxImages,4)">
         <img
           src="images/weixunxiu-5.webp"
-          alt="微醺秀上海舞台魔术表演"
+          alt="微醺秀上海舞台魔术表演" data-alt-en="Weixunxiu stage magic in Shanghai"
           width="1600"
           height="1201"
           loading="lazy"
@@ -173,7 +173,7 @@
       <div class="gallery-item" onclick="openLightbox(wxImages,5)">
         <img
           src="images/weixunxiu-6.webp"
-          alt="微醺秀小型场地互动魔术演出"
+          alt="微醺秀小型场地互动魔术演出" data-alt-en="Weixunxiu interactive magic in an intimate venue"
           width="1600"
           height="1066"
           loading="lazy"
@@ -203,18 +203,18 @@
     <div class="grid-2" style="gap:48px;align-items:start;">
       <div class="fade-up">
         <h3 style="font-family:var(--font-cn-serif);font-size:22px;color:var(--gold-text);margin-bottom:16px;" class="lang-cn">什么是微醺秀？沉浸式魔术体验在上海</h3>
-        <h3 style="font-family:var(--font-en-display);font-size:18px;color:var(--text-primary);display:none;" class="lang-en">What is 微醺秀? Immersive magic experience in Shanghai</h3>
+        <h3 style="font-family:var(--font-en-display);font-size:18px;color:var(--text-primary);display:none;" class="lang-en">What is Weixunxiu? Immersive magic experience in Shanghai</h3>
         <p style="font-size:13px;color:var(--text-secondary);line-height:2;" class="lang-cn">微醺秀是专为酒吧、Homebar、精品酒店和社交活动设计的沉浸式互动交友近景魔术表演在上海。在一个普通的夜晚，你的场馆将变成一个充满惊喜与暧昧还有笑声的空间。观众不是在看表演——他们在通过这场秀来链接陌生人。</p>
         <p style="font-size:13px;color:var(--text-secondary);line-height:2;display:none;" class="lang-en">Weixunxiu is an immersive close-up magic social show for bars, boutique hotels and social events in Shanghai. On an ordinary evening, your venue transforms into a space full of surprise and wonder.</p>
       </div>
       <div class="fade-up">
         <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.2);padding:28px;">
-          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);">&#9201; 时长 / Duration</span><span style="color:var(--text-primary);">45–60分钟</span></div>
-          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);">&#128101; 人数 / Guests</span><span style="color:var(--text-primary);">20–32人</span></div>
-          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);">&#128205; 场地 / Venue</span><span style="color:var(--text-primary);">50m² 以上</span></div>
-          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);">&#127917; 演员 / Performers</span><span style="color:var(--text-primary);">1–2名专业魔术师</span></div>
-          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);">&#128197; 频率 / Schedule</span><span style="color:var(--text-primary);">周五六日 / 灵活安排</span></div>
-          <div style="display:flex;justify-content:space-between;padding:10px 0;font-size:13px;"><span style="color:var(--text-secondary);">&#127864; 酒水收入 / Bar Revenue</span><span style="color:var(--gold);">100%归场馆</span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);"><span data-en="⏱ Duration">&#9201; 时长 / Duration</span></span><span style="color:var(--text-primary);"><span data-en="45–60 minutes">45–60分钟</span></span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);"><span data-en="👥 Guests">&#128101; 人数 / Guests</span></span><span style="color:var(--text-primary);"><span data-en="20–32 guests">20–32人</span></span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);"><span data-en="📍 Venue">&#128205; 场地 / Venue</span></span><span style="color:var(--text-primary);"><span data-en="50 m² or more">50m² 以上</span></span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);"><span data-en="🎭 Performers">&#127917; 演员 / Performers</span></span><span style="color:var(--text-primary);"><span data-en="1–2 professional magicians">1–2名专业魔术师</span></span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);"><span data-en="📅 Schedule">&#128197; 频率 / Schedule</span></span><span style="color:var(--text-primary);"><span data-en="Friday–Sunday / Flexible scheduling">周五六日 / 灵活安排</span></span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;font-size:13px;"><span style="color:var(--text-secondary);"><span data-en="🍸 Bar Revenue">&#127864; 酒水收入 / Bar Revenue</span></span><span style="color:var(--gold);"><span data-en="100% retained by the venue">100%归场馆</span></span></div>
         </div>
       </div>
     </div>
@@ -265,7 +265,7 @@
     <div class="grid-3" style="gap:16px;">
       <div class="pricing-card fade-up">
         <h4 class="lang-cn">体验场</h4><h4 class="lang-en" style="display:none;">Trial Show</h4>
-        <div class="price">¥3,500<span>/场</span></div>
+        <div class="price">¥3,500<span><span data-en="/ show">/场</span></span></div>
         <ul>
           <li class="lang-cn">45分钟演出</li><li class="lang-en" style="display:none;">45-min show</li>
           <li class="lang-cn">1名专业魔术师</li><li class="lang-en" style="display:none;">1 professional magician</li>
@@ -273,12 +273,12 @@
           <li class="lang-cn">基础道具设置</li><li class="lang-en" style="display:none;">Basic prop setup</li>
           <li class="lang-cn">演出后合影时间</li><li class="lang-en" style="display:none;">Post-show photo time</li>
         </ul>
-        <a href="/weixunxiu" class="btn btn-outlined" style="width:100%;justify-content:center;">预约体验场 / Book Trial</a>
+        <a href="/weixunxiu" class="btn btn-outlined" style="width:100%;justify-content:center;"><span data-en="Book Trial">预约体验场 / Book Trial</span></a>
       </div>
       <div class="pricing-card featured fade-up">
-        <div class="badge">最受欢迎 · MOST POPULAR</div>
+        <div class="badge"><span data-en="MOST POPULAR">最受欢迎 · MOST POPULAR</span></div>
         <h4 class="lang-cn">标准场</h4><h4 class="lang-en" style="display:none;">Standard Show</h4>
-        <div class="price">¥5,500<span>/场</span></div>
+        <div class="price">¥5,500<span><span data-en="/ show">/场</span></span></div>
         <ul>
           <li class="lang-cn">60分钟完整演出</li><li class="lang-en" style="display:none;">60-min full show</li>
           <li class="lang-cn">1–2名专业魔术师</li><li class="lang-en" style="display:none;">1–2 magicians</li>
@@ -288,11 +288,11 @@
           <li class="lang-cn">演后互动环节</li><li class="lang-en" style="display:none;">Post-show interaction</li>
           <li class="lang-cn">小红书内容拍摄授权</li><li class="lang-en" style="display:none;">Xiaohongshu content rights</li>
         </ul>
-        <a href="/weixunxiu" class="btn btn-filled" style="width:100%;justify-content:center;">预约标准场 / Book Standard</a>
+        <a href="/weixunxiu" class="btn btn-filled" style="width:100%;justify-content:center;"><span data-en="Book Standard">预约标准场 / Book Standard</span></a>
       </div>
       <div class="pricing-card fade-up">
         <h4 class="lang-cn">驻场合作</h4><h4 class="lang-en" style="display:none;">Residency Partnership</h4>
-        <div class="price">¥8,000<span>/月 + 票务分成</span></div>
+        <div class="price">¥8,000<span><span data-en="/ month + ticket revenue share">/月 + 票务分成</span></span></div>
         <ul>
           <li class="lang-cn">每周2场（周五/六/）</li><li class="lang-en" style="display:none;">2 shows per week</li>
           <li class="lang-cn">专属定制节目内容</li><li class="lang-en" style="display:none;">Custom show content</li>
@@ -300,7 +300,7 @@
           <li class="lang-cn">场馆专属推广物料</li><li class="lang-en" style="display:none;">Exclusive venue promo</li>
           <li class="lang-cn">2个月起合作周期</li><li class="lang-en" style="display:none;">2-month minimum</li>
         </ul>
-        <a href="/contact" class="btn btn-outlined" style="width:100%;justify-content:center;">洽谈驻场合作 / Discuss</a>
+        <a href="/contact" class="btn btn-outlined" style="width:100%;justify-content:center;"><span data-en="Discuss">洽谈驻场合作 / Discuss</span></a>
       </div>
     </div>
     <p style="text-align:center;font-size:12px;color:var(--text-tertiary);margin-top:24px;" class="lang-cn">价格为参考起步价，最终报价根据演出规模、场地和定制需求确定。</p>
@@ -314,19 +314,19 @@
     <div class="section-heading"><h2 class="lang-cn">预约演出</h2><h2 class="lang-en" style="display:none;">Book a Show</h2></div>
     <div style="max-width:500px;margin:0 auto;" class="fade-up">
      <form action="https://formspree.io/f/xwvzvgla" method="POST" onsubmit="handleSubmit(event)">
-  <div class="form-group"><input type="text" name="venue" placeholder="场馆名称 / Venue Name *" required></div>
-  <div class="form-group"><input type="text" name="name" placeholder="联系人 / Contact Name *" required></div>
-  <div class="form-group"><input type="text" name="contact" placeholder="手机/微信 / Phone or WeChat *" required></div>
+  <div class="form-group"><input type="text" name="venue" placeholder="场馆名称 / Venue Name *" data-placeholder-en="Venue Name *" required></div>
+  <div class="form-group"><input type="text" name="name" placeholder="联系人 / Contact Name *" data-placeholder-en="Contact Name *" required></div>
+  <div class="form-group"><input type="text" name="contact" placeholder="手机/微信 / Phone or WeChat *" data-placeholder-en="Phone or WeChat *" required></div>
   <div class="form-group">
-  <label style="display:block; margin-bottom:6px; font-size:12px; color:var(--text-secondary);">预计演出日期 / Preferred Date</label>
+  <label style="display:block; margin-bottom:6px; font-size:12px; color:var(--text-secondary);"><span data-en="Preferred Date">预计演出日期 / Preferred Date</span></label>
   <input type="date" name="date">
 </div>
-  <div class="form-group"><input type="number" name="guests" placeholder="预计观众人数 / Expected Guests"></div>
+  <div class="form-group"><input type="number" name="guests" placeholder="预计观众人数 / Expected Guests" data-placeholder-en="Expected Guests"></div>
   <div class="form-group">
-    <select name="package"><option>套餐选择 / Package</option><option>体验场 / Trial ¥3,500</option><option>标准场 / Standard ¥5,500</option><option>驻场合作 / Residency</option></select>
+    <select name="package"><option data-en="Package" value="套餐选择 / Package">套餐选择 / Package</option><option data-en="Trial ¥3,500" value="体验场 / Trial ¥3,500">体验场 / Trial ¥3,500</option><option data-en="Standard ¥5,500" value="标准场 / Standard ¥5,500">标准场 / Standard ¥5,500</option><option data-en="Residency" value="驻场合作 / Residency">驻场合作 / Residency</option></select>
   </div>
-  <div class="form-group"><textarea name="notes" placeholder="备注 / Notes"></textarea></div>
-  <button type="submit" class="btn btn-filled" style="width:100%;justify-content:center;">提交预约 / Submit Booking</button>
+  <div class="form-group"><textarea name="notes" placeholder="备注 / Notes" data-placeholder-en="Notes"></textarea></div>
+  <button type="submit" class="btn btn-filled" style="width:100%;justify-content:center;"><span data-en="Submit Booking">提交预约 / Submit Booking</span></button>
 </form>
     </div>
   </div>
@@ -361,23 +361,23 @@
     <p class="source-heading lang-cn">行业背景与参考资料</p>
     <p class="source-heading lang-en" style="display:none;">INDUSTRY CONTEXT &amp; SOURCES</p>
     <div class="source-note"><p class="lang-cn">全国沉浸式演艺专项报告显示，2024年中国沉浸式演艺总票房规模接近20亿元，观演人数突破1200万人次，25至35岁是核心消费群体。</p><p class="lang-en" style="display:none;">A national industry report placed China's 2024 immersive-performing-arts box office near RMB 2 billion, with more than 12 million visits and audiences aged 25–35 forming the core consumer group.</p><small>— <cite><a href="https://news.gmw.cn/2025-11/28/content_38442716.htm" target="_blank" rel="noopener noreferrer">Guangming Daily</a></cite></small></div>
-    <div class="source-note"><p class="lang-cn">上海市文化和旅游局报道指出，上海沉浸式演艺既有大体量项目，也出现了“吧台即舞台”、近乎零距离观演的“小而精”长期驻演作品。</p><p class="lang-en" style="display:none;">Shanghai's culture authority describes both large-scale immersive productions and smaller long-running works where the bar counter becomes the stage and audiences watch at close range.</p><small>— <cite><a href="https://whlyj.sh.gov.cn/cysc/20230215/54be30fb77d648caaf4265ed2dd1da66.html" target="_blank" rel="noopener noreferrer">上海市文化和旅游局</a></cite></small></div>
+    <div class="source-note"><p class="lang-cn">上海市文化和旅游局报道指出，上海沉浸式演艺既有大体量项目，也出现了“吧台即舞台”、近乎零距离观演的“小而精”长期驻演作品。</p><p class="lang-en" style="display:none;">Shanghai's culture authority describes both large-scale immersive productions and smaller long-running works where the bar counter becomes the stage and audiences watch at close range.</p><small>— <cite><a href="https://whlyj.sh.gov.cn/cysc/20230215/54be30fb77d648caaf4265ed2dd1da66.html" target="_blank" rel="noopener noreferrer"><span data-en="Shanghai Municipal Administration of Culture and Tourism">上海市文化和旅游局</span></a></cite></small></div>
   </aside>
 
 <!-- CTA -->
 <section class="cta-section" style="position:relative;z-index:2;">
-  <div class="cta-bg"><img src="images/weixunxiu-bg.webp" alt="微醺秀沉浸式魔术酒吧演出 by 浸门文化 Shanghai"></div>
+  <div class="cta-bg"><img src="images/weixunxiu-bg.webp" alt="微醺秀沉浸式魔术酒吧演出 by 浸门文化 Shanghai" data-alt-en="Weixunxiu immersive social magic show by Jinmen Culture in Shanghai"></div>
   <div class="cta-overlay"></div>
   <div class="cta-content">
     <div class="cta-row">
-      <button class="btn btn-outlined" onclick="copyToClipboard('1379197706@qq.com')">&#9993; 发送邮件</button>
-      <button class="btn btn-filled" onclick="copyToClipboard('Alex-lives')">&#128172; 微信咨询</button>
-      <a class="btn btn-outlined" href="tel:+8613641709150" aria-label="拨打电话 / Call +86 136 4170 9150">&#128222; <span class="lang-cn">拨打电话</span><span class="lang-en" lang="en">Call Us</span></a>
+      <button class="btn btn-outlined" onclick="copyToClipboard('1379197706@qq.com')"><span data-en="✉ Copy Email">&#9993; 发送邮件</span></button>
+      <button class="btn btn-filled" onclick="copyToClipboard('Alex-lives')"><span data-en="💬 Copy WeChat ID">&#128172; 微信咨询</span></button>
+      <a class="btn btn-outlined" href="tel:+8613641709150" aria-label="拨打电话 / Call +86 136 4170 9150" data-aria-label-en="Call +86 136 4170 9150">&#128222; <span class="lang-cn">拨打电话</span><span class="lang-en" lang="en">Call Us</span></a>
     </div>
   </div>
 </section>
  </main>
-<footer class="site-footer" style="position:relative;z-index:2;"><div class="container"><div class="footer-grid"><div class="footer-col"><div style="display:flex;align-items:center;gap:10px;"><img src="images/jinmen-logo.png" alt="" style="width:auto;height:32px;object-fit:contain;"><div><div style="font-family:var(--font-cn-serif);font-size:15px;color:var(--gold-text);">浸门文化</div><div style="font-family:var(--font-en);font-size:7.5px;color:#6A6050;letter-spacing:3px;">JINMEN CULTURE</div></div></div><p class="tagline" style="display:none;">我们实现不可能</p></div><div class="footer-col"><h4 class="lang-cn">快速链接</h4><h4 class="lang-en" style="display:none;">Quick Links</h4><a href="/">首页</a><a href="/ip">原创IP</a><a href="/engineering">幻觉工程</a><a href="/shows">品牌演出</a><a href="/direction">演艺创意</a><a href="/about">关于我们</a><a href="/contact">联系我们</a></div><div class="footer-col"><h4 class="lang-cn">联系方式</h4><h4 class="lang-en" style="display:none;">Contact</h4><button class="contact-item" onclick="copyToClipboard('Alex-lives')"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WeChat: Alex-lives</button><button class="contact-item" onclick="copyToClipboard('1379197706@qq.com')"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>1379197706@qq.com</button><a class="contact-item" href="tel:+8613641709150" aria-label="拨打电话 / Call +86 136 4170 9150"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>13641709150</a><img src="images/wechat-qr.jpg" alt="WeChat QR" class="qr"></div></div><div class="footer-bottom">&copy; 2026 上海浸门文化传媒有限公司 · Shanghai Jinmen Culture Media Co., Ltd.</div></div></footer>
+<footer class="site-footer" style="position:relative;z-index:2;"><div class="container"><div class="footer-grid"><div class="footer-col"><div style="display:flex;align-items:center;gap:10px;"><img src="images/jinmen-logo.png" alt="" style="width:auto;height:32px;object-fit:contain;"><div><div style="font-family:var(--font-cn-serif);font-size:15px;color:var(--gold-text);">浸门文化</div><div style="font-family:var(--font-en);font-size:7.5px;color:#6A6050;letter-spacing:3px;">JINMEN CULTURE</div></div></div><p class="tagline" style="display:none;"><span data-en="We Make the Impossible Real">我们实现不可能</span></p></div><div class="footer-col"><h4 class="lang-cn">快速链接</h4><h4 class="lang-en" style="display:none;">Quick Links</h4><a href="/"><span data-en="Home">首页</span></a><a href="/ip"><span data-en="Original IP">原创IP</span></a><a href="/engineering"><span data-en="Engineering">幻觉工程</span></a><a href="/shows"><span data-en="Brand Shows">品牌演出</span></a><a href="/direction"><span data-en="Creative Direction">演艺创意</span></a><a href="/about"><span data-en="About">关于我们</span></a><a href="/contact"><span data-en="Contact">联系我们</span></a></div><div class="footer-col"><h4 class="lang-cn">联系方式</h4><h4 class="lang-en" style="display:none;">Contact</h4><button class="contact-item" onclick="copyToClipboard('Alex-lives')"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WeChat: Alex-lives</button><button class="contact-item" onclick="copyToClipboard('1379197706@qq.com')"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>1379197706@qq.com</button><a class="contact-item" href="tel:+8613641709150" aria-label="拨打电话 / Call +86 136 4170 9150" data-aria-label-en="Call +86 136 4170 9150"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>13641709150</a><img src="images/wechat-qr.jpg" alt="WeChat QR" class="qr"></div></div><div class="footer-bottom"><span data-en="© 2026 Shanghai Jinmen Culture Media Co., Ltd.">&copy; 2026 上海浸门文化传媒有限公司 · Shanghai Jinmen Culture Media Co., Ltd.</span></div></div></footer>
 
 <script src="js/main.js"></script>
 </body>

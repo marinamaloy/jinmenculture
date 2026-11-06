@@ -3,6 +3,35 @@
  * Language toggle, nav, scroll animations, copy-to-clipboard
  */
 
+// ---- Shared language helpers ----
+function jmText(cn, en) {
+  return document.documentElement.lang === 'en' ? en : cn;
+}
+
+function jmSetMessage(element, cn, en) {
+  element.dataset.cn = cn;
+  element.dataset.en = en;
+  element.textContent = jmText(cn, en);
+}
+
+function jmApplyLanguageContent(lang) {
+  document.querySelectorAll('[data-en]').forEach(element => {
+    if (!element.hasAttribute('data-cn')) element.dataset.cn = element.textContent;
+    element.textContent = lang === 'en' ? element.dataset.en : element.dataset.cn;
+  });
+  ['placeholder', 'aria-label', 'alt'].forEach(attribute => {
+    document.querySelectorAll('[data-' + attribute + '-en]').forEach(element => {
+      const originalKey = 'data-' + attribute + '-cn';
+      if (!element.hasAttribute(originalKey)) {
+        element.setAttribute(originalKey, element.getAttribute(attribute) || '');
+      }
+      element.setAttribute(attribute, element.getAttribute(
+        'data-' + attribute + (lang === 'en' ? '-en' : '-cn')
+      ));
+    });
+  });
+}
+
 // ---- Language Toggle ----
 function initLangToggle() {
   const saved = localStorage.getItem('jm-lang') || 'cn';
@@ -24,6 +53,9 @@ function applyLang(lang) {
     const isActive = btn.dataset.langBtn === lang;
     btn.classList.toggle('active', isActive);
   });
+  jmApplyLanguageContent(lang);
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox && lightbox.style.display === 'flex') renderLightbox();
 }
 
 // ---- Navigation Injection ----
@@ -33,7 +65,7 @@ function injectNav() {
       <a href="/" class="logo">
         <img
   src="images/jinmen-logo.png"
-  alt="浸门文化"
+  alt="浸门文化" data-alt-en="Jinmen Culture"
   width="182"
   height="256"
 >
@@ -65,7 +97,7 @@ function injectNav() {
   class="nav-mobile-btn"
   type="button"
   onclick="toggleMobileMenu()"
-  aria-label="打开导航菜单 / Open navigation menu"
+  aria-label="打开导航菜单 / Open navigation menu" data-aria-label-en="Open navigation menu"
   aria-controls="mobileMenu"
   aria-expanded="false"
 >
@@ -92,7 +124,7 @@ function injectNav() {
   class="close"
   type="button"
   onclick="toggleMobileMenu()"
-  aria-label="关闭导航菜单 / Close navigation menu"
+  aria-label="关闭导航菜单 / Close navigation menu" data-aria-label-en="Close navigation menu"
 >
   &times;
 </button>
@@ -218,7 +250,7 @@ function showToast() {
     toast.className = 'toast';
     document.body.appendChild(toast);
   }
-  toast.textContent = '已复制到剪贴板 / Copied to clipboard';
+  jmSetMessage(toast, '已复制到剪贴板', 'Copied to clipboard');
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 2000);
 }
@@ -246,10 +278,10 @@ function renderLightbox() {
 
   const img = currentLightboxImages[currentLightboxIndex];
   lb.innerHTML = `
-    <button class="lb-close" onclick="closeLightbox()">&times;</button>
-    <button class="lb-prev" onclick="lightboxPrev()">&#8249;</button>
-    <img src="${img.src}" alt="${img.caption || ''}" onclick="event.stopPropagation()">
-    <button class="lb-next" onclick="lightboxNext()">&#8250;</button>
+    <button class="lb-close" onclick="closeLightbox()" aria-label="${jmText('关闭图片', 'Close image')}">&times;</button>
+    <button class="lb-prev" onclick="lightboxPrev()" aria-label="${jmText('上一张', 'Previous image')}">&#8249;</button>
+    <img src="${img.src}" alt="${jmText(img.caption || '', img.captionEn || img.caption || '')}" onclick="event.stopPropagation()">
+    <button class="lb-next" onclick="lightboxNext()" aria-label="${jmText('下一张', 'Next image')}">&#8250;</button>
     <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:#8A8070;font-size:12px;">
       ${currentLightboxIndex + 1} / ${currentLightboxImages.length}
     </div>
