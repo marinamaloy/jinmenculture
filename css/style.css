@@ -1830,9 +1830,14 @@ body.scrolled-past-hero .hero-bg {
     min-height: calc(100svh - 96px);
   }
 
+  /* The existing 64px nav placeholder plus 32px clears the 96px mobile header. */
+  .hero-section:has(.hero-actions) {
+    margin-top: 32px;
+  }
+
   .hero-section:has(.hero-actions) .hero-inner {
     justify-content: center;
-    padding: 48px 20px 64px;
+    padding: 32px 20px 64px;
   }
 
   .hero-section:has(.hero-actions) .hero-left {
