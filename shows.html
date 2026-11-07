@@ -68,7 +68,7 @@
         "mainEntity":[
           {"@type":"Question","name":"如何预约上海企业魔术演出？","acceptedAnswer":{"@type":"Answer","text":"请通过微信 Alex-lives、邮箱 1379197706@qq.com 或电话 +86 13641709150 联系浸门文化，并提供活动日期、场地、人数与演出需求。"}},
           {"@type":"Question","name":"企业或品牌魔术演出可以定制吗？","acceptedAnswer":{"@type":"Answer","text":"可以按公司或品牌目标定制内容、互动与视觉效果，也可根据活动场合选择成熟节目；具体创作范围与报价另行确认。"}},
-          {"@type":"Question","name":"上海品牌魔术演出的参考价格是多少？","acceptedAnswer":{"@type":"Answer","text":"体验场参考方案为45分钟、最多20位观众，人民币3,500元起；标准场为60分钟、最多32位观众，人民币5,500元起。公司专属内容及其他定制要求需另行确认。"}},
+          {"@type":"Question","name":"上海品牌魔术演出的参考价格是多少？","acceptedAnswer":{"@type":"Answer","text":"15分钟短时演出在上海为人民币2,000元，上海以外地区另行报价。体验场参考方案为45分钟、最多20位观众，人民币3,500元起；标准场为60分钟、最多32位观众，人民币5,500元起。公司专属内容及其他定制要求需另行确认。"}},
           {"@type":"Question","name":"需要提前多久预约演出？","acceptedAnswer":{"@type":"Answer","text":"通常建议提前2至4周联系；成熟项目在档期允许的情况下可更快确认。"}}
         ]
       }
@@ -84,6 +84,13 @@
   </script>
 
   <style>
+    .shows-pricing-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .shows-pricing-grid .pricing-card{min-width:0;padding:40px 24px;display:flex;flex-direction:column}
+    .shows-pricing-grid .btn{margin-top:auto;white-space:normal;line-height:1.5}
+    .shows-short-show ul li{font-size:14px;line-height:1.7}
+    #shows-pricing{scroll-margin-top:110px}
+    @media(max-width:1100px){.shows-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:768px){.shows-pricing-grid{grid-template-columns:1fr}}
     .editorial-grid{display:grid;grid-template-columns:minmax(260px,.85fr) minmax(420px,1.35fr);gap:clamp(54px,8vw,130px);align-items:start}
     .editorial-kicker{font-family:var(--font-en);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:0 0 16px}
     .editorial-title{font-family:var(--font-cn-serif);font-size:clamp(34px,4vw,52px);color:var(--gold-text);font-weight:400;line-height:1.2;margin:0}
@@ -185,7 +192,7 @@
   </section>
 
   <!-- Pricing -->
-<section class="section section-alt" style="position:relative;z-index:2;">
+<section id="shows-pricing" class="section section-alt" style="position:relative;z-index:2;">
   <div class="container">
     <div class="section-heading">
       <h2 class="lang-cn">演出方案与定价</h2>
@@ -193,7 +200,17 @@
       <p class="subtitle lang-cn">以下参考方案按演出时长与观众人数区分，可结合公司或活动需求调整。专属创作与额外技术要求需另行沟通。</p>
       <p class="subtitle lang-en" style="display:none;">Reference options vary by duration and audience size and can be adapted to your company or event. Bespoke creation and additional technical requirements are discussed separately.</p>
     </div>
-    <div class="grid-3" style="gap:16px;">
+    <div class="shows-pricing-grid" style="gap:16px;">
+      <div class="pricing-card shows-short-show fade-up">
+        <h4 class="lang-cn">短时演出</h4><h4 class="lang-en" style="display:none;">Short Performance</h4>
+        <div class="price">¥2,000<span><span data-en="/ show">/场</span></span></div>
+        <ul>
+          <li class="lang-cn">15分钟魔术演出</li><li class="lang-en" style="display:none;">15-minute magic performance</li>
+          <li class="lang-cn">该价格仅适用于上海</li><li class="lang-en" style="display:none;">This rate applies in Shanghai only</li>
+          <li class="lang-cn">上海以外地区费用另行商议</li><li class="lang-en" style="display:none;">Other locations are quoted separately</li>
+        </ul>
+        <a href="#shows-contact" class="btn btn-outlined" style="width:100%;justify-content:center;"><span data-en="Discuss Short Show">咨询短时演出</span></a>
+      </div>
       <div class="pricing-card fade-up">
         <h4 class="lang-cn">体验场</h4><h4 class="lang-en" style="display:none;">Trial Show</h4>
         <div class="price">¥3,500<span><span data-en="/ show">/场</span></span></div>
@@ -292,7 +309,7 @@
       <div class="fade-up">
         <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-cn">如何预约品牌演出？</h3><h3 class="lang-en" style="display:none;">How do I book a brand show?</h3><p class="lang-cn">通过微信 Alex-lives、邮箱 1379197706@qq.com 或电话 13641709150 联系我们，并提供日期、场地、人数和活动目标。</p><p class="lang-en" style="display:none;">Contact us by WeChat, email or telephone with the date, venue, audience size and event objective.</p></div></div>
         <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-cn">演出可以定制吗？</h3><h3 class="lang-en" style="display:none;">Can the show be customized?</h3><p class="lang-cn">可以。需要专属创作时，可围绕公司或品牌目标设计内容、互动与视觉效果；没有具体想法时，也可选择适合场合的成熟节目。</p><p class="lang-en" style="display:none;">Yes. We can develop content, interaction and visual effects around your company or brand goals. If you do not have a specific brief, an established programme can be selected to suit the occasion.</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-cn">参考价格是多少？</h3><h3 class="lang-en" style="display:none;">What are the reference prices?</h3><p class="lang-cn">体验场参考方案为45分钟、最多20位观众，人民币3,500元起；标准场为60分钟、最多32位观众，人民币5,500元起。公司专属内容及其他定制要求需另行确认。</p><p class="lang-en" style="display:none;">Reference options start at RMB 3,500 for 45 minutes and up to 20 guests, or RMB 5,500 for 60 minutes and up to 32 guests. Company-specific content and other custom requirements are confirmed separately.</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-cn">参考价格是多少？</h3><h3 class="lang-en" style="display:none;">What are the reference prices?</h3><p class="lang-cn">15分钟短时演出在上海为人民币2,000元，上海以外地区另行报价。体验场参考方案为45分钟、最多20位观众，人民币3,500元起；标准场为60分钟、最多32位观众，人民币5,500元起。公司专属内容及其他定制要求需另行确认。</p><p class="lang-en" style="display:none;">The 15-minute show costs RMB 2,000 in Shanghai; other locations are quoted separately. Reference options start at RMB 3,500 for 45 minutes and up to 20 guests, or RMB 5,500 for 60 minutes and up to 32 guests. Company-specific content and other custom requirements are confirmed separately.</p></div></div>
         <div class="editorial-row"><span class="editorial-number">04</span><div><h3 class="lang-cn">需要提前多久预约？</h3><h3 class="lang-en" style="display:none;">How far in advance should I book?</h3><p class="lang-cn">通常建议提前2至4周联系；成熟项目在档期允许的情况下可更快确认。</p><p class="lang-en" style="display:none;">We normally recommend 2–4 weeks' notice; established shows may be confirmed faster when dates are available.</p></div></div>
       </div>
     </div></div>
