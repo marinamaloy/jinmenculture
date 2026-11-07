@@ -1996,3 +1996,9 @@ body.show-en .occasion-item h4.en {
 @media (prefers-reduced-motion: reduce) {
   .mobile-menu { transition: none; }
 }
+
+/* Keep editorial columns inside tablet viewports on both language URLs. */
+@media (max-width: 900px) {
+  body .about-editorial-grid { grid-template-columns: minmax(0, 1fr); gap: 52px; }
+  body .contact-faq-grid { grid-template-columns: minmax(0, 1fr); gap: 42px; }
+}
