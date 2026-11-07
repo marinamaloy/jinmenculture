@@ -307,7 +307,7 @@ body.show-en .lang-en { display: block !important; }
   font-family: var(--font-en);
   font-size: 11px;
 }
-.site-nav .lang-toggle button {
+.site-nav .lang-toggle :is(button, a) {
   background: none;
   border: none;
   cursor: pointer;
@@ -318,11 +318,11 @@ body.show-en .lang-en { display: block !important; }
   letter-spacing: 1px;
   transition: color 0.3s;
 }
-.site-nav .lang-toggle button.active {
+.site-nav .lang-toggle :is(button, a).active {
   color: var(--gold-text);
   border-bottom: 1px solid var(--gold-text);
 }
-.site-nav .lang-toggle button:hover:not(.active) {
+.site-nav .lang-toggle :is(button, a):hover:not(.active) {
   color: var(--text-secondary);
 }
 
@@ -1912,7 +1912,7 @@ body.show-en .occasion-item h4.en {
   .site-nav .logo { gap: 8px; min-width: 0; }
   .site-nav .logo-text .en { letter-spacing: 1.8px; }
   .site-nav .lang-toggle { gap: 2px; }
-  .site-nav .lang-toggle button,
+  .site-nav .lang-toggle :is(button, a),
   .nav-mobile-btn {
     min-width: 44px;
     min-height: 44px;

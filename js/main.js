@@ -32,18 +32,38 @@ function jmApplyLanguageContent(lang) {
   });
 }
 
-// ---- Language Toggle ----
-function initLangToggle() {
-  const saved = localStorage.getItem('jm-lang') || 'cn';
-  applyLang(saved);
-
-  document.querySelectorAll('[data-lang-btn]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const lang = btn.dataset.langBtn;
-      applyLang(lang);
-      localStorage.setItem('jm-lang', lang);
-    });
+// ---- URL-based language versions ----
+// The URL is authoritative. A saved preference must never change an indexed page.
+const jmPageRoutes = new Set(['/', '/ip', '/engineering', '/shows', '/direction', '/weixunxiu', '/ghost', '/about', '/contact']);
+function jmPageLanguage() {
+  return /^\/en(?:\/|$)/.test(window.location.pathname) ? 'en' : 'cn';
+}
+function jmLocalizedPath(path, lang) {
+  let base = path.replace(/^\/en(?=\/|$)/, '').replace(/\.html$/, '').replace(/\/$/, '') || '/';
+  if (base === '/index') base = '/';
+  if (!jmPageRoutes.has(base)) return null;
+  return (lang === 'en' ? '/en' : '') + (base === '/' ? '/' : base);
+}
+function jmLanguageURL(lang) {
+  return (jmLocalizedPath(window.location.pathname, lang) || (lang === 'en' ? '/en/' : '/')) + window.location.search + window.location.hash;
+}
+function jmLocalizeNavigation() {
+  const lang = jmPageLanguage();
+  document.querySelectorAll('a[href]').forEach(link => {
+    const raw = link.getAttribute('href');
+    if (link.hasAttribute('data-lang-btn') || raw.startsWith('#')) return;
+    const url = new URL(raw, window.location.href);
+    if (url.origin !== window.location.origin) return;
+    const path = jmLocalizedPath(url.pathname, lang);
+    if (path) link.setAttribute('href', path + url.search + url.hash);
   });
+}
+function initLangToggle() {
+  applyLang(jmPageLanguage());
+  document.querySelectorAll('[data-lang-btn]').forEach(link => {
+    if (link.tagName === 'A') link.href = jmLanguageURL(link.dataset.langBtn);
+  });
+  jmLocalizeNavigation();
 }
 
 function applyLang(lang) {
@@ -52,6 +72,8 @@ function applyLang(lang) {
   document.querySelectorAll('[data-lang-btn]').forEach(btn => {
     const isActive = btn.dataset.langBtn === lang;
     btn.classList.toggle('active', isActive);
+    if (isActive) btn.setAttribute('aria-current', 'true');
+    else btn.removeAttribute('aria-current');
   });
   jmApplyLanguageContent(lang);
   requestAnimationFrame(revealActiveMobileTab);
@@ -65,7 +87,7 @@ function injectNav() {
     <header class="site-nav" id="siteNav">
       <a href="/" class="logo">
         <img
-  src="images/jinmen-logo.png"
+  src="/images/jinmen-logo.png"
   alt="浸门文化" data-alt-en="Jinmen Culture"
   width="182"
   height="256"
@@ -90,9 +112,9 @@ function injectNav() {
 
       <div style="display:flex;align-items:center;gap:16px;">
         <div class="lang-toggle">
-          <button data-lang-btn="cn" class="active">CN</button>
+          <a data-lang-btn="cn" href="${jmLanguageURL('cn')}" lang="zh-CN" hreflang="zh-CN">CN</a>
           <span style="color:#4A4438;">|</span>
-          <button data-lang-btn="en">EN</button>
+          <a data-lang-btn="en" href="${jmLanguageURL('en')}" lang="en" hreflang="en">EN</a>
         </div>
         <button
   class="nav-mobile-btn"
@@ -141,7 +163,7 @@ function injectNav() {
 
   const placeholder = document.getElementById('nav-placeholder');
   if (placeholder) {
-    placeholder.innerHTML = navHTML;
+    if (!placeholder.firstElementChild) placeholder.innerHTML = navHTML;
     injectMobileTabs();
     initLangToggle();
     initMobileMenu();
@@ -254,7 +276,7 @@ function initMobileMenu() {
   });
   const currentPage = getCurrentNavPage();
   menu.querySelectorAll('a').forEach(link => {
-    if (link.getAttribute('href') === (currentPage === 'index' ? '/' : '/' + currentPage)) {
+    if (link.getAttribute('href') === jmLocalizedPath(currentPage === 'index' ? '/' : '/' + currentPage, jmPageLanguage())) {
       link.setAttribute('aria-current', 'page');
     }
   });
