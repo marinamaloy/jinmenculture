@@ -367,15 +367,47 @@ function showToast() {
   setTimeout(() => toast.classList.remove('show'), 2000);
 }
 
+// ---- Booking package links ----
+function jmInitPackageLinks() {
+  const select = document.querySelector('form[data-inquiry-form="weixunxiu"] select[name="package"]');
+  if (!select) return;
+  document.querySelectorAll('[data-booking-package]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.button > 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const option = [...select.options].find(item => item.dataset.packageCode === link.dataset.bookingPackage);
+      if (!option) return;
+      select.value = option.value;
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+      select.focus({ preventScroll: true });
+      // Keep native anchor navigation: works with keyboard and without JavaScript.
+    });
+  });
+}
+
 // ---- Lightbox ----
 let currentLightboxImages = [];
 let currentLightboxIndex = 0;
+let lightboxReturnFocus = null;
+let lightboxPreviousOverflow = '';
+let lightboxBackground = [];
 
 function openLightbox(images, index) {
   if (!images || images.length === 0) return;
+  const existing = document.getElementById('lightbox');
+  const alreadyOpen = existing && existing.style.display === 'flex';
+  if (!alreadyOpen) {
+    lightboxReturnFocus = document.activeElement;
+    lightboxPreviousOverflow = document.body.style.overflow;
+  }
   currentLightboxImages = images;
-  currentLightboxIndex = Math.min(index, images.length - 1);
+  currentLightboxIndex = Math.max(0, Math.min(index, images.length - 1));
   renderLightbox();
+  if (!alreadyOpen) {
+    lightboxBackground = [...document.body.children]
+      .filter(element => element.id !== 'lightbox')
+      .map(element => [element, element.inert]);
+    lightboxBackground.forEach(([element]) => { element.inert = true; });
+  }
 }
 
 function renderLightbox() {
@@ -384,28 +416,42 @@ function renderLightbox() {
     lb = document.createElement('div');
     lb.id = 'lightbox';
     lb.className = 'lightbox';
-    lb.onclick = (e) => { if (e.target === lb) closeLightbox(); };
+    lb.setAttribute('role', 'dialog');
+    lb.setAttribute('aria-modal', 'true');
+    lb.onclick = (event) => { if (event.target === lb) closeLightbox(); };
     document.body.appendChild(lb);
   }
-
-  const img = currentLightboxImages[currentLightboxIndex];
-  lb.innerHTML = `
-    <button class="lb-close" onclick="closeLightbox()" aria-label="${jmText('关闭图片', 'Close image')}">&times;</button>
-    <button class="lb-prev" onclick="lightboxPrev()" aria-label="${jmText('上一张', 'Previous image')}">&#8249;</button>
-    <img src="${img.src}" alt="${jmText(img.caption || '', img.captionEn || img.caption || '')}" onclick="event.stopPropagation()">
-    <button class="lb-next" onclick="lightboxNext()" aria-label="${jmText('下一张', 'Next image')}">&#8250;</button>
-    <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:#8A8070;font-size:12px;">
-      ${currentLightboxIndex + 1} / ${currentLightboxImages.length}
-    </div>
-  `;
+  const focusedClass = lb.contains(document.activeElement)
+    ? ['lb-close', 'lb-prev', 'lb-next'].find(name => document.activeElement.classList.contains(name))
+    : null;
+  lb.setAttribute('aria-label', jmText('演出照片', 'Performance photos'));
+  // Construct media attributes via DOM properties, preserving captions as text.
+  lb.innerHTML = '<button type="button" class="lb-close" onclick="closeLightbox()">&times;</button>' +
+    '<button type="button" class="lb-prev" onclick="lightboxPrev()">&#8249;</button>' +
+    '<img onclick="event.stopPropagation()">' +
+    '<button type="button" class="lb-next" onclick="lightboxNext()">&#8250;</button>' +
+    '<div class="lb-count" aria-live="polite" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:var(--text-primary);font-size:14px;"></div>';
+  lb.querySelector('.lb-close').setAttribute('aria-label', jmText('关闭图片', 'Close image'));
+  lb.querySelector('.lb-prev').setAttribute('aria-label', jmText('上一张', 'Previous image'));
+  lb.querySelector('.lb-next').setAttribute('aria-label', jmText('下一张', 'Next image'));
+  const item = currentLightboxImages[currentLightboxIndex];
+  const picture = lb.querySelector('img');
+  picture.src = item.src;
+  picture.alt = jmText(item.caption || '', item.captionEn || item.caption || '');
+  lb.querySelector('.lb-count').textContent = (currentLightboxIndex + 1) + ' / ' + currentLightboxImages.length;
   lb.style.display = 'flex';
   document.body.style.overflow = 'hidden';
+  lb.querySelector('.' + (focusedClass || 'lb-close')).focus({ preventScroll: true });
 }
 
 function closeLightbox() {
   const lb = document.getElementById('lightbox');
-  if (lb) lb.style.display = 'none';
-  document.body.style.overflow = '';
+  if (!lb || lb.style.display !== 'flex') return;
+  lb.style.display = 'none';
+  lightboxBackground.forEach(([element, inert]) => { element.inert = inert; });
+  lightboxBackground = [];
+  document.body.style.overflow = lightboxPreviousOverflow;
+  if (lightboxReturnFocus?.isConnected) lightboxReturnFocus.focus({ preventScroll: true });
 }
 
 function lightboxPrev() {
@@ -418,7 +464,25 @@ function lightboxNext() {
   renderLightbox();
 }
 
-
+document.addEventListener('keydown', event => {
+  const lb = document.getElementById('lightbox');
+  if (!lb || lb.style.display !== 'flex') return;
+  if (event.key === 'Escape') {
+    event.preventDefault(); closeLightbox();
+  } else if (event.key === 'ArrowLeft') {
+    event.preventDefault(); lightboxPrev();
+  } else if (event.key === 'ArrowRight') {
+    event.preventDefault(); lightboxNext();
+  } else if (event.key === 'Tab') {
+    const controls = [...lb.querySelectorAll('button')];
+    const first = controls[0], last = controls[controls.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault(); first.focus();
+    }
+  }
+});
 
 // ---- Enquiry measurement and submission ----
 function jmTrackEvent(name, parameters) {
@@ -522,4 +586,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroParallax();
   initScrollAnimations();
   jmInitContactMeasurement();
+  jmInitPackageLinks();
 });

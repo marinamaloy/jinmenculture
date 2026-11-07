@@ -123,7 +123,7 @@
           "name": "What is the duration and audience capacity?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The standard show runs approximately 45–60 minutes for 20–32 guests; final arrangements depend on the venue and package."
+            "text": "The trial package is 45 minutes for up to 20 guests; the standard package is 60 minutes for up to 32 guests. Final arrangements depend on the venue and agreed programme."
           }
         },
         {
@@ -148,6 +148,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "It combines close-up magic, social interaction and venue atmosphere, helping guests connect through the performance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we choose the date and discuss regular cooperation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Any day of the week can be discussed. For regular cooperation, we agree the dates, frequency, performance fee and any revenue share together; the two-shows-per-week plan over two months or more is a reference option."
           }
         }
       ],
@@ -180,7 +188,9 @@
     .source-note{border-left:1px solid rgba(201,160,96,.28);padding-left:16px;margin-bottom:22px}
     .source-note p{font-size:12px;color:var(--text-secondary);line-height:1.9;margin:0}.source-note small{display:block;font-size:10px;color:#6A6050;margin-top:7px}.source-note a{color:#8A8070}
     @media(max-width:768px){.editorial-grid{grid-template-columns:1fr;gap:34px}.editorial-row{grid-template-columns:34px minmax(0,1fr);gap:12px}.page-hero-content h1{font-size:36px!important}.gallery-grid{grid-template-columns:repeat(2,1fr)}}
-  </style>
+  
+    .wx-page .wx-intro{padding:48px 0}.wx-intro h2{font-size:clamp(24px,3vw,32px);font-weight:400;margin:0 0 18px;color:var(--gold-text)}.wx-intro p{font-size:16px;line-height:1.85;color:var(--text-secondary);margin:0}.wx-page .subtitle{max-width:760px;margin:16px auto 0;font-size:15px;line-height:1.8}.wx-page .credential-card p,.wx-page .editorial-row p{font-size:15px;line-height:1.8}.wx-specs div[style*="justify-content:space-between"]{gap:16px}.wx-specs div[style*="justify-content:space-between"]>span:last-child{max-width:60%;text-align:right}.wx-field-label{display:block;font-size:14px;line-height:1.6;margin-bottom:8px;color:var(--text-secondary)}.wx-booking-guide{font-size:15px;line-height:1.8;color:var(--text-secondary);margin:0 0 24px}#booking{scroll-margin-top:120px}.wx-page button.gallery-item{display:block;width:100%;padding:0;border:0;background:transparent;color:inherit;font:inherit;text-align:inherit;cursor:pointer;appearance:none}.wx-page .gallery-item:focus-visible,.wx-page .lightbox button:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}.wx-page .pricing-card .btn{white-space:normal;line-height:1.5}.wx-page .pricing-card li{overflow-wrap:break-word}@media(max-width:768px){.wx-page .wx-intro{padding:36px 0}.wx-specs div[style*="justify-content:space-between"]{font-size:14px!important}}
+</style>
 
   <script>
     const wxImages = [
@@ -211,7 +221,7 @@
 <meta name="twitter:image" content="https://www.jinmenculture.com/images/weixunxiu-bg.webp">
 </head>
 
-<body class="show-en">
+<body class="show-en wx-page">
   <noscript><div style="padding:16px;text-align:center;">JavaScript enables galleries and enquiry forms. You can also contact us by email or telephone.</div></noscript>
 <div id="nav-placeholder">
     <header class="site-nav" id="siteNav">
@@ -282,8 +292,23 @@
     
     <h1 class="lang-en" style="font-family:var(--font-en-display);font-style:italic;font-size:36px;">Weixunxiu · Immersive Social Magic Show</h1>
     
-    <p style="font-size:15px;color:var(--text-secondary);margin:16px 0 32px;" class="lang-en">A night your entire venue will be talking about tomorrow</p>
+    <p style="font-size:16px;color:var(--text-primary);margin:16px auto 28px;max-width:680px;line-height:1.8;" class="lang-en">Cocktails in hand, magic up close, and conversations that start naturally — a memorable evening for couples and new connections.</p>
     <a href="#booking" class="btn btn-filled btn-lg"><span>Book Now</span></a>
+  </div>
+</section>
+
+<section class="section wx-intro" style="position:relative;z-index:2;background:var(--bg-primary);"><div class="container" style="max-width:840px;"><h2 class="lang-en">An Ordinary Evening, Made Unforgettable</h2><p>Weixunxiu brings close-up magic and social interaction to Shanghai bars, boutique hotels and gatherings. Sip your favourite cocktail as the magic unfolds around you, share a surprising moment with your partner, or let it spark a conversation with someone new. A relaxed evening becomes a memory you take home together.</p></div></section>
+<!-- Video -->
+<section class="section section-alt" style="position:relative;z-index:2;">
+  <div class="container">
+    <div class="section-heading"><h2 class="lang-en" style="">Magic &amp; Guest Reactions</h2></div>
+    <div style="max-width:720px;margin:0 auto;" class="fade-up">
+      <div class="video-container">
+        <iframe title="Weixunxiu: magic and guest reactions" src="//player.bilibili.com/player.html?isOutside=true&aid=116606113943840&bvid=BV1PeL16rE5U&cid=38473629936&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+      </div>
+      
+      <p style="text-align:center;font-size:14px;color:var(--text-secondary);margin-top:16px;" class="lang-en">For more performance videos, contact us on WeChat</p>
+    </div>
   </div>
 </section>
 
@@ -302,71 +327,41 @@
 
     <div class="gallery-grid">
 
-      <div class="gallery-item" onclick="openLightbox(wxImages,0)">
+      <button type="button" class="gallery-item" onclick="openLightbox(wxImages,0)" aria-label="Open photo 1: Weixunxiu residency show stage in Shanghai" aria-haspopup="dialog">
         <img src="/images/weixunxiu-1.webp" alt="Weixunxiu residency show stage in Shanghai" width="1600" height="1200" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(wxImages,1)">
+      <button type="button" class="gallery-item" onclick="openLightbox(wxImages,1)" aria-label="Open photo 2: Audience interaction at Weixunxiu" aria-haspopup="dialog">
         <img src="/images/weixunxiu-2.webp" alt="Audience interaction at Weixunxiu" width="1600" height="1201" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(wxImages,2)">
+      <button type="button" class="gallery-item" onclick="openLightbox(wxImages,2)" aria-label="Open photo 3: Close-up magic at Weixunxiu" aria-haspopup="dialog">
         <img src="/images/weixunxiu-3.webp" alt="Close-up magic at Weixunxiu" width="1600" height="1013" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(wxImages,3)">
+      <button type="button" class="gallery-item" onclick="openLightbox(wxImages,3)" aria-label="Open photo 4: Weixunxiu magicians and guests after the show" aria-haspopup="dialog">
         <img src="/images/weixunxiu-4.webp" alt="Weixunxiu magicians and guests after the show" width="1600" height="1201" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(wxImages,4)">
+      <button type="button" class="gallery-item" onclick="openLightbox(wxImages,4)" aria-label="Open photo 5: Weixunxiu stage magic in Shanghai" aria-haspopup="dialog">
         <img src="/images/weixunxiu-5.webp" alt="Weixunxiu stage magic in Shanghai" width="1600" height="1201" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(wxImages,5)">
+      <button type="button" class="gallery-item" onclick="openLightbox(wxImages,5)" aria-label="Open photo 6: Weixunxiu interactive magic in an intimate venue" aria-haspopup="dialog">
         <img src="/images/weixunxiu-6.webp" alt="Weixunxiu interactive magic in an intimate venue" width="1600" height="1066" loading="lazy" decoding="async">
-      </div>
+      </button>
 
     </div>
   </div>
 </section>
-<!-- Video -->
-<section class="section section-alt" style="position:relative;z-index:2;">
-  <div class="container">
-    <div class="section-heading"><h2 class="lang-en" style="">Watch the Audience - – Shanghai Immersive Magic Show </h2></div>
-    <div style="max-width:720px;margin:0 auto;" class="fade-up">
-      <div class="video-container">
-        <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116606113943840&bvid=BV1PeL16rE5U&cid=38473629936&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-      </div>
-      
-      <p style="text-align:center;font-size:12px;color:var(--text-tertiary);margin-top:16px;" class="lang-en">For more performance videos, contact us on WeChat</p>
-    </div>
-  </div>
-</section>
-
-<!-- What Is + Specs -->
-<section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
-  <div class="container">
-    <div class="grid-2" style="gap:48px;align-items:start;">
-      <div class="fade-up">
-        
-        <h3 style="font-family:var(--font-en-display);font-size:18px;color:var(--text-primary);" class="lang-en">What is Weixunxiu? Immersive magic experience in Shanghai</h3>
-        
-        <p style="font-size:13px;color:var(--text-secondary);line-height:2;" class="lang-en">Weixunxiu is an immersive close-up magic social show for bars, boutique hotels and social events in Shanghai. On an ordinary evening, your venue transforms into a space full of surprise and wonder.</p>
-      </div>
-      <div class="fade-up">
-        <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.2);padding:28px;">
-          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);"><span>⏱ Duration</span></span><span style="color:var(--text-primary);"><span>45–60 minutes</span></span></div>
-          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);"><span>👥 Guests</span></span><span style="color:var(--text-primary);"><span>20–32 guests</span></span></div>
-          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);"><span>📍 Venue</span></span><span style="color:var(--text-primary);"><span>50 m² or more</span></span></div>
-          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);"><span>🎭 Performers</span></span><span style="color:var(--text-primary);"><span>1–2 professional magicians</span></span></div>
-          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:13px;"><span style="color:var(--text-secondary);"><span>📅 Schedule</span></span><span style="color:var(--text-primary);"><span>Friday–Sunday / Flexible scheduling</span></span></div>
-          <div style="display:flex;justify-content:space-between;padding:10px 0;font-size:13px;"><span style="color:var(--text-secondary);"><span>🍸 Bar Revenue</span></span><span style="color:var(--gold);"><span>100% retained by the venue</span></span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<section class="section wx-specs" style="position:relative;z-index:2;background:var(--bg-primary);"><div class="container" style="max-width:840px;"><div class="section-heading"><h2>The Show at a Glance</h2></div><div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.2);padding:28px;">
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:14px;"><span style="color:var(--text-secondary);"><span>⏱ Duration</span></span><span style="color:var(--text-primary);"><span>45–60 minutes</span></span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:14px;"><span style="color:var(--text-secondary);"><span>👥 Guests</span></span><span style="color:var(--text-primary);"><span>Up to 20 / 32, by package</span></span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:14px;"><span style="color:var(--text-secondary);"><span>📍 Venue</span></span><span style="color:var(--text-primary);"><span>50 m² or more</span></span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:14px;"><span style="color:var(--text-secondary);"><span>🎭 Performers</span></span><span style="color:var(--text-primary);"><span>1–2 professional magicians</span></span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid #1E1C1633;font-size:14px;"><span style="color:var(--text-secondary);"><span>📅 Schedule</span></span><span style="color:var(--text-primary);"><span>Any day, by agreement</span></span></div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;font-size:14px;"><span style="color:var(--text-secondary);"><span>🍸 Revenue terms</span></span><span style="color:var(--gold);"><span>Agreed in the partnership</span></span></div>
+        </div></div></section>
 <!-- Benefits -->
 <section class="section section-alt" style="position:relative;z-index:2;">
   <div class="container">
@@ -379,21 +374,21 @@
       </div>
       <div class="credential-card fade-up">
         <span class="icon">&#128200;</span>
-        <h3 class="lang-en" style="">Weeknight Traffic</h3>
+        <h3 class="lang-en" style="">A Date That Suits You</h3>
         
-        <p class="lang-en" style="">Schedule the show on quieter weeknights to give guests a clear reason to visit the venue.</p>
+        <p class="lang-en" style="">Weekday or weekend, we discuss the date around your event and venue. Regular performances can be planned together.</p>
       </div>
       <div class="credential-card fade-up">
         <span class="icon">&#127864;</span>
-        <h3 class="lang-en" style="">You Keep Bar Revenue</h3>
+        <h3 class="lang-en" style="">Flexible Partnership Terms</h3>
         
-        <p class="lang-en" style="">We charge a fixed fee. The venue keeps 100% of bar revenue. </p>
+        <p class="lang-en" style="">One-off shows and regular partnerships are quoted separately. Performance fees and any revenue-sharing terms are agreed together.</p>
       </div>
       <div class="credential-card fade-up">
         <span class="icon">&#11088;</span>
         <h3 class="lang-en" style="">Brand Differentiation</h3>
         
-        <p class="lang-en" style="">In Shanghai's competitive bar market, become "the bar with magic."</p>
+        <p class="lang-en" style="">Give guests more than another night at the bar: shared surprises, new conversations and a reason to remember your venue.</p>
       </div>
     </div>
   </div>
@@ -406,7 +401,7 @@
       
       <h2 class="lang-en" style="">Show Packages &amp; Pricing</h2>
       
-      <p class="subtitle lang-en" style="">Reference packages below. All shows can be customized.</p>
+      <p class="subtitle lang-en" style="">Choose a one-off show or discuss a regular partnership. With ongoing cooperation, the per-show rate is more favourable than separate one-off bookings; final terms depend on frequency and scope.</p>
     </div>
     <div class="grid-3" style="gap:16px;">
       <div class="pricing-card fade-up">
@@ -419,7 +414,7 @@
           <li class="lang-en" style="">Basic prop setup</li>
           <li class="lang-en" style="">Post-show photo time</li>
         </ul>
-        <a href="/en/weixunxiu" class="btn btn-outlined" style="width:100%;justify-content:center;"><span>Book Trial</span></a>
+        <a href="#booking" data-booking-package="trial" class="btn btn-outlined" style="width:100%;justify-content:center;"><span>Book Trial</span></a>
       </div>
       <div class="pricing-card featured fade-up">
         <div class="badge"><span>MOST POPULAR</span></div>
@@ -434,45 +429,45 @@
           <li class="lang-en" style="">Post-show interaction</li>
           <li class="lang-en" style="">Xiaohongshu content rights</li>
         </ul>
-        <a href="/en/weixunxiu" class="btn btn-filled" style="width:100%;justify-content:center;"><span>Book Standard</span></a>
+        <a href="#booking" data-booking-package="standard" class="btn btn-filled" style="width:100%;justify-content:center;"><span>Book Standard</span></a>
       </div>
       <div class="pricing-card fade-up">
         <h4 class="lang-en" style="">Residency Partnership</h4>
-        <div class="price">¥8,000<span><span>/ month + ticket revenue share</span></span></div>
+        <div class="price">¥8,000<span><span>/ month · reference</span></span></div>
         <ul>
-          <li class="lang-en" style="">2 shows per week (Friday and Saturday)</li>
+          <li class="lang-en" style="">Reference plan: 2 shows per week</li>
           <li class="lang-en" style="">Custom show content</li>
           <li class="lang-en" style="">Joint social media promo</li>
           <li class="lang-en" style="">Exclusive venue promo</li>
-          <li class="lang-en" style="">2-month minimum</li>
+          <li class="lang-en" style="">Reference term: 2 months or more</li><li>Days, frequency, fees and any ticket revenue share agreed together</li>
         </ul>
-        <a href="/en/contact" class="btn btn-outlined" style="width:100%;justify-content:center;"><span>Discuss</span></a>
+        <a href="#booking" data-booking-package="residency" class="btn btn-outlined" style="width:100%;justify-content:center;"><span>Discuss</span></a>
       </div>
     </div>
     
-    <p style="text-align:center;font-size:12px;color:var(--text-tertiary);margin-top:24px;" class="lang-en">Reference starting prices. Final quotes vary by scale, venue and customization.</p>
+    <p style="text-align:center;font-size:14px;color:var(--text-secondary);margin-top:24px;" class="lang-en">Reference starting prices. Final quotes vary by scale, venue and customization.</p>
   </div>
 </section>
 
 <!-- Booking Form -->
 <section class="section" id="booking" style="position:relative;z-index:2;background:var(--bg-primary);">
   <div class="container">
-    <div class="section-heading"><h2 class="lang-en" style="">Book a Show</h2></div>
+    <div class="section-heading"><h2 class="lang-en">Discuss Your Show</h2></div>
     <div style="max-width:500px;margin:0 auto;" class="fade-up">
-     <form data-inquiry-form="weixunxiu" action="https://formspree.io/f/xwvzvgla" method="POST" onsubmit="handleSubmit(event)">
-  <div class="form-group"><input type="text" name="venue" placeholder="Venue Name *" required=""></div>
-  <div class="form-group"><input type="text" name="name" placeholder="Contact Name *" required=""></div>
-  <div class="form-group"><input type="text" name="contact" placeholder="Phone or WeChat *" required=""></div>
+     <p class="wx-booking-guide">Share your preferred date, venue and audience size. This is an enquiry; we confirm availability, the programme and the final quote with you.</p><form data-inquiry-form="weixunxiu" action="https://formspree.io/f/xwvzvgla" method="POST" onsubmit="handleSubmit(event)">
+  <div class="form-group"><label class="wx-field-label" for="wx-venue">Venue Name *</label><input type="text" name="venue" placeholder="Venue Name *" required="" id="wx-venue"></div>
+  <div class="form-group"><label class="wx-field-label" for="wx-name">Contact Name *</label><input type="text" name="name" placeholder="Contact Name *" required="" id="wx-name"></div>
+  <div class="form-group"><label class="wx-field-label" for="wx-contact">Phone or WeChat *</label><input type="text" name="contact" placeholder="Phone or WeChat *" required="" id="wx-contact"></div>
   <div class="form-group">
-  <label style="display:block; margin-bottom:6px; font-size:12px; color:var(--text-secondary);"><span>Preferred Date</span></label>
-  <input type="date" name="date">
+  
+  <label class="wx-field-label" for="wx-date">Preferred Date</label><input type="date" name="date" id="wx-date">
 </div>
-  <div class="form-group"><input type="number" name="guests" placeholder="Expected Guests"></div>
+  <div class="form-group"><label class="wx-field-label" for="wx-guests">Expected Guests</label><input type="number" name="guests" placeholder="Expected Guests" id="wx-guests"></div>
   <div class="form-group">
-    <select name="package"><option value="套餐选择 / Package">Package</option><option value="体验场 / Trial ¥3,500">Trial ¥3,500</option><option value="标准场 / Standard ¥5,500">Standard ¥5,500</option><option value="驻场合作 / Residency">Residency</option></select>
+    <label class="wx-field-label" for="wx-package">Package</label><select name="package" id="wx-package"><option value="套餐选择 / Package">Package</option><option value="体验场 / Trial ¥3,500" data-package-code="trial">Trial ¥3,500</option><option value="标准场 / Standard ¥5,500" data-package-code="standard">Standard ¥5,500</option><option value="驻场合作 / Residency" data-package-code="residency">Residency</option></select>
   </div>
-  <div class="form-group"><textarea name="notes" placeholder="Notes"></textarea></div>
-  <button type="submit" class="btn btn-filled" style="width:100%;justify-content:center;"><span>Submit Booking</span></button>
+  <div class="form-group"><label class="wx-field-label" for="wx-notes">Notes</label><textarea name="notes" placeholder="Notes" id="wx-notes"></textarea></div>
+  <button type="submit" class="btn btn-filled" style="width:100%;justify-content:center;"><span>Send Enquiry</span></button>
 </form>
     </div>
   </div>
@@ -493,11 +488,11 @@
         </div>
         <div class="fade-up">
           <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-en" style="">Where is Weixunxiu suitable?</h3><p class="lang-en" style="">It suits bars, boutique hotels, corporate dinners, private parties and brand events, with interaction adapted to each venue.</p></div></div>
-          <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-en" style="">What is the duration and audience capacity?</h3><p class="lang-en" style="">The standard show runs approximately 45–60 minutes for 20–32 guests; final arrangements depend on the venue and package.</p></div></div>
+          <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-en" style="">What is the duration and audience capacity?</h3><p class="lang-en" style="">The trial package is 45 minutes for up to 20 guests; the standard package is 60 minutes for up to 32 guests. Final arrangements depend on the venue and agreed programme.</p></div></div>
           <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-en" style="">How do I book Weixunxiu?</h3><p class="lang-en" style="">Use the booking form on this page or contact us by WeChat Alex-lives, email 1379197706@qq.com or telephone +86 136 4170 9150.</p></div></div>
           <div class="editorial-row"><span class="editorial-number">04</span><div><h3 class="lang-en" style="">Is the show available in English?</h3><p class="lang-en" style="">Yes. The show can be performed in Chinese, English or bilingually for international companies and audiences.</p></div></div>
           <div class="editorial-row"><span class="editorial-number">05</span><div><h3 class="lang-en" style="">What makes Weixunxiu different?</h3><p class="lang-en" style="">It combines close-up magic, social interaction and venue atmosphere, helping guests connect through the performance.</p></div></div>
-        </div>
+        <div class="editorial-row"><span class="editorial-number">06</span><div><h3>Can we choose the date and discuss regular cooperation?</h3><p>Yes. Any day of the week can be discussed. For regular cooperation, we agree the dates, frequency, performance fee and any revenue share together; the two-shows-per-week plan over two months or more is a reference option.</p></div></div></div>
       </div>
     </div>
   </section>
@@ -525,6 +520,6 @@
  </main>
 <footer class="site-footer" style="position:relative;z-index:2;"><div class="container"><div class="footer-grid"><div class="footer-col"><div style="display:flex;align-items:center;gap:10px;"><img src="/images/jinmen-logo.png" alt="" style="width:auto;height:32px;object-fit:contain;"><div><div style="font-family:var(--font-cn-serif);font-size:15px;color:var(--gold-text);">浸门文化</div><div style="font-family:var(--font-en);font-size:7.5px;color:#6A6050;letter-spacing:3px;">JINMEN CULTURE</div></div></div><p class="tagline" style="display:none;"><span>We Make the Impossible Real</span></p></div><div class="footer-col"><h4 class="lang-en" style="">Quick Links</h4><a href="/en/"><span>Home</span></a><a href="/en/ip"><span>Original IP</span></a><a href="/en/engineering"><span>Engineering</span></a><a href="/en/shows"><span>Brand Shows</span></a><a href="/en/direction"><span>Creative Direction</span></a><a href="/en/about"><span>About</span></a><a href="/en/contact"><span>Contact</span></a></div><div class="footer-col"><h4 class="lang-en" style="">Contact</h4><button class="contact-item" onclick="copyToClipboard('Alex-lives')"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WeChat: Alex-lives</button><button class="contact-item" onclick="copyToClipboard('1379197706@qq.com')"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>1379197706@qq.com</button><a class="contact-item" href="tel:+8613641709150" aria-label="Call +86 136 4170 9150"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>13641709150</a><img src="/images/wechat-qr.jpg" alt="WeChat QR" class="qr"></div></div><div class="footer-bottom"><span>© 2026 Shanghai Jinmen Culture Media Co., Ltd.</span></div></div></footer>
 
-<script src="/js/main.js?v=20261107-language-urls"></script>
+<script src="/js/main.js?v=20261107-weixunxiu"></script>
 </body>
 </html>
