@@ -108,7 +108,7 @@
           "name": "什么时候可能达到收支平衡？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "页面中的5至12周仅为基于每周8场、70%上座率及所列票价和成本的内部情景测算，不是收益承诺。实际结果会随票价、上座率、营销、租金、人工与其他费用变化。"
+            "text": "5至12周是初步情景测算区间，不是固定回本时间或收益承诺。示例参考每周8场、70%上座率；实际结果还取决于场地容量、平均票价及各项成本。合作场地确定后，我们会共同细化预算与测算。"
           }
         },
         {
@@ -131,8 +131,7 @@
       "inLanguage": "zh-CN"
     }
   ]
-}
-</script>
+}</script>
 
   
   
@@ -191,7 +190,33 @@
     .editorial-grid{display:grid;grid-template-columns:minmax(260px,.85fr) minmax(420px,1.35fr);gap:clamp(54px,8vw,130px);align-items:start}.editorial-kicker{font-family:var(--font-en);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:0 0 16px}.editorial-title{font-family:var(--font-cn-serif);font-size:clamp(34px,4vw,52px);color:var(--gold-text);font-weight:400;line-height:1.2;margin:0}.editorial-title-en{font-family:var(--font-en-display);color:var(--text-primary)}.editorial-title em{color:var(--text-primary);font-weight:400}.editorial-title-en em{color:var(--gold-text)}.editorial-line{width:60px;height:1px;background:var(--gold);margin:24px 0}.editorial-intro{font-size:14px;color:var(--text-secondary);line-height:1.8;margin:0}.editorial-row{display:grid;grid-template-columns:42px minmax(0,1fr);gap:18px;padding:20px 0 28px;border-bottom:.5px solid rgba(201,160,96,.15)}.editorial-row:last-child{border-bottom:0}.editorial-number{color:var(--gold-text);font-family:var(--font-en-display);font-size:18px;font-style:italic}.editorial-row h3{font-family:var(--font-cn-serif);font-size:18px;color:var(--text-primary);font-weight:400;margin:0 0 12px}.editorial-row p{font-size:14px;color:var(--text-secondary);line-height:1.8;margin:0}
     .source-notes{max-width:none;margin:0;padding:48px max(24px,calc((100vw - 760px)/2));background:#0A0A0A;border-top:.5px solid rgba(201,160,96,.18);border-bottom:.5px solid rgba(201,160,96,.12)}.source-heading{max-width:760px;margin:0 auto 18px;font-size:10px;color:var(--gold-text);letter-spacing:2px}.source-note{max-width:760px;margin:0 auto 22px;border-left:1px solid rgba(201,160,96,.28);padding-left:16px}.source-note:last-child{margin-bottom:0}.source-note p{font-size:12px;color:var(--text-secondary);line-height:1.9;margin:0}.source-note small{display:block;font-size:10px;color:#6A6050;margin-top:7px}.source-note a{color:#8A8070}
     @media(max-width:768px){.show-feature-grid,.stats-row,.team-grid{grid-template-columns:1fr}.audience-grid{grid-template-columns:repeat(2,1fr)}.editorial-grid{grid-template-columns:1fr;gap:34px}.editorial-row{grid-template-columns:34px minmax(0,1fr);gap:12px}}
-  </style>
+  
+/* Ghost: clearer project stage, partnership notes and keyboard access. */
+.ghost-hero-content{max-width:1000px}
+.ghost-status{max-width:650px;margin:0 auto 28px;font-size:15px;line-height:1.8;color:var(--text-primary)}
+.ghost-story p{font-size:16px!important;line-height:1.9!important}
+.ghost-scenario-note{max-width:760px;margin:0 auto 20px;font-size:14px;line-height:1.9;color:var(--text-secondary);text-align:center}
+.finance-disclaimer{font-size:14px}
+.ghost-partnership-cards p{font-size:14px!important;line-height:1.9!important}
+.stat-item .label{font-size:14px;color:var(--text-secondary)}
+.team-member .role,.team-member p{font-size:14px}
+.team-member p{color:var(--text-secondary)}
+button.gallery-item,button.feedback-item{display:block;appearance:none;padding:0;font:inherit;color:inherit}
+button.gallery-item{width:100%;border:0;text-align:inherit}
+button.gallery-item:focus-visible,button.feedback-item:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+#partnership,#contact{scroll-margin-top:120px}
+.show-en .hero-project-title,.show-en .show-feature h4,.show-en .team-member h4,.show-en .editorial-row h3{font-family:var(--font-en-display)}
+@media(max-width:768px){
+ .ghost-hero-content{padding:145px 20px 100px!important}
+ .ghost-hero-content>p{letter-spacing:normal!important}
+ .ghost-status{font-size:14px}
+ .ghost-finance-table .fin-row{gap:16px;align-items:flex-start}
+ .ghost-finance-table .label{min-width:0;font-size:14px}
+ .ghost-finance-table .value{flex-shrink:0;font-size:16px}
+ .ghost-scenario-note,.finance-disclaimer,.ghost-partnership-cards p,.editorial-row p{font-size:15px!important}
+ .show-feature p{font-size:14px}
+}
+</style>
   <script src="/js/analytics.js"></script>
 
 <title>马戏团的幽魂：沉浸式悬疑魔术剧与合作 | 浸门文化</title>
@@ -277,9 +302,9 @@
 <div style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;">
   <img src="/images/circus-bg.jpg" style="width:100%; height:100%; object-fit:cover;">
 </div>
-   <section style="position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background-attachment:fixed;">
+   <section style="position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background-attachment:fixed;" class="ghost-hero">
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,9,9,0.3) 0%,rgba(9,9,9,0.55) 50%,rgba(9,9,9,0.88) 100%);"></div>
-  <div style="position:relative;z-index:2;text-align:center;padding:100px 40px 80px;">
+  <div style="position:relative;z-index:2;text-align:center;padding:100px 40px 80px;" class="ghost-hero-content">
     <div style="margin-bottom:32px;">
       <img src="/images/circus-logo.png" alt="Ghost of the Circus immersive horror magic show by Jinmen Culture" style="width:auto;height:32px;object-fit:contain;" fetchpriority="high">
     </div>
@@ -287,9 +312,9 @@
     
     <p style="font-family:var(--font-cn-serif);font-size:20px;color:var(--gold-text);letter-spacing:2px;margin-bottom:12px;"><span>当魔术遇见戏剧，当马戏邂逅惊悚</span></p>
     <p style="font-size:15px;color:var(--text-secondary);margin-bottom:40px;"><span>90分钟沉浸式惊魂之旅 · 开创先锋互动演艺新品类</span></p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="#contact" class="btn btn-filled"><span>成为合作伙伴 / Become Partner</span></a>
-      <a href="#contact" class="btn btn-outlined"><span>讨论合作细节 / Discuss Details</span></a>
+    <p class="ghost-status">项目已完成试演，现正寻找合作伙伴与投资人，共同推进后续制作与落地。</p><div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="#contact" class="btn btn-filled">洽谈合作</a>
+      <a href="#partnership" class="btn btn-outlined">了解合作方案</a>
     </div>
   </div>
   <div style="position:absolute;bottom:30px;left:50%;transform:translateX(-50%);text-align:center;animation:scrollPulse 2s ease-in-out infinite;">
@@ -307,14 +332,14 @@
       
     </div>
 
-    <div style="max-width:720px;margin:0 auto;text-align:center;">
-      <p style="font-size:15px;color:var(--text-secondary);line-height:2.2;margin-bottom:16px;" class="lang-cn">打破传统演出边界，打造现象级城市娱乐新地标<br>一个为当代年轻消费者量身定制的社交娱乐产品</p>
+    <div style="max-width:720px;margin:0 auto;text-align:center;" class="ghost-story">
+      <p style="font-size:15px;color:var(--text-secondary);line-height:2.2;margin-bottom:16px;" class="lang-cn">走进一座老剧院，揭开一场演出背后的秘密。</p>
       
       
-      <p style="font-size:14px;color:var(--text-secondary);line-height:2.2;" class="lang-cn">《马戏团的幽魂》是一项以原创IP故事为核心，深度融合<strong style="color:var(--gold-text);">魔术、戏剧、悬疑与沉浸惊魂互动体验</strong>的先锋商业娱乐项目。项目旨在为目标客群打造一场集"秀、互动、悬疑、奇情"于一体的90分钟先锋惊魂之旅。</p>
+      <p style="font-size:14px;color:var(--text-secondary);line-height:2.2;" class="lang-cn">演出刚刚开始，一位表演者突然离世。身为幻术师的剧院老板开始追查这场神秘死亡的真相。魔术、戏剧与悬疑在复古马戏团的氛围中交织，一段90分钟的故事由此展开。</p>
       
       
-      <p style="font-size:14px;color:var(--text-secondary);line-height:2.2;margin-top:16px;" class="lang-cn">我们不仅仅是在上演一场秀，更是在运营一个<strong style="color:var(--gold-text);">可复制、高粘性的社交娱乐产品</strong>。</p>
+      <p style="font-size:14px;color:var(--text-secondary);line-height:2.2;margin-top:16px;" class="lang-cn">观众始终坐在观众席中，在部分环节与角色交流、回答问题，并参与魔术。你既是故事的见证者，也会在互动中走近谜团。</p>
       
     </div>
 
@@ -331,7 +356,7 @@
         <span class="emoji">✨</span>
         <h4 class="lang-cn">沉浸体验</h4>
         
-        <p class="lang-cn">观众零距离参与，成为故事的见证者</p>
+        <p class="lang-cn">坐在观众席中，在特定环节参与互动与魔术</p>
         
       </div>
       <div class="show-feature fade-up">
@@ -467,33 +492,33 @@
 
     <div class="gallery-grid">
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,0)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,0)" type="button" aria-haspopup="dialog" aria-label="查看照片 1">
         <img src="/images/circus-gallery-1.webp" alt="《马戏团的幽魂》沉浸式魔术演出舞台" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,1)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,1)" type="button" aria-haspopup="dialog" aria-label="查看照片 2">
         <img src="/images/circus-gallery-2.webp" alt="《马戏团的幽魂》双人幻觉表演" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,2)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,2)" type="button" aria-haspopup="dialog" aria-label="查看照片 3">
         <img src="/images/circus-gallery-3.webp" alt="《马戏团的幽魂》断头台舞台幻术" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,3)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,3)" type="button" aria-haspopup="dialog" aria-label="查看照片 4">
         <img src="/images/circus-gallery-4.webp" alt="《马戏团的幽魂》沉浸式戏剧表演" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,4)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,4)" type="button" aria-haspopup="dialog" aria-label="查看照片 5">
         <img src="/images/circus-gallery-5.webp" alt="《马戏团的幽魂》上海演出宣传照" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,5)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,5)" type="button" aria-haspopup="dialog" aria-label="查看照片 6">
         <img src="/images/circus-gallery-6.webp" alt="《马戏团的幽魂》演员与观众合影" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,6)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,6)" type="button" aria-haspopup="dialog" aria-label="查看照片 7">
         <img src="/images/circus-gallery-7.webp" alt="《马戏团的幽魂》沉浸式舞台全景" loading="lazy" decoding="async">
-      </div>
+      </button>
 
     </div>
   </div>
@@ -509,43 +534,43 @@
       
     </div>
     <div class="feedback-grid">
-      <div class="feedback-item" onclick="openLightbox(feedbackImages,0)">
+      <button class="feedback-item" onclick="openLightbox(feedbackImages,0)" type="button" aria-haspopup="dialog" aria-label="查看观众评价 1">
   <img src="/images/feedback-5.webp" alt="《马戏团的幽魂》舞台设计与演员表演观众评价" width="1155" height="2174" loading="lazy" decoding="async">
-</div>
+</button>
 
-<div class="feedback-item" onclick="openLightbox(feedbackImages,1)">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,1)" type="button" aria-haspopup="dialog" aria-label="查看观众评价 2">
   <img src="/images/feedback-6.webp" alt="《马戏团的幽魂》沉浸式魔术演出观众评价" width="1160" height="2160" loading="lazy" decoding="async">
-</div>
+</button>
 
-<div class="feedback-item" onclick="openLightbox(feedbackImages,2)">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,2)" type="button" aria-haspopup="dialog" aria-label="查看观众评价 3">
   <img src="/images/feedback-7.webp" alt="《马戏团的幽魂》上海沉浸式戏剧观众评价" width="1177" height="2139" loading="lazy" decoding="async">
-</div>
+</button>
 
-<div class="feedback-item" onclick="openLightbox(feedbackImages,3)">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,3)" type="button" aria-haspopup="dialog" aria-label="查看观众评价 4">
   <img src="/images/feedback-8.webp" alt="《马戏团的幽魂》互动魔术体验观众评价" width="1181" height="2150" loading="lazy" decoding="async">
-</div>
+</button>
 
-<div class="feedback-item" onclick="openLightbox(feedbackImages,4)">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,4)" type="button" aria-haspopup="dialog" aria-label="查看观众评价 5">
   <img src="/images/feedback-9.webp" alt="《马戏团的幽魂》现场观演反馈" width="1169" height="2041" loading="lazy" decoding="async">
-</div>
+</button>
 
-<div class="feedback-item" onclick="openLightbox(feedbackImages,5)">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,5)" type="button" aria-haspopup="dialog" aria-label="查看观众评价 6">
   <img src="/images/feedback-10.webp" alt="《马戏团的幽魂》剧情与舞台幻术观众评价" width="1171" height="2029" loading="lazy" decoding="async">
-</div>
+</button>
     </div>
 
   </div>
 </section>
 
 <!-- Investment Return Model (centered) -->
-<section class="section section-alt" style="position:relative;z-index:2;">
+<section class="section section-alt" style="position:relative;z-index:2;" id="partnership">
   <div class="container">
     <div class="section-heading">
       <h2 class="lang-cn">项目财务情景测算</h2>
       
     </div>
 
-    <div class="fin-table fade-up" style="max-width:700px;margin:0 auto 40px;">
+    <div class="fin-table fade-up ghost-finance-table" style="max-width:700px;margin:0 auto 40px;">
       <div style="padding:20px 24px;text-align:center;border-bottom:0.5px solid #1E1C1633;">
         <h3 style="font-family:var(--font-cn-serif);font-size:16px;color:var(--gold-text);font-weight:400;" class="lang-cn">内部测算示例（非收益承诺）</h3>
         
@@ -557,28 +582,28 @@
       <div class="fin-row"><div class="label"><span>每周运营成本</span><br><span class="en">Weekly Operating Cost</span></div><div class="value">¥60,000 – ¥80,000</div></div>
       <div class="fin-row"><div class="label"><span>每周净利润</span><br><span class="en">Weekly Net Profit</span></div><div class="value">¥46,000 – ¥116,000</div></div>
       <div class="fin-row highlight"><div class="label"><span>预计回本周数</span><br><span class="en">Weeks to Breakeven</span></div><div class="value"><span>5 – 12 周</span></div></div>
-    </div>
+    </div><p class="ghost-scenario-note">以上为不同合作情景下的初步测算区间，并非同一场地的固定预算。5至12周会随场地容量、平均票价、上座率、演出安排及成本变化；具体方案在确认合作场地后共同测算。</p>
     <p class="lang-cn finance-disclaimer">以上数据为内部情景测算，并非投资建议、收益承诺或风险评级。实际经营结果取决于票价、上座率、档期、营销、场租、人工、税费及其他成本；合作前应完成独立财务与法律尽调。</p>
     
 
     <!-- Partnership Options -->
-    <div class="grid-3" style="margin-bottom:40px;">
+    <div class="grid-3 ghost-partnership-cards" style="margin-bottom:40px;">
       <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.2);padding:28px;" class="fade-up">
         <h4 style="font-family:var(--font-cn-serif);font-size:16px;color:var(--gold-text);margin-bottom:12px;" class="lang-cn">制作人模式</h4>
         
-        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-cn">你负责场地运营营销票务，我们负责全部内容。收入分配：协商（建议55/45）</p>
+        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-cn">制作人负责场地运营、营销与票务，我们负责演出内容。建议收入分配：制作人55%，浸门文化45%（内容方）；具体条件可协商。</p>
         
       </div>
       <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.2);padding:28px;" class="fade-up">
         <h4 style="font-family:var(--font-cn-serif);font-size:16px;color:var(--gold-text);margin-bottom:12px;" class="lang-cn">投资人模式</h4>
         
-        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-cn">投资金额 ¥400,000–560,000。净利润35%直至2倍回报，后15%持续</p>
+        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-cn">投资金额为人民币40万至56万元。现有合作方案：投资人获得净利润的35%，直至累计分配达到投资额的2倍，此后持续获得净利润的15%。我们也欢迎讨论其他合作条件。</p>
         
       </div>
       <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.2);padding:28px;" class="fade-up">
         <h4 style="font-family:var(--font-cn-serif);font-size:16px;color:var(--gold-text);margin-bottom:12px;" class="lang-cn">场地驻场</h4>
         
-        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-cn">提供场地（减免租金）+ 票房分成。适合演艺新空间、商业综合体</p>
+        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-cn">场地方提供空间与租金优惠，并参与票房分成。适合演艺空间与商业综合体；租金、分成及合作方式具体协商。</p>
         
       </div>
     </div>
@@ -600,7 +625,7 @@
       </div>
       <div class="fade-up">
         <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-cn">项目预算是多少？</h3><p class="lang-cn">目前的制作启动预算示例为人民币40万至56万元。最终预算需根据合作模式、场地条件、制作范围与落地城市重新确认。</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-cn">什么时候可能达到收支平衡？</h3><p class="lang-cn">页面中的5至12周仅为基于每周8场、70%上座率及所列票价和成本的内部情景测算，不是收益承诺。实际结果会随票价、上座率、营销、租金、人工与其他费用变化。</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-cn">什么时候可能达到收支平衡？</h3><p class="lang-cn">5至12周是初步情景测算区间，不是固定回本时间或收益承诺。示例参考每周8场、70%上座率；实际结果还取决于场地容量、平均票价及各项成本。合作场地确定后，我们会共同细化预算与测算。</p></div></div>
         <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-cn">演出需要多长时间筹备？</h3><p class="lang-cn">现阶段预计制作周期约2至3个月，包括剧本确认、幻觉机关与舞美适配、演员排练、技术测试和试演。</p></div></div>
         <div class="editorial-row"><span class="editorial-number">04</span><div><h3 class="lang-cn">需要什么样的场地？</h3><p class="lang-cn">初步方案适配约200至300平方米、层高4米以上、可容纳100至150位观众的空间；实际要求须在技术勘察后确认。</p></div></div>
       </div>

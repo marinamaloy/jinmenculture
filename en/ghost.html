@@ -108,7 +108,7 @@
           "name": "When could the production break even?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The 5–12 week estimate is an internal scenario based on eight shows per week, 70% attendance and the listed ticket and cost assumptions. It is not a return guarantee; actual results vary with pricing, attendance, marketing, rent, labour and other expenses."
+            "text": "The 5–12 week range is a preliminary scenario, not a fixed payback period or a return guarantee. The example uses eight shows per week and 70% occupancy; actual results also depend on venue capacity, average ticket price and costs. We will refine the budget and model together once a venue is agreed."
           }
         },
         {
@@ -131,8 +131,7 @@
       "inLanguage": "en"
     }
   ]
-}
-</script>
+}</script>
 
   
   
@@ -191,7 +190,33 @@
     .editorial-grid{display:grid;grid-template-columns:minmax(260px,.85fr) minmax(420px,1.35fr);gap:clamp(54px,8vw,130px);align-items:start}.editorial-kicker{font-family:var(--font-en);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:0 0 16px}.editorial-title{font-family:var(--font-cn-serif);font-size:clamp(34px,4vw,52px);color:var(--gold-text);font-weight:400;line-height:1.2;margin:0}.editorial-title-en{font-family:var(--font-en-display);color:var(--text-primary)}.editorial-title em{color:var(--text-primary);font-weight:400}.editorial-title-en em{color:var(--gold-text)}.editorial-line{width:60px;height:1px;background:var(--gold);margin:24px 0}.editorial-intro{font-size:14px;color:var(--text-secondary);line-height:1.8;margin:0}.editorial-row{display:grid;grid-template-columns:42px minmax(0,1fr);gap:18px;padding:20px 0 28px;border-bottom:.5px solid rgba(201,160,96,.15)}.editorial-row:last-child{border-bottom:0}.editorial-number{color:var(--gold-text);font-family:var(--font-en-display);font-size:18px;font-style:italic}.editorial-row h3{font-family:var(--font-cn-serif);font-size:18px;color:var(--text-primary);font-weight:400;margin:0 0 12px}.editorial-row p{font-size:14px;color:var(--text-secondary);line-height:1.8;margin:0}
     .source-notes{max-width:none;margin:0;padding:48px max(24px,calc((100vw - 760px)/2));background:#0A0A0A;border-top:.5px solid rgba(201,160,96,.18);border-bottom:.5px solid rgba(201,160,96,.12)}.source-heading{max-width:760px;margin:0 auto 18px;font-size:10px;color:var(--gold-text);letter-spacing:2px}.source-note{max-width:760px;margin:0 auto 22px;border-left:1px solid rgba(201,160,96,.28);padding-left:16px}.source-note:last-child{margin-bottom:0}.source-note p{font-size:12px;color:var(--text-secondary);line-height:1.9;margin:0}.source-note small{display:block;font-size:10px;color:#6A6050;margin-top:7px}.source-note a{color:#8A8070}
     @media(max-width:768px){.show-feature-grid,.stats-row,.team-grid{grid-template-columns:1fr}.audience-grid{grid-template-columns:repeat(2,1fr)}.editorial-grid{grid-template-columns:1fr;gap:34px}.editorial-row{grid-template-columns:34px minmax(0,1fr);gap:12px}}
-  </style>
+  
+/* Ghost: clearer project stage, partnership notes and keyboard access. */
+.ghost-hero-content{max-width:1000px}
+.ghost-status{max-width:650px;margin:0 auto 28px;font-size:15px;line-height:1.8;color:var(--text-primary)}
+.ghost-story p{font-size:16px!important;line-height:1.9!important}
+.ghost-scenario-note{max-width:760px;margin:0 auto 20px;font-size:14px;line-height:1.9;color:var(--text-secondary);text-align:center}
+.finance-disclaimer{font-size:14px}
+.ghost-partnership-cards p{font-size:14px!important;line-height:1.9!important}
+.stat-item .label{font-size:14px;color:var(--text-secondary)}
+.team-member .role,.team-member p{font-size:14px}
+.team-member p{color:var(--text-secondary)}
+button.gallery-item,button.feedback-item{display:block;appearance:none;padding:0;font:inherit;color:inherit}
+button.gallery-item{width:100%;border:0;text-align:inherit}
+button.gallery-item:focus-visible,button.feedback-item:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+#partnership,#contact{scroll-margin-top:120px}
+.show-en .hero-project-title,.show-en .show-feature h4,.show-en .team-member h4,.show-en .editorial-row h3{font-family:var(--font-en-display)}
+@media(max-width:768px){
+ .ghost-hero-content{padding:145px 20px 100px!important}
+ .ghost-hero-content>p{letter-spacing:normal!important}
+ .ghost-status{font-size:14px}
+ .ghost-finance-table .fin-row{gap:16px;align-items:flex-start}
+ .ghost-finance-table .label{min-width:0;font-size:14px}
+ .ghost-finance-table .value{flex-shrink:0;font-size:16px}
+ .ghost-scenario-note,.finance-disclaimer,.ghost-partnership-cards p,.editorial-row p{font-size:15px!important}
+ .show-feature p{font-size:14px}
+}
+</style>
   <script src="/js/analytics.js"></script>
 
 <title>Ghost of the Circus | Immersive Horror Magic &amp; Partnerships</title>
@@ -277,9 +302,9 @@
 <div style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;">
   <img src="/images/circus-bg.jpg" style="width:100%; height:100%; object-fit:cover;">
 </div>
-   <section style="position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background-attachment:fixed;">
+   <section style="position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background-attachment:fixed;" class="ghost-hero">
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,9,9,0.3) 0%,rgba(9,9,9,0.55) 50%,rgba(9,9,9,0.88) 100%);"></div>
-  <div style="position:relative;z-index:2;text-align:center;padding:100px 40px 80px;">
+  <div style="position:relative;z-index:2;text-align:center;padding:100px 40px 80px;" class="ghost-hero-content">
     <div style="margin-bottom:32px;">
       <img src="/images/circus-logo.png" alt="Ghost of the Circus immersive horror magic show by Jinmen Culture" style="width:auto;height:32px;object-fit:contain;" fetchpriority="high">
     </div>
@@ -287,9 +312,9 @@
     <h1 class="lang-en hero-project-title" style="">Ghost of the Circus: Shanghai Immersive Horror Magic Show</h1>
     <p style="font-family:var(--font-cn-serif);font-size:20px;color:var(--gold-text);letter-spacing:2px;margin-bottom:12px;"><span>Where magic meets theatre and circus meets suspense</span></p>
     <p style="font-size:15px;color:var(--text-secondary);margin-bottom:40px;"><span>A 90-minute immersive journey of magic, suspense and audience interaction</span></p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="#contact" class="btn btn-filled"><span>Become Partner</span></a>
-      <a href="#contact" class="btn btn-outlined"><span>Discuss Details</span></a>
+    <p class="ghost-status">Trial performances are complete. We are seeking partners and investors to develop the production further and bring it to a venue.</p><div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="#contact" class="btn btn-filled">Discuss Partnership</a>
+      <a href="#partnership" class="btn btn-outlined">Explore Partnership Options</a>
     </div>
   </div>
   <div style="position:absolute;bottom:30px;left:50%;transform:translateX(-50%);text-align:center;animation:scrollPulse 2s ease-in-out infinite;">
@@ -307,15 +332,15 @@
       <h2 class="lang-en" style="">About the Show</h2>
     </div>
 
-    <div style="max-width:720px;margin:0 auto;text-align:center;">
+    <div style="max-width:720px;margin:0 auto;text-align:center;" class="ghost-story">
       
-      <p style="font-size:14px;color:var(--text-secondary);line-height:2;" class="lang-en">Breaking traditional performance boundaries to create a phenomenal urban entertainment landmark.<br>A social entertainment product tailor-made for contemporary young consumers.</p>
-      
-      
-      <p style="font-size:13px;color:var(--text-secondary);line-height:2;" class="lang-en">Ghost of the Circus is a pioneering commercial entertainment project with an original IP story at its core, deeply integrating <strong style="color:var(--gold-text);">magic, theatre, mystery, and immersive horror interaction</strong>. It aims to deliver a 90-minute cutting-edge horror journey combining spectacle, interaction, suspense, and emotion.</p>
+      <p style="font-size:14px;color:var(--text-secondary);line-height:2;" class="lang-en">Step inside an old theatre, where the evening takes an unexpected turn.</p>
       
       
-      <p style="font-size:13px;color:var(--text-secondary);line-height:2;" class="lang-en">We are not just staging a show — we are operating a <strong style="color:var(--gold-text);">replicable, highly sticky social entertainment product</strong>.</p>
+      <p style="font-size:13px;color:var(--text-secondary);line-height:2;" class="lang-en">As the show begins, one of the performers suddenly dies. The theatre owner, an illusionist, sets out to uncover the truth behind the mysterious death. Magic, theatre and suspense come together in a 90-minute story set against the atmosphere of a vintage circus.</p>
+      
+      
+      <p style="font-size:13px;color:var(--text-secondary);line-height:2;" class="lang-en">Guests remain seated in the auditorium. At selected moments, they speak with the characters, answer questions and take part in the magic — becoming witnesses to the story as the mystery unfolds.</p>
     </div>
 
     <!-- 3 Features -->
@@ -332,7 +357,7 @@
         
         <h4 class="lang-en" style="">Immersive Experience</h4>
         
-        <p class="lang-en" style="">Audience participates at zero distance, becoming witnesses to the story</p>
+        <p class="lang-en" style="">Join selected moments of magic and interaction from your seat</p>
       </div>
       <div class="show-feature fade-up">
         <span class="emoji">🎪</span>
@@ -417,7 +442,7 @@
       
       <h2 class="lang-en" style="">Creative Team</h2>
       
-      <p class="subtitle lang-en" style="">Senior creative team, professional excellence guaranteed</p>
+      <p class="subtitle lang-en" style="">Meet the people behind the production</p>
     </div>
     <div class="team-grid">
       <div class="team-member fade-up">
@@ -432,7 +457,7 @@
         <h4><span>Yan Donghan</span></h4>
         <div class="role"><span>Script Consultant</span></div>
         
-        <p class="lang-en" style="">Mystery narrative master, plot structure designer</p>
+        <p class="lang-en" style="">Mystery storytelling and script development</p>
       </div>
       <div class="team-member fade-up">
         <div class="avatar">Z</div>
@@ -446,7 +471,7 @@
         <h4>Roselia</h4>
         <div class="role"><span>Sound Designer</span></div>
         
-        <p class="lang-en" style="">Professional sound designer, atmosphere creator</p>
+        <p class="lang-en" style="">Sound design and atmosphere</p>
       </div>
     </div>
   </div>
@@ -462,40 +487,38 @@
       <h2 class="lang-en" style="">Photo Gallery</h2>
 
       
-      <p class="subtitle lang-en" style="">
-        Stage lighting, magical spectacles
-      </p>
+      <p class="subtitle lang-en" style="">Scenes from the production</p>
     </div>
 
     <div class="gallery-grid">
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,0)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,0)" type="button" aria-haspopup="dialog" aria-label="Open photo 1">
         <img src="/images/circus-gallery-1.webp" alt="Ghost of the Circus immersive magic show stage" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,1)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,1)" type="button" aria-haspopup="dialog" aria-label="Open photo 2">
         <img src="/images/circus-gallery-2.webp" alt="Two-performer illusion in Ghost of the Circus" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,2)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,2)" type="button" aria-haspopup="dialog" aria-label="Open photo 3">
         <img src="/images/circus-gallery-3.webp" alt="Guillotine stage illusion in Ghost of the Circus" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,3)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,3)" type="button" aria-haspopup="dialog" aria-label="Open photo 4">
         <img src="/images/circus-gallery-4.webp" alt="Immersive theatre in Ghost of the Circus" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,4)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,4)" type="button" aria-haspopup="dialog" aria-label="Open photo 5">
         <img src="/images/circus-gallery-5.webp" alt="Ghost of the Circus promotional photo in Shanghai" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,5)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,5)" type="button" aria-haspopup="dialog" aria-label="Open photo 6">
         <img src="/images/circus-gallery-6.webp" alt="Ghost of the Circus cast with audience members" loading="lazy" decoding="async">
-      </div>
+      </button>
 
-      <div class="gallery-item" onclick="openLightbox(galleryImages,6)">
+      <button class="gallery-item" onclick="openLightbox(galleryImages,6)" type="button" aria-haspopup="dialog" aria-label="Open photo 7">
         <img src="/images/circus-gallery-7.webp" alt="Panoramic stage view of Ghost of the Circus" loading="lazy" decoding="async">
-      </div>
+      </button>
 
     </div>
   </div>
@@ -508,80 +531,80 @@
       
       <h2 class="lang-en" style="">Audience Reviews</h2>
       
-      <p class="subtitle lang-en" style="">Real audience feedback, word of mouth speaks for quality</p>
+      <p class="subtitle lang-en" style="">Audience feedback from trial performances</p>
     </div>
     <div class="feedback-grid">
-      <div class="feedback-item" onclick="openLightbox(feedbackImages,0)">
+      <button class="feedback-item" onclick="openLightbox(feedbackImages,0)" type="button" aria-haspopup="dialog" aria-label="Open audience review 1">
   <img src="/images/feedback-5.webp" alt="Audience review of the set and performances in Ghost of the Circus" width="1155" height="2174" loading="lazy" decoding="async">
-</div>
+</button>
 
-<div class="feedback-item" onclick="openLightbox(feedbackImages,1)">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,1)" type="button" aria-haspopup="dialog" aria-label="Open audience review 2">
   <img src="/images/feedback-6.webp" alt="Audience review of Ghost of the Circus immersive magic" width="1160" height="2160" loading="lazy" decoding="async">
-</div>
+</button>
 
-<div class="feedback-item" onclick="openLightbox(feedbackImages,2)">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,2)" type="button" aria-haspopup="dialog" aria-label="Open audience review 3">
   <img src="/images/feedback-7.webp" alt="Audience review of Ghost of the Circus in Shanghai" width="1177" height="2139" loading="lazy" decoding="async">
-</div>
+</button>
 
-<div class="feedback-item" onclick="openLightbox(feedbackImages,3)">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,3)" type="button" aria-haspopup="dialog" aria-label="Open audience review 4">
   <img src="/images/feedback-8.webp" alt="Audience review of interactive magic in Ghost of the Circus" width="1181" height="2150" loading="lazy" decoding="async">
-</div>
+</button>
 
-<div class="feedback-item" onclick="openLightbox(feedbackImages,4)">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,4)" type="button" aria-haspopup="dialog" aria-label="Open audience review 5">
   <img src="/images/feedback-9.webp" alt="Audience feedback on Ghost of the Circus" width="1169" height="2041" loading="lazy" decoding="async">
-</div>
+</button>
 
-<div class="feedback-item" onclick="openLightbox(feedbackImages,5)">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,5)" type="button" aria-haspopup="dialog" aria-label="Open audience review 6">
   <img src="/images/feedback-10.webp" alt="Audience review of the story and stage illusions in Ghost of the Circus" width="1171" height="2029" loading="lazy" decoding="async">
-</div>
+</button>
     </div>
 
   </div>
 </section>
 
 <!-- Investment Return Model (centered) -->
-<section class="section section-alt" style="position:relative;z-index:2;">
+<section class="section section-alt" style="position:relative;z-index:2;" id="partnership">
   <div class="container">
     <div class="section-heading">
       
       <h2 class="lang-en" style="">Illustrative Financial Scenario</h2>
     </div>
 
-    <div class="fin-table fade-up" style="max-width:700px;margin:0 auto 40px;">
+    <div class="fin-table fade-up ghost-finance-table" style="max-width:700px;margin:0 auto 40px;">
       <div style="padding:20px 24px;text-align:center;border-bottom:0.5px solid #1E1C1633;">
         
         <h3 style="font-family:var(--font-en-display);font-size:14px;color:var(--text-primary);" class="lang-en">Illustrative Internal Model — Not a Return Guarantee</h3>
       </div>
-      <div class="fin-row"><div class="label"><span>Total Production Cost</span><br><span class="en">Total Production Cost</span></div><div class="value">¥400,000 – ¥560,000</div></div>
-      <div class="fin-row"><div class="label"><span>Shows Per Week</span><br><span class="en">Shows Per Week</span></div><div class="value"><span>8 shows</span></div></div>
-      <div class="fin-row"><div class="label"><span>Ticket Price Range</span><br><span class="en">Ticket Price</span></div><div class="value"><span>¥180 – ¥380 / guest</span></div></div>
-      <div class="fin-row"><div class="label"><span>Weekly Gross Revenue (70% occupancy)</span><br><span class="en">Weekly Gross (70% capacity)</span></div><div class="value">¥126,000 – ¥196,000</div></div>
-      <div class="fin-row"><div class="label"><span>Weekly Operating Costs</span><br><span class="en">Weekly Operating Cost</span></div><div class="value">¥60,000 – ¥80,000</div></div>
-      <div class="fin-row"><div class="label"><span>Weekly Net Profit</span><br><span class="en">Weekly Net Profit</span></div><div class="value">¥46,000 – ¥116,000</div></div>
-      <div class="fin-row highlight"><div class="label"><span>Estimated Break-even Period</span><br><span class="en">Weeks to Breakeven</span></div><div class="value"><span>5–12 weeks</span></div></div>
-    </div>
+      <div class="fin-row"><div class="label"><span>Total Production Cost</span></div><div class="value">¥400,000 – ¥560,000</div></div>
+      <div class="fin-row"><div class="label"><span>Shows Per Week</span></div><div class="value"><span>8 shows</span></div></div>
+      <div class="fin-row"><div class="label"><span>Ticket Price Range</span></div><div class="value"><span>¥180 – ¥380 / guest</span></div></div>
+      <div class="fin-row"><div class="label"><span>Weekly Gross Revenue (70% occupancy)</span></div><div class="value">¥126,000 – ¥196,000</div></div>
+      <div class="fin-row"><div class="label"><span>Weekly Operating Costs</span></div><div class="value">¥60,000 – ¥80,000</div></div>
+      <div class="fin-row"><div class="label"><span>Weekly Net Profit</span></div><div class="value">¥46,000 – ¥116,000</div></div>
+      <div class="fin-row highlight"><div class="label"><span>Estimated Break-even Period</span></div><div class="value"><span>5–12 weeks</span></div></div>
+    </div><p class="ghost-scenario-note">These preliminary ranges cover different partnership scenarios, rather than a fixed budget for one venue. The 5–12 week estimate varies with venue capacity, average ticket price, attendance, schedule and costs. We will prepare a venue-specific model together once the location is agreed.</p>
     
     <p class="lang-en finance-disclaimer" style="">These figures are an internal scenario, not investment advice, a return guarantee or a risk rating. Actual results depend on ticket pricing, attendance, schedule, marketing, rent, labour, taxes and other costs. Independent financial and legal due diligence is required before partnership.</p>
 
     <!-- Partnership Options -->
-    <div class="grid-3" style="margin-bottom:40px;">
+    <div class="grid-3 ghost-partnership-cards" style="margin-bottom:40px;">
       <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.2);padding:28px;" class="fade-up">
         
         <h4 style="font-family:var(--font-en-display);font-size:14px;color:var(--text-primary);" class="lang-en">Producer Model</h4>
         
-        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-en">You handle venue, marketing, ticketing. We handle all content. Revenue split: negotiable (suggested 55/45)</p>
+        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-en">The producer handles venue operations, marketing and ticketing; Jinmen Culture provides the show content. Suggested revenue split: 55% to the producer and 45% to Jinmen Culture as the content partner. Terms are open to discussion.</p>
       </div>
       <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.2);padding:28px;" class="fade-up">
         
         <h4 style="font-family:var(--font-en-display);font-size:14px;color:var(--text-primary);" class="lang-en">Investor Model</h4>
         
-        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-en">Investment ¥400,000–560,000. 35% of net profit until 2x return, then 15% ongoing</p>
+        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-en">Investment: RMB 400,000–560,000. The current proposal gives the investor 35% of net profit until cumulative distributions reach twice the invested amount, followed by an ongoing 15% share of net profit. We are open to discussing alternative terms.</p>
       </div>
       <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.2);padding:28px;" class="fade-up">
         
         <h4 style="font-family:var(--font-en-display);font-size:14px;color:var(--text-primary);" class="lang-en">Venue Partnership</h4>
         
-        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-en">Provide space (reduced rent) + ticket revenue share. Suitable for performance spaces and malls</p>
+        <p style="font-size:12px;color:var(--text-secondary);line-height:1.8;" class="lang-en">A venue partner provides space and reduced rent in exchange for a share of ticket revenue. Suitable for performance venues and commercial spaces. Rent, revenue share and the partnership structure are agreed together.</p>
       </div>
     </div>
   </div>
@@ -595,14 +618,14 @@
         
         <p class="editorial-kicker lang-en" style="">PARTNERSHIP NOTES</p>
         
-        <h2 class="editorial-title editorial-title-en lang-en" style="">Before We Partner,<br><em>What to Know.</em></h2>
+        <h2 class="editorial-title editorial-title-en lang-en" style="">Partnership Details</h2>
         <div class="editorial-line"></div>
         
         <p class="editorial-intro lang-en" style="">Budget, production schedule, venue requirements and financial assumptions.</p>
       </div>
       <div class="fade-up">
         <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-en" style="">What is the current project budget?</h3><p class="lang-en" style="">The current illustrative start-up production budget is RMB 400,000–560,000. The final budget must be confirmed for the partnership model, venue, production scope and city.</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-en" style="">When could the production break even?</h3><p class="lang-en" style="">The 5–12 week estimate is an internal scenario based on eight shows per week, 70% attendance and the listed ticket and cost assumptions. It is not a return guarantee; actual results vary with pricing, attendance, marketing, rent, labour and other expenses.</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-en" style="">When could the production break even?</h3><p class="lang-en" style="">The 5–12 week range is a preliminary scenario, not a fixed payback period or a return guarantee. The example uses eight shows per week and 70% occupancy; actual results also depend on venue capacity, average ticket price and costs. We will refine the budget and model together once a venue is agreed.</p></div></div>
         <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-en" style="">How long does production take?</h3><p class="lang-en" style="">The current estimated production period is approximately two to three months, including script confirmation, illusion and set adaptation, rehearsals, technical tests and previews.</p></div></div>
         <div class="editorial-row"><span class="editorial-number">04</span><div><h3 class="lang-en" style="">What kind of venue is required?</h3><p class="lang-en" style="">The preliminary concept is designed for approximately 200–300 m², a ceiling height above four metres and 100–150 guests. Final requirements follow a technical site survey.</p></div></div>
       </div>
@@ -625,7 +648,7 @@
     
     <h2 class="lang-en" style="">Partner With Us</h2>
     
-    <p class="subtext lang-en" style="">Ready to discuss? We look forward to offering a unique partnership plan for your venue</p>
+    <p class="subtext lang-en" style="">Tell us about your venue or partnership idea. We will discuss a plan together.</p>
     <div class="cta-row">
       <button class="btn btn-outlined" onclick="copyToClipboard('1379197706@qq.com')"><span>✉ Copy Email</span></button>
       <button class="btn btn-filled" onclick="copyToClipboard('Alex-lives')"><span>💬 Copy WeChat ID</span></button>
