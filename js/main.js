@@ -378,7 +378,7 @@ function jmInitPackageLinks() {
       if (!option) return;
       select.value = option.value;
       select.dispatchEvent(new Event('change', { bubbles: true }));
-      select.focus({ preventScroll: true });
+      requestAnimationFrame(() => select.focus({ preventScroll: true }));
       // Keep native anchor navigation: works with keyboard and without JavaScript.
     });
   });
