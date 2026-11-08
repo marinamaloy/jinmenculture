@@ -61,21 +61,12 @@
 .ip-page .project-card .ip-copyright-label{margin:0 0 6px;font-size:12px;line-height:1.7;color:var(--gold-text)}
 .ip-page .project-card .ip-copyright-number,.ip-page .project-card .ip-performance-record{margin:0;font-size:13px;line-height:1.85;color:var(--text-secondary);overflow-wrap:anywhere}
 .ip-page .project-card .ip-performance-record{margin:12px 0 0}
-.ip-page .ip-project-four{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;background:radial-gradient(ellipse at 90% 50%,#321213 0%,#15100f 45%,var(--bg-card) 80%)}
-.ip-four-art{min-width:0;margin:0;padding:28px 28px 28px 0;text-align:center}
-.ip-four-art a{display:block}
-.ip-four-art img{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;object-fit:contain}
-.ip-four-art figcaption{font-size:13px;color:var(--gold-text);line-height:1.6;margin-top:12px}
 .ip-page .ip-enquiry-prompt{max-width:700px;padding:0 20px;margin:18px auto 28px;font-size:16px;color:var(--text-primary);line-height:1.85}
 .ip-page .ip-sources{max-width:760px;margin:36px auto;padding:0 24px}
 .ip-sources summary{padding:16px 0;min-height:44px;font-size:14px;color:var(--gold-text);cursor:pointer}
-.ip-page .btn:focus-visible,.ip-sources summary:focus-visible,.ip-four-art a:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+.ip-page .btn:focus-visible,.ip-sources summary:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
 #ip-projects,#ip-contact,#ip-collaboration{scroll-margin-top:120px}
-@media(max-width:900px){
- .ip-page .ip-project-four{grid-template-columns:minmax(0,1fr)}
- .ip-four-art{order:-1;padding:24px;background:radial-gradient(ellipse at center,#331317 0%,#100d0c 75%)}
- .ip-four-art img{max-width:380px}
-}
+
 @media(max-width:600px){
  .ip-page .project-card .card-content{padding:24px 20px}
  .ip-page .project-card .tag{font-size:12px}
@@ -85,8 +76,23 @@
  .ip-page .page-hero-content{padding-left:20px;padding-right:20px}
  .ip-page .page-hero h1{font-size:clamp(29px,7.6vw,40px);line-height:1.25;overflow-wrap:anywhere}
  .ip-page .ip-intro-copy p{font-size:16px!important;line-height:1.85!important}
- .ip-four-art{padding:20px}
+ }
+
+/* Match the existing project cards: artwork behind the copy, with one targeted overlay. */
+.ip-page .project-card.ip-visual-card{display:flex;min-height:560px;background:#090909}
+.ip-page .project-card.ip-visual-card .card-content{background:none}
+.ip-page .ip-visual-card .card-bg img{filter:brightness(.95) saturate(.9);object-fit:cover;object-position:center}
+.ip-page #project-four404 .card-bg img{object-position:center 35%}
+.ip-page .ip-visual-card .card-gradient{background:linear-gradient(90deg,rgba(9,9,9,.94) 0%,rgba(9,9,9,.87) 40%,rgba(9,9,9,.5) 66%,rgba(9,9,9,.12) 100%)}
+.ip-page .ip-visual-card .ip-card-copy p,.ip-page .ip-visual-card h3,.ip-page .ip-visual-card .tag{text-shadow:0 2px 8px rgba(0,0,0,.85)}
+@media(max-width:600px){
+ .ip-page .project-card.ip-visual-card .card-content{padding-top:180px}
+ .ip-page .ip-visual-card .card-bg{background:#090909}
+ .ip-page .ip-visual-card .card-bg img{height:440px;width:100%;object-position:center top}
+ .ip-page #project-four404 .card-bg img{object-position:center top}
+ .ip-page .ip-visual-card .card-gradient{background:linear-gradient(180deg,rgba(9,9,9,.04) 0px,rgba(9,9,9,.1) 140px,rgba(9,9,9,.65) 240px,rgba(9,9,9,.95) 390px,#090909 460px)}
 }
+
 </style>
 
   <script type="application/ld+json">{
@@ -215,7 +221,7 @@
             "name": "FOUR404互动秀 · FOUR404 Interactive Show",
             "description": "An original nightlife show combining social interaction and illusion, with a completed script. Four characters with different abilities draw guests into an experience shaped by connections between strangers, relationship choices, live interaction, dance, illusion design and AI-driven psychological mechanisms. Guests actively participate and form real connections with one another. The project brings together meeting new people, entertainment, visual spectacle and moments worth sharing. Designed for nightlife venues, commercial spaces, unconventional theatres and resident productions, it is seeking producers, investors, theatres, commercial venues and residency partners.",
             "identifier": "国作登字-2026-A-SZ00053986",
-            "image": "https://www.jinmenculture.com/images/four404-poster.webp",
+            "image": "https://www.jinmenculture.com/images/four404-background.webp",
             "creator": {
               "@id": "https://www.jinmenculture.com/#organization"
             },
@@ -413,7 +419,7 @@
  </div>
  
 </article>
-<article class="project-card fade-up" id="project-it-is-watching" aria-labelledby="it-is-watching-title">
+<article class="project-card fade-up ip-visual-card" id="project-it-is-watching" aria-labelledby="it-is-watching-title">
  <div class="card-bg"><img src="/images/tazaijian.jpg" alt="It Is Watching" loading="lazy"></div><div class="card-gradient"></div>
  <div class="card-content">
   <div class="tag">SCRIPT COMPLETE</div>
@@ -437,7 +443,9 @@
  </div>
  
 </article>
-<article class="project-card fade-up ip-project-four" id="project-four404" aria-labelledby="four404-title">
+<article class="project-card fade-up ip-project-four ip-visual-card" id="project-four404" aria-labelledby="four404-title">
+<div class="card-bg"><img src="/images/four404-background.webp" alt="FOUR404 Interactive Show: theatrical mask, clock and red curtains" width="1012" height="984" loading="lazy" decoding="async"></div>
+<div class="card-gradient"></div>
  
  <div class="card-content">
   <div class="tag">SCRIPT COMPLETE</div>
@@ -446,7 +454,7 @@
   <div class="ip-card-actions"><a href="#ip-contact" class="btn btn-outlined">Discuss FOUR404</a></div>
   <div class="ip-copyright"><p class="ip-copyright-label">Copyright-Registered Literary Work</p><p class="ip-copyright-number">Copyright Registration No.: 国作登字-2026-A-SZ00053986<br>Copyright holder: Shanghai Jinmen Culture Media Co., Ltd.</p></div>
  </div>
- <figure class="ip-four-art"><a href="/images/four404-poster.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the full FOUR404 poster (new tab)"><img src="/images/four404-poster.webp" alt="FOUR404 Interactive Show poster with theatre curtains, masks and a clock" width="1024" height="1536" loading="lazy" decoding="async"></a><figcaption>View the full poster</figcaption></figure>
+ 
 </article>
 </div>
  </div>
