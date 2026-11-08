@@ -33,6 +33,28 @@
   .source-notes{max-width:none;margin:0;padding:48px max(24px,calc((100vw - 760px)/2));background:#0A0A0A;border-top:.5px solid rgba(201,160,96,.18);border-bottom:.5px solid rgba(201,160,96,.12);position:relative;z-index:2}.source-heading{max-width:760px;margin:0 auto 18px;font-size:10px;color:var(--gold-text);letter-spacing:2px}.source-note{max-width:760px;margin:0 auto 22px;border-left:1px solid rgba(201,160,96,.28);padding-left:16px}.source-note:last-child{margin-bottom:0}.source-note p{font-size:12px;color:var(--text-secondary);line-height:1.9;margin:0}.source-note small{display:block;font-size:10px;color:#6A6050;margin-top:7px}.source-note a{color:#8A8070}
   .about-hero-title-en{max-width:1100px;margin-left:auto!important;margin-right:auto!important;font-size:clamp(38px,4.2vw,68px)!important;line-height:1.12!important;text-align:center}.about-cta{min-height:340px!important;padding:50px 20px!important}.about-cta .cta-content h2{font-size:clamp(34px,3.2vw,50px)!important;margin-bottom:24px!important}.about-cta .cta-row{gap:14px!important}.about-cta .btn{min-width:160px!important;padding:12px 22px!important;font-size:13px!important}
   @media(max-width:760px){.about-editorial{padding:72px 0}.about-editorial-grid{grid-template-columns:1fr;gap:52px}.about-row{grid-template-columns:38px 1fr}.about-faq details p{margin-left:0}.about-editorial .intro{max-width:none}.about-hero-title-en{max-width:92%;font-size:clamp(28px,8.5vw,42px)!important;line-height:1.16!important}.about-cta{min-height:0!important;padding:44px 18px!important}.about-cta .cta-content h2{font-size:31px!important;margin-bottom:20px!important}.about-cta .cta-row{gap:9px!important}.about-cta .btn{min-width:0!important;padding:11px 14px!important;font-size:11px!important}}
+
+  /* About: readable supporting copy and compact links within the existing palette. */
+  .about-page .about-story{max-width:720px;margin:0 auto;padding:40px 0}
+  .about-page .about-story p{font-size:16px;color:var(--text-secondary);line-height:1.85;margin:0 0 20px}
+  .about-page .about-story p:last-child{margin-bottom:0}
+  .about-page .about-editorial .intro,.about-page .about-row p,.about-page .about-faq details p{color:var(--text-secondary);font-size:16px;line-height:1.85}
+  .about-page .value-block p{font-size:15px;line-height:1.85;color:var(--text-secondary)}
+  .about-page .team-card .info{min-width:0}
+  .about-page .team-card .role,.about-page .team-card li{font-size:14px;line-height:1.8;color:var(--text-secondary)}
+  .about-page .team-card .info .role{color:var(--gold-text)}
+  .about-page .about-row-links{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:10px}
+  .about-page .about-text-link{display:inline-flex;align-items:center;min-height:44px;color:var(--gold-text);font-size:14px;line-height:1.6;text-decoration:underline;text-underline-offset:4px}
+  .about-page .about-text-link:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px;border-radius:2px}
+  .about-page .about-project-links{display:flex;flex-wrap:wrap;gap:4px 28px;list-style:none;padding:0;margin:12px 0 0}
+  .about-page .about-project-proof{max-width:960px;margin:44px auto 0;padding-top:28px;border-top:1px solid rgba(201,160,96,.2)}
+  .about-page .about-project-proof h3{font-size:22px;color:var(--text-primary);font-weight:400}
+  .about-page .about-project-proof p{font-size:15px;line-height:1.8;color:var(--text-secondary);margin-top:12px}
+  .about-page .about-cta .btn{min-height:44px!important;font-size:14px!important;line-height:1.5!important}
+  .about-page .source-note p,.about-page .source-note small{font-size:13px;color:var(--text-secondary)}
+  .about-page .source-note a{color:var(--gold-text)}
+  html[lang="en"] .about-page .about-editorial h2,html[lang="en"] .about-page .about-row h3,html[lang="en"] .about-page .about-faq summary,html[lang="en"] .about-page .about-project-proof h3{font-family:var(--font-en-display)}
+  @media(max-width:760px){.about-page .about-story{padding:16px 0}.about-page .about-row{grid-template-columns:30px minmax(0,1fr);gap:12px}.about-page .about-project-links{flex-direction:column;gap:4px}.about-page .about-cta .cta-row{flex-wrap:wrap}.about-page .about-project-proof{margin-top:32px}}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -49,14 +71,14 @@
       },
       "email": "1379197706@qq.com",
       "telephone": "+86-136-4170-9150",
-      "description": "上海沉浸式演出、幻觉工程、品牌定制演出与演艺创意公司。"
+      "description": "位于上海的沉浸式演出制作与舞台幻术设计公司，为剧场、品牌及商业空间创作演出与幻觉装置。"
     },
     {
       "@type": "Person",
       "@id": "https://www.jinmenculture.com/about#wang-su",
       "name": "王速",
       "alternateName": "Wang Su",
-      "jobTitle": "创始人、艺术总监、幻觉工程总监",
+      "jobTitle": "创始人、导演、艺术总监、幻觉工程总监",
       "worksFor": {
         "@id": "https://www.jinmenculture.com/#organization"
       },
@@ -66,7 +88,7 @@
       "@type": "AboutPage",
       "@id": "https://www.jinmenculture.com/about#webpage",
       "url": "https://www.jinmenculture.com/about",
-      "name": "关于上海浸门文化 | 沉浸式演出与幻觉工程",
+      "name": "关于浸门文化与创始人王速｜上海演出创作与幻觉工程",
       "about": {
         "@id": "https://www.jinmenculture.com/#organization"
       },
@@ -74,7 +96,7 @@
         "@id": "https://www.jinmenculture.com/#organization"
       },
       "inLanguage": "zh-CN",
-      "description": "了解上海浸门文化传媒有限公司及创始人王速，探索原创沉浸式演出、幻觉工程、品牌定制演出与演艺创意服务。"
+      "description": "了解上海浸门文化传媒有限公司及创始人、导演王速。我们结合演出创作与幻觉工程，为剧场、品牌和商业空间提供原创项目、定制演出与装置设计。"
     },
     {
       "@type": "BreadcrumbList",
@@ -117,7 +139,7 @@
           "name": "浸门文化的创始人是谁？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "王速是创始人、艺术总监与幻觉工程总监，拥有18年相关经验，并获IMS梅林奖·最佳魔术装置设计。"
+            "text": "王速是浸门文化的创始人、导演、艺术总监与幻觉工程总监，拥有18年魔术与幻觉创作经验，并获IMS梅林奖·最佳魔术装置设计。"
           }
         },
         {
@@ -136,22 +158,22 @@
 </script>
   <script src="/js/analytics.js"></script>
 
-<title>关于上海浸门文化 | 沉浸式演出与幻觉工程</title>
-<meta name="description" content="了解上海浸门文化传媒有限公司及创始人王速，探索原创沉浸式演出、幻觉工程、品牌定制演出与演艺创意服务。">
+<title>关于浸门文化与创始人王速｜上海演出创作与幻觉工程</title>
+<meta name="description" content="了解上海浸门文化传媒有限公司及创始人、导演王速。我们结合演出创作与幻觉工程，为剧场、品牌和商业空间提供原创项目、定制演出与装置设计。">
 <link rel="canonical" href="https://www.jinmenculture.com/about">
 <link rel="alternate" hreflang="zh-CN" href="https://www.jinmenculture.com/about">
 <link rel="alternate" hreflang="en" href="https://www.jinmenculture.com/en/about">
 <link rel="alternate" hreflang="x-default" href="https://www.jinmenculture.com/about">
-<meta property="og:title" content="关于上海浸门文化 | 沉浸式演出与幻觉工程">
-<meta property="og:description" content="了解上海浸门文化传媒有限公司及创始人王速，探索原创沉浸式演出、幻觉工程、品牌定制演出与演艺创意服务。">
+<meta property="og:title" content="关于浸门文化与创始人王速｜上海演出创作与幻觉工程">
+<meta property="og:description" content="了解上海浸门文化传媒有限公司及创始人、导演王速。我们结合演出创作与幻觉工程，为剧场、品牌和商业空间提供原创项目、定制演出与装置设计。">
 <meta property="og:url" content="https://www.jinmenculture.com/about">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:locale:alternate" content="en_US">
-<meta name="twitter:title" content="关于上海浸门文化 | 沉浸式演出与幻觉工程">
-<meta name="twitter:description" content="了解上海浸门文化传媒有限公司及创始人王速，探索原创沉浸式演出、幻觉工程、品牌定制演出与演艺创意服务。">
+<meta name="twitter:title" content="关于浸门文化与创始人王速｜上海演出创作与幻觉工程">
+<meta name="twitter:description" content="了解上海浸门文化传媒有限公司及创始人、导演王速。我们结合演出创作与幻觉工程，为剧场、品牌和商业空间提供原创项目、定制演出与装置设计。">
 <meta name="twitter:image" content="https://www.jinmenculture.com/images/jinmen-culture-shanghai-about.png">
 </head>
-<body>
+<body class="about-page">
 <noscript><div style="padding:16px;text-align:center;">JavaScript用于图片浏览与咨询表单。你也可以通过邮箱或电话联系我们。</div></noscript>
 <div id="nav-placeholder">
     <header class="site-nav" id="siteNav">
@@ -225,18 +247,11 @@
 
 <!-- Company Story -->
 <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
-  <div class="container">
-    <div style="max-width:680px;margin:0 auto;padding:40px 0;">
-      <p style="font-size:14px;color:var(--text-secondary);line-height:2.2;margin-bottom:20px;" class="lang-cn">上海浸门文化传媒有限公司是一家位于上海的沉浸式演出制作与幻觉工程公司，业务涵盖原创演出IP、幻觉装置、品牌定制演出与演艺创意。我们相信：在这个数字过剩的时代，真正能触动人心的，永远是那个让你在现实中无法解释的瞬间。</p>
-      
-
-      <p style="font-size:14px;color:var(--text-secondary);line-height:2.2;margin-bottom:20px;" class="lang-cn">从近景魔术到大型沉浸式制作，从商业场馆到品牌活动，我们以18年的魔术与幻觉创作经验，将“不可能”变成观众可以亲眼见证的真实体验。数字影像可以参与叙事，但我们的核心能力是将创意转化为可制作、可测试、可演出的物理幻觉。</p>
-      
-
-      <p style="font-size:14px;color:var(--text-secondary);line-height:2.2;" class="lang-cn">我们的使命是创造让观众无法解释、无法忘记的瞬间。这些瞬间不需要屏幕，不需要后期处理——只需要一个真实的人，和一个精心设计的幻觉。</p>
-      
-    </div>
-  </div>
+  <div class="container"><div class="about-story">
+    <p class="lang-cn">上海浸门文化传媒有限公司位于上海，专注于沉浸式演出制作与舞台幻术设计，创作原创戏剧、定制演出与幻觉装置。</p>
+    <p class="lang-cn">我们将创意开发与工程工作结合：从故事、导演构思与效果设计，到制作、测试及现场呈现，让创意适应真实的演出条件。</p>
+    <p class="lang-cn">我们与剧场、品牌及商业空间合作。创始人王速拥有18年魔术与幻觉创作经验，将现场表演的理解融入项目开发。</p>
+  </div></div>
 </section>
 
 <!-- Stats -->
@@ -244,23 +259,23 @@
   <div class="container">
     <div class="grid-4" style="text-align:center;">
       <div class="fade-up">
-        <div style="font-family:var(--font-en-display);font-size:48px;color:var(--gold-text);font-weight:400;">18+</div>
-        <div style="font-size:13px;color:var(--text-secondary);margin-top:8px;" class="lang-cn">年行业经验</div>
+        <div style="font-family:var(--font-en-display);font-size:48px;color:var(--gold-text);font-weight:400;">18</div>
+        <div style="font-size:14px;color:var(--text-secondary);margin-top:8px;" class="lang-cn">王速魔术与幻觉经验（年）</div>
         
       </div>
       <div class="fade-up">
         <div style="font-family:var(--font-en-display);font-size:48px;color:var(--gold-text);font-weight:400;">100+</div>
-        <div style="font-size:13px;color:var(--text-secondary);margin-top:8px;" class="lang-cn">演出场次</div>
+        <div style="font-size:14px;color:var(--text-secondary);margin-top:8px;" class="lang-cn">演出场次</div>
         
       </div>
       <div class="fade-up">
         <div style="font-family:var(--font-en-display);font-size:48px;color:var(--gold-text);font-weight:400;">50+</div>
-        <div style="font-size:13px;color:var(--text-secondary);margin-top:8px;" class="lang-cn">定制装置</div>
+        <div style="font-size:14px;color:var(--text-secondary);margin-top:8px;" class="lang-cn">定制装置</div>
         
       </div>
       <div class="fade-up">
         <div style="font-family:var(--font-en-display);font-size:48px;color:var(--gold-text);font-weight:400;">20+</div>
-        <div style="font-size:13px;color:var(--text-secondary);margin-top:8px;" class="lang-cn">合作品牌</div>
+        <div style="font-size:14px;color:var(--text-secondary);margin-top:8px;" class="lang-cn">合作品牌</div>
         
       </div>
     </div>
@@ -279,10 +294,10 @@
       
     </div>
     <div>
-      <div class="about-row"><div class="about-num">01</div><div><h3 class="lang-cn">原创沉浸式演出与IP</h3><p class="lang-cn">从故事概念、剧本与导演设计，到演员排练、技术开发和正式演出落地。</p></div></div>
-      <div class="about-row"><div class="about-num">02</div><div><h3 class="lang-cn">幻觉工程与装置设计</h3><p class="lang-cn">依据剧情、视线、空间与安全条件，设计、制作和测试定制幻觉系统。</p></div></div>
-      <div class="about-row"><div class="about-num">03</div><div><h3 class="lang-cn">品牌演出与演艺创意</h3><p class="lang-cn">为发布会、企业活动、剧场、商业空间与文旅项目创造专属的“不可能时刻”。</p></div></div>
-      <div class="about-row"><div class="about-num">04</div><div><h3 class="lang-cn">联合制作与项目合作</h3><p class="lang-cn">与制作人、投资人、场馆及运营方讨论联合制作、驻演、授权与长期运营。</p></div></div>
+      <div class="about-row"><div class="about-num">01</div><div><h3 class="lang-cn">原创沉浸式演出与IP</h3><p class="lang-cn">从故事概念、剧本与导演设计，到演员排练、技术开发和正式演出落地。</p><div class="about-row-links"><a class="about-text-link" href="/ip">原创项目</a></div></div></div>
+      <div class="about-row"><div class="about-num">02</div><div><h3 class="lang-cn">幻觉工程与装置设计</h3><p class="lang-cn">依据剧情、视线、空间与安全条件，设计、制作和测试定制幻觉系统。</p><div class="about-row-links"><a class="about-text-link" href="/engineering">幻觉工程</a></div></div></div>
+      <div class="about-row"><div class="about-num">03</div><div><h3 class="lang-cn">品牌演出与演艺创意</h3><p class="lang-cn">为发布会、企业活动、剧场、商业空间与文旅项目创造专属的“不可能时刻”。</p><div class="about-row-links"><a class="about-text-link" href="/shows">品牌演出</a><a class="about-text-link" href="/direction">导演与创意</a></div></div></div>
+      <div class="about-row"><div class="about-num">04</div><div><h3 class="lang-cn">联合制作与项目合作</h3><p class="lang-cn">与制作人、投资人、场馆及运营方讨论联合制作、驻演、授权与长期运营。</p><div class="about-row-links"><a class="about-text-link" href="/ip">项目合作</a></div></div></div>
     </div>
   </div>
 </section>
@@ -299,21 +314,21 @@
         <div class="icon">&#128065;</div>
         <h4 class="lang-cn">物理为本</h4>
         
-        <p class="lang-cn">在这个数字特效泛滥的时代，我们选择相信亲眼所见。真实的物理魔法，拥有任何屏幕都无法替代的震撼力量。</p>
+        <p class="lang-cn">我们以现场发生的幻觉连接表演者与观众，并根据故事需要结合影像、灯光与其他舞台手段。</p>
         
       </div>
       <div class="value-block fade-up">
         <div class="icon">&#9881;</div>
         <h4 class="lang-cn">工程驱动</h4>
         
-        <p class="lang-cn">每一个幻觉背后，都是精密的力学计算、安全设计与反复测试。我们的"魔法"是可以被建造师签字的工程作品。</p>
+        <p class="lang-cn">创意与工程团队共同检查方案的可实现性，开展设计与测试，并根据场地、表演者和预算调整方案。</p>
         
       </div>
       <div class="value-block fade-up">
         <div class="icon">&#10084;</div>
         <h4 class="lang-cn">情感至上</h4>
         
-        <p class="lang-cn">技术只是手段。我们真正在意的，是那个让观众暂时失去语言能力的瞬间。那才是我们的产品。</p>
+        <p class="lang-cn">技术服务于故事与情感。我们希望观众带走的不只是对效果的惊叹，还有与现场的人共同经历的、值得回味的时刻。</p>
         
       </div>
     </div>
@@ -323,12 +338,12 @@
 <!-- Wang Su Profile -->
 <section class="section section-alt" style="position:relative;z-index:2;">
   <div class="container">
-    <div class="section-heading"><h2 class="lang-cn">核心团队</h2></div>
+    <div class="section-heading"><h2 class="lang-cn">创始人与创意负责人</h2></div>
     <div class="team-card fade-up">
-      <img src="/images/wangsu-portrait.png" alt="王速，上海浸门文化创始人及幻觉工程总监" loading="lazy" width="520" height="680">
+      <img src="/images/wangsu-portrait.png" alt="王速，上海浸门文化创始人、导演与幻觉工程总监" loading="lazy" width="520" height="680">
       <div class="info">
         <h3><span>王速 · Wang Su</span></h3>
-        <div class="role"><span>创始人 · 艺术总监 · 幻觉工程总监 / Founder · Artistic Director · Chief Illusion Engineer</span></div>
+        <div class="role"><span>创始人 · 导演 · 艺术总监 · 幻觉工程总监</span></div>
         <ul>
           <li><span>18年魔术与幻觉创作经验 / 18 years in magic and illusion creation</span></li>
           <li><span>IMS梅林奖·最佳魔术装置设计 / Merlin Award for Best Magic Device Design</span></li>
@@ -337,8 +352,10 @@
           <li><span>IMS国际魔术协会终身会员 / IMS Lifetime Member</span></li>
           <li><span>合作品牌: 开心麻花 · SMG上海文广 · 浦江魔盒</span></li>
         </ul>
+        <a class="about-text-link" href="/direction">查看王速的导演作品</a>
       </div>
     </div>
+    <div class="about-project-proof"><h3>从真实项目了解我们</h3><p>从原创戏剧到舞台幻觉与电视演出，查看我们在具体项目中的工作。</p><ul class="about-project-links"><li><a class="about-text-link" href="/ghost">《马戏团的幽魂》· 原创戏剧</a></li><li><a class="about-text-link" href="/engineering#engineering-cases">开心麻花 · 植物绽放效果</a></li><li><a class="about-text-link" href="/engineering#engineering-cases">SMG《爱乐之都》· 魔术效果</a></li></ul></div>
   </div>
 </section>
 
@@ -349,7 +366,7 @@
     <div>
       <details open><summary><span class="lang-cn">浸门文化提供哪些服务？</span></summary><p class="lang-cn">原创沉浸式演出、幻觉工程与装置设计、品牌定制演出、演艺创意，以及联合制作与IP合作。</p></details>
       <details><summary><span class="lang-cn">你们位于哪里，可以服务哪些地区？</span></summary><p class="lang-cn">我们位于上海，可为中国各地的品牌、剧场、商业场馆、制作公司与文旅项目提供创意、制作和现场支持。</p></details>
-      <details><summary><span class="lang-cn">浸门文化的创始人是谁？</span></summary><p class="lang-cn">王速是创始人、艺术总监与幻觉工程总监，拥有18年相关经验，并获IMS梅林奖·最佳魔术装置设计。</p></details>
+      <details><summary><span class="lang-cn">浸门文化的创始人是谁？</span></summary><p class="lang-cn">王速是浸门文化的创始人、导演、艺术总监与幻觉工程总监，拥有18年魔术与幻觉创作经验，并获IMS梅林奖·最佳魔术装置设计。</p></details>
       <details><summary><span class="lang-cn">如何开始一个项目？</span></summary><p class="lang-cn">请提供项目类型、场地、时间、观众规模与预算范围。我们会先进行需求沟通，再安排创意与技术评估。</p></details>
     </div>
   </div>
