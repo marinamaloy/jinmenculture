@@ -206,6 +206,31 @@
  .direction-page .direction-hero-action .btn{width:100%;padding:14px 18px}
 }
 
+
+/* Compact portfolio: scoped collaboration roles and clearly labelled script-stage projects. */
+.direction-portfolio{margin-top:36px}
+.direction-page .direction-portfolio>h2,.direction-page .direction-development>h2{font-family:var(--font-cn-serif);font-size:26px;line-height:1.35;font-weight:400;color:var(--gold-text);margin:0 0 12px}
+.direction-portfolio-intro{max-width:760px;font-size:14px;line-height:1.8;color:var(--text-secondary);margin:0 0 22px}
+.direction-mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.direction-mini{min-width:0;background:var(--bg-card);border:1px solid var(--gold-faint);display:flex;flex-direction:column}
+.direction-mini>img{display:block;width:100%;height:160px;object-fit:cover;filter:brightness(.9) saturate(.85)}
+.direction-mini-copy{padding:20px;display:flex;flex-direction:column;flex:1}
+.direction-mini h3{font-family:var(--font-cn-serif);font-size:20px;line-height:1.4;font-weight:400;color:var(--text-primary);margin:0 0 10px}
+.direction-mini-role{font-size:14px;line-height:1.65;color:var(--gold-text);margin:0 0 12px}
+.direction-mini-description{font-size:15px;line-height:1.8;color:var(--text-secondary);margin:0 0 14px}
+.direction-mini a{display:inline-flex;align-items:center;min-height:44px;margin-top:auto;color:var(--gold-text);font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.direction-development{margin-top:32px;padding-top:26px;border-top:1px solid var(--gold-faint)}
+.direction-development-note{font-size:14px;line-height:1.8;color:var(--text-secondary);margin:0 0 16px}
+.direction-dev-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.direction-dev-link{display:block;min-width:0;padding:18px 20px;background:var(--bg-card);border:1px solid var(--gold-faint);color:var(--text-primary);text-decoration:none}
+.direction-dev-link h3{font-family:var(--font-cn-serif);font-size:20px;font-weight:400;line-height:1.4;margin:0 0 7px;color:var(--text-primary)}
+.direction-dev-status{display:block;font-size:13px;line-height:1.7;color:var(--gold-text);margin-bottom:8px}
+.direction-dev-link p{font-size:14px;line-height:1.8;color:var(--text-secondary);margin:0}
+.direction-mini a:focus-visible,.direction-dev-link:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+.direction-page.show-en :is(.direction-portfolio>h2,.direction-development>h2,.direction-mini h3,.direction-dev-link h3){font-family:var(--font-en-display)}
+@media(max-width:900px){.direction-mini-grid{grid-template-columns:minmax(0,1fr)}.direction-mini{display:grid;grid-template-columns:190px minmax(0,1fr)}.direction-mini>img{height:100%;min-height:180px}}
+@media(max-width:600px){.direction-mini{display:flex}.direction-mini>img{height:135px;min-height:0}.direction-dev-grid{grid-template-columns:minmax(0,1fr)}}
+
 </style>
   <script src="/js/analytics.js"></script>
 
@@ -316,7 +341,20 @@
 <div class="direction-case-copy"><h2>马戏团的幽魂</h2><p class="direction-case-role">导演、幻觉设计：王速</p><p>导演任务：在一场完整的舞台秀中建立神秘感、压迫感与悬念，让戏剧叙事与魔术共同构成观众体验。</p><p>王速从零参与作品的创作与导演，将故事、演员表演、舞台氛围及幻觉设计组织为一个整体。魔术与装置服务剧情和情绪，随着故事推进逐步展开。</p>
 <a class="btn btn-outlined" href="/ghost">查看作品介绍</a></div>
 </div>
-<p class="direction-other-work">在其他合作制作中，王速也承担幻觉创意与舞台效果设计等专项工作，合作职责按项目明确。 <a href="/engineering">了解幻觉创意与工程项目</a></p>
+<div class="direction-portfolio" aria-labelledby="direction-collaborations-heading">
+<h2 id="direction-collaborations-heading">精选合作项目</h2><p class="direction-portfolio-intro">从剧场到电视与沉浸式现场，以下项目展示王速在不同制作中承担的专项创意工作。</p>
+<div class="direction-mini-grid"><article class="direction-mini" aria-labelledby="direction-collab-1">
+<img src="/images/case-kxmh.webp" alt="开心麻花剧场幻觉合作项目" loading="lazy" decoding="async">
+<div class="direction-mini-copy"><h3 id="direction-collab-1">开心麻花 · 剧场项目</h3><p class="direction-mini-role">角色：幻觉创意与装置设计</p><p class="direction-mini-description">为《出马》《谢同学不杀之恩》的舞台情境定制植物绽放效果，让魔法在观众眼前发生。</p><a href="/engineering#engineering-cases">查看相关案例</a></div></article>
+<article class="direction-mini" aria-labelledby="direction-collab-2">
+<img src="/images/case-smg.webp" alt="SMG爱乐之都魔术效果合作项目" loading="lazy" decoding="async">
+<div class="direction-mini-copy"><h3 id="direction-collab-2">SMG ·《爱乐之都》</h3><p class="direction-mini-role">角色：魔术效果创意与呈现指导</p><p class="direction-mini-description">为拥有魔法能力的角色构思并指导效果呈现，让角色的魔力成为可见的舞台瞬间。</p><a href="/engineering#engineering-cases">查看相关案例</a></div></article>
+<article class="direction-mini" aria-labelledby="direction-collab-3">
+<img src="/images/case-cruise.webp" alt="浦江魔盒沉浸式邮轮项目" loading="lazy" decoding="async">
+<div class="direction-mini-copy"><h3 id="direction-collab-3">浦江魔盒 · 邮轮项目</h3><p class="direction-mini-role">角色：沉浸式互动与魔术创意</p><p class="direction-mini-description">结合邮轮空间组织沉浸式游戏，将观众参与、魔术与幻觉串联成现场体验。</p><a href="/shows">查看相关案例</a></div></article></div>
+<div class="direction-development"><h2>创作中的项目</h2><p class="direction-development-note">两个项目均已完成剧本，正在寻找制作与场地合作伙伴。</p><div class="direction-dev-grid"><a class="direction-dev-link" href="/ip#project-it-is-watching"><h3>它在看</h3><span class="direction-dev-status">剧本已完成</span><p>两层房屋中的心理悬疑故事，以幻觉效果呈现难以解释的事件。</p></a>
+<a class="direction-dev-link" href="/ip#project-four404"><h3>FOUR404互动秀</h3><span class="direction-dev-status">剧本已完成</span><p>以关系选择、舞蹈与幻觉串联陌生人之间的社交互动。</p></a></div></div>
+</div>
 </div></section>
 
 <!-- Creative direction process -->

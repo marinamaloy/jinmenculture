@@ -206,6 +206,31 @@
  .direction-page .direction-hero-action .btn{width:100%;padding:14px 18px}
 }
 
+
+/* Compact portfolio: scoped collaboration roles and clearly labelled script-stage projects. */
+.direction-portfolio{margin-top:36px}
+.direction-page .direction-portfolio>h2,.direction-page .direction-development>h2{font-family:var(--font-cn-serif);font-size:26px;line-height:1.35;font-weight:400;color:var(--gold-text);margin:0 0 12px}
+.direction-portfolio-intro{max-width:760px;font-size:14px;line-height:1.8;color:var(--text-secondary);margin:0 0 22px}
+.direction-mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.direction-mini{min-width:0;background:var(--bg-card);border:1px solid var(--gold-faint);display:flex;flex-direction:column}
+.direction-mini>img{display:block;width:100%;height:160px;object-fit:cover;filter:brightness(.9) saturate(.85)}
+.direction-mini-copy{padding:20px;display:flex;flex-direction:column;flex:1}
+.direction-mini h3{font-family:var(--font-cn-serif);font-size:20px;line-height:1.4;font-weight:400;color:var(--text-primary);margin:0 0 10px}
+.direction-mini-role{font-size:14px;line-height:1.65;color:var(--gold-text);margin:0 0 12px}
+.direction-mini-description{font-size:15px;line-height:1.8;color:var(--text-secondary);margin:0 0 14px}
+.direction-mini a{display:inline-flex;align-items:center;min-height:44px;margin-top:auto;color:var(--gold-text);font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.direction-development{margin-top:32px;padding-top:26px;border-top:1px solid var(--gold-faint)}
+.direction-development-note{font-size:14px;line-height:1.8;color:var(--text-secondary);margin:0 0 16px}
+.direction-dev-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.direction-dev-link{display:block;min-width:0;padding:18px 20px;background:var(--bg-card);border:1px solid var(--gold-faint);color:var(--text-primary);text-decoration:none}
+.direction-dev-link h3{font-family:var(--font-cn-serif);font-size:20px;font-weight:400;line-height:1.4;margin:0 0 7px;color:var(--text-primary)}
+.direction-dev-status{display:block;font-size:13px;line-height:1.7;color:var(--gold-text);margin-bottom:8px}
+.direction-dev-link p{font-size:14px;line-height:1.8;color:var(--text-secondary);margin:0}
+.direction-mini a:focus-visible,.direction-dev-link:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+.direction-page.show-en :is(.direction-portfolio>h2,.direction-development>h2,.direction-mini h3,.direction-dev-link h3){font-family:var(--font-en-display)}
+@media(max-width:900px){.direction-mini-grid{grid-template-columns:minmax(0,1fr)}.direction-mini{display:grid;grid-template-columns:190px minmax(0,1fr)}.direction-mini>img{height:100%;min-height:180px}}
+@media(max-width:600px){.direction-mini{display:flex}.direction-mini>img{height:135px;min-height:0}.direction-dev-grid{grid-template-columns:minmax(0,1fr)}}
+
 </style>
   <script src="/js/analytics.js"></script>
 
@@ -317,7 +342,20 @@
 <div class="direction-case-copy"><h2>Ghost of the Circus</h2><p class="direction-case-role">Director &amp; Illusion Designer: Wang Su</p><p>The directing brief: build mystery, tension and intrigue within a complete stage show, bringing theatrical storytelling and magic together.</p><p>Wang Su developed and directed the production from the ground up, bringing the story, performances, stage atmosphere and illusion design into one creative vision. Magic and apparatus serve the narrative and its emotional progression.</p>
 <a class="btn btn-outlined" href="/en/ghost">Explore the Production</a></div>
 </div>
-<p class="direction-other-work">On other productions, Wang Su also contributes illusion concepts and stage-effect design. His responsibilities are defined for each collaboration. <a href="/en/engineering">Explore Illusion &amp; Engineering Projects</a></p>
+<div class="direction-portfolio" aria-labelledby="direction-collaborations-heading">
+<h2 id="direction-collaborations-heading">Selected Collaborations</h2><p class="direction-portfolio-intro">Across theatre, television and immersive events, these projects show Wang Su’s specialist creative contributions to other productions.</p>
+<div class="direction-mini-grid"><article class="direction-mini" aria-labelledby="direction-collab-1">
+<img src="/images/case-kxmh.webp" alt="Mahua FunAge theatre illusion collaboration" loading="lazy" decoding="async">
+<div class="direction-mini-copy"><h3 id="direction-collab-1">Mahua FunAge · Theatre</h3><p class="direction-mini-role">Role: Illusion concepts &amp; apparatus design</p><p class="direction-mini-description">Created a plant-blooming effect for the stage worlds of《出马》and《谢同学不杀之恩》, making magic happen before the audience’s eyes.</p><a href="/en/engineering#engineering-cases">View Related Case</a></div></article>
+<article class="direction-mini" aria-labelledby="direction-collab-2">
+<img src="/images/case-smg.webp" alt="SMG City of Musicals magic effect collaboration" loading="lazy" decoding="async">
+<div class="direction-mini-copy"><h3 id="direction-collab-2">SMG · City of Musicals</h3><p class="direction-mini-role">Role: Magic effect concept &amp; staging direction</p><p class="direction-mini-description">Conceived and guided the staging of effects for characters with magical powers, making those powers visible on stage.</p><a href="/en/engineering#engineering-cases">View Related Case</a></div></article>
+<article class="direction-mini" aria-labelledby="direction-collab-3">
+<img src="/images/case-cruise.webp" alt="Pujiang Magic Box immersive cruise project" loading="lazy" decoding="async">
+<div class="direction-mini-copy"><h3 id="direction-collab-3">Pujiang Magic Box · Cruise</h3><p class="direction-mini-role">Role: Immersive interaction &amp; magic concepts</p><p class="direction-mini-description">An immersive game shaped for a cruise setting, bringing audience participation, magic and illusions into the live experience.</p><a href="/en/shows">View Related Case</a></div></article></div>
+<div class="direction-development"><h2>Projects in Development</h2><p class="direction-development-note">Both scripts are complete and seeking production and venue partners.</p><div class="direction-dev-grid"><a class="direction-dev-link" href="/en/ip#project-it-is-watching"><h3>It Is Watching</h3><span class="direction-dev-status">SCRIPT COMPLETE</span><p>A psychological mystery in a two-storey house, with illusions bringing unexplained events to life.</p></a>
+<a class="direction-dev-link" href="/en/ip#project-four404"><h3>FOUR404 Interactive Show</h3><span class="direction-dev-status">SCRIPT COMPLETE</span><p>Relationship choices, dance and illusions shape an interactive social experience for strangers.</p></a></div></div>
+</div>
 </div></section>
 
 <!-- Creative direction process -->
