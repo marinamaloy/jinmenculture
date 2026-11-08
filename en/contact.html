@@ -6,12 +6,15 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://www.jinmenculture.com/#organization",
-  "name": "上海浸门文化传媒有限公司",
-  "alternateName": "JINMEN CULTURE",
+  "name": "Shanghai Jinmen Culture Media Co., Ltd.",
+  "alternateName": [
+    "Jinmen Culture",
+    "上海浸门文化传媒有限公司"
+  ],
   "image": "https://www.jinmenculture.com/images/jinmen-logo.png",
   "logo": "https://www.jinmenculture.com/images/jinmen-logo.png",
   "url": "https://www.jinmenculture.com/en/",
-  "description": "沉浸式魔术演出与幻觉工程解决方案提供商。原创IP、品牌演出、幻觉装置定制。Illusion engineering, immersive shows, and magic experiences provider in Shanghai.",
+  "description": "Shanghai-based Jinmen Culture creates original shows, custom performances and illusion devices, and provides directing and creative development.",
   "telephone": "+86 13641709150",
   "email": "1379197706@qq.com",
   "areaServed": "China"
@@ -98,13 +101,29 @@ function handleSubmit(event) { return jmSubmitInquiry(event, 'contact'); }
 <style>
   .contact-hero-title{max-width:900px;margin:0 auto 10px}.contact-intro{max-width:720px;margin:18px auto 0;color:var(--text-secondary);font-size:14px;line-height:1.9}.contact-faq{background:#080808;padding:95px 0;position:relative;z-index:2}.contact-faq-grid{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(420px,1.35fr);gap:10%;align-items:start}.contact-faq .kicker{font:500 11px/1.4 var(--font-en);letter-spacing:.3em;color:#b88b48;text-transform:uppercase}.contact-faq h2{margin:22px 0 26px;font:400 clamp(38px,4vw,62px)/1.1 var(--font-cn-serif);color:#eee9df}.contact-faq h2 em{color:#c99d59;font-style:italic}.contact-faq .gold-line{width:58px;height:1px;background:#c99d59;margin-bottom:28px}.contact-faq .intro{color:#756d60;line-height:1.9}.contact-faq details{border-bottom:1px solid rgba(201,157,89,.13);padding:22px 0}.contact-faq summary{cursor:pointer;list-style:none;color:#ded8ce;font:400 18px/1.5 var(--font-cn-serif);display:flex;gap:16px}.contact-faq summary::-webkit-details-marker{display:none}.contact-faq summary:after{content:'+';margin-left:auto;color:#c99d59}.contact-faq details[open] summary:after{content:'−'}.contact-faq details p{margin:14px 36px 0;color:#766e61;line-height:1.9;font-size:14px}.contact-card-copy{margin-left:auto;font-size:11px;color:var(--gold);border:1px solid rgba(201,160,96,.3);padding:4px 10px;border-radius:12px}
   @media(max-width:760px){.contact-faq{padding:70px 0}.contact-faq-grid{grid-template-columns:1fr;gap:42px}.contact-faq details p{margin-left:0}.contact-card-copy{display:none}.contact-hero-title{font-size:34px!important}.contact-hero-buttons{gap:8px!important}.contact-hero-buttons .btn{min-width:0!important;padding:11px 12px!important;font-size:11px!important}}
+
+  /* Contact: readable supporting copy; retain placeholders without visible labels. */
+  .contact-page .contact-intro{font-size:16px;line-height:1.8}
+  .contact-page .contact-form-intro{font-size:15px;line-height:1.8;color:var(--text-secondary);margin:16px 0 24px}
+  .contact-page .contact-faq .intro,.contact-page .contact-faq details p{color:var(--text-secondary);font-size:16px;line-height:1.8}
+  .contact-page .form-group input,.contact-page .form-group select,.contact-page .form-group textarea{font-size:16px}
+  .contact-page .contact-card-label{font-size:12px!important;color:var(--text-secondary)!important}
+  .contact-page .contact-card-copy{display:block;font-size:12px;color:var(--gold-text);flex-shrink:0;white-space:nowrap}
+  .contact-page .contact-copy-card{width:100%;font:inherit;color:inherit;text-align:left}
+  .contact-page .contact-copy-card>span:nth-child(2)>span{display:block}
+  .contact-page .contact-copy-card:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+  .contact-page .contact-qr-note,.contact-page .contact-reply-note{font-size:14px!important;line-height:1.8;color:var(--text-secondary)!important}
+  .contact-page .contact-qr-note{max-width:360px;margin:12px auto 0!important}
+  .contact-page .contact-hero-buttons .btn{min-height:44px;line-height:1.5;font-size:14px!important}
+  html[lang="en"] .contact-page .contact-faq h2,html[lang="en"] .contact-page .contact-faq summary{font-family:var(--font-en-display)}
+  @media(max-width:760px){.contact-page .contact-hero-buttons{flex-wrap:wrap}.contact-page .contact-card-copy{display:block;padding:4px 7px;font-size:12px}.contact-page .contact-copy-card{padding:18px 14px!important;gap:12px!important}.contact-page .contact-copy-card>span:nth-child(2){min-width:0;overflow-wrap:anywhere}.contact-page .contact-form-intro{font-size:15px}}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "@id": "https://www.jinmenculture.com/en/contact#webpage",
   "url": "https://www.jinmenculture.com/en/contact",
-  "name": "Contact Jinmen Culture Shanghai | Shows & Illusion Engineering",
+  "name": "Contact Jinmen Culture | Show Enquiries & Project Partnerships",
   "about": {
     "@id": "https://www.jinmenculture.com/#organization"
   },
@@ -115,38 +134,38 @@ function handleSubmit(event) { return jmSubmitInquiry(event, 'contact'); }
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "首页",
+        "name": "Home",
         "item": "https://www.jinmenculture.com/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "联系我们",
+        "name": "Contact",
         "item": "https://www.jinmenculture.com/en/contact"
       }
     ]
   },
-  "description": "Contact Jinmen Culture to discuss immersive shows, custom stage illusions, corporate magic performances and project partnerships. Share your venue, date and goals."
+  "description": "Contact Shanghai-based Jinmen Culture about custom shows, illusion devices, directing and original theatre partnerships. Share your project, location and dates."
 }
 </script>
   <script src="/js/analytics.js"></script>
 
-<title>Contact Jinmen Culture Shanghai | Shows &amp; Illusion Engineering</title>
-<meta name="description" content="Contact Jinmen Culture to discuss immersive shows, custom stage illusions, corporate magic performances and project partnerships. Share your venue, date and goals.">
+<title>Contact Jinmen Culture | Show Enquiries &amp; Project Partnerships</title>
+<meta name="description" content="Contact Shanghai-based Jinmen Culture about custom shows, illusion devices, directing and original theatre partnerships. Share your project, location and dates.">
 <link rel="canonical" href="https://www.jinmenculture.com/en/contact">
 <link rel="alternate" hreflang="zh-CN" href="https://www.jinmenculture.com/contact">
 <link rel="alternate" hreflang="en" href="https://www.jinmenculture.com/en/contact">
 <link rel="alternate" hreflang="x-default" href="https://www.jinmenculture.com/contact">
-<meta property="og:title" content="Contact Jinmen Culture Shanghai | Shows &amp; Illusion Engineering">
-<meta property="og:description" content="Contact Jinmen Culture to discuss immersive shows, custom stage illusions, corporate magic performances and project partnerships. Share your venue, date and goals.">
+<meta property="og:title" content="Contact Jinmen Culture | Show Enquiries &amp; Project Partnerships">
+<meta property="og:description" content="Contact Shanghai-based Jinmen Culture about custom shows, illusion devices, directing and original theatre partnerships. Share your project, location and dates.">
 <meta property="og:url" content="https://www.jinmenculture.com/en/contact">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
-<meta name="twitter:title" content="Contact Jinmen Culture Shanghai | Shows &amp; Illusion Engineering">
-<meta name="twitter:description" content="Contact Jinmen Culture to discuss immersive shows, custom stage illusions, corporate magic performances and project partnerships. Share your venue, date and goals.">
+<meta name="twitter:title" content="Contact Jinmen Culture | Show Enquiries &amp; Project Partnerships">
+<meta name="twitter:description" content="Contact Shanghai-based Jinmen Culture about custom shows, illusion devices, directing and original theatre partnerships. Share your project, location and dates.">
 <meta name="twitter:image" content="https://www.jinmenculture.com/images/jinmen-culture-shanghai-contact.png">
 </head>
-<body class="show-en">
+<body class="show-en contact-page">
 <noscript><div style="padding:16px;text-align:center;">JavaScript enables galleries and enquiry forms. You can also contact us by email or telephone.</div></noscript>
 <div id="nav-placeholder">
     <header class="site-nav" id="siteNav">
@@ -234,24 +253,24 @@ function handleSubmit(event) { return jmSubmitInquiry(event, 'contact'); }
       <div class="fade-up">
         
         <h3 style="font-family:var(--font-en-display);font-size:18px;color:var(--text-primary);" class="lang-en">Send Inquiry</h3>
-        <form data-inquiry-form="contact" action="https://formspree.io/f/mzdwdnde" method="POST" onsubmit="handleSubmit(event)">
+        <p id="contact-form-guide" class="contact-form-intro lang-en">Tell us what you are planning: the project type, city, proposed dates, venue and approximate budget. If the details are still taking shape, a brief description of your idea is enough.</p>
+        <form data-inquiry-form="contact" aria-describedby="contact-form-guide" action="https://formspree.io/f/mzdwdnde" method="POST" onsubmit="handleSubmit(event)">
           <input type="hidden" name="_subject" value="New inquiry from Jinmen Culture website">
-          <div class="form-group"><input type="text" name="name" placeholder="Name *" required=""></div>
-          <div class="form-group"><input type="text" name="company" placeholder="Company (optional)"></div>
-          <div class="form-group"><input type="text" name="contact" placeholder="Phone or WeChat *" required=""></div>
+          <div class="form-group"><input type="text" name="name" placeholder="Name *" required="" aria-label="Name" autocomplete="name"></div>
+          <div class="form-group"><input type="text" name="company" placeholder="Company (optional)" aria-label="Company (optional)" autocomplete="organization"></div>
+          <div class="form-group"><input type="text" name="contact" placeholder="Email, phone or WeChat *" required="" aria-label="Email, phone or WeChat"></div>
           <div class="form-group">
-            <select name="inquiry_type">
-              <option value="咨询类型 / Inquiry Type">Inquiry Type</option>
-              <option value="原创IP合作 / Original IP Partnership">Original IP Partnership</option>
-              <option value="马戏团的幽魂投资 / Ghost of Circus Investment">Ghost of Circus Investment</option>
-              <option value="幻觉工程订制 / Custom Illusion Engineering">Custom Illusion Engineering</option>
-              <option value="品牌演出预约 / Brand Show Booking">Brand Show Booking</option>
-              <option value="微醺秀预约 / Weixunxiu Booking">Weixunxiu Booking</option>
-              <option value="演艺创意合作 / Creative Direction">Creative Direction</option>
-              <option value="其他 / Other">Other</option>
+            <select name="inquiry_type" aria-label="Enquiry type">
+              <option value="">Enquiry type</option>
+              <option value="event-performance">Event performance</option>
+              <option value="illusion-engineering">Illusion device or effect</option>
+              <option value="directing-creative">Directing &amp; creative development</option>
+              <option value="original-theatre">Original theatre partnership</option>
+              <option value="weixunxiu">Weixunxiu</option>
+              <option value="other">Other</option>
             </select>
           </div>
-          <div class="form-group"><textarea name="message" placeholder="Message"></textarea></div>
+          <div class="form-group"><textarea name="message" placeholder="Message" aria-label="Message"></textarea></div>
           <button type="submit" class="btn btn-filled" style="width:100%;justify-content:center;"><span>Send</span></button>
         </form>
       </div>
@@ -262,28 +281,28 @@ function handleSubmit(event) { return jmSubmitInquiry(event, 'contact'); }
 
         <div style="display:flex;flex-direction:column;gap:16px;">
           <!-- WeChat Card -->
-          <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.15);padding:20px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,160,96,0.4)'" onmouseout="this.style.borderColor='rgba(201,160,96,0.15)'" onclick="copyToClipboard('Alex-lives')">
-            <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,160,96,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <button type="button" class="contact-copy-card" aria-label="Copy WeChat ID" style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.15);padding:20px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,160,96,0.4)'" onmouseout="this.style.borderColor='rgba(201,160,96,0.15)'" onclick="copyToClipboard('Alex-lives')">
+            <span style="width:44px;height:44px;border-radius:50%;background:rgba(201,160,96,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-            </div>
-            <div>
-              <div style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">WECHAT</div>
-              <div style="font-size:15px;color:var(--text-primary);margin-top:2px;">Alex-lives</div>
-            </div>
-            <div class="contact-card-copy"><span>Click to copy</span></div>
-          </div>
+            </span>
+            <span style="display:block;">
+              <span class="contact-card-label" style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">WECHAT</span>
+              <span style="font-size:15px;color:var(--text-primary);margin-top:2px;">Alex-lives</span>
+            </span>
+            <span class="contact-card-copy"><span style="display:block;">Click to copy</span></span>
+          </button>
 
           <!-- Email Card -->
-          <div style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.15);padding:20px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,160,96,0.4)'" onmouseout="this.style.borderColor='rgba(201,160,96,0.15)'" onclick="copyToClipboard('1379197706@qq.com')">
-            <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,160,96,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <button type="button" class="contact-copy-card" aria-label="Copy email address" style="background:var(--bg-card);border:1px solid rgba(201,160,96,0.15);padding:20px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,160,96,0.4)'" onmouseout="this.style.borderColor='rgba(201,160,96,0.15)'" onclick="copyToClipboard('1379197706@qq.com')">
+            <span style="width:44px;height:44px;border-radius:50%;background:rgba(201,160,96,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
-            </div>
-            <div>
-              <div style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">EMAIL</div>
-              <div style="font-size:15px;color:var(--text-primary);margin-top:2px;">1379197706@qq.com</div>
-            </div>
-            <div class="contact-card-copy"><span>Click to copy</span></div>
-          </div>
+            </span>
+            <span style="display:block;">
+              <span class="contact-card-label" style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">EMAIL</span>
+              <span style="font-size:15px;color:var(--text-primary);margin-top:2px;">1379197706@qq.com</span>
+            </span>
+            <span class="contact-card-copy"><span style="display:block;">Click to copy</span></span>
+          </button>
 
           <!-- Phone Card -->
           <a href="tel:+8613641709150" aria-label="Call +86 136 4170 9150" style="text-decoration:none;background:var(--bg-card);border:1px solid rgba(201,160,96,0.15);padding:20px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,160,96,0.4)'" onmouseout="this.style.borderColor='rgba(201,160,96,0.15)'">
@@ -291,7 +310,7 @@ function handleSubmit(event) { return jmSubmitInquiry(event, 'contact'); }
               <svg width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
             <div>
-              <div style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">PHONE</div>
+              <div class="contact-card-label" style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">PHONE</div>
               <div style="font-size:15px;color:var(--text-primary);margin-top:2px;">13641709150</div>
             </div>
             <div class="contact-card-copy"><span class="lang-en" lang="en">Call</span></div>
@@ -303,7 +322,7 @@ function handleSubmit(event) { return jmSubmitInquiry(event, 'contact'); }
               <svg width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <div style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">LOCATION</div>
+              <div class="contact-card-label" style="font-size:11px;color:var(--text-tertiary);letter-spacing:1px;">LOCATION</div>
               <div style="font-size:15px;color:var(--text-primary);margin-top:2px;">Shanghai, China</div>
             </div>
           </div>
@@ -311,11 +330,11 @@ function handleSubmit(event) { return jmSubmitInquiry(event, 'contact'); }
 
         <div style="margin-top:32px;text-align:center;">
           <img src="/images/wechat-qr.jpg" alt="WeChat QR" style="width:160px;height:160px;border-radius:4px;border:1px solid rgba(201,160,96,0.2);">
-          <p style="font-size:11px;color:var(--text-tertiary);margin-top:8px;"><span>Scan to add WeChat</span></p>
+          <p class="contact-qr-note">Scan to add us on WeChat. On a phone, save the QR image, then open WeChat’s scanner and select it from your photos.</p>
         </div>
 
         
-        <p style="font-size:12px;color:var(--text-tertiary);margin-top:24px;text-align:center;" class="lang-en">We respond to all inquiries within 1 business day</p>
+        <p style="margin-top:24px;text-align:center;" class="contact-reply-note lang-en">We normally reply within one business day.</p>
       </div>
     </div>
   </div>
