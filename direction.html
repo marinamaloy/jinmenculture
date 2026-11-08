@@ -53,7 +53,8 @@
       "jobTitle": [
         "Artistic Director",
         "Creative Director",
-        "Chief Illusion Engineer"
+        "Chief Illusion Engineer",
+        "Show Director"
       ],
       "worksFor": {
         "@id": "https://www.jinmenculture.com/#organization"
@@ -113,10 +114,10 @@
         },
         {
           "@type": "Question",
-          "name": "可以只负责一个关键场景吗？",
+          "name": "可以执导完整演出，也可以只参与一个环节吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "可以。合作范围可从单一幻觉段落、创意顾问，到整场演出的视觉概念与幻觉统筹。"
+            "text": "可以。合作方式包括创意与场景咨询、完整演出或戏剧的开发与导演，以及已有制作中的幻觉效果创意统筹。我们会根据项目阶段、团队与需求明确工作范围。"
           }
         },
         {
@@ -139,8 +140,7 @@
       "inLanguage": "zh-CN"
     }
   ]
-}
-</script>
+}</script>
 
   
   
@@ -152,7 +152,45 @@
     .editorial-grid{display:grid;grid-template-columns:minmax(260px,.85fr) minmax(420px,1.35fr);gap:clamp(54px,8vw,130px);align-items:start}.editorial-kicker{font-family:var(--font-en);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:0 0 16px}.editorial-title{font-family:var(--font-cn-serif);font-size:clamp(34px,4vw,52px);color:var(--gold-text);font-weight:400;line-height:1.2;margin:0}.editorial-title-en{font-family:var(--font-en-display);color:var(--text-primary)}.editorial-title em{color:var(--text-primary);font-weight:400}.editorial-title-en em{color:var(--gold-text)}.editorial-line{width:60px;height:1px;background:var(--gold);margin:24px 0}.editorial-intro{font-size:14px;color:var(--text-secondary);line-height:1.8;margin:0}.editorial-row{display:grid;grid-template-columns:42px minmax(0,1fr);gap:18px;padding:20px 0 28px;border-bottom:.5px solid rgba(201,160,96,.15)}.editorial-row:last-child{border-bottom:0}.editorial-number{color:var(--gold-text);font-family:var(--font-en-display);font-size:18px;font-style:italic}.editorial-row h3{font-family:var(--font-cn-serif);font-size:18px;color:var(--text-primary);font-weight:400;margin:0 0 12px}.editorial-row p{font-size:14px;color:var(--text-secondary);line-height:1.8;margin:0}
     .source-notes{max-width:none;margin:0;padding:48px max(24px,calc((100vw - 760px)/2));background:#0A0A0A;border-top:.5px solid rgba(201,160,96,.18);border-bottom:.5px solid rgba(201,160,96,.12)}.source-heading{max-width:760px;margin:0 auto 18px;font-size:10px;color:var(--gold-text);letter-spacing:2px}.source-note{max-width:760px;margin:0 auto 22px;border-left:1px solid rgba(201,160,96,.28);padding-left:16px}.source-note:last-child{margin-bottom:0}.source-note p{font-size:12px;color:var(--text-secondary);line-height:1.9;margin:0}.source-note small{display:block;font-size:10px;color:#6A6050;margin-top:7px}.source-note a{color:#8A8070}
     @media(max-width:768px){.editorial-grid{grid-template-columns:1fr;gap:34px}.editorial-row{grid-template-columns:34px minmax(0,1fr);gap:12px}.page-hero-content h1{font-size:36px!important}}
-  </style>
+  
+/* Direction: clear ways to commission the director, with the existing typography and palette. */
+.direction-page .direction-identity{margin:18px 0 0;font-size:14px;line-height:1.7;letter-spacing:.5px;color:var(--gold-text)}
+.direction-page .direction-hero-copy{max-width:760px;margin:18px auto 0;font-size:16px;line-height:1.85;color:var(--text-primary)}
+.direction-page .direction-hero-action{margin-top:26px}
+.direction-page .direction-hero-action .btn{min-height:44px;max-width:100%;white-space:normal;justify-content:center;text-align:center;line-height:1.6}
+.direction-options .value-block{text-align:left;min-width:0}
+.direction-options .direction-option-number{font-family:var(--font-en-display);font-size:24px;color:var(--gold-text);margin-bottom:18px}
+.direction-options .value-block h3{font-family:var(--font-cn-serif);font-weight:400;font-size:22px;line-height:1.4;margin:0 0 16px;color:var(--gold-text)}
+.direction-page .direction-options .value-block p,.direction-page .direction-philosophy p{font-size:16px;line-height:1.9;color:var(--text-secondary)}
+.direction-philosophy p+p{margin-top:18px}
+.direction-case{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);background:var(--bg-card);border:1px solid var(--gold-faint)}
+.direction-case-media{min-width:0}
+.direction-case-media img{display:block;width:100%;height:100%;min-height:380px;object-fit:cover;filter:brightness(.9) saturate(.85)}
+.direction-case-copy{min-width:0;padding:36px}
+.direction-case-copy h2{font-family:var(--font-cn-serif);font-size:clamp(28px,3vw,38px);font-weight:400;line-height:1.3;margin:0 0 14px;color:var(--gold-text)}
+.direction-case-role{font-size:14px;line-height:1.7;color:var(--gold-text);margin:0 0 20px}
+.direction-case-copy p:not(.direction-case-role){font-size:16px;line-height:1.85;color:var(--text-secondary);margin:0 0 18px}
+.direction-case-copy .btn{min-height:44px;max-width:100%;white-space:normal;text-align:center;justify-content:center;line-height:1.6}
+.direction-other-work{max-width:760px;margin:24px auto 0;font-size:14px;line-height:1.85;color:var(--text-secondary)}
+.direction-other-work a{color:var(--gold-text);text-decoration:underline;text-underline-offset:4px}
+.direction-page .direction-enquiry-copy{max-width:720px;padding:0 20px;margin:18px auto 28px;font-size:16px;line-height:1.85;color:var(--text-primary)}
+.direction-page .btn:focus-visible,.direction-other-work a:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+.direction-page.show-en :is(.section-heading h2,.cta-section h2,.hero-statement,.editorial-row h3,.value-block h3,.value-block h4,.team-card .info h3,.direction-case-copy h2){font-family:var(--font-en-display)}
+#direction-contact,#direction-work,#direction-options{scroll-margin-top:120px}
+@media(max-width:900px){
+ .direction-page .editorial-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+ .direction-page .editorial-grid>*{min-width:0}
+ .direction-options .grid-3{grid-template-columns:minmax(0,1fr)}
+ .direction-case{grid-template-columns:minmax(0,1fr)}
+ .direction-case-media img{height:320px;min-height:0}
+}
+@media(max-width:600px){
+ .direction-case-copy{padding:24px 20px}
+ .direction-options .value-block{padding:24px 20px}
+ .direction-page .direction-hero-action .btn{width:100%;padding:14px 18px}
+}
+
+</style>
   <script src="/js/analytics.js"></script>
 
 <title>演艺创意导演与舞台幻觉设计 | 上海浸门文化</title>
@@ -171,7 +209,7 @@
 <meta name="twitter:image" content="https://www.jinmenculture.com/images/shanghai-illusion-creative-direction.webp">
 </head>
 
-<body>
+<body class="direction-page">
 <noscript><div style="padding:16px;text-align:center;">JavaScript用于图片浏览与咨询表单。你也可以通过邮箱或电话联系我们。</div></noscript>
 <div id="nav-placeholder">
     <header class="site-nav" id="siteNav">
@@ -239,69 +277,33 @@
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content" style="padding-top:80px;">
     <div class="label"><span>04 · 视觉幻觉秀与大型演艺创意导演 / CREATIVE DIRECTION</span></div>
-    <h1 class="lang-cn">上海演艺创意导演与舞台幻觉设计</h1><p class="hero-statement lang-cn">让每一场大型演出，都有一个无法解释的瞬间</p>
-    
-  </div>
-</section>
+    <h1 class="lang-cn">上海演艺创意导演与舞台幻觉设计</h1><p class="hero-statement lang-cn">让每一场大型演出，都有一个无法解释的瞬间</p><p class="direction-identity">王速 · 演艺导演 · 幻觉创作者</p><p class="direction-hero-copy">为戏剧、电视节目、演唱会与品牌活动开发并执导魔术与幻觉场景，合作范围从单一效果到整部演出的创作与导演。</p><div class="direction-hero-action"><a href="#direction-contact" class="btn btn-filled">讨论场景或演出项目</a></div>
+</div></section>
 
+<section class="section section-alt direction-options" id="direction-options" style="position:relative;z-index:2;">
+<div class="container"><div class="section-heading"><h2 class="lang-cn">如何邀请王速参与项目</h2></div>
+<div class="grid-3"><div class="value-block fade-up"><div class="direction-option-number" aria-hidden="true">01</div><h3>创意与场景咨询</h3><p>从项目主题、故事与目标观众出发，讨论创意方向、场景构思与舞台表达，明确下一步开发的重点。</p></div>
+<div class="value-block fade-up"><div class="direction-option-number" aria-hidden="true">02</div><h3>完整演出与戏剧导演</h3><p>从概念出发，组织故事、演员表演、氛围与舞台节奏，发展并执导完整的演出或戏剧作品。具体合作范围与制作团队根据项目确定。</p></div>
+<div class="value-block fade-up"><div class="direction-option-number" aria-hidden="true">03</div><h3>幻觉效果创意统筹</h3><p>在已有制作中负责幻觉与魔术场景的创意及舞台呈现，与导演、演员和技术团队共同完成排练与现场适配。</p></div></div>
+</div></section>
 <!-- Director's Philosophy -->
 <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
-  <div class="container">
-    <div class="section-heading">
-      <h2 class="lang-cn">浸门的创作理念</h2>
-      
-    </div>
-    <div style="max-width:680px;margin:0 auto;" class="fade-up">
-      <p style="font-size:14px;color:var(--text-secondary);line-height:2.2;margin-bottom:20px;" class="lang-cn">在数字特效铺天盖地的今天，真正让观众起鸡皮疙瘩的，往往不是屏幕上的虚拟奇景——而是眼前这个真实的人，做出了一件在物理上本不应该发生的事。</p>
-      
+<div class="container"><div class="section-heading"><h2>导演的创作视角</h2></div>
+<div class="direction-philosophy fade-up" style="max-width:760px;margin:0 auto;"><p>王速从故事、人物与观众的情绪出发构思演出，让氛围、悬念和舞台节奏共同推动作品。他的创作特点，是将幻觉与魔术作为戏剧表达的一部分，而不只是独立的表演技巧。</p>
+<p>凭借18年的魔术从业经历及幻觉工程经验，他为导演创作带来独特的视角。创意与工程团队共同验证想法的可行性，并根据场地、演员与预算调整方案。</p></div>
+</div></section>
+<!-- Directorial work -->
+<section class="section section-alt" id="direction-work" style="position:relative;z-index:2;">
+<div class="container"><p class="editorial-kicker">导演代表作</p>
+<div class="direction-case fade-up">
+<div class="direction-case-media"><img src="/images/circus-gallery-1.webp" alt="王速执导的《马戏团的幽魂》舞台剧照" loading="lazy" decoding="async"></div>
+<div class="direction-case-copy"><h2>马戏团的幽魂</h2><p class="direction-case-role">导演、幻觉设计：王速</p><p>导演任务：在一场完整的舞台秀中建立神秘感、压迫感与悬念，让戏剧叙事与魔术共同构成观众体验。</p><p>王速从零参与作品的创作与导演，将故事、演员表演、舞台氛围及幻觉设计组织为一个整体。魔术与装置服务剧情和情绪，随着故事推进逐步展开。</p>
+<a class="btn btn-outlined" href="/ghost">查看作品介绍</a></div>
+</div>
+<p class="direction-other-work">在其他合作制作中，王速也承担幻觉创意与舞台效果设计等专项工作，合作职责按项目明确。 <a href="/engineering">了解幻觉创意与工程项目</a></p>
+</div></section>
 
-      <p style="font-size:14px;color:var(--text-secondary);line-height:2.2;margin-bottom:20px;" class="lang-cn">王速做了18年这件事。作为幻术导演，他懂得如何在一台演出的叙事弧线中，找到那个最需要「不可能」的时刻——然后用18年积累的幻觉工程技术，将它变成真实发生在舞台上的奇观。结果是：观众离场时不记得灯光，不记得布景，只记得那个让他们停止呼吸的瞬间。</p>
-      
-    </div>
-  </div>
-</section>
-
-<!-- Four Blocks -->
-<section class="section section-alt" style="position:relative;z-index:2;">
-  <div class="container">
-    <div class="section-heading">
-      <h2 class="lang-cn">他能为你的演出带来什么</h2>
-      
-    </div>
-    <div class="grid-2" style="gap:20px;">
-      <div class="value-block fade-up">
-        <div class="icon">&#127913;</div>
-        <h4 class="lang-cn">幻觉叙事设计</h4>
-        
-        <p class="lang-cn">从故事角度出发，设计幻觉效果出现的时机、方式和情感意义。不是"哪里放一个技巧"，而是"这个时刻的震撼如何推动整个故事"。</p>
-        
-      </div>
-      <div class="value-block fade-up">
-        <div class="icon">&#127909;</div>
-        <h4 class="lang-cn">大型演艺创意统筹</h4>
-        
-        <p class="lang-cn">参与演出概念设计、视觉风格确立、关键场景的创意策划，并全程把控幻觉效果的艺术品质与技术执行之间的平衡。</p>
-        
-      </div>
-      <div class="value-block fade-up">
-        <div class="icon">&#9881;</div>
-        <h4 class="lang-cn">自主研发的技术支撑</h4>
-        
-        <p class="lang-cn">与纯艺术导演不同，王速同时是幻觉装置的设计者和制造者。他构想的每一个"不可能"，他的团队都能亲手造出来。没有中间商，没有技术妥协。</p>
-        
-      </div>
-      <div class="value-block fade-up">
-        <div class="icon">&#128065;</div>
-        <h4 class="lang-cn">横跨剧场、电视、品牌的创作经验</h4>
-        
-        <p class="lang-cn">从沉浸式话剧到大型电视综艺（爱乐之都·SMG），从品牌快闪到驻场演出，王速的创作语言在不同媒介中都保持一致的震撼力。</p>
-        
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Creative direction process -->
+<!-- Creative direction process -->
 <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
   <div class="container">
     <div class="editorial-grid">
@@ -311,14 +313,14 @@
         <h2 class="editorial-title lang-cn">从一个概念<br><em>到不可能的瞬间</em></h2>
         
         <div class="editorial-line"></div>
-        <p class="editorial-intro lang-cn">创意导演、幻觉工程与现场执行在同一条工作流程中完成。</p>
+        <p class="editorial-intro lang-cn">导演创作、创意开发与制作协作，共同推进作品的舞台呈现。</p>
         
       </div>
       <div class="fade-up">
-        <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-cn">理解故事与目标</h3><p class="lang-cn">确认项目主题、品牌信息、目标观众、场地限制和最需要被记住的情绪。</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-cn">设计关键幻觉时刻</h3><p class="lang-cn">让幻觉服务叙事节奏，而不是把孤立的魔术技巧简单加入演出。</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-cn">工程验证与舞台适配</h3><p class="lang-cn">完成结构设计、制作测试、安全评估，并根据演员、视线和现场技术条件调整。</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">04</span><div><h3 class="lang-cn">排练与现场执行</h3><p class="lang-cn">通过演员训练、技术联排和现场支持，让创意以稳定、完整的方式落地。</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-cn">理解故事与观众</h3><p class="lang-cn">明确作品主题、人物、目标观众的情绪体验与场地条件。</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-cn">构建演出结构与舞台语言</h3><p class="lang-cn">梳理场景、节奏与表演方向，将魔术与幻觉融入故事需要的时刻。</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-cn">验证创意与制作可行性</h3><p class="lang-cn">创意与工程团队共同评估想法，并根据场地、演员和预算，在约定范围内推进技术方案、制作与测试。</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">04</span><div><h3 class="lang-cn">排练与现场呈现</h3><p class="lang-cn">通过表演指导、演员排练与技术联排，让故事、氛围和效果在舞台上形成整体。</p></div></div>
       </div>
     </div>
   </div>
@@ -343,7 +345,7 @@
       
       <p style="text-align:center;font-size:13px;color:var(--text-tertiary);margin-top:24px;" class="lang-cn">每一个项目都是独特的对话。请通过以下方式联系创意团队：</p>
       
-      <div style="text-align:center;margin-top:16px;"><a href="/contact" class="btn btn-filled"><span>联系我们 / Contact</span></a></div>
+      <div style="text-align:center;margin-top:16px;"><a href="#direction-contact" class="btn btn-filled"><span>联系我们 / Contact</span></a></div>
     </div>
   </div>
 </section>
@@ -356,7 +358,7 @@
       <img src="/images/wangsu-portrait.png" alt="王速 Wang Su">
       <div class="info">
         <h3><span>王速 · Wang Su</span></h3>
-        <div class="role"><span>创始人 · 艺术总监 · 幻觉工程总监 / Founder · Artistic Director · Chief Illusion Engineer</span></div>
+        <div class="role"><span>创始人 · 导演 · 艺术总监 · 幻觉工程总监</span></div>
         <ul>
           <li><span>18年魔术从业经验 / 18 years in magic</span></li>
           <li><span>IMS梅林奖·最佳魔术装置设计 / Merlin Award for Best Magic Device Design</span></li>
@@ -386,7 +388,7 @@
       </div>
       <div class="fade-up">
         <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-cn">哪些项目适合创意导演服务？</h3><p class="lang-cn">适合演唱会、巡演、品牌发布、企业年会、电视节目、文化节庆、文旅演出及原创沉浸式项目。</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-cn">可以只负责一个关键场景吗？</h3><p class="lang-cn">可以。合作范围可从单一幻觉段落、创意顾问，到整场演出的视觉概念与幻觉统筹。</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-cn">可以执导完整演出，也可以只参与一个环节吗？</h3><p class="lang-cn">可以。合作方式包括创意与场景咨询、完整演出或戏剧的开发与导演，以及已有制作中的幻觉效果创意统筹。我们会根据项目阶段、团队与需求明确工作范围。</p></div></div>
         <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-cn">是否同时提供装置设计和制作？</h3><p class="lang-cn">可以。浸门文化可将创意导演与幻觉工程结合，完成结构设计、制作、测试、演员训练和现场适配。</p></div></div>
         <div class="editorial-row"><span class="editorial-number">04</span><div><h3 class="lang-cn">如何获得项目报价？</h3><p class="lang-cn">请提供项目类型、日期、城市、场地、观众规模、预算范围和希望实现的舞台时刻，我们会据此确认工作范围。</p></div></div>
       </div>
@@ -403,10 +405,10 @@
 </aside>
 
 <!-- CTA -->
-<section class="cta-section" style="position:relative;z-index:2;">
+<section class="cta-section" id="direction-contact" style="position:relative;z-index:2;">
   <div class="cta-bg"><img src="/images/shanghai-illusion-creative-direction.webp" alt="演艺创意导演 视觉幻觉设计 浸门文化"></div>
   <div class="cta-overlay"></div>
-  <div class="cta-content">
+  <div class="cta-content"><h2>邀请王速参与你的演出</h2><p class="direction-enquiry-copy">请告诉我们演出的形式、城市、日期、场地，以及您希望创造的舞台时刻。如果已有剧本、参考资料或舞台平面图，也欢迎在联系时一并提供。</p>
     <div class="cta-row">
       <button class="btn btn-outlined" onclick="copyToClipboard('1379197706@qq.com')"><span>&#9993; 复制邮箱</span></button>
       <button class="btn btn-filled" onclick="copyToClipboard('Alex-lives')"><span>&#128172; 微信咨询</span></button>

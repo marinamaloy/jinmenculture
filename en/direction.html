@@ -53,7 +53,8 @@
       "jobTitle": [
         "Artistic Director",
         "Creative Director",
-        "Chief Illusion Engineer"
+        "Chief Illusion Engineer",
+        "Show Director"
       ],
       "worksFor": {
         "@id": "https://www.jinmenculture.com/#organization"
@@ -113,10 +114,10 @@
         },
         {
           "@type": "Question",
-          "name": "Can you direct only one key scene?",
+          "name": "Can you direct a full show or contribute to one part?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Scope can range from one illusion sequence or consultancy to the visual concept and illusion direction of a complete production."
+            "text": "Yes. We can provide creative and scene consultancy, develop and direct a complete show or theatre production, or shape the illusions within an existing production. We agree the scope according to the project's stage, team and needs."
           }
         },
         {
@@ -139,8 +140,7 @@
       "inLanguage": "en"
     }
   ]
-}
-</script>
+}</script>
 
   
   
@@ -152,7 +152,45 @@
     .editorial-grid{display:grid;grid-template-columns:minmax(260px,.85fr) minmax(420px,1.35fr);gap:clamp(54px,8vw,130px);align-items:start}.editorial-kicker{font-family:var(--font-en);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:0 0 16px}.editorial-title{font-family:var(--font-cn-serif);font-size:clamp(34px,4vw,52px);color:var(--gold-text);font-weight:400;line-height:1.2;margin:0}.editorial-title-en{font-family:var(--font-en-display);color:var(--text-primary)}.editorial-title em{color:var(--text-primary);font-weight:400}.editorial-title-en em{color:var(--gold-text)}.editorial-line{width:60px;height:1px;background:var(--gold);margin:24px 0}.editorial-intro{font-size:14px;color:var(--text-secondary);line-height:1.8;margin:0}.editorial-row{display:grid;grid-template-columns:42px minmax(0,1fr);gap:18px;padding:20px 0 28px;border-bottom:.5px solid rgba(201,160,96,.15)}.editorial-row:last-child{border-bottom:0}.editorial-number{color:var(--gold-text);font-family:var(--font-en-display);font-size:18px;font-style:italic}.editorial-row h3{font-family:var(--font-cn-serif);font-size:18px;color:var(--text-primary);font-weight:400;margin:0 0 12px}.editorial-row p{font-size:14px;color:var(--text-secondary);line-height:1.8;margin:0}
     .source-notes{max-width:none;margin:0;padding:48px max(24px,calc((100vw - 760px)/2));background:#0A0A0A;border-top:.5px solid rgba(201,160,96,.18);border-bottom:.5px solid rgba(201,160,96,.12)}.source-heading{max-width:760px;margin:0 auto 18px;font-size:10px;color:var(--gold-text);letter-spacing:2px}.source-note{max-width:760px;margin:0 auto 22px;border-left:1px solid rgba(201,160,96,.28);padding-left:16px}.source-note:last-child{margin-bottom:0}.source-note p{font-size:12px;color:var(--text-secondary);line-height:1.9;margin:0}.source-note small{display:block;font-size:10px;color:#6A6050;margin-top:7px}.source-note a{color:#8A8070}
     @media(max-width:768px){.editorial-grid{grid-template-columns:1fr;gap:34px}.editorial-row{grid-template-columns:34px minmax(0,1fr);gap:12px}.page-hero-content h1{font-size:36px!important}}
-  </style>
+  
+/* Direction: clear ways to commission the director, with the existing typography and palette. */
+.direction-page .direction-identity{margin:18px 0 0;font-size:14px;line-height:1.7;letter-spacing:.5px;color:var(--gold-text)}
+.direction-page .direction-hero-copy{max-width:760px;margin:18px auto 0;font-size:16px;line-height:1.85;color:var(--text-primary)}
+.direction-page .direction-hero-action{margin-top:26px}
+.direction-page .direction-hero-action .btn{min-height:44px;max-width:100%;white-space:normal;justify-content:center;text-align:center;line-height:1.6}
+.direction-options .value-block{text-align:left;min-width:0}
+.direction-options .direction-option-number{font-family:var(--font-en-display);font-size:24px;color:var(--gold-text);margin-bottom:18px}
+.direction-options .value-block h3{font-family:var(--font-cn-serif);font-weight:400;font-size:22px;line-height:1.4;margin:0 0 16px;color:var(--gold-text)}
+.direction-page .direction-options .value-block p,.direction-page .direction-philosophy p{font-size:16px;line-height:1.9;color:var(--text-secondary)}
+.direction-philosophy p+p{margin-top:18px}
+.direction-case{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);background:var(--bg-card);border:1px solid var(--gold-faint)}
+.direction-case-media{min-width:0}
+.direction-case-media img{display:block;width:100%;height:100%;min-height:380px;object-fit:cover;filter:brightness(.9) saturate(.85)}
+.direction-case-copy{min-width:0;padding:36px}
+.direction-case-copy h2{font-family:var(--font-cn-serif);font-size:clamp(28px,3vw,38px);font-weight:400;line-height:1.3;margin:0 0 14px;color:var(--gold-text)}
+.direction-case-role{font-size:14px;line-height:1.7;color:var(--gold-text);margin:0 0 20px}
+.direction-case-copy p:not(.direction-case-role){font-size:16px;line-height:1.85;color:var(--text-secondary);margin:0 0 18px}
+.direction-case-copy .btn{min-height:44px;max-width:100%;white-space:normal;text-align:center;justify-content:center;line-height:1.6}
+.direction-other-work{max-width:760px;margin:24px auto 0;font-size:14px;line-height:1.85;color:var(--text-secondary)}
+.direction-other-work a{color:var(--gold-text);text-decoration:underline;text-underline-offset:4px}
+.direction-page .direction-enquiry-copy{max-width:720px;padding:0 20px;margin:18px auto 28px;font-size:16px;line-height:1.85;color:var(--text-primary)}
+.direction-page .btn:focus-visible,.direction-other-work a:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+.direction-page.show-en :is(.section-heading h2,.cta-section h2,.hero-statement,.editorial-row h3,.value-block h3,.value-block h4,.team-card .info h3,.direction-case-copy h2){font-family:var(--font-en-display)}
+#direction-contact,#direction-work,#direction-options{scroll-margin-top:120px}
+@media(max-width:900px){
+ .direction-page .editorial-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+ .direction-page .editorial-grid>*{min-width:0}
+ .direction-options .grid-3{grid-template-columns:minmax(0,1fr)}
+ .direction-case{grid-template-columns:minmax(0,1fr)}
+ .direction-case-media img{height:320px;min-height:0}
+}
+@media(max-width:600px){
+ .direction-case-copy{padding:24px 20px}
+ .direction-options .value-block{padding:24px 20px}
+ .direction-page .direction-hero-action .btn{width:100%;padding:14px 18px}
+}
+
+</style>
   <script src="/js/analytics.js"></script>
 
 <title>Stage Illusion Design &amp; Creative Direction Shanghai | Jinmen</title>
@@ -171,7 +209,7 @@
 <meta name="twitter:image" content="https://www.jinmenculture.com/images/shanghai-illusion-creative-direction.webp">
 </head>
 
-<body class="show-en">
+<body class="show-en direction-page">
 <noscript><div style="padding:16px;text-align:center;">JavaScript enables galleries and enquiry forms. You can also contact us by email or telephone.</div></noscript>
 <div id="nav-placeholder">
     <header class="site-nav" id="siteNav">
@@ -240,68 +278,33 @@
   <div class="page-hero-content" style="padding-top:80px;">
     <div class="label"><span>04 · CREATIVE DIRECTION</span></div>
     
-    <h1 class="lang-en" style="">Shanghai Show Creative Direction &amp; Stage Illusion Design</h1><p class="hero-statement lang-en" style="">Every Great Show Deserves One Impossible Moment</p>
-  </div>
-</section>
+    <h1 class="lang-en" style="">Shanghai Show Creative Direction &amp; Stage Illusion Design</h1><p class="hero-statement lang-en" style="">Every Great Show Deserves One Impossible Moment</p><p class="direction-identity">Wang Su · Show Director · Illusion Creator</p><p class="direction-hero-copy">We develop and direct magic and illusion scenes for theatre, television, concerts and brand events, from a single effect to the creative development and direction of a complete production.</p><div class="direction-hero-action"><a href="#direction-contact" class="btn btn-filled">Discuss a Scene or Production</a></div>
+</div></section>
 
+<section class="section section-alt direction-options" id="direction-options" style="position:relative;z-index:2;">
+<div class="container"><div class="section-heading"><h2 class="lang-en">Ways to Work with Wang Su</h2></div>
+<div class="grid-3"><div class="value-block fade-up"><div class="direction-option-number" aria-hidden="true">01</div><h3>Creative &amp; Scene Consultancy</h3><p>Explore the creative approach, story and staging of an idea or scene, informed by the project's aims and audience. Together, we define what to develop next.</p></div>
+<div class="value-block fade-up"><div class="direction-option-number" aria-hidden="true">02</div><h3>Show &amp; Theatre Direction</h3><p>Develop and direct a complete show or theatre production, bringing story, performances, atmosphere and stage rhythm together. Scope and the production team are agreed for each project.</p></div>
+<div class="value-block fade-up"><div class="direction-option-number" aria-hidden="true">03</div><h3>Illusion Creative Direction</h3><p>Shape the magic and illusion scenes within an existing production, working with its director, performers and technical team through rehearsal and venue adaptation.</p></div></div>
+</div></section>
 <!-- Director's Philosophy -->
 <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
-  <div class="container">
-    <div class="section-heading">
-      
-      <h2 class="lang-en" style="">A Director's Vision</h2>
-    </div>
-    <div style="max-width:680px;margin:0 auto;" class="fade-up">
-      
-      <p style="font-size:13px;color:var(--text-secondary);line-height:2;" class="lang-en">In a world saturated with digital effects, what truly gives audiences goosebumps is not a CGI spectacle on a screen — it is a real person, standing in front of you, doing something that should not be physically possible.</p>
+<div class="container"><div class="section-heading"><h2>A Director’s Approach</h2></div>
+<div class="direction-philosophy fade-up" style="max-width:760px;margin:0 auto;"><p>Wang Su approaches a production through its story, characters and the audience's emotions. Atmosphere, suspense and stage rhythm work together, with magic and illusions forming part of the theatrical language.</p>
+<p>Drawing on 18 years in magic and his experience in illusion engineering, he brings a distinctive perspective to directing. The creative and engineering teams test whether an idea is achievable, then adapt it to the venue, performers and budget.</p></div>
+</div></section>
+<!-- Directorial work -->
+<section class="section section-alt" id="direction-work" style="position:relative;z-index:2;">
+<div class="container"><p class="editorial-kicker">DIRECTORIAL WORK</p>
+<div class="direction-case fade-up">
+<div class="direction-case-media"><img src="/images/circus-gallery-1.webp" alt="Stage scene from Ghost of the Circus, directed by Wang Su" loading="lazy" decoding="async"></div>
+<div class="direction-case-copy"><h2>Ghost of the Circus</h2><p class="direction-case-role">Director &amp; Illusion Designer: Wang Su</p><p>The directing brief: build mystery, tension and intrigue within a complete stage show, bringing theatrical storytelling and magic together.</p><p>Wang Su developed and directed the production from the ground up, bringing the story, performances, stage atmosphere and illusion design into one creative vision. Magic and apparatus serve the narrative and its emotional progression.</p>
+<a class="btn btn-outlined" href="/en/ghost">Explore the Production</a></div>
+</div>
+<p class="direction-other-work">On other productions, Wang Su also contributes illusion concepts and stage-effect design. His responsibilities are defined for each collaboration. <a href="/en/engineering">Explore Illusion &amp; Engineering Projects</a></p>
+</div></section>
 
-      
-      <p style="font-size:13px;color:var(--text-secondary);line-height:2;" class="lang-en">Wang Su has spent 18 years engineering exactly those moments. As a creative director, he understands how to locate the precise point in a production's narrative arc where the "impossible" will hit hardest — and then make that impossibility happen live on stage. The result: audiences remember not the lights, not the set — only the moment that stopped their breath.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Four Blocks -->
-<section class="section section-alt" style="position:relative;z-index:2;">
-  <div class="container">
-    <div class="section-heading">
-      
-      <h2 class="lang-en" style="">What He Brings to Your Production</h2>
-    </div>
-    <div class="grid-2" style="gap:20px;">
-      <div class="value-block fade-up">
-        <div class="icon">&#127913;</div>
-        
-        <h4 class="lang-en" style="">Illusion Narrative Design</h4>
-        
-        <p class="lang-en" style="">Designing illusion sequences from a storytelling perspective — not where to put a trick, but how that impossible moment serves and amplifies the emotional arc.</p>
-      </div>
-      <div class="value-block fade-up">
-        <div class="icon">&#127909;</div>
-        
-        <h4 class="lang-en" style="">Large-Scale Show Creative Direction</h4>
-        
-        <p class="lang-en" style="">From concept to curtain call — creative conceptualization, visual identity, scene design, and maintaining the balance between artistic vision and technical execution.</p>
-      </div>
-      <div class="value-block fade-up">
-        <div class="icon">&#9881;</div>
-        
-        <h4 class="lang-en" style="">In-House Engineering Advantage</h4>
-        
-        <p class="lang-en" style="">Unlike purely artistic directors, Wang Su is also the engineer behind every illusion he directs. Whatever he imagines, his team can build. No middlemen. No technical compromise.</p>
-      </div>
-      <div class="value-block fade-up">
-        <div class="icon">&#128065;</div>
-        
-        <h4 class="lang-en" style="">Cross-Discipline Creative Experience</h4>
-        
-        <p class="lang-en" style="">From immersive theatre to major TV variety shows (SMG's City of Musicals), from brand activations to residency productions — Wang Su's creative language delivers impact across every format.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Creative direction process -->
+<!-- Creative direction process -->
 <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
   <div class="container">
     <div class="editorial-grid">
@@ -312,13 +315,13 @@
         <h2 class="editorial-title editorial-title-en lang-en" style="">From a Concept<br><em>to the Impossible.</em></h2>
         <div class="editorial-line"></div>
         
-        <p class="editorial-intro lang-en" style="">Creative direction, illusion engineering and live execution developed as one workflow.</p>
+        <p class="editorial-intro lang-en" style="">Direction, creative development and production collaboration move together towards the live performance.</p>
       </div>
       <div class="fade-up">
-        <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-en" style="">Understand the Story and Objective</h3><p class="lang-en" style="">We define the theme, brand message, audience, venue constraints and the emotion the audience should remember.</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-en" style="">Design the Key Illusion Moment</h3><p class="lang-en" style="">The illusion serves the narrative arc instead of appearing as an isolated magic trick.</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-en" style="">Engineer and Adapt for the Stage</h3><p class="lang-en" style="">We develop, test and assess the mechanism, then adapt it to performers, sightlines and technical conditions.</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">04</span><div><h3 class="lang-en" style="">Rehearse and Deliver</h3><p class="lang-en" style="">Performer training, technical rehearsals and live support bring the creative concept reliably to the stage.</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-en" style="">Understand the Story and Audience</h3><p class="lang-en" style="">Define the theme, characters, intended audience experience and venue conditions.</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-en" style="">Shape the Show and Its Stage Language</h3><p class="lang-en" style="">Shape the scenes, pacing and performance approach, integrating magic and illusion where they serve the story.</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-en" style="">Test Creative and Technical Feasibility</h3><p class="lang-en" style="">The creative and engineering teams assess ideas against the venue, performers and budget, then develop and test the technical solutions within the agreed scope.</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">04</span><div><h3 class="lang-en" style="">Rehearse and Bring It to the Stage</h3><p class="lang-en" style="">Performance direction, cast rehearsals and technical runs bring the story, atmosphere and effects together on stage.</p></div></div>
       </div>
     </div>
   </div>
@@ -348,8 +351,8 @@
         <li style="font-size:13px;color:var(--text-secondary);padding:12px 0;"><span style="color:var(--gold);margin-right:8px;">·</span>Original immersive show IP — concept creation to artistic direction</li>
       </ul>
       
-      <p style="text-align:center;font-size:13px;color:var(--text-tertiary);margin-top:24px;" class="lang-en">Every project begins with a conversation. Reach Wang Su directly:</p>
-      <div style="text-align:center;margin-top:16px;"><a href="/en/contact" class="btn btn-filled"><span>Contact</span></a></div>
+      <p style="text-align:center;font-size:13px;color:var(--text-tertiary);margin-top:24px;" class="lang-en">Every project begins with a conversation. Discuss your production with our creative team:</p>
+      <div style="text-align:center;margin-top:16px;"><a href="#direction-contact" class="btn btn-filled"><span>Contact</span></a></div>
     </div>
   </div>
 </section>
@@ -362,7 +365,7 @@
       <img src="/images/wangsu-portrait.png" alt="Wang Su">
       <div class="info">
         <h3><span>Wang Su</span></h3>
-        <div class="role"><span>Founder · Artistic Director · Chief Illusion Engineer</span></div>
+        <div class="role"><span>Founder · Director · Artistic Director · Chief Illusion Engineer</span></div>
         <ul>
           <li><span>18 years in magic</span></li>
           <li><span>Merlin Award for Best Magic Device Design</span></li>
@@ -392,7 +395,7 @@
       </div>
       <div class="fade-up">
         <div class="editorial-row"><span class="editorial-number">01</span><div><h3 class="lang-en" style="">Which projects suit this service?</h3><p class="lang-en" style="">Concerts, tours, brand launches, corporate galas, television, cultural festivals, tourism productions and original immersive projects.</p></div></div>
-        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-en" style="">Can you direct only one key scene?</h3><p class="lang-en" style="">Yes. Scope can range from one illusion sequence or consultancy to the visual concept and illusion direction of a complete production.</p></div></div>
+        <div class="editorial-row"><span class="editorial-number">02</span><div><h3 class="lang-en" style="">Can you direct a full show or contribute to one part?</h3><p class="lang-en" style="">Yes. We can provide creative and scene consultancy, develop and direct a complete show or theatre production, or shape the illusions within an existing production. We agree the scope according to the project's stage, team and needs.</p></div></div>
         <div class="editorial-row"><span class="editorial-number">03</span><div><h3 class="lang-en" style="">Do you also design and build the apparatus?</h3><p class="lang-en" style="">Yes. Jinmen combines creative direction with illusion engineering, including structural design, fabrication, testing, performer training and site adaptation.</p></div></div>
         <div class="editorial-row"><span class="editorial-number">04</span><div><h3 class="lang-en" style="">How do I request a quotation?</h3><p class="lang-en" style="">Share the project type, date, city, venue, audience size, budget range and desired stage moment so we can define the scope.</p></div></div>
       </div>
@@ -409,10 +412,10 @@
 </aside>
 
 <!-- CTA -->
-<section class="cta-section" style="position:relative;z-index:2;">
+<section class="cta-section" id="direction-contact" style="position:relative;z-index:2;">
   <div class="cta-bg"><img src="/images/shanghai-illusion-creative-direction.webp" alt="Creative direction and visual illusion design by Jinmen Culture"></div>
   <div class="cta-overlay"></div>
-  <div class="cta-content">
+  <div class="cta-content"><h2>Invite Wang Su to Your Production</h2><p class="direction-enquiry-copy">Tell us the production format, city, date, venue and the stage moment you want to create. If you have a script, reference material or stage plan, include it in your message.</p>
     <div class="cta-row">
       <button class="btn btn-outlined" onclick="copyToClipboard('1379197706@qq.com')"><span>✉ Copy Email</span></button>
       <button class="btn btn-filled" onclick="copyToClipboard('Alex-lives')"><span>💬 Copy WeChat ID</span></button>
