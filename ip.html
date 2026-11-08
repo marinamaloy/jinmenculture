@@ -41,49 +41,53 @@
     </script>
 
 <style>
-  .ip-copyright {
-  max-width: 540px;
-  margin: 14px 0 18px;
-  padding: 12px 16px;
-  background: rgba(9, 9, 9, 0.62);
-  border-left: 1px solid rgba(201, 160, 96, 0.65);
+/* Original IP: project-first presentation in the established Jinmen palette. */
+.ip-page .ip-hero-description{max-width:740px;margin:22px auto 0;font-size:16px;line-height:1.85;color:var(--text-primary)}
+.ip-hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ip-page .ip-hero-actions .btn,.ip-page .ip-card-actions .btn{min-width:0;max-width:100%;min-height:44px;white-space:normal;text-align:center;justify-content:center;line-height:1.6;letter-spacing:.4px}
+.ip-page .ip-hero-actions .btn-outlined{background:rgba(9,9,9,.55)}
+.ip-page .ip-projects{display:grid;gap:36px}
+.ip-page .ip-projects .project-card{margin:0;min-width:0}
+.ip-page .project-card .card-content{padding:40px;min-width:0}
+.ip-page .project-card:not(.ip-project-four) .card-content{background:linear-gradient(90deg,rgba(9,9,9,.9),rgba(9,9,9,.72) 65%,rgba(9,9,9,.16))}
+.ip-page .project-card .tag{display:inline-block;max-width:100%;border:1px solid var(--gold-muted);padding:7px 12px;margin-bottom:16px;font-size:12px;line-height:1.6;letter-spacing:.5px;color:var(--gold-text);overflow-wrap:anywhere}
+.ip-page .project-card h3{font-size:clamp(25px,3vw,34px);line-height:1.3;margin:0 0 18px}
+.ip-page.show-en .project-card h3{font-family:var(--font-en-display)}
+.ip-card-copy{max-width:630px}
+.ip-page .project-card .ip-card-copy p{margin:0 0 16px;font-size:16px;line-height:1.85;color:var(--text-primary)}
+.ip-page .project-card .ip-card-copy .ip-project-facts{font-size:14px;color:var(--text-secondary)}
+.ip-card-actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.ip-page .ip-copyright{max-width:630px;margin:24px 0 0;padding:16px 0 0;border-top:1px solid var(--gold-faint)}
+.ip-page .project-card .ip-copyright-label{margin:0 0 6px;font-size:12px;line-height:1.7;color:var(--gold-text)}
+.ip-page .project-card .ip-copyright-number,.ip-page .project-card .ip-performance-record{margin:0;font-size:13px;line-height:1.85;color:var(--text-secondary);overflow-wrap:anywhere}
+.ip-page .project-card .ip-performance-record{margin:12px 0 0}
+.ip-page .ip-project-four{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;background:radial-gradient(ellipse at 90% 50%,#321213 0%,#15100f 45%,var(--bg-card) 80%)}
+.ip-four-art{min-width:0;margin:0;padding:28px 28px 28px 0;text-align:center}
+.ip-four-art a{display:block}
+.ip-four-art img{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;object-fit:contain}
+.ip-four-art figcaption{font-size:13px;color:var(--gold-text);line-height:1.6;margin-top:12px}
+.ip-page .ip-enquiry-prompt{max-width:700px;padding:0 20px;margin:18px auto 28px;font-size:16px;color:var(--text-primary);line-height:1.85}
+.ip-page .ip-sources{max-width:760px;margin:36px auto;padding:0 24px}
+.ip-sources summary{padding:16px 0;min-height:44px;font-size:14px;color:var(--gold-text);cursor:pointer}
+.ip-page .btn:focus-visible,.ip-sources summary:focus-visible,.ip-four-art a:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+#ip-projects,#ip-contact,#ip-collaboration{scroll-margin-top:120px}
+@media(max-width:900px){
+ .ip-page .ip-project-four{grid-template-columns:minmax(0,1fr)}
+ .ip-four-art{order:-1;padding:24px;background:radial-gradient(ellipse at center,#331317 0%,#100d0c 75%)}
+ .ip-four-art img{max-width:380px}
 }
-
-.ip-copyright-label {
-  margin: 0 0 5px;
-  font-size: 10px;
-  color: var(--gold-text);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+@media(max-width:600px){
+ .ip-page .project-card .card-content{padding:24px 20px}
+ .ip-page .project-card .tag{font-size:12px}
+ .ip-page .ip-card-actions .btn{width:100%;padding:14px 18px}
+ .ip-page .ip-hero-actions{flex-direction:column}
+ .ip-page .ip-hero-actions .btn{width:100%;padding:14px 18px}
+ .ip-page .page-hero-content{padding-left:20px;padding-right:20px}
+ .ip-page .page-hero h1{font-size:clamp(29px,7.6vw,40px);line-height:1.25;overflow-wrap:anywhere}
+ .ip-page .ip-intro-copy p{font-size:16px!important;line-height:1.85!important}
+ .ip-four-art{padding:20px}
 }
-
-.ip-copyright-number {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.7;
-  color: var(--text-secondary);
-}
-
-.ip-performance-record {
-  max-width: 540px;
-  margin: 16px 0 0;
-  font-size: 11px;
-  line-height: 1.8;
-  color: var(--text-tertiary);
-}
-
-@media (max-width: 768px) {
-  .ip-copyright {
-    margin: 12px 0 16px;
-    padding: 10px 13px;
-  }
-
-  .ip-copyright-number {
-    font-size: 11px;
-    overflow-wrap: anywhere;
-  }
-}
-  </style>
+</style>
 
   <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -105,8 +109,8 @@
       "@type": "WebPage",
       "@id": "https://www.jinmenculture.com/ip#webpage",
       "url": "https://www.jinmenculture.com/ip",
-      "name": "原创沉浸式演出与演艺IP开发 | 上海浸门文化",
-      "description": "上海浸门文化开发原创沉浸式演艺IP，结合剧本、戏剧制作与幻觉工程，为场馆、制作人与合作伙伴打造演出项目。了解项目与合作方式。",
+      "name": "原创沉浸式演艺IP｜联合制作与驻演合作｜浸门文化",
+      "description": "上海浸门文化开发原创沉浸式戏剧与演艺IP，融合剧本、魔术与幻觉工程。了解《马戏团的幽魂》《它在看》与FOUR404互动秀，洽谈联合制作、驻演、场地合作与演出授权。",
       "inLanguage": "zh-CN",
       "isPartOf": {
         "@id": "https://www.jinmenculture.com/#website"
@@ -140,7 +144,7 @@
       "@type": "ItemList",
       "@id": "https://www.jinmenculture.com/ip#projects",
       "name": "Original immersive show IP developed by Jinmen Culture",
-      "numberOfItems": 2,
+      "numberOfItems": 3,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -148,7 +152,7 @@
           "item": {
             "@type": "CreativeWork",
             "name": "马戏团的幽魂 · Ghost of the Circus",
-            "description": "A 90-minute original immersive magic mystery show developed for a residency venue.",
+            "description": "90分钟原创沉浸式魔术悬疑演出，5名核心演员，初步适配100–150名观众及约200–300平方米的空间，具体条件可根据场地讨论。项目已在上海完成四场测试演出，现正寻找合作伙伴与投资人。",
             "url": "https://www.jinmenculture.com/ghost",
             "identifier": "国作登字-2025-A-SZ00541636",
             "dateCreated": "2025-08-20",
@@ -179,7 +183,7 @@
           "item": {
             "@type": "CreativeWork",
             "name": "它在看 · It Is Watching",
-            "description": "An original psychological and illusion-led theatre script seeking production partners.",
+            "description": "一对伴侣搬进新家，奇怪的事情接连发生。舞台上，一座两层的房屋成为故事的中心，魔术与幻觉效果让那些难以解释的现象在观众眼前发生。那究竟是幽灵，还是另有真相？答案直到故事最后才会揭晓。 原创心理悬疑与幻觉戏剧项目，剧本已完成，正在寻找制作人、投资方、剧场或驻演场地合作伙伴。",
             "identifier": "国作登字-2026-A-SZ00014874",
             "dateCreated": "2026-02-26",
             "datePublished": "2026-02-26",
@@ -202,12 +206,28 @@
               }
             ]
           }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "FOUR404互动秀 · FOUR404 Interactive Show",
+            "description": "一部已完成剧本的原创夜场社交互动与幻觉体验秀。作品围绕陌生人连接、关系选择、现场互动、舞蹈、幻觉设计与AI心理机制展开，通过四位不同能力的人物，让观众在演出过程中主动参与并建立真实的人际连接。 项目兼具交友属性、娱乐性、视觉性与社交传播价值，适合夜场、商业空间、非标剧场及驻演场景，目前正在寻找制作人、投资方、剧场、商业空间或驻演场地合作伙伴。",
+            "identifier": "国作登字-2026-A-SZ00053986",
+            "image": "https://www.jinmenculture.com/images/four404-poster.webp",
+            "creator": {
+              "@id": "https://www.jinmenculture.com/#organization"
+            },
+            "copyrightHolder": {
+              "@id": "https://www.jinmenculture.com/#organization"
+            }
+          }
         }
       ]
     }
   ]
-}
-</script>
+}</script>
 
   <!-- Google tag -->
   
@@ -217,22 +237,22 @@
   
   <script src="/js/analytics.js"></script>
 
-<title>原创沉浸式演出与演艺IP开发 | 上海浸门文化</title>
-<meta name="description" content="上海浸门文化开发原创沉浸式演艺IP，结合剧本、戏剧制作与幻觉工程，为场馆、制作人与合作伙伴打造演出项目。了解项目与合作方式。">
+<title>原创沉浸式演艺IP｜联合制作与驻演合作｜浸门文化</title>
+<meta name="description" content="上海浸门文化开发原创沉浸式戏剧与演艺IP，融合剧本、魔术与幻觉工程。了解《马戏团的幽魂》《它在看》与FOUR404互动秀，洽谈联合制作、驻演、场地合作与演出授权。">
 <link rel="canonical" href="https://www.jinmenculture.com/ip">
 <link rel="alternate" hreflang="zh-CN" href="https://www.jinmenculture.com/ip">
 <link rel="alternate" hreflang="en" href="https://www.jinmenculture.com/en/ip">
 <link rel="alternate" hreflang="x-default" href="https://www.jinmenculture.com/ip">
-<meta property="og:title" content="原创沉浸式演出与演艺IP开发 | 上海浸门文化">
-<meta property="og:description" content="上海浸门文化开发原创沉浸式演艺IP，结合剧本、戏剧制作与幻觉工程，为场馆、制作人与合作伙伴打造演出项目。了解项目与合作方式。">
+<meta property="og:title" content="原创沉浸式演艺IP｜联合制作与驻演合作｜浸门文化">
+<meta property="og:description" content="上海浸门文化开发原创沉浸式戏剧与演艺IP，融合剧本、魔术与幻觉工程。了解《马戏团的幽魂》《它在看》与FOUR404互动秀，洽谈联合制作、驻演、场地合作与演出授权。">
 <meta property="og:url" content="https://www.jinmenculture.com/ip">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:locale:alternate" content="en_US">
-<meta name="twitter:title" content="原创沉浸式演出与演艺IP开发 | 上海浸门文化">
-<meta name="twitter:description" content="上海浸门文化开发原创沉浸式演艺IP，结合剧本、戏剧制作与幻觉工程，为场馆、制作人与合作伙伴打造演出项目。了解项目与合作方式。">
+<meta name="twitter:title" content="原创沉浸式演艺IP｜联合制作与驻演合作｜浸门文化">
+<meta name="twitter:description" content="上海浸门文化开发原创沉浸式戏剧与演艺IP，融合剧本、魔术与幻觉工程。了解《马戏团的幽魂》《它在看》与FOUR404互动秀，洽谈联合制作、驻演、场地合作与演出授权。">
 <meta name="twitter:image" content="https://www.jinmenculture.com/images/original-ip-hero.jpg">
 </head>
-<body>
+<body class="ip-page">
    <noscript><div style="padding:16px;text-align:center;">JavaScript用于图片浏览与咨询表单。你也可以通过邮箱或电话联系我们。</div></noscript>
 
 <div id="nav-placeholder">
@@ -295,7 +315,7 @@
       <a href="/contact"><span class="lang-cn">联系我们</span></a>
     </div>
   </div>
-<div id="nav-placeholder"></div>
+
 
 <section class="page-hero" style="min-height:50vh;">
   <div class="page-hero-bg">
@@ -319,9 +339,8 @@
     <p class="lang-cn" style="margin-top:18px;color:var(--gold-text);font-family:var(--font-cn-serif);font-size:18px;">
       我们创造自己的世界
     </p>
-
-    
-  </div>
+<p class="ip-hero-description">融合戏剧、魔术与舞台幻觉的原创沉浸式演出。我们正在寻找联合制作、驻演与项目开发合作伙伴。</p><div class="ip-hero-actions"><a href="#ip-projects" class="btn btn-outlined">查看原创项目</a><a href="#ip-contact" class="btn btn-filled">洽谈项目合作</a></div>
+</div>
 </section>
 
 <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
@@ -338,16 +357,14 @@
         <div style="width:88px;height:1px;background:var(--gold);margin-top:28px;"></div>
       </div>
 
-      <div style="padding-top:10px;">
+      <div class="ip-intro-copy" style="padding-top:10px;">
         <p class="lang-cn" style="font-size:14px;color:var(--text-secondary);line-height:2;margin:0 0 24px;">
           上海浸门文化传媒有限公司在上海开发原创沉浸式演出与戏剧IP。我们的工作覆盖概念开发、剧本创作、导演设计、演员训练、幻觉工程、技术测试与场地适配，使故事、表演和舞台机关从项目开始阶段便形成统一的创作系统。
         </p>
 
         
 
-        <p class="lang-cn" style="font-size:14px;color:var(--text-secondary);line-height:2;margin:0;">
-          我们目前正在推进两个原创项目：一个已完成四场测试演出的驻场沉浸式作品，以及一个已完成剧本、正在寻找制作合作伙伴的新项目。我们欢迎制作人、投资人、剧场、商业场馆及文旅项目洽谈联合制作、驻演与授权合作。
-        </p>
+        <p class="lang-cn" style="font-size:14px;color:var(--text-secondary);line-height:2;margin:0;">我们目前正在推进三个原创项目：《马戏团的幽魂》已完成四场测试演出；《它在看》与FOUR404互动秀已完成剧本。我们欢迎制作人、投资人、剧场、商业场馆及文旅项目洽谈原创演艺IP合作、联合制作、驻演与授权合作。</p>
 
         
       </div>
@@ -356,23 +373,22 @@
   </div>
 </section>
 
-<section class="section section-alt" style="position:relative;z-index:2;">
+<section class="section section-alt" style="position:relative;z-index:2;" id="ip-projects">
   <div class="container">
     <div class="section-heading">
       <h2 class="lang-cn">现有原创项目</h2>
       
     </div>
 
-    <!-- Project 1: Ghost of Circus -->
-    <div class="project-card fade-up" style="min-height:420px;margin-bottom:40px;">
-      <div class="card-bg"><img src="/images/ghost-circus-show-card.webp" alt="马戏团的幽魂" loading="lazy"></div>
-      <div class="card-gradient"></div>
-      <div class="card-content" style="padding:40px;">
-        <div class="tag" style="border:1px solid var(--gold);display:inline-block;padding:4px 12px;margin-bottom:12px;"><span>试演完成 · 寻求制作人 / TESTED · SEEKING PRODUCER</span></div>
-        <h3 class="lang-cn" style="font-size:32px;">马戏团的幽魂</h3>
-
-
-        <div class="ip-copyright">
+    <div class="ip-projects">
+<article class="project-card fade-up" id="project-ghost" aria-labelledby="ghost-title">
+ <div class="card-bg"><img src="/images/ghost-circus-show-card.webp" alt="马戏团的幽魂" loading="lazy"></div><div class="card-gradient"></div>
+ <div class="card-content">
+  <div class="tag">试演完成 · 寻找合作伙伴与投资人</div>
+  <h3 id="ghost-title" class="lang-cn">马戏团的幽魂</h3>
+  <div class="ip-card-copy"><p>走进一座老剧院，演出刚开始，一位表演者突然离世。身为幻术师的剧院老板开始追查这场神秘死亡，观众在座席中通过对话、问题与魔术互动走近谜团。</p><p class="ip-project-facts">90分钟原创沉浸式魔术悬疑演出，5名核心演员，初步适配100–150名观众及约200–300平方米的空间，具体条件可根据场地讨论。项目已在上海完成四场测试演出，现正寻找合作伙伴与投资人。</p></div>
+  <div class="ip-card-actions"><a href="/ghost" class="btn btn-filled">查看完整项目</a></div>
+  <div class="ip-copyright">
   <p class="ip-copyright-label lang-cn">剧本文字作品已登记</p>
   
 
@@ -382,37 +398,21 @@
   </p>
 
   
-</div>
-
-<p class="lang-cn" style="max-width:500px;">
-  90分钟原创沉浸式魔术悬疑演出，由5名核心演员完成，适合100–150名观众及约200–300平方米的演出空间。项目已在上海完成四场测试演出。故事、剧本、表演结构、幻觉装置与舞台机关均由浸门文化进行原创开发。
-</p>
-
-
-<p class="ip-performance-record lang-cn">
+</div><p class="ip-performance-record lang-cn">
   演出记录：2025年10月31日至11月2日，项目在上海世茂广场·星空间完成四场获批商业演出。
   行政许可文号：黄文旅许〔2025〕1745号。
 </p>
-
-
-<div style="margin-top:24px;">
-  <a href="/ghost" class="btn btn-lg btn-filled" style="min-width:280px;justify-content:center;">
-    <span>查看完整项目介绍 / View Full Project</span>
-  </a>
-</div>
-      </div>
-    </div>
-
-    <!-- Project 2: 它在看 -->
-    <div class="project-card fade-up" style="min-height:360px;">
-      <div class="card-bg"><img src="/images/tazaijian.jpg" alt="它在看" loading="lazy"></div>
-      <div class="card-gradient"></div>
-      <div class="card-content" style="padding:40px;">
-        <div class="tag" style="border:1px solid var(--gold);display:inline-block;padding:4px 12px;margin-bottom:12px;"><span>剧本已完成 / SCRIPT COMPLETE</span></div>
-        <h3 class="lang-cn" style="font-size:32px;">它在看</h3>
-
-
-        <div class="ip-copyright">
+ </div>
+ 
+</article>
+<article class="project-card fade-up" id="project-it-is-watching" aria-labelledby="it-is-watching-title">
+ <div class="card-bg"><img src="/images/tazaijian.jpg" alt="它在看" loading="lazy"></div><div class="card-gradient"></div>
+ <div class="card-content">
+  <div class="tag">剧本已完成</div>
+  <h3 id="it-is-watching-title" class="lang-cn">它在看</h3>
+  <div class="ip-card-copy"><p>一对伴侣搬进新家，奇怪的事情接连发生。舞台上，一座两层的房屋成为故事的中心，魔术与幻觉效果让那些难以解释的现象在观众眼前发生。那究竟是幽灵，还是另有真相？答案直到故事最后才会揭晓。</p><p class="ip-project-facts">原创心理悬疑与幻觉戏剧项目，剧本已完成，正在寻找制作人、投资方、剧场或驻演场地合作伙伴。</p></div>
+  <div class="ip-card-actions"><a href="#ip-contact" class="btn btn-outlined">洽谈项目合作</a></div>
+  <div class="ip-copyright">
   <p class="ip-copyright-label lang-cn">剧本文字作品已登记</p>
   
 
@@ -423,24 +423,25 @@
 
   
 </div>
-
-<p class="lang-cn" style="max-width:500px;">
-  一部已完成剧本的原创心理悬疑与幻觉戏剧项目。作品围绕心理恐惧、视觉错觉与现场叙事展开，目前正在寻找制作人、投资方、剧场或驻演场地合作伙伴。
-</p>
-
-
-
-<div style="margin-top:24px;">
-  <a href="/contact" class="btn btn-outlined" style="min-width:280px;justify-content:center;">
-    <span>洽谈合作 / Inquire About Collaboration</span>
-  </a>
+ </div>
+ 
+</article>
+<article class="project-card fade-up ip-project-four" id="project-four404" aria-labelledby="four404-title">
+ 
+ <div class="card-content">
+  <div class="tag">剧本已完成</div>
+  <h3 id="four404-title" class="lang-cn">FOUR404互动秀</h3>
+  <div class="ip-card-copy"><p>一部已完成剧本的原创夜场社交互动与幻觉体验秀。作品围绕陌生人连接、关系选择、现场互动、舞蹈、幻觉设计与AI心理机制展开，通过四位不同能力的人物，让观众在演出过程中主动参与并建立真实的人际连接。</p><p class="ip-project-facts">项目兼具交友属性、娱乐性、视觉性与社交传播价值，适合夜场、商业空间、非标剧场及驻演场景，目前正在寻找制作人、投资方、剧场、商业空间或驻演场地合作伙伴。</p></div>
+  <div class="ip-card-actions"><a href="#ip-contact" class="btn btn-outlined">洽谈FOUR404合作</a></div>
+  <div class="ip-copyright"><p class="ip-copyright-label">剧本文字作品已登记</p><p class="ip-copyright-number">著作权登记号：国作登字-2026-A-SZ00053986<br>著作权人：上海浸门文化传媒有限公司</p></div>
+ </div>
+ <figure class="ip-four-art"><a href="/images/four404-poster.webp" target="_blank" rel="noopener noreferrer" aria-label="打开FOUR404完整海报（新标签页）"><img src="/images/four404-poster.webp" alt="FOUR404互动秀海报：剧场幕布、面具与时钟" width="1024" height="1536" loading="lazy" decoding="async"></a><figcaption>查看完整海报</figcaption></figure>
+</article>
 </div>
-      </div>
-    </div>
-  </div>
+ </div>
 </section>
 
-    <!-- ====== IP COLLABORATION — DEEPSEEK STYLE ====== -->
+<!-- ====== IP COLLABORATION — DEEPSEEK STYLE ====== -->
 <section
   class="section"
   id="ip-collaboration"
@@ -544,7 +545,7 @@
 
           <div>
             <h3 class="lang-cn" style="font-family:var(--font-cn-serif);font-size:18px;color:var(--text-primary);font-weight:400;line-height:1.5;margin:0 0 14px;">
-              投资与IP授权
+              投资与演出IP授权
             </h3>
 
             
@@ -563,15 +564,10 @@
 </section>
          
   <!-- GEO Citations -->
-<aside
-  aria-label="Immersive performance industry sources"
-  style="max-width:760px;margin:48px auto 0;padding:0 24px;"
->
+<aside class="ip-sources" aria-label="行业背景与参考资料"><details><summary>行业背景与参考资料</summary>
   <div style="border-top:0.5px solid rgba(201,160,96,0.18);padding-top:24px;">
 
-    <p class="lang-cn" style="font-size:10px;color:var(--gold-text);letter-spacing:2px;margin:0 0 18px;">
-      行业背景与参考资料
-    </p>
+    
 
     
 
@@ -630,14 +626,14 @@
     </div>
 
   </div>
-</aside>
+</details></aside>
 
 <!-- ====== CTA ====== -->
-<section class="cta-section" style="position:relative;z-index:2;">
+<section class="cta-section" id="ip-contact" style="position:relative;z-index:2;">
   <div class="cta-bg"><img src="/images/original-ip-hero.jpg" alt="原创IP与戏剧制作 background 浸门文化"></div>
   <div class="cta-overlay"></div>
   <div class="cta-content">
-    <h2 class="lang-cn">准备好合作了吗？</h2>
+    <h2 class="lang-cn">准备好合作了吗？</h2><p class="ip-enquiry-prompt">请告诉我们：您对哪个项目感兴趣、场地位于哪个城市，以及希望以何种方式参与合作。</p>
     
     <div class="cta-row">
       <button class="btn btn-outlined" onclick="copyToClipboard('1379197706@qq.com')"><span>&#9993; 复制邮箱</span></button>

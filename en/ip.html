@@ -41,49 +41,53 @@
     </script>
 
 <style>
-  .ip-copyright {
-  max-width: 540px;
-  margin: 14px 0 18px;
-  padding: 12px 16px;
-  background: rgba(9, 9, 9, 0.62);
-  border-left: 1px solid rgba(201, 160, 96, 0.65);
+/* Original IP: project-first presentation in the established Jinmen palette. */
+.ip-page .ip-hero-description{max-width:740px;margin:22px auto 0;font-size:16px;line-height:1.85;color:var(--text-primary)}
+.ip-hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ip-page .ip-hero-actions .btn,.ip-page .ip-card-actions .btn{min-width:0;max-width:100%;min-height:44px;white-space:normal;text-align:center;justify-content:center;line-height:1.6;letter-spacing:.4px}
+.ip-page .ip-hero-actions .btn-outlined{background:rgba(9,9,9,.55)}
+.ip-page .ip-projects{display:grid;gap:36px}
+.ip-page .ip-projects .project-card{margin:0;min-width:0}
+.ip-page .project-card .card-content{padding:40px;min-width:0}
+.ip-page .project-card:not(.ip-project-four) .card-content{background:linear-gradient(90deg,rgba(9,9,9,.9),rgba(9,9,9,.72) 65%,rgba(9,9,9,.16))}
+.ip-page .project-card .tag{display:inline-block;max-width:100%;border:1px solid var(--gold-muted);padding:7px 12px;margin-bottom:16px;font-size:12px;line-height:1.6;letter-spacing:.5px;color:var(--gold-text);overflow-wrap:anywhere}
+.ip-page .project-card h3{font-size:clamp(25px,3vw,34px);line-height:1.3;margin:0 0 18px}
+.ip-page.show-en .project-card h3{font-family:var(--font-en-display)}
+.ip-card-copy{max-width:630px}
+.ip-page .project-card .ip-card-copy p{margin:0 0 16px;font-size:16px;line-height:1.85;color:var(--text-primary)}
+.ip-page .project-card .ip-card-copy .ip-project-facts{font-size:14px;color:var(--text-secondary)}
+.ip-card-actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.ip-page .ip-copyright{max-width:630px;margin:24px 0 0;padding:16px 0 0;border-top:1px solid var(--gold-faint)}
+.ip-page .project-card .ip-copyright-label{margin:0 0 6px;font-size:12px;line-height:1.7;color:var(--gold-text)}
+.ip-page .project-card .ip-copyright-number,.ip-page .project-card .ip-performance-record{margin:0;font-size:13px;line-height:1.85;color:var(--text-secondary);overflow-wrap:anywhere}
+.ip-page .project-card .ip-performance-record{margin:12px 0 0}
+.ip-page .ip-project-four{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;background:radial-gradient(ellipse at 90% 50%,#321213 0%,#15100f 45%,var(--bg-card) 80%)}
+.ip-four-art{min-width:0;margin:0;padding:28px 28px 28px 0;text-align:center}
+.ip-four-art a{display:block}
+.ip-four-art img{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;object-fit:contain}
+.ip-four-art figcaption{font-size:13px;color:var(--gold-text);line-height:1.6;margin-top:12px}
+.ip-page .ip-enquiry-prompt{max-width:700px;padding:0 20px;margin:18px auto 28px;font-size:16px;color:var(--text-primary);line-height:1.85}
+.ip-page .ip-sources{max-width:760px;margin:36px auto;padding:0 24px}
+.ip-sources summary{padding:16px 0;min-height:44px;font-size:14px;color:var(--gold-text);cursor:pointer}
+.ip-page .btn:focus-visible,.ip-sources summary:focus-visible,.ip-four-art a:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+#ip-projects,#ip-contact,#ip-collaboration{scroll-margin-top:120px}
+@media(max-width:900px){
+ .ip-page .ip-project-four{grid-template-columns:minmax(0,1fr)}
+ .ip-four-art{order:-1;padding:24px;background:radial-gradient(ellipse at center,#331317 0%,#100d0c 75%)}
+ .ip-four-art img{max-width:380px}
 }
-
-.ip-copyright-label {
-  margin: 0 0 5px;
-  font-size: 10px;
-  color: var(--gold-text);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+@media(max-width:600px){
+ .ip-page .project-card .card-content{padding:24px 20px}
+ .ip-page .project-card .tag{font-size:12px}
+ .ip-page .ip-card-actions .btn{width:100%;padding:14px 18px}
+ .ip-page .ip-hero-actions{flex-direction:column}
+ .ip-page .ip-hero-actions .btn{width:100%;padding:14px 18px}
+ .ip-page .page-hero-content{padding-left:20px;padding-right:20px}
+ .ip-page .page-hero h1{font-size:clamp(29px,7.6vw,40px);line-height:1.25;overflow-wrap:anywhere}
+ .ip-page .ip-intro-copy p{font-size:16px!important;line-height:1.85!important}
+ .ip-four-art{padding:20px}
 }
-
-.ip-copyright-number {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.7;
-  color: var(--text-secondary);
-}
-
-.ip-performance-record {
-  max-width: 540px;
-  margin: 16px 0 0;
-  font-size: 11px;
-  line-height: 1.8;
-  color: var(--text-tertiary);
-}
-
-@media (max-width: 768px) {
-  .ip-copyright {
-    margin: 12px 0 16px;
-    padding: 10px 13px;
-  }
-
-  .ip-copyright-number {
-    font-size: 11px;
-    overflow-wrap: anywhere;
-  }
-}
-  </style>
+</style>
 
   <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -105,8 +109,8 @@
       "@type": "WebPage",
       "@id": "https://www.jinmenculture.com/en/ip#webpage",
       "url": "https://www.jinmenculture.com/en/ip",
-      "name": "Original Immersive Shows & IP Development China | Jinmen",
-      "description": "Original immersive show IP developed in Shanghai, combining scriptwriting, theatre production and illusion engineering for venues, producers and partners.",
+      "name": "Original Immersive Theatre Projects & Co-production | Jinmen Culture",
+      "description": "Explore original immersive theatre projects by Shanghai-based Jinmen Culture. Discuss co-production in China, venue partnerships, resident productions and show licensing.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://www.jinmenculture.com/#website"
@@ -140,7 +144,7 @@
       "@type": "ItemList",
       "@id": "https://www.jinmenculture.com/en/ip#projects",
       "name": "Original immersive show IP developed by Jinmen Culture",
-      "numberOfItems": 2,
+      "numberOfItems": 3,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -148,7 +152,7 @@
           "item": {
             "@type": "CreativeWork",
             "name": "马戏团的幽魂 · Ghost of the Circus",
-            "description": "A 90-minute original immersive magic mystery show developed for a residency venue.",
+            "description": "A 90-minute original immersive magic mystery with five core performers, initially designed for 100–150 guests in approximately 200–300 m². Venue requirements are open to discussion. Four trial performances have been completed in Shanghai; the project is seeking partners and investors.",
             "url": "https://www.jinmenculture.com/en/ghost",
             "identifier": "国作登字-2025-A-SZ00541636",
             "dateCreated": "2025-08-20",
@@ -179,7 +183,7 @@
           "item": {
             "@type": "CreativeWork",
             "name": "它在看 · It Is Watching",
-            "description": "An original psychological and illusion-led theatre script seeking production partners.",
+            "description": "A couple move into a new home, and strange things begin to happen. A two-storey house takes centre stage as magic and illusion effects bring the unexplained to life before the audience. Is it a ghost, or is something else behind it all? The truth is revealed at the end of the story. An original psychological mystery and illusion-led theatre project with a completed script, seeking producers, investors, theatres and resident venue partners.",
             "identifier": "国作登字-2026-A-SZ00014874",
             "dateCreated": "2026-02-26",
             "datePublished": "2026-02-26",
@@ -202,12 +206,28 @@
               }
             ]
           }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "FOUR404互动秀 · FOUR404 Interactive Show",
+            "description": "An original nightlife show combining social interaction and illusion, with a completed script. Four characters with different abilities draw guests into an experience shaped by connections between strangers, relationship choices, live interaction, dance, illusion design and AI-driven psychological mechanisms. Guests actively participate and form real connections with one another. The project brings together meeting new people, entertainment, visual spectacle and moments worth sharing. Designed for nightlife venues, commercial spaces, unconventional theatres and resident productions, it is seeking producers, investors, theatres, commercial venues and residency partners.",
+            "identifier": "国作登字-2026-A-SZ00053986",
+            "image": "https://www.jinmenculture.com/images/four404-poster.webp",
+            "creator": {
+              "@id": "https://www.jinmenculture.com/#organization"
+            },
+            "copyrightHolder": {
+              "@id": "https://www.jinmenculture.com/#organization"
+            }
+          }
         }
       ]
     }
   ]
-}
-</script>
+}</script>
 
   <!-- Google tag -->
   
@@ -217,22 +237,22 @@
   
   <script src="/js/analytics.js"></script>
 
-<title>Original Immersive Shows &amp; IP Development China | Jinmen</title>
-<meta name="description" content="Original immersive show IP developed in Shanghai, combining scriptwriting, theatre production and illusion engineering for venues, producers and partners.">
+<title>Original Immersive Theatre Projects &amp; Co-production | Jinmen Culture</title>
+<meta name="description" content="Explore original immersive theatre projects by Shanghai-based Jinmen Culture. Discuss co-production in China, venue partnerships, resident productions and show licensing.">
 <link rel="canonical" href="https://www.jinmenculture.com/en/ip">
 <link rel="alternate" hreflang="zh-CN" href="https://www.jinmenculture.com/ip">
 <link rel="alternate" hreflang="en" href="https://www.jinmenculture.com/en/ip">
 <link rel="alternate" hreflang="x-default" href="https://www.jinmenculture.com/ip">
-<meta property="og:title" content="Original Immersive Shows &amp; IP Development China | Jinmen">
-<meta property="og:description" content="Original immersive show IP developed in Shanghai, combining scriptwriting, theatre production and illusion engineering for venues, producers and partners.">
+<meta property="og:title" content="Original Immersive Theatre Projects &amp; Co-production | Jinmen Culture">
+<meta property="og:description" content="Explore original immersive theatre projects by Shanghai-based Jinmen Culture. Discuss co-production in China, venue partnerships, resident productions and show licensing.">
 <meta property="og:url" content="https://www.jinmenculture.com/en/ip">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
-<meta name="twitter:title" content="Original Immersive Shows &amp; IP Development China | Jinmen">
-<meta name="twitter:description" content="Original immersive show IP developed in Shanghai, combining scriptwriting, theatre production and illusion engineering for venues, producers and partners.">
+<meta name="twitter:title" content="Original Immersive Theatre Projects &amp; Co-production | Jinmen Culture">
+<meta name="twitter:description" content="Explore original immersive theatre projects by Shanghai-based Jinmen Culture. Discuss co-production in China, venue partnerships, resident productions and show licensing.">
 <meta name="twitter:image" content="https://www.jinmenculture.com/images/original-ip-hero.jpg">
 </head>
-<body class="show-en">
+<body class="show-en ip-page">
    <noscript><div style="padding:16px;text-align:center;">JavaScript enables galleries and enquiry forms. You can also contact us by email or telephone.</div></noscript>
 
 <div id="nav-placeholder">
@@ -295,7 +315,7 @@
       <a href="/en/contact"><span class="lang-en">Contact</span></a>
     </div>
   </div>
-<div id="nav-placeholder"></div>
+
 
 <section class="page-hero" style="min-height:50vh;">
   <div class="page-hero-bg">
@@ -314,16 +334,15 @@
     </div>
 
     
-    <h1 class="lang-en" style="">
-      Original Immersive Show &amp; Theatre IP Production
-    </h1>
+    <h1 class="lang-en" style="">Original Immersive Theatre Projects</h1>
 
     
 
     <p class="lang-en" style="margin-top:18px;color:var(--gold-text);font-family:var(--font-en-display);font-size:19px;font-style:italic;">
       We Create Our Own Worlds
     </p>
-  </div>
+<p class="ip-hero-description">Original immersive productions combining theatre, magic and stage illusions. We are seeking partners for co-production, resident shows and further project development.</p><div class="ip-hero-actions"><a href="#ip-projects" class="btn btn-outlined">Explore the Projects</a><a href="#ip-contact" class="btn btn-filled">Discuss a Partnership</a></div>
+</div>
 </section>
 
 <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);">
@@ -341,7 +360,7 @@
         <div style="width:88px;height:1px;background:var(--gold);margin-top:28px;"></div>
       </div>
 
-      <div style="padding-top:10px;">
+      <div class="ip-intro-copy" style="padding-top:10px;">
         
 
         <p class="lang-en" style="font-size:14px;color:var(--text-secondary);line-height:2;margin:0 0 24px;">
@@ -350,34 +369,29 @@
 
         
 
-        <p class="lang-en" style="font-size:14px;color:var(--text-secondary);line-height:2;margin:0;">
-          We are currently developing two original projects: a residency-format immersive production that has completed four test performances, and a completed original script seeking production partners. We welcome co-production, residency and licensing discussions with producers, investors, theatres, commercial venues and cultural tourism projects.
-        </p>
+        <p class="lang-en" style="font-size:14px;color:var(--text-secondary);line-height:2;margin:0;">We are developing three original projects: Ghost of the Circus has completed four trial performances, while It Is Watching and FOUR404 Interactive Show have completed scripts. We welcome immersive theatre partnerships with producers, investors, theatres, commercial venues and cultural tourism projects, including co-production in China, resident productions and show licensing.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="section section-alt" style="position:relative;z-index:2;">
+<section class="section section-alt" style="position:relative;z-index:2;" id="ip-projects">
   <div class="container">
     <div class="section-heading">
       
       <h2 class="lang-en" style="">Our Current IP Projects</h2>
     </div>
 
-    <!-- Project 1: Ghost of Circus -->
-    <div class="project-card fade-up" style="min-height:420px;margin-bottom:40px;">
-      <div class="card-bg"><img src="/images/ghost-circus-show-card.webp" alt="Ghost of the Circus" loading="lazy"></div>
-      <div class="card-gradient"></div>
-      <div class="card-content" style="padding:40px;">
-        <div class="tag" style="border:1px solid var(--gold);display:inline-block;padding:4px 12px;margin-bottom:12px;"><span>TESTED · SEEKING PRODUCER</span></div>
-        
-
-<h3 class="lang-en" style="font-size:24px;font-family:var(--font-en-display);font-style:italic;">
-  Ghost of the Circus
-</h3>
-        <div class="ip-copyright">
+    <div class="ip-projects">
+<article class="project-card fade-up" id="project-ghost" aria-labelledby="ghost-title">
+ <div class="card-bg"><img src="/images/ghost-circus-show-card.webp" alt="Ghost of the Circus" loading="lazy"></div><div class="card-gradient"></div>
+ <div class="card-content">
+  <div class="tag">TRIALS COMPLETE · SEEKING PARTNERS &amp; INVESTORS</div>
+  <h3 id="ghost-title" class="lang-en">Ghost of the Circus</h3>
+  <div class="ip-card-copy"><p>Step inside an old theatre, where a performer suddenly dies as the show begins. The theatre owner, an illusionist, investigates the mysterious death. From their seats, guests draw closer to the mystery through conversation, questions and moments of magic.</p><p class="ip-project-facts">A 90-minute original immersive magic mystery with five core performers, initially designed for 100–150 guests in approximately 200–300 m². Venue requirements are open to discussion. Four trial performances have been completed in Shanghai; the project is seeking partners and investors.</p></div>
+  <div class="ip-card-actions"><a href="/en/ghost" class="btn btn-filled">View Full Project</a></div>
+  <div class="ip-copyright">
   
   <p class="ip-copyright-label lang-en" style="">
     Copyright-Registered Literary Work
@@ -390,41 +404,23 @@
     国作登字-2025-A-SZ00541636<br>
     Copyright holder: Shanghai Jinmen Culture Media Co., Ltd.
   </p>
-</div>
-
-
-
-<p class="lang-en" style="max-width:500px;">
-  A 90-minute original immersive magic mystery show designed for five core performers, an audience of 100–150 and a venue of approximately 200–300 square metres. Four test performances have been completed in Shanghai. Its story, script, performance structure, illusion devices and stage mechanisms were originally developed by Jinmen Culture.
-</p>
-
-
-<p class="ip-performance-record lang-en" style="">
+</div><p class="ip-performance-record lang-en" style="">
   Performance history: four approved commercial performances were
   presented at Shimao Plaza · Star Space in Shanghai from
   31 October to 2 November 2025.
   Administrative approval reference: 黄文旅许〔2025〕1745号.
 </p>
-<div style="margin-top:24px;">
-  <a href="/en/ghost" class="btn btn-lg btn-filled" style="min-width:280px;justify-content:center;">
-    <span>View Full Project</span>
-  </a>
-</div>
-      </div>
-    </div>
-
-    <!-- Project 2: 它在看 -->
-    <div class="project-card fade-up" style="min-height:360px;">
-      <div class="card-bg"><img src="/images/tazaijian.jpg" alt="It Is Watching" loading="lazy"></div>
-      <div class="card-gradient"></div>
-      <div class="card-content" style="padding:40px;">
-        <div class="tag" style="border:1px solid var(--gold);display:inline-block;padding:4px 12px;margin-bottom:12px;"><span>SCRIPT COMPLETE</span></div>
-        
-
-<h3 class="lang-en" style="font-size:24px;font-family:var(--font-en-display);font-style:italic;">
-  It Is Watching
-</h3>
-        <div class="ip-copyright">
+ </div>
+ 
+</article>
+<article class="project-card fade-up" id="project-it-is-watching" aria-labelledby="it-is-watching-title">
+ <div class="card-bg"><img src="/images/tazaijian.jpg" alt="It Is Watching" loading="lazy"></div><div class="card-gradient"></div>
+ <div class="card-content">
+  <div class="tag">SCRIPT COMPLETE</div>
+  <h3 id="it-is-watching-title" class="lang-en">It Is Watching</h3>
+  <div class="ip-card-copy"><p>A couple move into a new home, and strange things begin to happen. A two-storey house takes centre stage as magic and illusion effects bring the unexplained to life before the audience. Is it a ghost, or is something else behind it all? The truth is revealed at the end of the story.</p><p class="ip-project-facts">An original psychological mystery and illusion-led theatre project with a completed script, seeking producers, investors, theatres and resident venue partners.</p></div>
+  <div class="ip-card-actions"><a href="#ip-contact" class="btn btn-outlined">Discuss This Project</a></div>
+  <div class="ip-copyright">
   
   <p class="ip-copyright-label lang-en" style="">
     Copyright-Registered Literary Work
@@ -438,24 +434,25 @@
     Copyright holder: Shanghai Jinmen Culture Media Co., Ltd.
   </p>
 </div>
-
-
-
-<p class="lang-en" style="max-width:500px;">
-  A completed original psychological mystery and illusion-led theatre script. The project explores psychological fear, visual deception and live storytelling, and is currently seeking producers, investors, theatres and residency venues.
-</p>
-
-<div style="margin-top:24px;">
-  <a href="/en/contact" class="btn btn-outlined" style="min-width:280px;justify-content:center;">
-    <span>Inquire About Collaboration</span>
-  </a>
+ </div>
+ 
+</article>
+<article class="project-card fade-up ip-project-four" id="project-four404" aria-labelledby="four404-title">
+ 
+ <div class="card-content">
+  <div class="tag">SCRIPT COMPLETE</div>
+  <h3 id="four404-title" class="lang-en">FOUR404 Interactive Show</h3>
+  <div class="ip-card-copy"><p>An original nightlife show combining social interaction and illusion, with a completed script. Four characters with different abilities draw guests into an experience shaped by connections between strangers, relationship choices, live interaction, dance, illusion design and AI-driven psychological mechanisms. Guests actively participate and form real connections with one another.</p><p class="ip-project-facts">The project brings together meeting new people, entertainment, visual spectacle and moments worth sharing. Designed for nightlife venues, commercial spaces, unconventional theatres and resident productions, it is seeking producers, investors, theatres, commercial venues and residency partners.</p></div>
+  <div class="ip-card-actions"><a href="#ip-contact" class="btn btn-outlined">Discuss FOUR404</a></div>
+  <div class="ip-copyright"><p class="ip-copyright-label">Copyright-Registered Literary Work</p><p class="ip-copyright-number">Copyright Registration No.: 国作登字-2026-A-SZ00053986<br>Copyright holder: Shanghai Jinmen Culture Media Co., Ltd.</p></div>
+ </div>
+ <figure class="ip-four-art"><a href="/images/four404-poster.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the full FOUR404 poster (new tab)"><img src="/images/four404-poster.webp" alt="FOUR404 Interactive Show poster with theatre curtains, masks and a clock" width="1024" height="1536" loading="lazy" decoding="async"></a><figcaption>View the full poster</figcaption></figure>
+</article>
 </div>
-      </div>
-    </div>
-  </div>
+ </div>
 </section>
 
-    <!-- ====== IP COLLABORATION — DEEPSEEK STYLE ====== -->
+<!-- ====== IP COLLABORATION — DEEPSEEK STYLE ====== -->
 <section
   class="section"
   id="ip-collaboration"
@@ -561,13 +558,13 @@
             
 
             <h3 class="lang-en" style="font-family:var(--font-en-display);font-size:18px;color:var(--text-primary);font-weight:400;line-height:1.5;margin:0 0 14px;">
-              Investment &amp; IP Licensing
+              Investment &amp; Show Licensing
             </h3>
 
             
 
             <p class="lang-en" style="font-size:14px;color:var(--text-secondary);line-height:1.8;margin:0;">
-              Depending on the project stage and territory, we discuss production investment, co-presentation, regional licensing and long-term performance operation.
+              Depending on the project stage and territory, we discuss production investment, co-presentation, regional immersive show licensing and long-term performance operation.
             </p>
           </div>
         </div>
@@ -578,17 +575,12 @@
 </section>
          
   <!-- GEO Citations -->
-<aside
-  aria-label="Immersive performance industry sources"
-  style="max-width:760px;margin:48px auto 0;padding:0 24px;"
->
+<aside class="ip-sources" aria-label="Industry Context &amp; Sources"><details><summary>Industry Context &amp; Sources</summary>
   <div style="border-top:0.5px solid rgba(201,160,96,0.18);padding-top:24px;">
 
     
 
-    <p class="lang-en" style="font-size:10px;color:var(--gold-text);letter-spacing:2px;margin:0 0 18px;">
-      INDUSTRY CONTEXT &amp; SOURCES
-    </p>
+    
 
     <!-- Source 1 -->
     <div style="border-left:1px solid rgba(201,160,96,0.28);padding-left:16px;margin-bottom:22px;">
@@ -645,15 +637,15 @@
     </div>
 
   </div>
-</aside>
+</details></aside>
 
 <!-- ====== CTA ====== -->
-<section class="cta-section" style="position:relative;z-index:2;">
+<section class="cta-section" id="ip-contact" style="position:relative;z-index:2;">
   <div class="cta-bg"><img src="/images/original-ip-hero.jpg" alt="Original IP and theatre production by Jinmen Culture"></div>
   <div class="cta-overlay"></div>
   <div class="cta-content">
     
-    <h2 class="lang-en" style="">Ready to Work Together?</h2>
+    <h2 class="lang-en" style="">Ready to Work Together?</h2><p class="ip-enquiry-prompt">Tell us which project interests you, the city where your venue is located, and the type of partnership you have in mind.</p>
     <div class="cta-row">
       <button class="btn btn-outlined" onclick="copyToClipboard('1379197706@qq.com')"><span>✉ Copy Email</span></button>
       <button class="btn btn-filled" onclick="copyToClipboard('Alex-lives')"><span>💬 Copy WeChat ID</span></button>
