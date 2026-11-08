@@ -195,8 +195,26 @@
 .home-page .home-why-copy{max-width:800px;margin:0 auto;text-align:center;color:var(--text-secondary);font-size:16px;line-height:1.85}
 @media(max-width:600px){.home-page .jm-case-overview{font-size:15px}.home-page .jm-case-details .jm-case-facts{padding:16px 12px}}
 </style>
+<script>
+/* One short entrance per tab session; deep links and reduced motion bypass it. */
+(function () {
+  try {
+    if (location.hash || matchMedia('(prefers-reduced-motion: reduce)').matches ||
+        (navigator.connection && navigator.connection.saveData) ||
+        sessionStorage.getItem('jm-curtain-seen')) return;
+    sessionStorage.setItem('jm-curtain-seen', '1');
+    document.documentElement.classList.add('jm-curtain-ready');
+    setTimeout(function () { document.documentElement.classList.remove('jm-curtain-ready'); }, 2200);
+  } catch (error) { /* Storage unavailable: open the site immediately. */ }
+})();
+</script>
 </head>
 <body class="home-page">
+<div class="jm-curtain" id="jm-curtain">
+  <div class="jm-curtain-panel jm-curtain-left" aria-hidden="true"></div>
+  <div class="jm-curtain-panel jm-curtain-right" aria-hidden="true"></div>
+  <button type="button" class="jm-curtain-skip">跳过开场</button>
+</div>
   <noscript><div style="padding:16px;text-align:center;">JavaScript用于图片浏览与咨询表单。你也可以通过邮箱或电话联系我们。</div></noscript>
 <div id="nav-placeholder">
     <header class="site-nav" id="siteNav">

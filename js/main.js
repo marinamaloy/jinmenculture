@@ -579,6 +579,71 @@ function jmInitContactMeasurement() {
   });
 }
 
+
+/* Decorative theatre entrance and edge mist; never gate access to site content. */
+function jmInitTheatreAtmosphere() {
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const curtain = document.getElementById('jm-curtain');
+  let curtainTimer;
+  const dismiss = () => {
+    const skipHadFocus = curtain && curtain.contains(document.activeElement);
+    document.documentElement.classList.remove('jm-curtain-ready');
+    if (curtain) curtain.remove();
+    clearTimeout(curtainTimer);
+    document.removeEventListener('keydown', onKey);
+    document.removeEventListener('pointerdown', dismiss);
+    document.removeEventListener('wheel', dismiss);
+    if (skipHadFocus) {
+      const main = document.getElementById('main-content');
+      if (main) { main.setAttribute('tabindex', '-1'); main.focus({ preventScroll: true }); }
+    }
+  };
+  const onKey = event => {
+    if (event.key === 'Escape' || event.key === 'Tab') dismiss();
+  };
+  if (curtain) {
+    if (document.documentElement.classList.contains('jm-curtain-ready') && !motion.matches) {
+      curtain.querySelector('button').addEventListener('click', dismiss);
+      document.addEventListener('keydown', onKey);
+      document.addEventListener('pointerdown', dismiss, { passive: true });
+      document.addEventListener('wheel', dismiss, { passive: true });
+      curtainTimer = setTimeout(dismiss, 1700);
+    } else dismiss();
+  }
+  if (motion.matches || (navigator.connection && navigator.connection.saveData)) return;
+  const mist = document.createElement('div');
+  mist.className = 'jm-mist';
+  mist.setAttribute('aria-hidden', 'true');
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'jm-atmosphere-toggle';
+  let paused = false;
+  try { paused = sessionStorage.getItem('jm-mist-paused') === '1'; } catch (error) {}
+  const paint = () => {
+    mist.hidden = paused;
+    toggle.textContent = document.documentElement.lang === 'en'
+      ? (paused ? 'Enable mist' : 'Pause mist')
+      : (paused ? '开启薄雾' : '暂停薄雾');
+    toggle.setAttribute('aria-label', toggle.textContent);
+  };
+  toggle.addEventListener('click', () => {
+    paused = !paused;
+    try { sessionStorage.setItem('jm-mist-paused', paused ? '1' : '0'); } catch (error) {}
+    paint();
+  });
+  paint();
+  document.body.append(mist, toggle);
+  const onMotion = event => {
+    if (event.matches) {
+      dismiss();
+      mist.remove();
+      toggle.remove();
+      motion.removeEventListener('change', onMotion);
+    }
+  };
+  motion.addEventListener('change', onMotion);
+}
+
 // ---- Initialize everything ----
 document.addEventListener('DOMContentLoaded', () => {
   injectNav();
@@ -587,4 +652,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   jmInitContactMeasurement();
   jmInitPackageLinks();
+  jmInitTheatreAtmosphere();
 });
