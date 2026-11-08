@@ -14,7 +14,7 @@
     {
       "@type": "WebSite",
       "@id": "https://www.jinmenculture.com/#website",
-      "url": "https://www.jinmenculture.com/en/",
+      "url": "https://www.jinmenculture.com/",
       "name": "Jinmen Culture",
       "alternateName": "浸门文化",
       "inLanguage": "en",
@@ -68,8 +68,8 @@
       "@type": "WebPage",
       "@id": "https://www.jinmenculture.com/en/#webpage",
       "url": "https://www.jinmenculture.com/en/",
-      "name": "Immersive Show Production & Illusion Engineering China | Jinmen",
-      "description": "Shanghai-based Jinmen Culture creates original immersive shows, custom stage illusions and corporate magic performances. Explore our work and discuss your project.",
+      "name": "Jinmen Culture | Immersive Shows & Illusion Engineering",
+      "description": "Shanghai-based Jinmen Culture creates original immersive productions, custom magic shows and stage illusion devices, with show direction by Wang Su. Explore our work.",
       "isPartOf": {
         "@id": "https://www.jinmenculture.com/#website"
       },
@@ -159,22 +159,44 @@
 <link rel="stylesheet" href="/css/style.css">
   <script src="/js/analytics.js"></script>
 
-<title>Immersive Show Production &amp; Illusion Engineering China | Jinmen</title>
-<meta name="description" content="Shanghai-based Jinmen Culture creates original immersive shows, custom stage illusions and corporate magic performances. Explore our work and discuss your project.">
+<title>Jinmen Culture | Immersive Shows &amp; Illusion Engineering</title>
+<meta name="description" content="Shanghai-based Jinmen Culture creates original immersive productions, custom magic shows and stage illusion devices, with show direction by Wang Su. Explore our work.">
 <link rel="canonical" href="https://www.jinmenculture.com/en/">
 <link rel="alternate" hreflang="zh-CN" href="https://www.jinmenculture.com/">
 <link rel="alternate" hreflang="en" href="https://www.jinmenculture.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://www.jinmenculture.com/">
-<meta property="og:title" content="Immersive Show Production &amp; Illusion Engineering China | Jinmen">
-<meta property="og:description" content="Shanghai-based Jinmen Culture creates original immersive shows, custom stage illusions and corporate magic performances. Explore our work and discuss your project.">
+<meta property="og:title" content="Jinmen Culture | Immersive Shows &amp; Illusion Engineering">
+<meta property="og:description" content="Shanghai-based Jinmen Culture creates original immersive productions, custom magic shows and stage illusion devices, with show direction by Wang Su. Explore our work.">
 <meta property="og:url" content="https://www.jinmenculture.com/en/">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
-<meta name="twitter:title" content="Immersive Show Production &amp; Illusion Engineering China | Jinmen">
-<meta name="twitter:description" content="Shanghai-based Jinmen Culture creates original immersive shows, custom stage illusions and corporate magic performances. Explore our work and discuss your project.">
+<meta name="twitter:title" content="Jinmen Culture | Immersive Shows &amp; Illusion Engineering">
+<meta name="twitter:description" content="Shanghai-based Jinmen Culture creates original immersive productions, custom magic shows and stage illusion devices, with show direction by Wang Su. Explore our work.">
 <meta name="twitter:image" content="https://www.jinmenculture.com/images/hero-bg.webp">
+
+<style>
+/* Home cases: concise overview with optional project detail, in the existing gold palette. */
+.home-page .jm-cases-grid{align-items:start}
+.home-page .jm-case-overview{font-size:15px;line-height:1.8;color:var(--text-secondary);margin:0 0 10px}
+.home-page .jm-case-details{min-width:0}
+.home-page .jm-case-details summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;cursor:pointer;list-style:none;font-size:14px;line-height:1.6;color:var(--gold-text,#D4AA6A)}
+.home-page .jm-case-details summary::-webkit-details-marker{display:none}
+.home-page .jm-case-details summary::marker{content:""}
+.home-page .jm-case-details summary::after{content:"+";font-size:20px;flex-shrink:0}
+.home-page .jm-case-details[open] summary::after{content:"−"}
+.home-page .jm-case-details summary:hover,.home-page .jm-case-details summary:focus-visible{color:#E8C080}
+.home-page .jm-case-details summary:focus-visible{outline:2px solid var(--gold-text,#D4AA6A);outline-offset:4px}
+.home-page .jm-case-details .jm-case-hide{display:none}
+.home-page .jm-case-details[open] .jm-case-show{display:none}
+.home-page .jm-case-details[open] .jm-case-hide{display:inline}
+.home-page .jm-case-details .jm-case-facts{margin-top:12px}
+.home-page .jm-case-details .jm-case-copy{font-size:14px;line-height:1.8}
+.home-page .jm-case-details .jm-case-label{font-size:12px;letter-spacing:.08em}
+.home-page .home-why-copy{max-width:800px;margin:0 auto;text-align:center;color:var(--text-secondary);font-size:16px;line-height:1.85}
+@media(max-width:600px){.home-page .jm-case-overview{font-size:15px}.home-page .jm-case-details .jm-case-facts{padding:16px 12px}}
+</style>
 </head>
-<body class="show-en">
+<body class="show-en home-page">
   <noscript><div style="padding:16px;text-align:center;">JavaScript enables galleries and enquiry forms. You can also contact us by email or telephone.</div></noscript>
 <div id="nav-placeholder">
     <header class="site-nav" id="siteNav">
@@ -331,7 +353,7 @@
       
       <p class="lang-en" style="">Upgraded package available for up to 32 guests</p>
       <div class="card-buttons">
-        <a href="/en/weixunxiu" class="btn btn-filled"><span>Book Now</span></a>
+        <a href="/en/weixunxiu#booking" class="btn btn-filled"><span>Book Now</span></a>
         <a href="/en/weixunxiu" class="btn btn-outlined"><span>Learn More</span></a>
       </div>
     </div>
@@ -351,11 +373,12 @@
       <p class="lang-en" style="">Immersive magic-mystery show for 100–150 guests. Trial performances completed. Seeking a partner and investor.</p>
       <div class="card-buttons" style="margin-top:24px;">
         <a href="/en/ghost" class="btn btn-filled"><span>View Show</span></a>
-        <a href="/en/ghost" class="btn btn-outlined"><span>Invest</span></a>
+        <a href="/en/ghost#partnership" class="btn btn-outlined"><span>Invest</span></a>
       </div>
     </div>
   </article>
-</div>
+    </div>
+  </div>
 </section>
 
 <!-- ====== FOUR DIRECTIONS ====== -->
@@ -379,9 +402,7 @@
     </h3>
 
     
-    <p class="lang-en" style="">
-      We create original immersive IPs. Ready shows available for partners.
-    </p>
+    <p class="lang-en" style="">Original theatre projects at different stages of development, open to co-production and venue partnerships.</p>
   </a>
 
   <a href="/en/engineering" class="direction-card fade-up">
@@ -407,7 +428,7 @@
 
     
     <h3 class="lang-en" style="">
-      Brand Shows &amp; Flash Events
+      Brand Shows &amp; Pop-up Experiences
     </h3>
 
     
@@ -422,14 +443,10 @@
     </div>
 
     
-    <h3 class="lang-en" style="">
-      Creative Direction
-    </h3>
+    <h3 class="lang-en" style="">Show Direction &amp; Creative Development</h3>
 
     
-    <p class="lang-en" style="">
-      Wang Su's creative direction for large-scale illusion spectacles.
-    </p>
+    <p class="lang-en" style="">From the initial idea and show structure to staging, with magic and illusion at the heart of Wang Su’s directing approach.</p>
   </a>
 
 </div>
@@ -513,7 +530,10 @@
           
           <h3 class="jm-case-title lang-en" style="">Mahua FunAge<br><span style="font-size:.75em;">Chuma &amp; Thank You for Not Killing Me</span></h3>
 
-          <div class="jm-case-facts">
+          <p class="jm-case-overview lang-en">Illusion concepts and devices that make plants bloom before the audience’s eyes in Mahua FunAge productions.</p>
+          <details class="jm-case-details">
+            <summary><span><span class="jm-case-show">View project details</span><span class="jm-case-hide">Hide project details</span></span></summary>
+            <div class="jm-case-facts">
             <div class="jm-case-fact">
               
               <span class="jm-case-label lang-en" style="">Challenge</span>
@@ -533,6 +553,7 @@
               <p class="jm-case-copy lang-en" style="">The illusions were no longer standalone magic displays, but an integral part of the storytelling and the creation of theatrical spectacle.</p>
             </div>
           </div>
+          </details>
         </div>
       </article>
 
@@ -549,7 +570,10 @@
           
           <h3 class="jm-case-title lang-en" style="">SMG<br>City of Musicals</h3>
 
-          <div class="jm-case-facts">
+          <p class="jm-case-overview lang-en">Development and staging of magic effects for characters with magical powers in City of Musicals.</p>
+          <details class="jm-case-details">
+            <summary><span><span class="jm-case-show">View project details</span><span class="jm-case-hide">Hide project details</span></span></summary>
+            <div class="jm-case-facts">
             <div class="jm-case-fact">
               
               <span class="jm-case-label lang-en" style="">Challenge</span>
@@ -569,6 +593,7 @@
               <p class="jm-case-copy lang-en" style="">The magic effect was successfully integrated into the television production, creating a memorable visual moment within the performance.</p>
             </div>
           </div>
+          </details>
         </div>
       </article>
 
@@ -585,7 +610,10 @@
           
           <h3 class="jm-case-title lang-en" style="">Pujiang Magic Box</h3>
 
-          <div class="jm-case-facts">
+          <p class="jm-case-overview lang-en">An immersive cruise performance combining audience participation, magic and interactive gameplay.</p>
+          <details class="jm-case-details">
+            <summary><span><span class="jm-case-show">View project details</span><span class="jm-case-hide">Hide project details</span></span></summary>
+            <div class="jm-case-facts">
             <div class="jm-case-fact">
               
               <span class="jm-case-label lang-en" style="">Challenge</span>
@@ -605,6 +633,7 @@
               <p class="jm-case-copy lang-en" style="">The cruise space became part of the production, transforming passengers from spectators into participants.</p>
             </div>
           </div>
+          </details>
         </div>
       </article>
 
@@ -621,7 +650,10 @@
           
           <h3 class="jm-case-title lang-en" style="">UMEPLAY<br>INSANE 2</h3>
 
-          <div class="jm-case-facts">
+          <p class="jm-case-overview lang-en">Live illusions for INSANE 2: a ghost appears, and a seemingly headless body continues to move.</p>
+          <details class="jm-case-details">
+            <summary><span><span class="jm-case-show">View project details</span><span class="jm-case-hide">Hide project details</span></span></summary>
+            <div class="jm-case-facts">
             <div class="jm-case-fact">
               
               <span class="jm-case-label lang-en" style="">Challenge</span>
@@ -641,6 +673,7 @@
               <p class="jm-case-copy lang-en" style="">The physical visual effects became part of the narrative experience, intensifying suspense, fear and immersion at key moments.</p>
             </div>
           </div>
+          </details>
         </div>
       </article>
 
@@ -657,7 +690,10 @@
           
           <h3 class="jm-case-title lang-en" style="">Suzhou Imperial Kiln<br>Brick Museum</h3>
 
-          <div class="jm-case-facts">
+          <p class="jm-case-overview lang-en">Appearance and disappearance illusions bring cultural storytelling into the museum experience.</p>
+          <details class="jm-case-details">
+            <summary><span><span class="jm-case-show">View project details</span><span class="jm-case-hide">Hide project details</span></span></summary>
+            <div class="jm-case-facts">
             <div class="jm-case-fact">
               
               <span class="jm-case-label lang-en" style="">Challenge</span>
@@ -677,6 +713,7 @@
               <p class="jm-case-copy lang-en" style="">The installation added an experiential layer to the exhibition and created a memorable point within the cultural destination.</p>
             </div>
           </div>
+          </details>
         </div>
       </article>
 
@@ -693,7 +730,10 @@
           
           <h3 class="jm-case-title lang-en" style="">Back to the 1990s</h3>
 
-          <div class="jm-case-facts">
+          <p class="jm-case-overview lang-en">A nostalgic 1990s experience combining themed environments and live performance.</p>
+          <details class="jm-case-details">
+            <summary><span><span class="jm-case-show">View project details</span><span class="jm-case-hide">Hide project details</span></span></summary>
+            <div class="jm-case-facts">
             <div class="jm-case-fact">
               
               <span class="jm-case-label lang-en" style="">Challenge</span>
@@ -713,6 +753,7 @@
               <p class="jm-case-copy lang-en" style="">The project created a participatory nostalgic environment that strengthened the atmosphere of the commercial space.</p>
             </div>
           </div>
+          </details>
         </div>
       </article>
 
@@ -724,39 +765,8 @@
     <!-- ====== WHY CHOOSE JINMEN CULTURE ====== -->
 <section class="section" style="position:relative;z-index:2;background:var(--bg-primary);padding-top:0;">
   <div class="container">
-    <div class="section-heading">
-      
-      <h2 class="lang-en" style="">Why Choose Jinmen Culture?</h2>
-    </div>
-    <div style="max-width:800px;margin:0 auto;text-align:center;color:var(--text-secondary);line-height:2;font-size:15px;">
-      
-
-<p class="lang-en" style="">
-  Jinmen Culture is a Shanghai-based immersive show production and illusion
-  engineering company serving clients across China. We combine theatre,
-  magic design, physical engineering and live operations to create practical,
-  venue-ready experiences for brands, theatres, cultural attractions and
-  commercial spaces.
-</p>
-
-
-
-<p class="lang-en" style="margin-top:16px;">
-  Our experience includes stage illusion systems for Mahua FunAge,
-  television magic design for SMG, escape-room effects for UMEPLAY,
-  museum installations and immersive cruise productions.
-</p>
-    </div>
-  </div>
-</section>
-   
-<!-- ====== OUR MISSION ====== -->
-<section class="section" style="position:relative;z-index:2;background:var(--bg-primary);padding-top:0;">
-  <div class="container">
-    <div style="max-width:800px;margin:0 auto;text-align:center;color:var(--text-secondary);line-height:2;font-size:15px;">
-      
-      <p class="lang-en" style="">Jinmen Culture is committed to turning the impossible into reality. Whether creating immersive experiences for brands or designing illusion devices for venues, our goal remains the same: to create unique experiences that audiences remember and clients love.</p>
-    </div>
+    <div class="section-heading"><h2 class="lang-en">Why Choose Jinmen Culture?</h2></div>
+    <p class="home-why-copy lang-en">We bring theatre-making, magic design and engineering together. Creative and technical development inform each other as we assess feasibility and adapt ideas to the venue, performers and budget, connecting the story, effects and live experience.</p>
   </div>
 </section>
 
@@ -881,6 +891,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ====== FOOTER ====== -->
 <footer class="site-footer" style="position:relative;z-index:2;">
   <div class="container">
@@ -888,7 +900,7 @@
       <!-- Left: Logo -->
       <div class="footer-col">
         <div style="display:flex;align-items:center;gap:10px;">
-          <img src="/images/jinmen-logo.png" alt="Jinmen Culture immersive magic and corporate events in Shanghai" width="182" height="256" style="width:auto;height:32px;object-fit:contain;">
+          <img src="/images/jinmen-logo.png" alt="Jinmen Culture logo" width="182" height="256" style="width:auto;height:32px;object-fit:contain;">
           <div>
             <div style="font-family:var(--font-cn-serif);font-size:15px;color:var(--gold-text);">浸门文化</div>
             <div style="font-family:var(--font-en);font-size:7.5px;color:#6A6050;letter-spacing:3px;">JINMEN CULTURE</div>
