@@ -216,6 +216,26 @@ button.gallery-item:focus-visible,button.feedback-item:focus-visible{outline:2px
  .ghost-scenario-note,.finance-disclaimer,.ghost-partnership-cards p,.editorial-row p{font-size:15px!important}
  .show-feature p{font-size:14px}
 }
+
+/* English review translations stay paired with their original screenshots. */
+.review-card{min-width:0;background:var(--bg-card);border:1px solid rgba(201,160,96,.18)}
+.review-card .feedback-item{border:0;border-bottom:1px solid rgba(201,160,96,.18)}
+.review-translation{padding:24px;text-align:left}
+.review-kicker{margin:0 0 12px;font-size:12px;line-height:1.6;letter-spacing:.6px;color:var(--gold-text)}
+.review-translation h3{margin:0 0 16px;font-family:var(--font-en-display);font-size:20px;font-weight:400;line-height:1.4;color:var(--text-primary);overflow-wrap:anywhere}
+.review-excerpt{margin:0 0 16px;font-size:16px;line-height:1.8;color:var(--text-primary)}
+.review-full{border-top:1px solid rgba(201,160,96,.18)}
+.review-full summary{padding:14px 0;min-height:44px;cursor:pointer;font-size:14px;line-height:1.7;color:var(--gold-text)}
+.review-full summary:focus-visible{outline:2px solid var(--gold-text);outline-offset:4px}
+.review-spoilers{font-size:12px;color:var(--text-secondary)}
+.review-text{font-size:16px;line-height:1.85;color:var(--text-primary);overflow-wrap:anywhere}
+.review-text p{margin:0 0 16px}
+.review-text ul{margin:0 0 16px;padding-left:20px;list-style:disc}
+.review-text li{margin-bottom:10px}
+.review-intro{max-width:680px;margin:16px auto 0;font-size:14px;line-height:1.8;color:var(--text-secondary)}
+#audience-reviews{scroll-margin-top:120px}
+@media(max-width:600px){.review-translation{padding:20px}.review-translation h3{font-size:19px}}
+
 </style>
   <script src="/js/analytics.js"></script>
 
@@ -525,40 +545,153 @@ button.gallery-item:focus-visible,button.feedback-item:focus-visible{outline:2px
 </section>
 
 <!-- Feedback Gallery -->
-<section class="section section-alt" style="position:relative;z-index:2;">
+<section class="section section-alt" id="audience-reviews" style="position:relative;z-index:2;">
   <div class="container">
     <div class="section-heading">
-      
-      <h2 class="lang-en" style="">Audience Reviews</h2>
-      
-      <p class="subtitle lang-en" style="">Audience feedback from trial performances</p>
+      <h2 class="lang-en">Audience Reviews</h2>
+      <p class="subtitle lang-en">Audience feedback from trial performances</p>
+      <p class="review-intro">Read an English excerpt below each original Chinese review, or expand the full translation. These comments describe the reviewers’ experiences of earlier performances.</p>
     </div>
     <div class="feedback-grid">
-      <button class="feedback-item" onclick="openLightbox(feedbackImages,0)" type="button" aria-haspopup="dialog" aria-label="Open audience review 1">
+<article class="review-card" aria-labelledby="review-5-title" data-review-image="feedback-5">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,0)" type="button" aria-haspopup="dialog" aria-label="Open original Chinese review 1">
   <img src="/images/feedback-5.webp" alt="Audience review of the set and performances in Ghost of the Circus" width="1155" height="2174" loading="lazy" decoding="async">
 </button>
+<div class="review-translation" lang="en">
+  <p class="review-kicker">English translation · <span lang="zh-CN">蓝胖儿</span></p>
+  <h3 id="review-5-title">Ghost of the Circus was so good!</h3>
+  <p class="review-excerpt">It was not just thrilling and exciting — it was also romantic and warm.</p>
+  <details class="review-full">
+    <summary>Read full translation <span class="review-spoilers">· Story spoilers</span></summary>
+    <div class="review-text">
+<p>A breathtaking performance!</p>
+<p>First of all, the stage design was wonderfully clever. The dim lighting, mysterious scenery and ghost effects that appeared from time to time made it feel as though we had entered a world that was both frightening and romantic. I was completely drawn into the atmosphere, as if I had become part of the story myself.</p>
+<p>Secondly, the performers were outstanding. They had to handle high-altitude, high-speed stunts while coordinating with the ghost effects, showing remarkable professionalism and courage. The moment at the climax when the performers plunged from a height into water left me stunned!</p>
+<p>Finally, the story was captivating too. Although ghosts were its theme, it was full of warmth and emotion. The courage, wisdom and love the performers conveyed really moved me.</p>
+<p>Especially at the end, when the ghosts turned into light and disappeared into the night sky, I felt the beauty and hope of life.</p>
+<p>Overall, Ghost of the Circus is a performance I would highly recommend. It was not just thrilling and exciting — it was also romantic and warm.</p>
 
-<button class="feedback-item" onclick="openLightbox(feedbackImages,1)" type="button" aria-haspopup="dialog" aria-label="Open audience review 2">
+
+    </div>
+  </details>
+</div>
+</article>
+
+<article class="review-card" aria-labelledby="review-6-title" data-review-image="feedback-6">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,1)" type="button" aria-haspopup="dialog" aria-label="Open original Chinese review 2">
   <img src="/images/feedback-6.webp" alt="Audience review of Ghost of the Circus immersive magic" width="1160" height="2160" loading="lazy" decoding="async">
 </button>
+<div class="review-translation" lang="en">
+  <p class="review-kicker">English translation</p>
+  <h3 id="review-6-title">Ghost of the Circus — who do you think won?</h3>
+  <p class="review-excerpt">There are surprises, and there are twists. Who wins? You will have to see it for yourself.</p>
+  <details class="review-full">
+    <summary>Read full translation</summary>
+    <div class="review-text">
+<p>I loved circuses as a child, but as I have grown older, I have become increasingly afraid of them. They seem to be places where joy and pain always coexist. Before coming, I was told that, because of the nature of the performance, late arrival was not allowed. That, along with the title, made me especially curious and excited.</p>
+<p>I do not want to spoil anything — I will leave the story for you to discover in person. All I will say is that there are surprises, and there are twists. Who wins? You will have to see it for yourself.</p>
+<p>Full credit to every performer. Alongside the acting, one of this production's challenges is that some of the cast really have to become magicians. And because of the theatre setting, the magic is all performed at close range. I can only imagine how much practice happens behind the scenes.</p>
+<p>They have to act, dance and perform magic. Add a completely dark theatre, and even hitting the right positions becomes a challenge. I cannot imagine how many things they have to keep track of at once. Respect!</p>
+<p>The theatre is at Star Space on the seventh floor of the east wing of Shimao Plaza — an excellent location.</p>
+<p>With the added Halloween atmosphere, it made for a thoroughly enjoyable evening.</p>
 
-<button class="feedback-item" onclick="openLightbox(feedbackImages,2)" type="button" aria-haspopup="dialog" aria-label="Open audience review 3">
+
+    </div>
+  </details>
+</div>
+</article>
+
+<article class="review-card" aria-labelledby="review-7-title" data-review-image="feedback-7">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,2)" type="button" aria-haspopup="dialog" aria-label="Open original Chinese review 3">
   <img src="/images/feedback-7.webp" alt="Audience review of Ghost of the Circus in Shanghai" width="1177" height="2139" loading="lazy" decoding="async">
 </button>
+<div class="review-translation" lang="en">
+  <p class="review-kicker">English translation</p>
+  <h3 id="review-7-title">Ghost of the Circus</h3>
+  <p class="review-excerpt">The space was small, but the atmosphere was great. Watching Ghost of the Circus with my best friend was such fun.</p>
+  <details class="review-full">
+    <summary>Read full translation</summary>
+    <div class="review-text">
+<p>Another weekend, another theatre trip. This seemed to be the production's opening performance. The space was small, but the atmosphere was great, and every seat was taken. Several times I heard women nearby laughing out loud. Many audience members were curious about some of the magic, and you could tell the cast were putting real care into their performances.</p>
+<p>There was a little twist at the end. I look forward to seeing the show keep developing, with its pacing and dialogue becoming even more polished over time. Watching Ghost of the Circus with my best friend was such fun!</p>
+<p>#ImmersiveTheatre #GhostOfTheCircus</p>
 
-<button class="feedback-item" onclick="openLightbox(feedbackImages,3)" type="button" aria-haspopup="dialog" aria-label="Open audience review 4">
+
+    </div>
+  </details>
+</div>
+</article>
+
+<article class="review-card" aria-labelledby="review-8-title" data-review-image="feedback-8">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,3)" type="button" aria-haspopup="dialog" aria-label="Open original Chinese review 4">
   <img src="/images/feedback-8.webp" alt="Audience review of interactive magic in Ghost of the Circus" width="1181" height="2150" loading="lazy" decoding="async">
 </button>
+<div class="review-translation" lang="en">
+  <p class="review-kicker">English translation</p>
+  <h3 id="review-8-title">A Shanghai newcomer's guide to making the most of 100 weekends | Ghost of the Circus</h3>
+  <p class="review-excerpt">Do not let the word ‘ghost’ put you off if you scare easily. The humour kept catching me by surprise and making me laugh.</p>
+  <details class="review-full">
+    <summary>Read full translation</summary>
+    <div class="review-text">
+<p>The latest season of Back to Field sparked my interest in theatre, and I had been wanting to see a live performance — but tickets were so hard to get! I had previously seen a similar format with a mystery theme. This time, I chose Ghost of the Circus and, with Halloween approaching, immersed myself in some spooky circus moments.</p>
+<p>In fact, friends who scare easily should not let the word ‘ghost’ put them off: that part of the story is only a small proportion of the show. I especially liked the actor playing David. His jokes and deadpan humour kept catching me by surprise and making me laugh.</p>
+<p>Overall, between the final plot twist, the cast's thoughtful performances and the theatre design, it was well worth the trip. If you have a free weekend, get some friends together and go!</p>
 
-<button class="feedback-item" onclick="openLightbox(feedbackImages,4)" type="button" aria-haspopup="dialog" aria-label="Open audience review 5">
+
+    </div>
+  </details>
+</div>
+</article>
+
+<article class="review-card" aria-labelledby="review-9-title" data-review-image="feedback-9">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,4)" type="button" aria-haspopup="dialog" aria-label="Open original Chinese review 5">
   <img src="/images/feedback-9.webp" alt="Audience feedback on Ghost of the Circus" width="1169" height="2041" loading="lazy" decoding="async">
 </button>
+<div class="review-translation" lang="en">
+  <p class="review-kicker">English translation</p>
+  <h3 id="review-9-title">Ghost of the Circus | A Halloween weekend</h3>
+  <p class="review-excerpt">Unlike a traditional small-theatre production, it includes lots of magic — even people who do not usually go to the theatre can enjoy it.</p>
+  <details class="review-full">
+    <summary>Read full translation</summary>
+    <div class="review-text">
+<p>November 1</p>
+<p>I caught a new production, Ghost of the Circus, on the seventh floor of Shanghai Shimao Plaza at People's Square.</p>
+<p>Unlike a traditional small-theatre production, it includes lots of magic. It is easy to get into — even people who do not usually go to the theatre can enjoy it. Some audience members are even chosen to become the magician's partner.</p>
+<p>From the moment I entered, it felt as though I had taken a seat at a circus. The lighting and music drew me into that world.</p>
+<p>As the performers appeared, scenes you could only see at a circus unfolded one after another.</p>
+<p>At first I thought it was going to be a cheerful circus play. I did not expect it to be a mystery as well!</p>
+<p>As the story progressed, the atmosphere grew more and more tense, building towards the climax.</p>
+<p>I have to say, the design was so clever, and the performers were fantastic!</p>
 
-<button class="feedback-item" onclick="openLightbox(feedbackImages,5)" type="button" aria-haspopup="dialog" aria-label="Open audience review 6">
+
+    </div>
+  </details>
+</div>
+</article>
+
+<article class="review-card" aria-labelledby="review-10-title" data-review-image="feedback-10">
+<button class="feedback-item" onclick="openLightbox(feedbackImages,5)" type="button" aria-haspopup="dialog" aria-label="Open original Chinese review 6">
   <img src="/images/feedback-10.webp" alt="Audience review of the story and stage illusions in Ghost of the Circus" width="1171" height="2029" loading="lazy" decoding="async">
 </button>
+<div class="review-translation" lang="en">
+  <p class="review-kicker">English translation</p>
+  <h3 id="review-10-title">“Some wounds become another eye”</h3>
+  <p class="review-excerpt">“Some wounds never scab over. They become another eye, watching over the people we love, forever.”</p>
+  <details class="review-full">
+    <summary>Read full translation <span class="review-spoilers">· Story spoilers</span></summary>
+    <div class="review-text">
+<p>When Chris lit the last kerosene lamp in the abandoned circus, I had to pinch the back of my hand to stop myself from crying out loud. This once-dazzling magician was now setting up a séance with trembling hands, just to say sorry to Angela, who had died.</p>
+<p>The shattering beauty of magical realism:</p>
+<ul><li>A rust-covered carousel transformed into a time machine through projections.</li><li>Playing cards drifting down from above suddenly froze into Angela's silhouette.</li><li>When Chris cried out, “I would rather be trapped in that night,” the chandelier shattered in response.</li></ul>
+<p>Every detail tugged at my nerves.</p>
+<p>As Chris repeated the rope movements of his escape act, the lights cast Angela's dancing shadow on the wall. In the memory of their first successful two-person levitation, ribbons drifted down, mingling with tonight's rain… Sobs could be heard all around the theatre. The woman in the front row had already soaked through three tissues.</p>
+<p>Looking at the neon lights of East Nanjing Road after the show, I suddenly remembered that line:</p>
+<p>“Some wounds never scab over. They become another eye, watching over the people we love, forever.”</p>
     </div>
-
+  </details>
+</div>
+</article>
+    </div>
   </div>
 </section>
 
