@@ -543,10 +543,7 @@ async function jmSubmitInquiry(event, formName) {
     status.setAttribute('role', 'status');
     status.setAttribute('tabindex', '-1');
     status.style.cssText = 'text-align:center;color:var(--text-primary);padding:36px 0;line-height:1.8;';
-    status.innerHTML = '<p style="color:var(--gold-text);font-size:20px;">✓ <span class="lang-cn">您的咨询已提交</span><span class="lang-en">Your enquiry has been submitted</span></p><p><span class="lang-cn">我们会尽快与您联系。请保留咨询编号：</span><span class="lang-en">We will contact you soon. Please keep your enquiry reference:</span></p>';
-    const code = document.createElement('p');
-    code.textContent = reference;
-    status.appendChild(code);
+    status.innerHTML = '<p style="color:var(--gold-text);font-size:20px;">✓ <span class="lang-cn">感谢您的咨询！</span><span class="lang-en">Thank you!</span></p><p><span class="lang-cn">信息已发送，我们通常会在一个工作日内回复。</span><span class="lang-en">Your enquiry has been sent. We normally reply within one business day.</span></p>';
     form.replaceChildren(status);
     status.focus({ preventScroll: true });
   } catch (error) {
