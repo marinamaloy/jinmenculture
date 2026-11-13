@@ -87,7 +87,7 @@ function injectNav() {
     <header class="site-nav" id="siteNav">
       <a href="/" class="logo">
         <img
-  src="/images/jinmen-logo.png"
+  src="/images/optimized/jinmen-logo-nav.webp"
   alt="浸门文化" data-alt-en="Jinmen Culture"
   width="182"
   height="256"
